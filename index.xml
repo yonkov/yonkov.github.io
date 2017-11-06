@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My Hugo Website</title>
-    <link>https://yonkov.github.io/My-New-Hugo-Website/</link>
+    <link>https://yonkov.github.io/</link>
     <description>Recent content on My Hugo Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 17 Jun 2013 12:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://yonkov.github.io/My-New-Hugo-Website/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yonkov.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://yonkov.github.io/My-New-Hugo-Website/about/</link>
+      <link>https://yonkov.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://yonkov.github.io/My-New-Hugo-Website/about/</guid>
+      <guid>https://yonkov.github.io/about/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam beatae soluta accusantium iusto nihil nesciunt unde veniam magnam repudiandae sapiente.
 Necessitatibus Velit, odit, eius, libero unde impedit quaerat dolorem assumenda alias consequuntur optio quae maiores ratione tempore sit aliquid architecto eligendi pariatur ab soluta doloremque dicta aspernatur labore quibusdam dolore corrupti quod inventore. Maiores, repellat, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam!</description>
     </item>
     
     <item>
       <title>Vivamus Lacus Mauris</title>
-      <link>https://yonkov.github.io/My-New-Hugo-Website/post/vivamus-lacus-mauris/</link>
+      <link>https://yonkov.github.io/post/vivamus-lacus-mauris/</link>
       <pubDate>Mon, 17 Jun 2013 12:00:00 +0000</pubDate>
       
-      <guid>https://yonkov.github.io/My-New-Hugo-Website/post/vivamus-lacus-mauris/</guid>
+      <guid>https://yonkov.github.io/post/vivamus-lacus-mauris/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, rerum voluptates veniam. Esse, nihil, ea, eaque, quos cum id tempore voluptate nisi nemo debitis impedit officiis culpa repellat voluptatum in aperiam error quo minima ratione ex pariatur maxime eligendi dolore nesciunt molestiae enim alias atque commodi delectus perferendis. Blanditiis, iste placeat nostrum in! Eligendi, omnis, unde, quos ullam nesciunt molestias quis a saepe nisi distinctio molestiae voluptate obcaecati officiis consequuntur similique aspernatur rerum sequi placeat iure quaerat itaque libero officia recusandae ad corrupti aperiam cum beatae.</description>
     </item>
     
     <item>
       <title>Application development</title>
-      <link>https://yonkov.github.io/My-New-Hugo-Website/service/service3/</link>
+      <link>https://yonkov.github.io/service/service3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://yonkov.github.io/My-New-Hugo-Website/service/service3/</guid>
+      <guid>https://yonkov.github.io/service/service3/</guid>
       <description>&lt;p&gt;I don&amp;rsquo;t think they tried to market it to the billionaire, spelunking, base-jumping crowd. i did the same thing to gandhi, he didn&amp;rsquo;t eat for three weeks. i once heard a wise man say there are no perfect men.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -43,10 +43,10 @@ Necessitatibus Velit, odit, eius, libero unde impedit quaerat dolorem assumenda 
     
     <item>
       <title>Custom website design</title>
-      <link>https://yonkov.github.io/My-New-Hugo-Website/service/service1/</link>
+      <link>https://yonkov.github.io/service/service1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://yonkov.github.io/My-New-Hugo-Website/service/service1/</guid>
+      <guid>https://yonkov.github.io/service/service1/</guid>
       <description>&lt;p&gt;I don&amp;rsquo;t think they tried to market it to the billionaire, spelunking, base-jumping crowd. i did the same thing to gandhi, he didn&amp;rsquo;t eat for three weeks. i once heard a wise man say there are no perfect men.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -54,10 +54,10 @@ Necessitatibus Velit, odit, eius, libero unde impedit quaerat dolorem assumenda 
     
     <item>
       <title>SEO &amp; SEM services</title>
-      <link>https://yonkov.github.io/My-New-Hugo-Website/service/service4/</link>
+      <link>https://yonkov.github.io/service/service4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://yonkov.github.io/My-New-Hugo-Website/service/service4/</guid>
+      <guid>https://yonkov.github.io/service/service4/</guid>
       <description>&lt;p&gt;I don&amp;rsquo;t think they tried to market it to the billionaire, spelunking, base-jumping crowd. i did the same thing to gandhi, he didn&amp;rsquo;t eat for three weeks. i once heard a wise man say there are no perfect men.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -65,10 +65,10 @@ Necessitatibus Velit, odit, eius, libero unde impedit quaerat dolorem assumenda 
     
     <item>
       <title>Wordpress integration</title>
-      <link>https://yonkov.github.io/My-New-Hugo-Website/service/service2/</link>
+      <link>https://yonkov.github.io/service/service2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://yonkov.github.io/My-New-Hugo-Website/service/service2/</guid>
+      <guid>https://yonkov.github.io/service/service2/</guid>
       <description>&lt;p&gt;I don&amp;rsquo;t think they tried to market it to the billionaire, spelunking, base-jumping crowd. i did the same thing to gandhi, he didn&amp;rsquo;t eat for three weeks. i once heard a wise man say there are no perfect men.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

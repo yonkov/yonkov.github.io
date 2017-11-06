@@ -3,55 +3,55 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://yonkov.github.io/My-New-Hugo-Website/about/</loc>
+    <loc>https://yonkov.github.io/about/</loc>
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/My-New-Hugo-Website/post/vivamus-lacus-mauris/</loc>
+    <loc>https://yonkov.github.io/post/vivamus-lacus-mauris/</loc>
     <lastmod>2013-06-17T12:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/My-New-Hugo-Website/service/service3/</loc>
+    <loc>https://yonkov.github.io/service/service3/</loc>
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/My-New-Hugo-Website/categories/</loc>
+    <loc>https://yonkov.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/My-New-Hugo-Website/service/service1/</loc>
+    <loc>https://yonkov.github.io/service/service1/</loc>
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/My-New-Hugo-Website/</loc>
-    <lastmod>2013-06-17T12:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://yonkov.github.io/My-New-Hugo-Website/post/</loc>
+    <loc>https://yonkov.github.io/</loc>
     <lastmod>2013-06-17T12:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/My-New-Hugo-Website/service/service4/</loc>
-  </url>
-  
-  <url>
-    <loc>https://yonkov.github.io/My-New-Hugo-Website/service/</loc>
+    <loc>https://yonkov.github.io/post/</loc>
+    <lastmod>2013-06-17T12:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/My-New-Hugo-Website/tags/</loc>
+    <loc>https://yonkov.github.io/service/service4/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/service/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/My-New-Hugo-Website/service/service2/</loc>
+    <loc>https://yonkov.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/service/service2/</loc>
   </url>
   
 </urlset>
