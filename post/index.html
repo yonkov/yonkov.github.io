@@ -6,7 +6,7 @@
 	<meta name="description" content="">
 	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
 
-	<title>Posts</title>
+	<title>_index</title>
 
 	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
 
@@ -18,12 +18,6 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
 	
 	<link rel="stylesheet" href="https://yonkov.github.io/css/styles.css">
-
-	
-
-    
-        <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=123456789012345678901234&product=inline-share-buttons"></script>
-    
 
 </head>
 <body class="home">
@@ -88,6 +82,57 @@
 				<article class="post">
 					<header class="entry-header">
 						<div class="entry-meta">
+							<span class="posted-on"><time class="entry-date published" date="2017-11-07 21:23:59 &#43;0200 EET">November 7, 2017</time></span>
+						</div>
+						<h1 class="entry-title"><a href="https://yonkov.github.io/post/b/" rel="bookmark">4 Awesome Things You Can Do with Hugo</a></h1>
+					</header>
+					<div class="entry-content">
+						<p><br>
+1. Create a list page or a post using default templates.
+<br>
+<br>
+2. Use a shortcode to embed an youtube video</p>
+
+<p>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/2xkNJL4gJ9E" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0" title="YouTube Video"></iframe>
+ </div>
+
+<br>
+3. The following shortcode shows how to highlight code:
+<br>
+<br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;main&#34;</span>&gt;
+  &lt;<span style="color:#f92672">div</span>&gt;
+   &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+    {{ range .Data.Pages }}
+        {{ .Render &#34;summary&#34;}}
+    {{ end }}
+  &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">section</span>&gt;</code></pre></div>
+4. Use raw Html in your markdown file.
+<br>
+<br>
+<p><em>You can always use <strong>raw html</strong> in md files</em></p></p>
+
+					</div>
+				</article>
+                
+				<article class="post">
+					<header class="entry-header">
+						<div class="entry-meta">
+							<span class="posted-on"><time class="entry-date published" date="2017-11-07 21:23:59 &#43;0200 EET">November 7, 2017</time></span>
+						</div>
+						<h1 class="entry-title"><a href="https://yonkov.github.io/post/c/" rel="bookmark">C</a></h1>
+					</header>
+					<div class="entry-content">
+						
+					</div>
+				</article>
+                
+				<article class="post">
+					<header class="entry-header">
+						<div class="entry-meta">
 							<span class="posted-on"><time class="entry-date published" date="2013-06-17 12:00:00 &#43;0000 &#43;0000">June 17, 2013</time></span>
 						</div>
 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/vivamus-lacus-mauris/" rel="bookmark">Vivamus Lacus Mauris</a></h1>
@@ -98,6 +143,19 @@
 <p>Dolores harum alias consequatur blanditiis. Inventore, quod, ullam veritatis eum ratione neque quis fugit quae optio facilis in ipsa! Maiores, quia, possimus repellendus iusto nostrum nisi doloribus qui excepturi ducimus veritatis molestiae autem consequatur quae ex nihil id sapiente minima adipisci. Quibusdam, aperiam, sapiente, nobis, possimus vero laudantium delectus esse minus quo nihil perspiciatis accusamus. Cupiditate sapiente illum accusantium animi pariatur sed minima nam.</p>
 
 <p>Harum, consectetur, quia nisi fugiat quasi ea amet cum inventore aperiam optio qui perspiciatis debitis molestiae laborum minima doloremque ullam eum nesciunt repellendus dolor dicta cumque deserunt. Quaerat, saepe, maxime, quod, dolor nisi assumenda aut est quos optio animi aliquid quidem voluptates adipisci hic recusandae dicta quis eligendi illo ducimus asperiores reiciendis odit distinctio natus? In, reprehenderit, facere, ipsam, vel architecto autem temporibus a quidem voluptatum at nesciunt quas facilis. Soluta, excepturi, nihil, illum dicta hic ratione tenetur voluptate dolorum a tempore dignissimos reprehenderit voluptas expedita officiis enim minus adipisci?</p>
+
+					</div>
+				</article>
+                
+				<article class="post">
+					<header class="entry-header">
+						<div class="entry-meta">
+							<span class="posted-on"><time class="entry-date published" date="0001-01-01 00:00:00 &#43;0000 UTC">January 1, 0001</time></span>
+						</div>
+						<h1 class="entry-title"><a href="https://yonkov.github.io/post/a/" rel="bookmark"></a></h1>
+					</header>
+					<div class="entry-content">
+						<p>More stupid content</p>
 
 					</div>
 				</article>
@@ -214,11 +272,15 @@
 
 
 
+	
 
+    
+        <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=123456789012345678901234&product=inline-share-buttons"></script>
+    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="https://yonkov.github.io/js/template.js"></script>
-<script id="dsq-count-scr" src="//disqus.com/count.js" async></script>
+<script id="dsq-count-scr" src="//disqus.com/count.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -231,4 +293,3 @@
 
 </body>
 </html>
-

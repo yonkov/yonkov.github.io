@@ -6,7 +6,7 @@
     <description>Recent content on My Hugo Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Jun 2013 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Nov 2017 21:23:59 +0200</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -22,12 +22,49 @@ Necessitatibus Velit, odit, eius, libero unde impedit quaerat dolorem assumenda 
     </item>
     
     <item>
+      <title>4 Awesome Things You Can Do with Hugo</title>
+      <link>https://yonkov.github.io/post/b/</link>
+      <pubDate>Tue, 07 Nov 2017 21:23:59 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/post/b/</guid>
+      <description>1. Create a list page or a post using default templates. 2. Use a shortcode to embed an youtube video
+   3. The following shortcode shows how to highlight code: &amp;lt;section id=&amp;#34;main&amp;#34;&amp;gt;&amp;lt;div&amp;gt;&amp;lt;h1 id=&amp;#34;title&amp;#34;&amp;gt;{{ .Title }}&amp;lt;/h1&amp;gt;{{ range .Data.Pages }}{{ .Render &amp;#34;summary&amp;#34;}}{{ end }}&amp;lt;/div&amp;gt;&amp;lt;/section&amp;gt; 4. Use raw Html in your markdown file. You can always use raw html in md files</description>
+    </item>
+    
+    <item>
+      <title>C</title>
+      <link>https://yonkov.github.io/post/c/</link>
+      <pubDate>Tue, 07 Nov 2017 21:23:59 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/post/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Vivamus Lacus Mauris</title>
       <link>https://yonkov.github.io/post/vivamus-lacus-mauris/</link>
       <pubDate>Mon, 17 Jun 2013 12:00:00 +0000</pubDate>
       
       <guid>https://yonkov.github.io/post/vivamus-lacus-mauris/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, rerum voluptates veniam. Esse, nihil, ea, eaque, quos cum id tempore voluptate nisi nemo debitis impedit officiis culpa repellat voluptatum in aperiam error quo minima ratione ex pariatur maxime eligendi dolore nesciunt molestiae enim alias atque commodi delectus perferendis. Blanditiis, iste placeat nostrum in! Eligendi, omnis, unde, quos ullam nesciunt molestias quis a saepe nisi distinctio molestiae voluptate obcaecati officiis consequuntur similique aspernatur rerum sequi placeat iure quaerat itaque libero officia recusandae ad corrupti aperiam cum beatae.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://yonkov.github.io/post/a/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yonkov.github.io/post/a/</guid>
+      <description>More stupid content</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://yonkov.github.io/posts/my-first-post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://yonkov.github.io/posts/my-first-post/</guid>
+      <description>Some stupid content here.</description>
     </item>
     
     <item>
