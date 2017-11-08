@@ -6,7 +6,7 @@
     <description>Recent content on My Hugo Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Nov 2017 21:23:59 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 08 Nov 2017 10:20:31 +0200</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,8 +17,16 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://yonkov.github.io/about/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam beatae soluta accusantium iusto nihil nesciunt unde veniam magnam repudiandae sapiente.
-Necessitatibus Velit, odit, eius, libero unde impedit quaerat dolorem assumenda alias consequuntur optio quae maiores ratione tempore sit aliquid architecto eligendi pariatur ab soluta doloremque dicta aspernatur labore quibusdam dolore corrupti quod inventore. Maiores, repellat, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam!</description>
+      <description>Welcome to my portfolio website! I am a blogger, web developer and an avid dreamer. I live in Bulgaria. In my free time I enjoy playing the guitar and hiking. I am very passionate about web development. I work as a freelancer and web developer. I am always interested in joining in new projects. Feel free to drop me a line if you have an interesting idea and we can start working on it.</description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>https://yonkov.github.io/post/my-first-post/</link>
+      <pubDate>Wed, 08 Nov 2017 10:20:31 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/post/my-first-post/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -32,12 +40,39 @@ Necessitatibus Velit, odit, eius, libero unde impedit quaerat dolorem assumenda 
     </item>
     
     <item>
+      <title>Application Development</title>
+      <link>https://yonkov.github.io/service/service4/</link>
+      <pubDate>Tue, 07 Nov 2017 21:23:59 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/service/service4/</guid>
+      <description>Web development with Wordpress. Experience with portfolio websites, ecommerce websites, forums and blogs. “Mobile first” responsive design approach.</description>
+    </item>
+    
+    <item>
       <title>C</title>
       <link>https://yonkov.github.io/post/c/</link>
       <pubDate>Tue, 07 Nov 2017 21:23:59 +0200</pubDate>
       
       <guid>https://yonkov.github.io/post/c/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Website Maintenance</title>
+      <link>https://yonkov.github.io/service/service1/</link>
+      <pubDate>Tue, 07 Nov 2017 21:23:59 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/service/service1/</guid>
+      <description>Webmaster services and Web Support. Experience with portfolio websites, ecommerce websites, forums and blogs. “Mobile first” responsive design approach.</description>
+    </item>
+    
+    <item>
+      <title>Custom Web Design</title>
+      <link>https://yonkov.github.io/service/service3/</link>
+      <pubDate>Tue, 07 Nov 2017 21:23:58 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/service/service3/</guid>
+      <description>Web development with Wordpress. Experience with portfolio websites, ecommerce websites, forums and blogs. “Mobile first” responsive design approach.</description>
     </item>
     
     <item>
@@ -50,65 +85,12 @@ Necessitatibus Velit, odit, eius, libero unde impedit quaerat dolorem assumenda 
     </item>
     
     <item>
-      <title></title>
-      <link>https://yonkov.github.io/post/a/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yonkov.github.io/post/a/</guid>
-      <description>More stupid content</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://yonkov.github.io/posts/my-first-post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yonkov.github.io/posts/my-first-post/</guid>
-      <description>Some stupid content here.</description>
-    </item>
-    
-    <item>
-      <title>Application development</title>
-      <link>https://yonkov.github.io/service/service3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yonkov.github.io/service/service3/</guid>
-      <description>&lt;p&gt;I don&amp;rsquo;t think they tried to market it to the billionaire, spelunking, base-jumping crowd. i did the same thing to gandhi, he didn&amp;rsquo;t eat for three weeks. i once heard a wise man say there are no perfect men.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Custom website design</title>
-      <link>https://yonkov.github.io/service/service1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yonkov.github.io/service/service1/</guid>
-      <description>&lt;p&gt;I don&amp;rsquo;t think they tried to market it to the billionaire, spelunking, base-jumping crowd. i did the same thing to gandhi, he didn&amp;rsquo;t eat for three weeks. i once heard a wise man say there are no perfect men.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>SEO &amp; SEM services</title>
-      <link>https://yonkov.github.io/service/service4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yonkov.github.io/service/service4/</guid>
-      <description>&lt;p&gt;I don&amp;rsquo;t think they tried to market it to the billionaire, spelunking, base-jumping crowd. i did the same thing to gandhi, he didn&amp;rsquo;t eat for three weeks. i once heard a wise man say there are no perfect men.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Wordpress integration</title>
       <link>https://yonkov.github.io/service/service2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://yonkov.github.io/service/service2/</guid>
-      <description>&lt;p&gt;I don&amp;rsquo;t think they tried to market it to the billionaire, spelunking, base-jumping crowd. i did the same thing to gandhi, he didn&amp;rsquo;t eat for three weeks. i once heard a wise man say there are no perfect men.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>Integration of existing websites to Wordpress. Experience with portfolio websites, ecommerce websites, forums and blogs. “Mobile first” responsive design approach.</description>
     </item>
     
   </channel>

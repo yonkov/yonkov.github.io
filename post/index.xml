@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>My First Post</title>
+      <link>https://yonkov.github.io/post/my-first-post/</link>
+      <pubDate>Wed, 08 Nov 2017 10:20:31 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/post/my-first-post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>4 Awesome Things You Can Do with Hugo</title>
       <link>https://yonkov.github.io/post/b/</link>
       <pubDate>Tue, 07 Nov 2017 21:23:59 +0200</pubDate>
@@ -37,15 +46,6 @@
       
       <guid>https://yonkov.github.io/post/vivamus-lacus-mauris/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, rerum voluptates veniam. Esse, nihil, ea, eaque, quos cum id tempore voluptate nisi nemo debitis impedit officiis culpa repellat voluptatum in aperiam error quo minima ratione ex pariatur maxime eligendi dolore nesciunt molestiae enim alias atque commodi delectus perferendis. Blanditiis, iste placeat nostrum in! Eligendi, omnis, unde, quos ullam nesciunt molestias quis a saepe nisi distinctio molestiae voluptate obcaecati officiis consequuntur similique aspernatur rerum sequi placeat iure quaerat itaque libero officia recusandae ad corrupti aperiam cum beatae.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://yonkov.github.io/post/a/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yonkov.github.io/post/a/</guid>
-      <description>More stupid content</description>
     </item>
     
   </channel>

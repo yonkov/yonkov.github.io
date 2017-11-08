@@ -1,0 +1,7 @@
+@media screen and (max-width: 767px) {
+.navbar-toggle {
+	display: block;
+	float: none;
+	margin: 10px auto;
+}
+}

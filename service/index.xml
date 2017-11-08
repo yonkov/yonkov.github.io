@@ -6,41 +6,36 @@
     <description>Recent content in Services on My Hugo Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 07 Nov 2017 21:23:59 +0200</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/service/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Application development</title>
-      <link>https://yonkov.github.io/service/service3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yonkov.github.io/service/service3/</guid>
-      <description>&lt;p&gt;I don&amp;rsquo;t think they tried to market it to the billionaire, spelunking, base-jumping crowd. i did the same thing to gandhi, he didn&amp;rsquo;t eat for three weeks. i once heard a wise man say there are no perfect men.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Custom website design</title>
-      <link>https://yonkov.github.io/service/service1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://yonkov.github.io/service/service1/</guid>
-      <description>&lt;p&gt;I don&amp;rsquo;t think they tried to market it to the billionaire, spelunking, base-jumping crowd. i did the same thing to gandhi, he didn&amp;rsquo;t eat for three weeks. i once heard a wise man say there are no perfect men.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>SEO &amp; SEM services</title>
+      <title>Application Development</title>
       <link>https://yonkov.github.io/service/service4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 07 Nov 2017 21:23:59 +0200</pubDate>
       
       <guid>https://yonkov.github.io/service/service4/</guid>
-      <description>&lt;p&gt;I don&amp;rsquo;t think they tried to market it to the billionaire, spelunking, base-jumping crowd. i did the same thing to gandhi, he didn&amp;rsquo;t eat for three weeks. i once heard a wise man say there are no perfect men.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>Web development with Wordpress. Experience with portfolio websites, ecommerce websites, forums and blogs. “Mobile first” responsive design approach.</description>
+    </item>
+    
+    <item>
+      <title>Website Maintenance</title>
+      <link>https://yonkov.github.io/service/service1/</link>
+      <pubDate>Tue, 07 Nov 2017 21:23:59 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/service/service1/</guid>
+      <description>Webmaster services and Web Support. Experience with portfolio websites, ecommerce websites, forums and blogs. “Mobile first” responsive design approach.</description>
+    </item>
+    
+    <item>
+      <title>Custom Web Design</title>
+      <link>https://yonkov.github.io/service/service3/</link>
+      <pubDate>Tue, 07 Nov 2017 21:23:58 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/service/service3/</guid>
+      <description>Web development with Wordpress. Experience with portfolio websites, ecommerce websites, forums and blogs. “Mobile first” responsive design approach.</description>
     </item>
     
     <item>
@@ -49,9 +44,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://yonkov.github.io/service/service2/</guid>
-      <description>&lt;p&gt;I don&amp;rsquo;t think they tried to market it to the billionaire, spelunking, base-jumping crowd. i did the same thing to gandhi, he didn&amp;rsquo;t eat for three weeks. i once heard a wise man say there are no perfect men.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>Integration of existing websites to Wordpress. Experience with portfolio websites, ecommerce websites, forums and blogs. “Mobile first” responsive design approach.</description>
     </item>
     
   </channel>
