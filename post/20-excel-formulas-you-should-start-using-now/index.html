@@ -84,7 +84,7 @@
  				<article class="post">
 					<header class="entry-header">
  						
- 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/vivamus-lacus-mauris/" rel="bookmark">20 Excel Formulas You Should Start Using Now</a></h1>
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/20-excel-formulas-you-should-start-using-now/" rel="bookmark">20 Excel Formulas You Should Start Using Now</a></h1>
 						<div class="entry-meta">
  							<span class="posted-on"><time class="entry-date published" date="2017-11-10 12:00:00 &#43;0000 &#43;0000">November 10, 2017</time></span>
  						</div>
@@ -92,16 +92,16 @@
 					<div class="entry-content">
 						
 
-<p>MS Excel is one of the most popular data analysis tools in the world. More and more companies greatly depend on this software and people are using it on a daily basis. However, from my experience, not many are taking full advantage of the opportunities that this program can offer. Here is my list of the 20 most important Excel functions that everyone should use in order to increase his efficiency. Using Excel functions is highly recommended over manual calculations, as they will ensure that data is correctly processed. And last but not least, learning these formulas is a wonderful base to help you improve your Excel knowledge and make you a confident Excel user.</p>
+<p>MS Excel is one of the most popular data analysis tools in the world. More and more companies greatly depend on this software and quite a lot of people are using it on a daily basis. However, from my experience, not many are taking full advantage of the opportunities that the program can offer. Here is my list of the 20 most important Excel functions, which everyone should use in order to increase his efficiency. Excel functions are also highly recommended over manual calculations, as they can greatly reduce the number of errors. Last but not least, learning these formulas is a wonderful opportunity for you to improve your Excel knowledge and become a confident MS Excel user.</p>
 
 <h3 id="1-sum">1. Sum</h3>
 
-<p>&ldquo;Sum&rdquo; is probably the easiest and the most important Excel function at the same time. You can use this function to calculate sum of a range of cells.<br></p>
+<p>&ldquo;Sum&rdquo; is probably the easiest and the most important Excel function at the same time. You can use it to calculate sum of a range of cells.<br></p>
 
-<pre><code>= SUM(A1: A10) or = SUM(A1, A10)
+<pre><code>= SUM(A1:A10) or = SUM(A1,A10)
 </code></pre>
 
-<p>In this example, the first formula sums the cells from A1 to A10. The second sums only cells A1 and A10. You can play around with it and try to use different ranges in order to get used to it. You can also use specific values in the function instead of references.</p>
+<p>In this example, the first formula sums the cells from A1 to A10. The second sums only cells A1 and A10. You can play around with it and try to use different ranges in order to get used to it. Please note that you can also use specific values inside the function, instead of references.</p>
 
 <h3 id="2-average">2. Average</h3>
 
@@ -110,15 +110,15 @@
 <pre><code>= AVERAGE(A1:A10)
 </code></pre>
 
-<p>This will return the average value of all cells from A1 to A10.</p>
+<p>This will return the average value of the cells from A1 to A10.</p>
 
 <h3 id="3-if">3. If</h3>
 
-<p>This is another must-use formula. It is relatively easy to use and very powerful at the same time. You can use this function to check whether a statement is true or false and return the stated value.</p>
+<p>Another must-use formula. It is relatively easy to use and very powerful at the same time. You can use this function to check whether a statement is true or false and return the stated value.</p>
 
 <p><img src="../../images/excel-examples/if.jpg" alt="if" /></p>
 
-<pre><code>= IF(A2&gt; 100, &quot;yes&quot;, &quot;no&quot;)
+<pre><code>= IF(A2&gt;100,&quot;yes&quot;,&quot;no&quot;)
 </code></pre>
 
 <p>Here, the formula looks for sales over 100 € in cell &ldquo;A2&rdquo;. If this statement is true, the formula returns &ldquo;yes&rdquo;. If the sales are below 100 €, the formula returns &ldquo;no&rdquo;.</p>
@@ -129,27 +129,27 @@
 
 <p><img src="../../images/excel-examples/sumif.jpg" alt="if" /></p>
 
-<pre><code>= SUMIF(A1: A20, A2, B1: B20)
+<pre><code>= SUMIF(A1:A20,A2,B1:B20)
 </code></pre>
 
-<p>Let&rsquo;s have a look at the above example. We have sales agents who register a certain number of sales. We want to know the total number of sales for each agent. The function = SUMIF (A1: A20, A2, B1: B20) sums the values of cells B1: B20 that correspond to the text in cell A2 (in the case of Ivailo). The guy has registered a total sales of 230 €. We can use the formula to calculate the turnover of the other agents.</p>
+<p>Let&rsquo;s have a look at the above example. We have sales agents who register a certain number of sales. We want to know the total number of sales for each agent. The function = SUMIF (A1: A20, A2, B1: B20) sums the values of cells B1: B20 that correspond to the text in cell A2 (in the case of Ivailo). The guy has registered a total sales of 325 €. We can use the formula to calculate the turnover of the other agents as well.</p>
 
 <h3 id="5-countif">5. Countif</h3>
 
-<p>&ldquo;Countif&rdquo; is a very useful function that works like a sumif. It sums under a certain condition. The difference between sum and count is that the count functin counts the number of cells in which there is certain information. On the contrary, the sumif function sums the values inside the cells.</p>
+<p>Countif is a very useful function that works like a sumif. It sums under a certain condition. The difference between sum and count is that the count function counts the number of cells where certain condition is true. On the contrary, the sumif function sums the values inside the cells.</p>
 
 <p><img src="../../images/excel-examples/countif.jpg" alt="if" /></p>
 
-<pre><code>= COUNTIF(A1: A10, &quot;&gt; 100&quot;)
+<pre><code>= COUNTIF(A1:A10,&quot;&gt;100&quot;)
 </code></pre>
 
-<p>The formula in the above example checks how many times sales are made over 100 € and returns the number of those sales. You can also include more than one criteria by using countifs for that purpose.</p>
+<p>The formula in the above example checks how many times sales are made over 100 € and returns the number of occurances. You can also include more than one criteria by using countifs for that purpose.</p>
 
-<p>PS: If you are not sure about the syntax of a function, you can always use the Insert function option in Excel (Just press the function sign on the left side of the function bar). In the next example, we will demonstrate how the insert function option works.</p>
+<p>PS: If you are not sure about the syntax of a function, you can always use the Insert function option in Excel (Just press the function sign on the left side of the function bar). In the next example, we will demonstrate how this works.</p>
 
 <h3 id="6-counta">6. Counta</h3>
 
-<p>This function counts the number of cells from a specific range which are not empty. It is very useful when you have thousands of rows and you want to know where this all ends.
+<p>This formula counts the number of cells from a specific range which are not empty. It is very useful when you have thousands of rows and you want to know where this all ends.
 Example 6.</p>
 
 <pre><code>= COUNTA(A:A) 
@@ -159,24 +159,24 @@ Example 6.</p>
 
 <h3 id="7-vlookup">7. Vlookup</h3>
 
-<p>Probably the most powerful Excel function. Very useful when you work with more than one table, different sheets or even different workbook. Vlookup lets you exract data from one table to another.</p>
+<p>Probably the most powerful Excel function. Very useful when you have to deal with more than one table, different sheets or even a different workbook. Vlookup lets you exract data from one table to another.</p>
 
-<p>Let&rsquo;s continue with the same example by adding another column &ldquo;A&rdquo; with customer numbers.</p>
+<p>Let&rsquo;s continue with the above example by adding another column &ldquo;A&rdquo; with customer numbers.</p>
 
 <p><img src="../../images/excel-examples/vlookup1.jpg" alt="vlookup example 1" /></p>
 
-<p>Note that there is information about the sales and the customer numbers, but the customers’ names are missing. However, we have another Excel sheet(Sheet2) with client names and client numbers.</p>
+<p>Note that there is information about the sales and the customer numbers, but the customers’ names are missing. However, we have another Excel sheet (Sheet2) with client names and client numbers.</p>
 
 <p><img src="../../images/excel-examples/vlookup2.jpg" alt="vlookup example 2" /></p>
 
-<p>Instead of taking our time to look from one sheet to the other and search for a match manually, we can use the following formula:</p>
+<p>Instead of taking our time to look from Sheet1 to Sheet2 and search for a match manually for each single row, we should use the following formula:</p>
 
-<pre><code>= VLOOKUP(A2, Sheet2! A1: B100,2,0)
+<pre><code>= VLOOKUP(A2,Sheet2!$A$1:$B$100,2,0)
 </code></pre>
 
-<p>This formula looks up for the value of cell A2 (112 in our case) in sheet2, columns A &amp; B. The function then returns the value in the second column. The last character of the formula is 0. In this way we tell Excel to look in a shuffle order, not only for a match in the second row.</p>
+<p>This formula looks up for the value in cell A2 (112 in our case) in sheet2, columns A &amp; B (the &ldquo;$&rdquo; signs mean that we want to have a constant lookup range). The function then returns the value from the second column. The last part of the formula is 0. In this way we tell Excel to look for a match in a shuffle order, not only in one row.</p>
 
-<p>Now, let&rsquo;s try to construct your own vlookup formula using the insert formula option.</p>
+<p>Now, try to construct your own vlookup formula using the insert formula option.</p>
 
 <p>In our case, it looks like this:</p>
 
@@ -188,14 +188,14 @@ Example 6.</p>
 
 <p><img src="../../images/excel-examples/left-right-mid.jpg" alt="left, right and mid functions" /></p>
 
-<pre><code> = Left(A1,2) or = MID(A1,4,6) or = RIGHT(A1,5)
+<pre><code> = Left(A1,1) or = MID(A1,4,6) or = RIGHT(A1,5)
 </code></pre>
 
-<p>In our example, with the Left formula, we take the first 2 characters from the left side. With the right formula we can do the same, but with the symbols from right to left. Keep in mind that the space is also a symbol.</p>
+<p>In our example, with the Left formula, we take the first character from the left side. With the right formula we can do the same, but with the symbols from right to left. Keep in mind that the space is also a symbol.</p>
 
 <h3 id="9-trim">9. Trim</h3>
 
-<p>Another exceptional Excel feature. The trim function removes unnecessary spaces after the words, when they are more than one. This can happen quite often in Excel. It can happen that the information is extracted from different databases and it is full of unnecessary empty spaces between the words. This can be a huge problem because your Excel fomulas may not work. To get rid of the annoying empty spaces, when we use the Trim formula.</p>
+<p>Another exceptional MS Excel feature. The trim function removes unnecessary spaces after the words, when they are more than one. This can happen quite often in Excel. It may be that the information is extracted from different databases and it is full of unnecessary empty spaces between the words. This can be a huge problem because your Excel fomulas may not work. To get rid of the annoying empty spaces, we use the Trim formula.</p>
 
 <pre><code>= TRIM(A1)
 </code></pre>
@@ -207,37 +207,37 @@ Example 6.</p>
 <p>This is a handy Excel function that comes to help when we want to combine cells.
 Here, we want to merge cells A1, A2, and A3. This can be done with the following function:</p>
 
-<pre><code>= CONCATENATE(A1, A2, A3)
+<pre><code>= CONCATENATE(A1,A2,A3)
 </code></pre>
 
 <p>In this way, however, we will not have any spaces between the words. To add blanks between &ldquo;I&rdquo; and &ldquo; love&rdquo;, we need to add a space. This can be addressed by adding quotes inside the function:</p>
 
-<pre><code>= CONCATENATE(A1, &quot; &quot;, A2, &quot; &quot;, A3)
+<pre><code>= CONCATENATE(A1,&quot; &quot;,A2,&quot; &quot;,A3)
 </code></pre>
 
 <p><br><img src="../../images/excel-examples/concatenate.png" alt="concatenate function example" /></p>
 
 <p>PS: You can also merge the cells by simply adding:</p>
 
-<pre><code>= A1 &amp; &quot; &quot; &amp; A2 &amp; &quot; &quot; &amp; A3
+<pre><code>= A1&amp;&quot; &quot;&amp;A2&amp;&quot; &quot;&amp;A3
 </code></pre>
 
 <p>Try it yourself!</p>
 
 <h3 id="11-len">11. Len</h3>
 
-<p>Another formula that can be applied in many situations. It is extremely useful for constructing of more complicated formulas.</p>
+<p>Another amazing formula that can be applied in many situations. It is widely used for construction of more complicated formulas.</p>
 
-<pre><code>= LEN(C1)
+<pre><code>= LEN(A1)
 </code></pre>
 
-<p>This function will count the number of symbols in a cell. If we take the above example, the function will return “15”</p>
+<p>This function will count the number of symbols in a cell.</p>
 
 <h3 id="12-max">12. Max</h3>
 
 <p>The max function returns the largest value from a range.</p>
 
-<pre><code>= MAX(A2: A8)
+<pre><code>= MAX(A2:A8)
 </code></pre>
 
 <p>This formula will look in cells A2:A8 and it will then extract the highest value from this range.</p>
@@ -246,7 +246,7 @@ Here, we want to merge cells A1, A2, and A3. This can be done with the following
 
 <p>The min function functions in a similar way as the max function, however it gives the opposite result. It extracts the lowest value from a range of data.</p>
 
-<pre><code>= MIN(A2: A8)
+<pre><code>= MIN(A2:A8)
 </code></pre>
 
 <p>The formula from the above example will return the smallest number from the selected cells in column &ldquo;A&rdquo;.</p>
@@ -255,7 +255,7 @@ Here, we want to merge cells A1, A2, and A3. This can be done with the following
 
 <p>This is the function when you need to estimate the number of days between two days in a spreadsheet.</p>
 
-<pre><code>= DAYS(B1, A1)
+<pre><code>= DAYS(B1,A1)
 </code></pre>
 
 <p>The formula will return the number of days that have passed.</p>
@@ -273,7 +273,7 @@ Here, we want to merge cells A1, A2, and A3. This can be done with the following
 <pre><code>= SQRT(1444)
 </code></pre>
 
-<p>This will return the square root of 1444 (38). You can also use cell reference here, just like in other Excel formulas.</p>
+<p>This will return the square root of 1444 (38). You can also use cell reference here, just like in many other Excel formulas.</p>
 
 <h3 id="17-now">17. Now</h3>
 
@@ -283,22 +283,20 @@ Example</p>
 <pre><code>= NOW()
 </code></pre>
 
-<p>This will return the current date. Do not forget to set the format to date. You can play around with it as much as you want. You can, for example, add days. =Now() -14 will give the date before two weeks.</p>
+<p>This will return the current date. Do not forget to set the format to date. You can play around with it as much as you want. You can, for example, add or subtract days. =Now() -14 will return the date before two weeks.</p>
 
 <h3 id="18-round">18. Round</h3>
 
-<p>The Round function is very useful, when you have to work with rounded numbers. Excel can show numbers to a specific character, but retains the original number and uses it for calculations. In some cases, however, this is a problem and we need to work with rounded only. In such cases, the ROUND function comes into help.</p>
+<p>The Round function is very useful, when you have to work with rounded numbers. Excel can show numbers to a specific character, but retains the original number and uses it for calculations. In some cases, however, this could be an issue and we need to work with rounded numbers only. In such cases, the ROUND function comes into our help.</p>
 
-<p>Example 18.</p>
-
-<pre><code>= ROUND(B1, 2)
+<pre><code>= ROUND(B1,2)
 </code></pre>
 
-<p>In the example, the number is rounded to the second decimal. The value in cell C2 is now 5.75.</p>
+<p>In the example, the number is rounded to the second decimal.</p>
 
 <h3 id="19-roundup">19.Roundup</h3>
 
-<p>This is a variation of the round formula that can help a lot In some cases. It rounds the value up to the closest integer. It is very useful in combination with other formulas
+<p>This is a variation of the round formula that can help a lot In some cases. It rounds the value up to the closest integer. It is very useful in combination with other Excel formulas.
 Let&rsquo;s have a look at this example:</p>
 
 <pre><code>= ROUNDUP(MONTH(B3)/3,0)
@@ -312,7 +310,7 @@ Let&rsquo;s have a look at this example:</p>
 
 <p>Rounddown works in a similar way as Roundup, however it rounds the number down to the closest integer</p>
 
-<pre><code>= ROUNDDOWN(20.65, 0)
+<pre><code>= ROUNDDOWN(20.65,0)
 </code></pre>
 
 <p><br>This will return 20.</p>
