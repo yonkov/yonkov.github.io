@@ -6,9 +6,37 @@
     <description>Recent content in Tags on Atanas Yonkov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Fri, 10 Nov 2017 12:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Excel Formulas</title>
+      <link>https://yonkov.github.io/tags/excel-formulas/</link>
+      <pubDate>Fri, 10 Nov 2017 12:00:00 +0000</pubDate>
+      
+      <guid>https://yonkov.github.io/tags/excel-formulas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Excel Functions</title>
+      <link>https://yonkov.github.io/tags/excel-functions/</link>
+      <pubDate>Fri, 10 Nov 2017 12:00:00 +0000</pubDate>
+      
+      <guid>https://yonkov.github.io/tags/excel-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Top 20 Excel Functions</title>
+      <link>https://yonkov.github.io/tags/top-20-excel-functions/</link>
+      <pubDate>Fri, 10 Nov 2017 12:00:00 +0000</pubDate>
+      
+      <guid>https://yonkov.github.io/tags/top-20-excel-functions/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

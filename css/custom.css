@@ -4,4 +4,12 @@
 	float: none;
 	margin: 10px auto;
 }
+
+.nav-side{
+	text-align:left;
+}
+
+.nav > li > a {
+	padding: 10px 10px;
+}
 }

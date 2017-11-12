@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Excel Functions on Atanas Yonkov</title>
+    <link>https://yonkov.github.io/tags/excel-functions/</link>
+    <description>Recent content in Excel Functions on Atanas Yonkov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Nov 2017 12:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://yonkov.github.io/tags/excel-functions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>20 Excel Formulas You Should Start Using Now</title>
+      <link>https://yonkov.github.io/post/20-excel-formulas-you-should-start-using-now/</link>
+      <pubDate>Fri, 10 Nov 2017 12:00:00 +0000</pubDate>
+      
+      <guid>https://yonkov.github.io/post/20-excel-formulas-you-should-start-using-now/</guid>
+      <description>MS Excel is one of the most popular data analysis tools in the world. More and more companies greatly depend on this software and quite a lot of people are using it on a daily basis. However, from my experience, not many are taking full advantage of the opportunities that the program can offer. Here is my list of the 20 most important Excel functions, which everyone should use in order to increase his efficiency.</description>
+    </item>
+    
+  </channel>
+</rss>
