@@ -140,9 +140,8 @@ PRIMARY KEY (`id`)
 
 <p>Create a db.php file and put it in the root directory of your webserver. (If you are running XAMPP on Windows, this is htdocs. If you run an Apache webserver on Ubuntu, you need to put the file in var/www/html).
 Paste the following code in your code editor:
-<p style="color: #e93675;">db.php</p></p>
-
-<pre><code><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<p style="color: #e93675;">db.php</p>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">	<span style="color:#75715e">&lt;?php</span>
 	$servername <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;localhost&#34;</span>;
 	$username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span>;
 	$password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
@@ -153,18 +152,16 @@ Paste the following code in your code editor:
 </span><span style="color:#75715e"></span>	<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>$conn) {
 		<span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#34;Connection failed: &#34;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">mysqli_connect_error</span>());
 	}
-	<span style="color:#75715e">?&gt;</span></code></pre></div>
-</code></pre>
-
-<p>Please make sure you put the correct username and password. Save the file as db.php. Now, in your web browser, go to <a href="http://localhost/db.php">http://localhost/db.php</a> and make sure you have established connection with the database.</p>
+	<span style="color:#75715e">?&gt;</span>
+	</code></pre></div>
+Please make sure you put the correct username and password. Save the file as db.php. Now, in your web browser, go to <a href="http://localhost/db.php">http://localhost/db.php</a> and make sure you have established connection with the database.</p>
 
 <h3 id="3-create-homepage">3. Create Homepage</h3>
 
 <p>We need to create a home page. However, we might want to have a default page template, e.g. header and footer that are constant on all the pages. This can save as a lot of time, instead of having to code each page manually. For the purpose, create three new php files:
 Header.php, Footer.php and Index.php.
-<p style="color: #e93675;">header.php</p></p>
-
-<pre><code><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34;
+<p style="color: #e93675;">header.php</p>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34;
 </span><span style="color:#75715e">	&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;</span>
 	&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">xmlns</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.w3.org/1999/xhtml&#34;</span> <span style="color:#a6e22e">xml:lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
 	&lt;<span style="color:#f92672">head</span>&gt;
@@ -183,12 +180,9 @@ Header.php, Footer.php and Index.php.
 
 		&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;style.css&#34;</span> &gt;
 	&lt;/<span style="color:#f92672">head</span>&gt;</code></pre></div>
-</code></pre>
-
-<p>Great, we have created a header and we can now use it on all our php pages. I will show you how to do this in a minute. We have also added links to bootstrap css. Now let&rsquo;s go on, create a footer:
-<p style="color: #e93675;">footer.php</p></p>
-
-<pre><code><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;footer&#34;</span>&gt; 	©2017&lt;/<span style="color:#f92672">div</span>&gt;
+Great, we have created a header and we can now use it on all our php pages. I will show you how to do this in a minute. We have also added links to bootstrap css. Now let&rsquo;s go on, create a footer:
+<p style="color: #e93675;">footer.php</p>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;footer&#34;</span>&gt; 	©2017&lt;/<span style="color:#f92672">div</span>&gt;
 		<span style="color:#75715e">&lt;!-- jQuery library --&gt;</span>
 		&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js&#34;</span> 
 		<span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
@@ -196,9 +190,7 @@ Header.php, Footer.php and Index.php.
 	<span style="color:#75715e">&lt;!-- Latest compiled and minified JavaScript --&gt;</span>
 	&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js&#34;</span> 
 	<span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;</code></pre></div>
-</code></pre>
-
-<p>Basically, what we did here is just adding some links to bootstrap and css, nothing to worry about. Let’s also add some custom css:
+Basically, what we did here is just adding some links to bootstrap and css, nothing to worry about. Let’s also add some custom css:
 <p style="color: #e93675;">style.css</p></p>
 
 <pre><code>body {
@@ -244,26 +236,22 @@ Header.php, Footer.php and Index.php.
 </code></pre>
 
 <p>Finally, let’s make a very simple homepage. We will change it later, but let&rsquo;s keep it really simple for now.
-<p style="color: #e93675;">index.php</p></p>
-
-<pre><code><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<p style="color: #e93675;">index.php</p>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 	<span style="color:#66d9ef">require</span>(<span style="color:#e6db74">&#39;db.php&#39;</span>);
 	<span style="color:#66d9ef">include</span> <span style="color:#e6db74">&#39;header.php&#39;</span>;
 	<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;center&gt;&lt;h3&gt;Welcome to my Awesome Website!&lt;/h3&gt;&lt;/center&gt;&#34;</span>;
 	<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;&lt;center&gt;&lt;div&gt;New user? Please &lt;a href=&#34;login.php&#34;&gt;Login&lt;/a&gt; or &lt;a href=&#34;register.php&#34;&gt;Register&lt;/a&gt; &lt;/div&gt;&lt;/center&gt;&#39;</span>;
-	<span style="color:#66d9ef">include</span> <span style="color:#e6db74">&#39;footer.php&#39;</span>;</code></pre></div> 
-</code></pre>
-
-<p>Put all of the files in the root directory of your web server. That’s it! Now we have a homepage and we have included the header and the footer. You should be able to access it at <a href="http://localhost/">http://localhost/</a>. Now, we need to create the registration form.</p>
+	<span style="color:#66d9ef">include</span> <span style="color:#e6db74">&#39;footer.php&#39;</span>;</code></pre></div>
+Put all of the files in the root directory of your web server. That’s it! Now we have a homepage and we have included the header and the footer. You should be able to access it at <a href="http://localhost/">http://localhost/</a>. Now, we need to create the registration form.</p>
 
 <h3 id="4-create-register-page">4. Create Register page</h3>
 
 <p><br><img src="../../images/register.jpg" alt="register.php" /></p>
 
 <p>Create a file called register.php and use the following code:
-<p style="color: #e93675;">register.php</p></p>
-
-<pre><code><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<p style="color: #e93675;">register.php</p>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">	<span style="color:#75715e">&lt;?php</span>
 	<span style="color:#66d9ef">require</span>(<span style="color:#e6db74">&#39;db.php&#39;</span>);
 		<span style="color:#75715e">// If the values are posted, insert them into the database.
 </span><span style="color:#75715e"></span>		<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($_POST[<span style="color:#e6db74">&#39;username&#39;</span>]) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">isset</span>($_POST[<span style="color:#e6db74">&#39;password&#39;</span>])){
@@ -317,8 +305,7 @@ Header.php, Footer.php and Index.php.
 
 	&lt;/body&gt;
 
-	&lt;/html&gt;</code></pre></div>
-</code></pre>
+	&lt;/html&gt;</code></pre></div></p>
 
 <p>This php code is creating a line in the &ldquo;user&rdquo; table from the database db_1, whenever a new user fills in the registration form. Now, go to <a href="http://localhost/register.php">http://localhost/register.php</a> to check if everything works.</p>
 
@@ -327,9 +314,8 @@ Header.php, Footer.php and Index.php.
 <p><br><img src="../../images/login.jpg" alt="login.php" /></p>
 
 <p>Create a file called login.php and paste the following code:
-<p style="color: #e93675;">login.php</p></p>
-
-<pre><code><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<p style="color: #e93675;">login.php</p>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">	<span style="color:#75715e">&lt;?php</span>
 	<span style="color:#66d9ef">include</span> <span style="color:#e6db74">&#39;header.php&#39;</span>;
 	<span style="color:#75715e">//Start the Session
 </span><span style="color:#75715e"></span>	<span style="color:#a6e22e">session_start</span>();
@@ -389,8 +375,7 @@ Header.php, Footer.php and Index.php.
 	&lt;/body&gt;
 
 	&lt;/html&gt;
-	<span style="color:#75715e">&lt;?php</span> } <span style="color:#75715e">?&gt;</span></code></pre></div>
-</code></pre>
+	<span style="color:#75715e">&lt;?php</span> } <span style="color:#75715e">?&gt;</span></code></pre></div></p>
 
 <p>The explanations are inside the above code, please read them carefully. What you need to understand is that php does a check with the database whether the submitted data exists in the user table that we have already created in MYSQL. If this is the case, the user can log in to the restricted area. This is the area for logged-in users, e.g. the dashboard.</p>
 
@@ -408,9 +393,8 @@ Header.php, Footer.php and Index.php.
 </code></pre>
 
 <p>Now create the dashboard.php file:
-<p style="color: #e93675;">dashboard.php</p></p>
-
-<pre><code><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<p style="color: #e93675;">dashboard.php</p>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 	<span style="color:#66d9ef">require</span>(<span style="color:#e6db74">&#39;db.php&#39;</span>);
 	<span style="color:#66d9ef">include</span>(<span style="color:#e6db74">&#34;auth.php&#34;</span>);
 	<span style="color:#66d9ef">include</span>(<span style="color:#e6db74">&#34;header.php&#34;</span>);
@@ -431,17 +415,15 @@ Header.php, Footer.php and Index.php.
 	&lt;a href=&#34;logout.php&#34;&gt;Logout&lt;/a&gt;
 	&lt;/div&gt;
 	&lt;/body&gt;
-	&lt;/html&gt;</code></pre></div>
-</code></pre>
+	&lt;/html&gt;</code></pre></div></p>
 
 <p>This is how your dashboard page should look like in your browser:</p>
 
 <p><img src="../../images/dashboard.jpg" alt="dashboard.php" /></p>
 
 <p>And logout.php file:
-<p style="color: #e93675;">logout.php</p></p>
-
-<pre><code><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<p style="color: #e93675;">logout.php</p>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 	<span style="color:#a6e22e">session_start</span>();
 	<span style="color:#75715e">// Destroying All Sessions
 </span><span style="color:#75715e"></span>	<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">session_destroy</span>())
@@ -449,17 +431,15 @@ Header.php, Footer.php and Index.php.
 	<span style="color:#75715e">// Redirecting To Home Page
 </span><span style="color:#75715e"></span>	<span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;Location: login.php&#34;</span>);
 	}
-	<span style="color:#75715e">?&gt;</span></code></pre></div>
-</code></pre>
+	<span style="color:#75715e">?&gt;</span></code></pre></div></p>
 
 <p><br></p>
 
 <h3 id="7-different-home-page-for-a-new-user-and-a-logged-in-user">7. Different home page for a new user and a logged-in user</h3>
 
 <p>Now, remove the old index.php file and paste this code in index.php:
-<p style="color: #e93675;">index.php</p></p>
-
-<pre><code><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<p style="color: #e93675;">index.php</p>
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
 	<span style="color:#66d9ef">require</span>(<span style="color:#e6db74">&#39;db.php&#39;</span>);
 	<span style="color:#66d9ef">include</span> <span style="color:#e6db74">&#39;header.php&#39;</span>;
 	<span style="color:#75715e">//Check if a user is logged in or not
@@ -558,8 +538,7 @@ Header.php, Footer.php and Index.php.
 		&lt;/footer&gt;
 	  
 	&lt;/body&gt;
-	&lt;/html&gt;</code></pre></div>
-</code></pre>
+	&lt;/html&gt;</code></pre></div></p>
 
 <p>Now, when you go to <a href="http://localhost/">http://localhost/</a>, it should resolve to your new website!</p>
 

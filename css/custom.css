@@ -14,4 +14,16 @@
 }
 }
 
-
+pre {
+	word-break: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	hyphens: none;
+	max-height: 600px; /* Change to your desired max height */
+	display: block;
+    overflow-x: auto;
+	overflow-y: auto;
+}
+pre code {
+	white-space: pre;
+}
