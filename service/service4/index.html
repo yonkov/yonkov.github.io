@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Web development with Wordpress. Experience with portfolio websites, ecommerce websites, forums and blogs. “Mobile first” responsive design approach.">
+	<meta name="author"      content="Atanas Yonkov">
+	<title>Application Development</title>
+
+	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
+
+	
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+
+	
+	
+	<link rel="preload" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"></noscript>
+	
+	
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700"></noscript>
+	
+	<link rel="preload" href="../../css/styles.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="../../css/styles.css"></noscript>
+	
+	
+	<script>
+		 
+		(function(w){
+	"use strict";
+	 
+	var loadCSS = function( href, before, media ){
+		
+		
+		
+			
+		
+		var doc = w.document;
+		var ss = doc.createElement( "link" );
+		var ref;
+		if( before ){
+			ref = before;
+		}
+		else {
+			var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+			ref = refs[ refs.length - 1];
+		}
+
+		var sheets = doc.styleSheets;
+		ss.rel = "stylesheet";
+		ss.href = href;
+		
+		ss.media = "only x";
+
+		
+		function ready( cb ){
+			if( doc.body ){
+				return cb();
+			}
+			setTimeout(function(){
+				ready( cb );
+			});
+		}
+		
+			
+			
+		ready( function(){
+			ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+		});
+		
+		var onloadcssdefined = function( cb ){
+			var resolvedHref = ss.href;
+			var i = sheets.length;
+			while( i-- ){
+				if( sheets[ i ].href === resolvedHref ){
+					return cb();
+				}
+			}
+			setTimeout(function() {
+				onloadcssdefined( cb );
+			});
+		};
+
+		function loadCB(){
+			if( ss.addEventListener ){
+				ss.removeEventListener( "load", loadCB );
+			}
+			ss.media = media || "all";
+		}
+
+		
+		if( ss.addEventListener ){
+			ss.addEventListener( "load", loadCB);
+		}
+		ss.onloadcssdefined = onloadcssdefined;
+		onloadcssdefined( loadCB );
+		return ss;
+	};
+	
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ));
+		
+		 
+	(function( w ){
+	  
+	  if( !w.loadCSS ){
+		return;
+	  }
+	  var rp = loadCSS.relpreload = {};
+	  rp.support = function(){
+		try {
+		  return w.document.createElement( "link" ).relList.supports( "preload" );
+		} catch (e) {
+		  return false;
+		}
+	  };
+
+	  
+	  rp.poly = function(){
+		var links = w.document.getElementsByTagName( "link" );
+		for( var i = 0; i < links.length; i++ ){
+		  var link = links[ i ];
+		  if( link.rel === "preload" && link.getAttribute( "as" ) === "style" ){
+			w.loadCSS( link.href, link, link.getAttribute( "media" ) );
+			link.rel = null;
+		  }
+		}
+	  };
+
+	  
+	  if( !rp.support() ){
+		rp.poly();
+		var run = w.setInterval( rp.poly, 300 );
+		if( w.addEventListener ){
+		  w.addEventListener( "load", function(){
+			rp.poly();
+			w.clearInterval( run );
+		  } );
+		}
+		if( w.attachEvent ){
+		  w.attachEvent( "onload", function(){
+			w.clearInterval( run );
+		  } );
+		}
+	  }
+	}( this ));
+	</script>
+	
+
+	
+	
+	<link rel="stylesheet" href="../../css/custom.css">
+</head>
+<body class="home">
+
+<header id="header">
+	<div id="head" class="parallax" parallax-speed="2">
+		<h1 id="logo" class="text-center">
+			<img class="img-circle" src="https://yonkov.github.io/images/guy.jpg" alt="me">
+			<span class="title">Atanas Yonkov</span>
+			<span class="tagline">Blogger, Web Developer<br>
+				<a href="">yonkov.atanas@gmail.com</a>
+            </span>
+		</h1>
+	</div>
+
+    <nav class="navbar navbar-default navbar-sticky">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav">
+                
+                <li>
+                    <a href="/">home</a>
+                </li>
+                
+                <li>
+                    <a href="/post/">blog</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+                
+                
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+</header>
+
+
+<main id="main">
+
+	<div class="container">
+
+		<div class="row topspace">
+			<div class="col-sm-8 col-sm-offset-2">
+
+ 				<article class="post">
+					<header class="entry-header">
+ 						
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/service/service4/" rel="bookmark">Application Development</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2017-11-07 21:23:59 &#43;0200 EET">November 7, 2017</time></span>
+ 						</div>
+					</header>
+					<div class="entry-content">
+						<p>Web development with Wordpress. Experience with portfolio websites, ecommerce websites, forums and blogs. “Mobile first” responsive design approach.</p>
+
+					</div>
+				</article>
+
+			</div>
+		</div> 
+
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+	</div>	
+
+</main>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><br>
+						<a href="mailto:yonkov.atanas@gmail.com">yonkov.atanas@gmail.com</a><br>
+						<br>
+						
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Follow me</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+                        
+                            
+                                <a href="https://www.facebook.com/nickname" target="_blank"><i class="fa fa-facebook-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://twitter.com/nickname" target="_blank"><i class="fa fa-twitter-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://www.instagram.com/nickname" target="_blank"><i class="fa fa-instagram fa-2"></i></a>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <a href="https://github.com/nickname" target="_blank"><i class="fa fa-github fa-2"></i></a>
+                            
+                        
+                            
+                        
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Text widget</h3>
+				<div class="widget-body">
+					<p>Welcome to my professional website! I work as a devoted web developer and a freelancer. My ultimate goal is customer satisfaction. I focus on quality and creating value for my clients. </p>
+					
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Form widget</h3>
+				<div class="widget-body">
+					<p><br>
+						<a href="mailto:yonkov.atanas@gmail.com">yonkov.atanas@gmail.com</a><br>
+						<br>
+                        
+					</p>
+				</div>
+			</div>
+
+		</div> 
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p></p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2017, Atanas Yonkov<br>
+						Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> - 
+                        Powered by: <a href="https://gohugo.io/" rel="poweredby">Hugo</a>
+                    </p>
+				</div>
+			</div>
+
+		</div> 
+	</div>
+</footer>
+
+
+
+    
+      
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://yonkov.github.io/js/template.js"></script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['TyxoObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//s.tyxo.com/c.js','tx');
+tx('create', 'TX-927463385881');
+tx('pageview');
+</script>
+
+</body>
+</html>

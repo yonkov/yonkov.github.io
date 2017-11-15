@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://yonkov.github.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/post/20-excel-formulas-you-should-start-using-now/</loc>
+    <lastmod>2017-11-12T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/post/how-to-make-a-website-from-scratch-using-php-and-mysql/</loc>
+    <lastmod>2017-11-10T19:48:56+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/post/</loc>
+    <lastmod>2017-11-07T23:26:42+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/post/4-awesome-things-you-can-do-with-hugo/</loc>
+    <lastmod>2017-11-07T21:23:59+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/service/service4/</loc>
+    <lastmod>2017-11-07T21:23:59+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/service/service1/</loc>
+    <lastmod>2017-11-07T21:23:59+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/service/service3/</loc>
+    <lastmod>2017-11-07T21:23:58+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/</loc>
+    <lastmod>2017-11-12T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/tags/excel-formulas/</loc>
+    <lastmod>2017-11-12T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/tags/excel-functions/</loc>
+    <lastmod>2017-11-12T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/tags/how-to-make-a-dynamic-website/</loc>
+    <lastmod>2017-11-10T19:48:56+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/tags/login-form-php-7/</loc>
+    <lastmod>2017-11-10T19:48:56+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/tags/php-mysql-website-from-scratch/</loc>
+    <lastmod>2017-11-10T19:48:56+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/tags/registration-form-php-7/</loc>
+    <lastmod>2017-11-10T19:48:56+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/service/</loc>
+    <lastmod>2017-11-07T21:23:59+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/tags/</loc>
+    <lastmod>2017-11-12T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/tags/top-20-excel-functions/</loc>
+    <lastmod>2017-11-12T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/service/service2/</loc>
+  </url>
+  
+</urlset>
