@@ -6,7 +6,7 @@
     <description>Recent content on Atanas Yonkov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Nov 2017 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Nov 2017 15:24:01 +0200</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,15 @@
       
       <guid>https://yonkov.github.io/about/</guid>
       <description>Welcome to my portfolio website! I am a blogger, web developer and an avid dreamer. I live in Bulgaria. In my free time I enjoy playing the guitar and hiking. I am very passionate about web development. I work as a freelancer and web developer. I am always interested in joining in new projects. Feel free to drop me a line if you have an interesting idea and we can start working on it.</description>
+    </item>
+    
+    <item>
+      <title>How to Set up Static IP in Windows XP and Windows 7</title>
+      <link>https://yonkov.github.io/post/how-to-set-up-static-ip-in-windows-xp-and-windows-7/</link>
+      <pubDate>Thu, 16 Nov 2017 15:24:01 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/post/how-to-set-up-static-ip-in-windows-xp-and-windows-7/</guid>
+      <description>Static IP means that your computer is assigned an IP address that does not change each time the PC is restarted. It is required in some situations, for example, to access an ftp server or a web server from another computer inside the network. To do this, you need to change the IP version 4 (TCP / IP) properties. First, go to the start menu and type cmd in the search bar.</description>
     </item>
     
     <item>

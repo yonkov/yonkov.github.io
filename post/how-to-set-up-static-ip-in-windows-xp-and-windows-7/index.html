@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
+	<meta name="description" content="Static IP means that your computer is assigned an IP address that does not change each time the PC is restarted. It is required in some situations, for example, to access an ftp server or a web server from another computer inside the network. To do this, you need to change the IP version 4 (TCP / IP) properties. First, go to the start menu and type cmd in the search bar.">
 	<meta name="author"      content="Atanas Yonkov">
-	<title>_index</title>
+	<title>How to Set up Static IP in Windows XP and Windows 7</title>
 
 	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
 
@@ -87,96 +87,61 @@
 <main id="main">
 
 	<div class="container">
+
 		<div class="row topspace">
 			<div class="col-sm-8 col-sm-offset-2">
 
-                
-				<article class="post">
+ 				<article class="post">
+					<header class="entry-header">
+ 						
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/how-to-set-up-static-ip-in-windows-xp-and-windows-7/" rel="bookmark">How to Set up Static IP in Windows XP and Windows 7</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2017-11-16 15:24:01 &#43;0200 EET">November 16, 2017</time></span>
+ 						</div>
+					</header>
 					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/how-to-set-up-static-ip-in-windows-xp-and-windows-7/" rel="bookmark">How to Set up Static IP in Windows XP and Windows 7</a></h2>
-							</header>
-								Static IP means that your computer is assigned an IP address that does not change each time the PC is restarted. It is required in some situations, for example, to access an ftp server or a web server from another computer inside the network. To do this, you need to change the IP version 4 (TCP / IP) properties. First, go to the start menu and type cmd in the search bar.
-								
-								
-								<a href="/post/how-to-set-up-static-ip-in-windows-xp-and-windows-7/">Read More…</a>
-							</div>
-						  
-						</article>
+						<p>Static IP means that your computer is assigned an IP address that does not change each time the PC is restarted. It is required in some situations, for example, to access an ftp server or a web server from another computer inside the network. To do this, you need to change the IP version 4 (TCP / IP) properties. First, go to the start menu and type cmd in the search bar. This will open the command prompt window. From the command line type ipconfig/all. You should now see the following screen:</p>
+
+<p><img src="../../images/static-ip.jpg" alt="ip config command prompt" /></p>
+
+<p>Locate your IP address and write it down as well as the default Gateway (your router internal ip address), the Subnet Mask, and the two DNS server names.
+In Windows XP go to Control Panel -&gt; Network Connections -&gt; Right click on the Local Area Connection that you use and select Properties. Locate Internet Protocol (TCP/IP) and click on properties.
+In Windows 7, go to Control Panel -&gt; View Network Status and Tasks -&gt; Change Adapter Settings -&gt; Local Area Connection. Right-click on it andselect propertie, then open Internet Protocol version 4:</p>
+
+<p><img src="../../images/ip4-1.png" alt="ip configuration settings" /></p>
+
+<p>You must create an IP address of your choice. It should be the same as the Default Gateway, however, it should be out of the pool of ip addresses used by the router. For example, you could use 192.168.0.12 or 192.168.0.16. Just make sure that the first seven digits of your new IP address are the same as the Default Gateway. Now, go on and adjust your settings with the numbers you have written down from the command line.</p>
+
+<p><img src="../../images/ip4-2.png" alt="static ip adress example" /></p>
+
+<p>Please, before changing anything in your web configuration, make a screenshot with your old settings. In this way, you can always get back if something goes wrong. Wait 5-10 minutes for te changes to take effect. If necessary, restart your PC and the router. Now, check your ip adress in the command prompt. It should have been changed with the one you specified earlier.
+If you are having trouble with any of these, go back to the initial settings and consult your Internet Service Provider. They should be able to guide you through the whole process.</p>
+
 					</div>
 				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/20-excel-formulas-you-should-start-using-now/" rel="bookmark">20 Excel Formulas You Should Start Using Now</a></h2>
-							</header>
-								MS Excel is one of the most popular data analysis tools in the world. More and more companies greatly depend on this software and quite a lot of people are using it on a daily basis. However, from my experience, not many are taking full advantage of the opportunities that the program can offer. Here is my list of the 20 most important Excel functions, which everyone should use in order to increase his efficiency.
-								
-								
-								<a href="/post/20-excel-formulas-you-should-start-using-now/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/how-to-make-a-website-from-scratch-using-php-and-mysql/" rel="bookmark">How to Make a Website from Scratch Using PHP and MYSQL</a></h2>
-							</header>
-								In this tutorial, I am going to teach you how to create a dynamic website from scratch using PHP 7 and Mysql. This article is a nice real-life example that can help beginner learners to understand the basics of PHP and MYSQL. It is written for educational purposes, however, it represents a good base that can be used to deliver a fully-operational digital product. Together, we shall create an example website with login and registration form.
-								
-								
-								<a href="/post/how-to-make-a-website-from-scratch-using-php-and-mysql/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/4-awesome-things-you-can-do-with-hugo/" rel="bookmark">4 Awesome Things You Can Do with Hugo</a></h2>
-							</header>
-								Hugo is an awesome static website generator, which you can use to create beautiful portfolio websites and blogs. So, what makes Hugo so great?
-Speed Hugo is absurdly fast! The Developers claim that a webpage can render just for 1 milisecond!
-Functionalities 1. Create a list page or a post using default templates.
-There are two types of templates you can use in Hugo. These are the single page templates and list page templates.
-								
-								
-								<a href="/post/4-awesome-things-you-can-do-with-hugo/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
 
 			</div>
-		</div>
+		</div> 
 
-		<center class="">
-			<ul class="pagination">
-                
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
 
-			</ul>
-		</center>
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
 
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
 
 	</div>	
 

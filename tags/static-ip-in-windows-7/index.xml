@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Static Ip in Windows 7 on Atanas Yonkov</title>
+    <link>https://yonkov.github.io/tags/static-ip-in-windows-7/</link>
+    <description>Recent content in Static Ip in Windows 7 on Atanas Yonkov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Nov 2017 15:24:01 +0200</lastBuildDate>
+    
+	<atom:link href="https://yonkov.github.io/tags/static-ip-in-windows-7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Set up Static IP in Windows XP and Windows 7</title>
+      <link>https://yonkov.github.io/post/how-to-set-up-static-ip-in-windows-xp-and-windows-7/</link>
+      <pubDate>Thu, 16 Nov 2017 15:24:01 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/post/how-to-set-up-static-ip-in-windows-xp-and-windows-7/</guid>
+      <description>Static IP means that your computer is assigned an IP address that does not change each time the PC is restarted. It is required in some situations, for example, to access an ftp server or a web server from another computer inside the network. To do this, you need to change the IP version 4 (TCP / IP) properties. First, go to the start menu and type cmd in the search bar.</description>
+    </item>
+    
+  </channel>
+</rss>
