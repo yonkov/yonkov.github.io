@@ -6,7 +6,7 @@
     <description>Recent content on Atanas Yonkov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Nov 2017 15:24:01 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 21 Nov 2017 21:02:46 +0200</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,15 @@
       
       <guid>https://yonkov.github.io/about/</guid>
       <description>Welcome to my portfolio website! I am a blogger, web developer and an avid dreamer. I live in Bulgaria. In my free time I enjoy playing the guitar and hiking. I am very passionate about web development. I work as a freelancer and web developer. I am always interested in joining in new projects. Feel free to drop me a line if you have an interesting idea and we can start working on it.</description>
+    </item>
+    
+    <item>
+      <title>18 ready-to-use VBA Codes that will save your day</title>
+      <link>https://yonkov.github.io/post/18-ready-to-use-vba-codes-that-will-save-your-day/</link>
+      <pubDate>Tue, 21 Nov 2017 21:02:46 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/post/18-ready-to-use-vba-codes-that-will-save-your-day/</guid>
+      <description>In this article, I am going to show you 18 amazing VBA codes that you can use to optimize your work. VBA is a programming language, which can be used to extend the capabilities of MS Excel and other MS Office applications. It is extremely helpful for MS Excel users, because it can be used to automate your work and significantly improve your efficiency. This article will introduce you to VBA and show you some of the most useful, ready to use VBA codes out there.</description>
     </item>
     
     <item>

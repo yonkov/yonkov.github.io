@@ -23,6 +23,7 @@ pre {
 	display: block;
     overflow-x: auto;
 	overflow-y: auto;
+	margin-bottom: 33px;
 }
 pre code {
 	white-space: pre;
