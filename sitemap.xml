@@ -62,13 +62,18 @@
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/tags/</loc>
+    <loc>https://yonkov.github.io/service/service2/</loc>
+    <lastmod>2017-11-07T21:23:58+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/categories/</loc>
     <lastmod>2017-11-21T21:02:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/categories/</loc>
+    <loc>https://yonkov.github.io/tags/</loc>
     <lastmod>2017-11-21T21:02:46+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -179,10 +184,6 @@
     <loc>https://yonkov.github.io/categories/wordpress/</loc>
     <lastmod>2018-06-05T17:53:08+03:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://yonkov.github.io/service/service2/</loc>
   </url>
   
 </urlset>

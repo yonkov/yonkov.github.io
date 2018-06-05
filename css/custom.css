@@ -29,6 +29,27 @@ pre code {
 	white-space: pre;
 }
 
-.section-title a:hover, .entry-title a:hover {
+.section-title a:hover, .entry-title a:hover, #head .tagline a:hover {
     color: #800000;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #800000;
+    background-color: #fff;
+	font-weight:500;
+}
+
+.btn-action {
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.btn-action:hover, .btn-action:focus, .btn-action:active, .btn-action.active {
+
+	-webkit-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    -o-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
+
 }
