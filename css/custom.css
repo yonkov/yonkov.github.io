@@ -28,3 +28,7 @@ pre {
 pre code {
 	white-space: pre;
 }
+
+.section-title a:hover, .entry-title a:hover {
+    color: #800000;
+}
