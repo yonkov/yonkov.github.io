@@ -6,7 +6,7 @@
     <description>Recent content on Atanas Yonkov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Nov 2017 21:02:46 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 05 Jun 2018 17:53:08 +0300</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,24 @@
       
       <guid>https://yonkov.github.io/about/</guid>
       <description>Welcome to my portfolio website! I am a blogger, web developer and an avid dreamer. I live in Bulgaria. In my free time I enjoy playing the guitar and hiking. I am very passionate about web development. I work as a freelancer and web developer. I am always interested in joining in new projects. Feel free to drop me a line if you have an interesting idea and we can start working on it.</description>
+    </item>
+    
+    <item>
+      <title>How to Customize a Very Long Drop Down Menu in Divi</title>
+      <link>https://yonkov.github.io/post/how-to-style-a-very-long-drop-down-menu-in-divi/</link>
+      <pubDate>Tue, 05 Jun 2018 17:53:08 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/how-to-style-a-very-long-drop-down-menu-in-divi/</guid>
+      <description>How to fix the issue with long drop-downs in Wordpress? This is a common question when you have a main menu item with many sub items. You usually come to a point when the content can go below the fold of the screen. In these cases, you will not be able to see the remaining submenu items. Luckily to all of us who are using the Divi theme, there is a nice hidden feature, called &amp;ldquo;mega menu&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>How to Change the Color of the “Add to Cart” button in Divi</title>
+      <link>https://yonkov.github.io/post/how-to-change-the-color-of-woocommerce-add-to-cart-button-in-divi/</link>
+      <pubDate>Tue, 05 Jun 2018 17:08:06 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/how-to-change-the-color-of-woocommerce-add-to-cart-button-in-divi/</guid>
+      <description>In this tutorial, I am going to show you how to change the style of the “Add to Cart” button in your Divi theme. The Woocommerce &amp;ldquo;Add to Cart&amp;rdquo; button is the first thing that the customer sees on your product page, so it is really important to style it with a color that corresponds well with your theme. After all, you do not want to lose sales because your website design is not as good as your competitors’.</description>
     </item>
     
     <item>
@@ -44,7 +62,7 @@
       <pubDate>Sun, 12 Nov 2017 12:00:00 +0000</pubDate>
       
       <guid>https://yonkov.github.io/post/20-excel-formulas-you-should-start-using-now/</guid>
-      <description>MS Excel is one of the most popular data analysis tools in the world. More and more companies greatly depend on this software and quite a lot of people are using it on a daily basis. However, from my experience, not many are taking full advantage of the opportunities that the program can offer. Here is my list of the 20 most important Excel functions, which everyone should use in order to increase his efficiency.</description>
+      <description>MS Excel is one of the most popular data analysis tools in the world. More and more companies greatly depend on this software and quite a lot of people are using it on a daily basis. However, from my experience, not many are taking full advantage of the opportunities that the program can offer. Here is my list of the top 20 most important Excel functions, which everyone should use in order to increase his efficiency.</description>
     </item>
     
     <item>

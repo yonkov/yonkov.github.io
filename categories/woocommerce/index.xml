@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Woocommerce on Atanas Yonkov</title>
+    <link>https://yonkov.github.io/categories/woocommerce/</link>
+    <description>Recent content in Woocommerce on Atanas Yonkov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Jun 2018 17:08:06 +0300</lastBuildDate>
+    
+	<atom:link href="https://yonkov.github.io/categories/woocommerce/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Change the Color of the “Add to Cart” button in Divi</title>
+      <link>https://yonkov.github.io/post/how-to-change-the-color-of-woocommerce-add-to-cart-button-in-divi/</link>
+      <pubDate>Tue, 05 Jun 2018 17:08:06 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/how-to-change-the-color-of-woocommerce-add-to-cart-button-in-divi/</guid>
+      <description>In this tutorial, I am going to show you how to change the style of the “Add to Cart” button in your Divi theme. The Woocommerce &amp;ldquo;Add to Cart&amp;rdquo; button is the first thing that the customer sees on your product page, so it is really important to style it with a color that corresponds well with your theme. After all, you do not want to lose sales because your website design is not as good as your competitors’.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,6 +7,16 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/post/how-to-style-a-very-long-drop-down-menu-in-divi/</loc>
+    <lastmod>2018-06-05T17:53:08+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/post/how-to-change-the-color-of-woocommerce-add-to-cart-button-in-divi/</loc>
+    <lastmod>2018-06-05T17:08:06+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/post/18-ready-to-use-vba-codes-that-will-save-your-day/</loc>
     <lastmod>2017-11-21T21:02:46+02:00</lastmod>
   </url>
@@ -52,26 +62,38 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/categories/</loc>
+    <lastmod>2017-11-21T21:02:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/tags/</loc>
     <lastmod>2017-11-21T21:02:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/categories/</loc>
-    <lastmod>2017-11-21T21:02:46+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://yonkov.github.io/</loc>
-    <lastmod>2017-11-21T21:02:46+02:00</lastmod>
+    <lastmod>2018-06-05T17:53:08+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://yonkov.github.io/categories/</loc>
     <lastmod>2017-11-21T21:02:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/categories/divi/</loc>
+    <lastmod>2018-06-05T17:53:08+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/tags/dropdown-menu-in-divi/</loc>
+    <lastmod>2018-06-05T17:53:08+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -130,6 +152,12 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/tags/sub-menu-items/</loc>
+    <lastmod>2018-06-05T17:53:08+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/tags/</loc>
     <lastmod>2017-11-21T21:02:46+02:00</lastmod>
     <priority>0</priority>
@@ -138,6 +166,18 @@
   <url>
     <loc>https://yonkov.github.io/tags/top-20-excel-functions/</loc>
     <lastmod>2017-11-12T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/categories/woocommerce/</loc>
+    <lastmod>2018-06-05T17:08:06+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/categories/wordpress/</loc>
+    <lastmod>2018-06-05T17:53:08+03:00</lastmod>
     <priority>0</priority>
   </url>
   

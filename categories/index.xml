@@ -20,5 +20,32 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Divi</title>
+      <link>https://yonkov.github.io/categories/divi/</link>
+      <pubDate>Tue, 05 Jun 2018 17:53:08 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/categories/divi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Woocommerce</title>
+      <link>https://yonkov.github.io/categories/woocommerce/</link>
+      <pubDate>Tue, 05 Jun 2018 17:08:06 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/categories/woocommerce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wordpress</title>
+      <link>https://yonkov.github.io/categories/wordpress/</link>
+      <pubDate>Tue, 05 Jun 2018 17:53:08 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/categories/wordpress/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
