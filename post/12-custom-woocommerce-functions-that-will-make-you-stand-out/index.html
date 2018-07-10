@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="WooCommerce is the most popular ecommerce platform in the world and there is a reason for this – it is highly customizable, easy to use and completely free. While it gives you an awesome standardized solution, which you may use to build a complete online store, sometimes you may want to expand your Wordpress website functionalities and further customize it according to your clients’ needs. In this way, you can make your website stand out from the rest.">
+	<meta name="author"      content="Atanas Yonkov">
+	<title>12 Custom WooCommerce Functions That Will Make You Stand Out</title>
+
+	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
+
+	
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+
+	
+	
+	<link rel="preload" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"></noscript>
+	
+	
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700"></noscript>
+	
+	
+	<link rel="stylesheet" href="../../css/styles.css">
+	<link rel="preload" href="../../css/custom.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="../../css/custom.css"></noscript>
+	
+	
+	
+		<script>
+		 
+		(function(w){
+	"use strict";
+	 
+	var loadCSS = function( href, before, media ){
+		
+		
+		
+			
+		
+		var doc = w.document;
+		var ss = doc.createElement( "link" );
+		var ref;
+		if( before ){
+			ref = before;
+		}
+		else {
+			var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+			ref = refs[ refs.length - 1];
+		}
+
+		var sheets = doc.styleSheets;
+		ss.rel = "stylesheet";
+		ss.href = href;
+		
+		ss.media = "only x";
+
+		
+		function ready( cb ){
+			if( doc.body ){
+				return cb();
+			}
+			setTimeout(function(){
+				ready( cb );
+			});
+		}
+		
+			
+			
+		ready( function(){
+			ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+		});
+		
+		var onloadcssdefined = function( cb ){
+			var resolvedHref = ss.href;
+			var i = sheets.length;
+			while( i-- ){
+				if( sheets[ i ].href === resolvedHref ){
+					return cb();
+				}
+			}
+			setTimeout(function() {
+				onloadcssdefined( cb );
+			});
+		};
+
+		function loadCB(){
+			if( ss.addEventListener ){
+				ss.removeEventListener( "load", loadCB );
+			}
+			ss.media = media || "all";
+		}
+
+		
+		if( ss.addEventListener ){
+			ss.addEventListener( "load", loadCB);
+		}
+		ss.onloadcssdefined = onloadcssdefined;
+		onloadcssdefined( loadCB );
+		return ss;
+	};
+	
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ));
+		
+		 
+	(function( w ){
+	  
+	  if( !w.loadCSS ){
+		return;
+	  }
+	  var rp = loadCSS.relpreload = {};
+	  rp.support = function(){
+		try {
+		  return w.document.createElement( "link" ).relList.supports( "preload" );
+		} catch (e) {
+		  return false;
+		}
+	  };
+
+	  
+	  rp.poly = function(){
+		var links = w.document.getElementsByTagName( "link" );
+		for( var i = 0; i < links.length; i++ ){
+		  var link = links[ i ];
+		  if( link.rel === "preload" && link.getAttribute( "as" ) === "style" ){
+			w.loadCSS( link.href, link, link.getAttribute( "media" ) );
+			link.rel = null;
+		  }
+		}
+	  };
+
+	  
+	  if( !rp.support() ){
+		rp.poly();
+		var run = w.setInterval( rp.poly, 300 );
+		if( w.addEventListener ){
+		  w.addEventListener( "load", function(){
+			rp.poly();
+			w.clearInterval( run );
+		  } );
+		}
+		if( w.attachEvent ){
+		  w.attachEvent( "onload", function(){
+			w.clearInterval( run );
+		  } );
+		}
+	  }
+	}( this ));
+	</script>	
+	
+</head>
+<body class="home">
+
+<header id="header">
+	<div id="head" class="parallax" parallax-speed="2">
+		<h1 id="logo" class="text-center">
+			<img class="img-circle" src="https://yonkov.github.io/images/guy.jpg" alt="me">
+			<span class="title">Atanas Yonkov</span>
+			<span class="tagline">Blogger, Web Developer<br>
+				<a href="">yonkov.atanas@gmail.com</a>
+            </span>
+		</h1>
+	</div>
+
+    <nav class="navbar navbar-default navbar-sticky">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav">
+                
+                <li>
+                    <a href="/">home</a>
+                </li>
+                
+                <li>
+                    <a href="/post/">blog</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+                
+                
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+</header>
+
+<main id="main">
+
+	<div class="container">
+
+		<div class="row topspace">
+			<div class="col-sm-8 col-sm-offset-2">
+
+ 				<article class="post">
+					<header class="entry-header">
+ 						
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/12-custom-woocommerce-functions-that-will-make-you-stand-out/" rel="bookmark">12 Custom WooCommerce Functions That Will Make You Stand Out</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2018-07-10 18:47:58 &#43;0300 EEST">July 10, 2018</time></span>
+ 						</div>
+					</header>
+					<div class="entry-content">
+						
+
+<p>WooCommerce is the most popular ecommerce platform in the world and there is a reason for this – it is highly customizable, easy to use and completely free. While it gives you an awesome standardized solution, which you may use to build a complete online store, sometimes you may want to expand your Wordpress website functionalities and further customize it according to your clients’ needs. In this way, you can make your website stand out from the rest. There are many plugins out there, which you can use to change WooCommerce standard behavior. However, plugins may not always be the best solution, since they are not specifically made for your website and may be bloated with additional or unnecessary functionalities. It is always better to write custom code. In this tutorial, I have prepared a list of the top 12 ready-to-use custom WooCommerce functions that you can use to significantly increase the functionality of your web store to make your website stand out and give you a competitive advantage over the others.</p>
+
+<p>To make use of these functions, you first need to create a child theme. Here is a nice tutorial how to do that in Wordpress: “How to Create a WordPress Child Theme (Video)”. After you have successfully set up your child theme, paste any of the codes below in your child theme’s functions.php. Please, do not copy the opening php tag, it only needs to be included once, at the beginnng of the file.
+<div>
+	<header>
+		<h5 style="margin: 0 0 10px 23px;">Table of Contents</h5>
+	</header>
+	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#1-move-woocommerce-product-galery-images-to-the-right">1.   Move WooCommerce Product Galery Images to the Right</a></li>
+<li><a href="#2-rename-product-tabs">2. Rename Product Tabs</a></li>
+<li><a href="#3-add-a-custom-product-tab">3.   Add a Custom Product Tab</a></li>
+<li><a href="#4-reorder-single-product-page-content">4. Reorder Single Product Page Content</a></li>
+<li><a href="#5-remove-zooming-effect-in-woocommerce">5. Remove Zooming Effect in WooCommerce</a></li>
+<li><a href="#6-hide-product-price-range-on-single-product-page">6. Hide Product Price Range on Single Product Page</a></li>
+<li><a href="#7-hide-product-price-range-entirely">7.   Hide Product Price Range Entirely</a></li>
+<li><a href="#8-display-image-title-on-single-product-page-with-variations">8. Display Image Title on Single Product Page With Variations</a></li>
+<li><a href="#9-replace-choose-an-option-text-with-custom-text">9. Replace “choose an option” Text with Custom Text</a></li>
+<li><a href="#10-display-product-excerpt-on-woocommerce-product-archive-page">10.  Display Product Excerpt on WooCommerce Product Archive Page</a></li>
+<li><a href="#11-hide-subtotal-on-woocommerce-order-confirmation-template">11.  Hide Subtotal on WooCommerce Order Confirmation Template</a></li>
+<li><a href="#12-change-total-text-on-woocommerce-order-confirmation-template">12.  Change “total” Text on WooCommerce Order Confirmation Template</a></li>
+</ul></li>
+</ul>
+</nav>
+</div></p>
+
+<h2 id="1-move-woocommerce-product-galery-images-to-the-right">1.   Move WooCommerce Product Galery Images to the Right</h2>
+
+<p>Sometimes, you may want to move your product gallery images to the right side of the single product page. Here is how to do that:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">add_filter</span> ( <span style="color:#e6db74">&#39;WooCommerce_product_thumbnails_columns&#39;</span>, <span style="color:#e6db74">&#39;change_gallery_columns&#39;</span> );
+<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">change_gallery_columns</span>() {
+     <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>; 
+}</code></pre></div>
+
+<h2 id="2-rename-product-tabs">2. Rename Product Tabs</h2>
+
+<p>Sometimes you would like to rename the product tabs on the single product page.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">add_filter</span>( <span style="color:#e6db74">&#39;WooCommerce_product_tabs&#39;</span>, <span style="color:#e6db74">&#39;woo_rename_tab&#39;</span>, <span style="color:#ae81ff">98</span>);
+<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">woo_rename_tab</span>($tabs) {
+	$tabs[<span style="color:#e6db74">&#39;description&#39;</span>][<span style="color:#e6db74">&#39;title&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Omschrijving&#39;</span>;
+	$tabs[<span style="color:#e6db74">&#39;additional_information&#39;</span>][<span style="color:#e6db74">&#39;title&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Extra informatie&#39;</span>;
+	<span style="color:#66d9ef">return</span> $tabs;
+}</code></pre></div>
+
+<p>This function will rename the Description tab to Omschrijving and the Additional Information tab to  Extra informatie. You are free to customize it according to your own needs</p>
+
+<h2 id="3-add-a-custom-product-tab">3.   Add a Custom Product Tab</h2>
+
+<p>Sometimes you may also want to include a custom product tab on the Single product page. Paste the following code in your child theme’s functions.php:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">add_filter</span>( <span style="color:#e6db74">&#39;WooCommerce_product_tabs&#39;</span>, <span style="color:#e6db74">&#39;new_product_tab&#39;</span> );
+<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">new_product_tab</span>( $tabs ) {
+	<span style="color:#75715e">/* Adds the new tab */</span>
+	$tabs[<span style="color:#e6db74">&#39;test_tab&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
+		<span style="color:#e6db74">&#39;title&#39;</span> 	<span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">__</span>( <span style="color:#e6db74">&#39;Custom Tab, &#39;</span><span style="color:#a6e22e">WooCommerce</span><span style="color:#e6db74">&#39; ),
+</span><span style="color:#e6db74">		&#39;</span><span style="color:#a6e22e">priority</span><span style="color:#e6db74">&#39; 	=&gt; 50,  
+</span><span style="color:#e6db74">		&#39;</span><span style="color:#a6e22e">callback</span><span style="color:#e6db74">&#39; 	=&gt; &#39;</span><span style="color:#a6e22e">new_product_tab_content</span><span style="color:#e6db74">&#39;
+</span><span style="color:#e6db74">	);
+</span><span style="color:#e6db74">	return $tabs;  /* Return all  tabs including the new New Custom Product Tab  to display */
+</span><span style="color:#e6db74">}
+</span><span style="color:#e6db74">/* The new tab content */
+</span><span style="color:#e6db74">function new_product_tab_content() {
+</span><span style="color:#e6db74">echo &#39;</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">p</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Your</span> <span style="color:#a6e22e">custom</span> <span style="color:#a6e22e">tab</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">&lt;/</span><span style="color:#a6e22e">p</span><span style="color:#f92672">&gt;</span><span style="color:#960050;background-color:#1e0010">&#39;</span>;
+}</code></pre></div>
+
+<p>(Sometimes, you may want to further customize the product tabs. For example, you may want to add custom text for each product. Here is an amazing WordPress plugin that can help you achieve this: <a href="https://wordpress.org/plugins/yikes-inc-easy-custom-woocommerce-product-tabs/">Custom Product Tabs for WooCommerce</a>)</p>
+
+<h2 id="4-reorder-single-product-page-content">4. Reorder Single Product Page Content</h2>
+
+<p>Sometimes, you may wish to move a section in your WooCommerce single product page. For example, you may want to move the product data tabs from the bottom of the page to a position just below the image title:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e">/* Reorder single product page content */</span>
+<span style="color:#a6e22e">remove_action</span>( <span style="color:#e6db74">&#39;WooCommerce_after_single_product_summary&#39;</span>, <span style="color:#e6db74">&#39;WooCommerce_output_product_data_tabs&#39;</span>, <span style="color:#ae81ff">10</span> );
+<span style="color:#a6e22e">add_action</span>( <span style="color:#e6db74">&#39;WooCommerce_single_product_summary&#39;</span>, <span style="color:#e6db74">&#39;WooCommerce_output_product_data_tabs&#39;</span>, <span style="color:#ae81ff">7</span> );</code></pre></div></p>
+
+<p>If you want to learn more about how to customize and reorder the content of the single product page, here is a nice tutorial on that subject: <a href="https://www.cloudways.com/blog/reorder-content-on-woocommerce-single-product-page/">Reorder Content on WooCommerce Single Product Page</a>.</p>
+
+<h2 id="5-remove-zooming-effect-in-woocommerce">5. Remove Zooming Effect in WooCommerce</h2>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">remove_theme_support</span>( <span style="color:#e6db74">&#39;wc-product-gallery-zoom&#39;</span> );</code></pre></div>
+
+<h2 id="6-hide-product-price-range-on-single-product-page">6. Hide Product Price Range on Single Product Page</h2>
+
+<p>Sometimes, when you have product variations, it is a good idea to get rid of the price variations because they do not always add extra value to the customer. Paste this code to your child theme’s functions.php file:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">add_action</span>( <span style="color:#e6db74">&#39;WooCommerce_single_product_summary&#39;</span>, <span style="color:#e6db74">&#39;hide_single_product_variable_price_range&#39;</span>, <span style="color:#ae81ff">1</span> );
+<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">hide_single_product_variable_price_range</span>(){
+    <span style="color:#66d9ef">global</span> $product;
+    <span style="color:#66d9ef">if</span>( $product<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">is_type</span>(<span style="color:#e6db74">&#39;variable&#39;</span>) )<span style="color:#f92672">:</span>
+		<span style="color:#a6e22e">remove_action</span>(<span style="color:#e6db74">&#39;WooCommerce_single_product_summary&#39;</span>, <span style="color:#e6db74">&#39;WooCommerce_template_single_price&#39;</span>, <span style="color:#ae81ff">10</span> );
+    <span style="color:#66d9ef">endif</span>;
+}</code></pre></div></p>
+
+<h2 id="7-hide-product-price-range-entirely">7.   Hide Product Price Range Entirely</h2>
+
+<p>If you remove the product price range on the single product page, it will still appear on WooCommerce product archives page. You may want to hide it entirely. Use the following code:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">add_filter</span>( <span style="color:#e6db74">&#39;WooCommerce_variable_sale_price_html&#39;</span>, <span style="color:#e6db74">&#39;detect_variation_price_format&#39;</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">2</span> );
+<span style="color:#a6e22e">add_filter</span>( <span style="color:#e6db74">&#39;WooCommerce_variable_price_html&#39;</span>, <span style="color:#e6db74">&#39;detect_variation_price_format&#39;</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">2</span> );
+<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">detect_variation_price_format</span>( $price, $product ) {
+
+<span style="color:#75715e">// Main Price
+</span><span style="color:#75715e"></span>$prices <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>( $product<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">get_variation_price</span>( <span style="color:#e6db74">&#39;min&#39;</span>, <span style="color:#66d9ef">true</span> ), $product<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">get_variation_price</span>( <span style="color:#e6db74">&#39;max&#39;</span>, <span style="color:#66d9ef">true</span> ) );
+$price <span style="color:#f92672">=</span> $prices[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">!==</span> $prices[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">?</span> <span style="color:#a6e22e">sprintf</span>( <span style="color:#a6e22e">__</span>( <span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#e6db74">&#39;WooCommerce&#39;</span> ), <span style="color:#a6e22e">wc_price</span>( $prices[<span style="color:#ae81ff">0</span>] ) ) <span style="color:#f92672">:</span> <span style="color:#a6e22e">wc_price</span>( $prices[<span style="color:#ae81ff">0</span>] );
+
+<span style="color:#75715e">// Sale Price
+</span><span style="color:#75715e"></span>$prices <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>( $product<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">get_variation_regular_price</span>( <span style="color:#e6db74">&#39;min&#39;</span>, <span style="color:#66d9ef">true</span> ), $product<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">get_variation_regular_price</span>( <span style="color:#e6db74">&#39;max&#39;</span>, <span style="color:#66d9ef">true</span> ) );
+
+<span style="color:#a6e22e">sort</span>( $prices );
+
+$saleprice <span style="color:#f92672">=</span> $prices[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">!==</span> $prices[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">?</span> <span style="color:#a6e22e">sprintf</span>( <span style="color:#a6e22e">__</span>( <span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#e6db74">&#39;WooCommerce&#39;</span> ), <span style="color:#a6e22e">wc_price</span>( $prices[<span style="color:#ae81ff">0</span>] ) ) <span style="color:#f92672">:</span> <span style="color:#a6e22e">wc_price</span>( $prices[<span style="color:#ae81ff">0</span>] );
+
+<span style="color:#66d9ef">if</span> ( $price <span style="color:#f92672">!==</span> $saleprice ) {
+$price <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&lt;del&gt;&#39;</span> <span style="color:#f92672">.</span> $saleprice <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/del&gt; &lt;ins&gt;&#39;</span> <span style="color:#f92672">.</span> $price <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/ins&gt;&#39;</span>;
+}
+
+<span style="color:#66d9ef">return</span> ;
+}</code></pre></div></p>
+
+<h2 id="8-display-image-title-on-single-product-page-with-variations">8. Display Image Title on Single Product Page With Variations</h2>
+
+<p>Product variation gallery on the single product page is nice but it will be even better to add image captions on the single product page. This can add a great value to your users, because they will be able to differentiate the product not only by its image but also thanks to your custom text. In this way, you can change the product title, when an image from the product gallery is selected
+The code takes the image title and prints it below the image on the single product page. You can customize the image title from your media library. Go to Dashboard – media – library and select the image you want to edit. You will see image tabs on the right side of the page. Click on the Image Title field and put your custom text there.
+After that, paste the following code in your child theme’s functions.php:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">gcw_insert_captions</span>( $html, $attachment_id ) {
+	$captions <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+	$title <span style="color:#f92672">=</span> <span style="color:#a6e22e">get_post_field</span>( <span style="color:#e6db74">&#39;post_title&#39;</span>, $attachment_id );
+	<span style="color:#66d9ef">if</span>( <span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>( $title ) ) {
+		$captions <span style="color:#f92672">.=</span> <span style="color:#e6db74">&#39;&lt;h5&gt;&lt;br&gt;&#39;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">esc_html</span>( $title ) <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/h5&gt;&#39;</span>;
+	}
+	$description <span style="color:#f92672">=</span> <span style="color:#a6e22e">get_post_field</span>( <span style="color:#e6db74">&#39;post_excerpt&#39;</span>, $attachment_id );
+	<span style="color:#66d9ef">if</span>( <span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>( $description ) ) {
+		$captions <span style="color:#f92672">.=</span> <span style="color:#e6db74">&#39;&lt;p&gt;&#39;</span> <span style="color:#f92672">.</span> $description <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/p&gt;&#39;</span>;
+	}
+	<span style="color:#66d9ef">if</span>( <span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>( $captions ) ) {
+		$captions <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&lt;div class=&#34;gcw-caption&#34;&gt;&#39;</span> <span style="color:#f92672">.</span> $captions <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/div&gt;&#39;</span>;	
+		$html <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_replace</span>(<span style="color:#e6db74">&#39;~&lt;\/div&gt;$~&#39;</span>, $captions <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/div&gt;&#39;</span>, $html );
+	}
+	<span style="color:#66d9ef">return</span> $html;
+}
+<span style="color:#a6e22e">add_filter</span>( <span style="color:#e6db74">&#39;WooCommerce_single_product_image_thumbnail_html&#39;</span>, <span style="color:#e6db74">&#39;gcw_insert_captions&#39;</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">2</span> );</code></pre></div>
+The code takes the image title and prints it below the image on the single product page. For more information on how to do this and further customization, you can check the following article: <a href="https://yonkov.github.io/post/change-product-title-based-on-product-variations-in-woocommerce/">Change Product Title Based on Product Variations in WooCommerce</a></p>
+
+<h2 id="9-replace-choose-an-option-text-with-custom-text">9. Replace “choose an option” Text with Custom Text</h2>
+
+<p>This code applied on the single product page with product variations. It is extremely useful when you want to make it more clear what are the available options that your customer may choose from:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">filter_WooCommerce_dropdown_variation_attribute_options_args</span>( $array ) { 
+    <span style="color:#75715e">// Find the name of the attribute for the slug we passed in to the function
+</span><span style="color:#75715e"></span>    $attribute_name <span style="color:#f92672">=</span> <span style="color:#a6e22e">wc_attribute_label</span>($array[<span style="color:#e6db74">&#39;attribute&#39;</span>]);
+
+    <span style="color:#75715e">// Create a string for our select
+</span><span style="color:#75715e"></span>    $select_text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Kies &#39;</span> <span style="color:#f92672">.</span> $attribute_name;
+
+    $array[<span style="color:#e6db74">&#39;show_option_none&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">__</span>( $select_text, <span style="color:#e6db74">&#39;WooCommerce&#39;</span> );
+    <span style="color:#66d9ef">return</span> $array;
+}; 
+
+<span style="color:#75715e">// add the filter 
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">add_filter</span>( <span style="color:#e6db74">&#39;WooCommerce_dropdown_variation_attribute_options_args&#39;</span>, <span style="color:#e6db74">&#39;filter_WooCommerce_dropdown_variation_attribute_options_args&#39;</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">1</span> );</code></pre></div></p>
+
+<h2 id="10-display-product-excerpt-on-woocommerce-product-archive-page">10.  Display Product Excerpt on WooCommerce Product Archive Page</h2>
+
+<p>One of my favorite functions. It allows you to add custom text on the WooCommerce product archive page – the page that displays the list with all your products.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">vitahc_excerpt_in_product_archives</span>() {
+	<span style="color:#a6e22e">the_excerpt</span>();
+}
+<span style="color:#a6e22e">add_action</span>(<span style="color:#e6db74">&#39;woocommerce_after_shop_loop_item_title&#39;</span>,<span style="color:#e6db74">&#39;vitahc_excerpt_in_product_archives&#39;</span>, <span style="color:#ae81ff">40</span>);</code></pre></div></p>
+
+<h2 id="11-hide-subtotal-on-woocommerce-order-confirmation-template">11.  Hide Subtotal on WooCommerce Order Confirmation Template</h2>
+
+<p>Customize the email customer gets as a confirmation for a new order
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">add_filter</span>( <span style="color:#e6db74">&#39;WooCommerce_get_order_item_totals&#39;</span>, <span style="color:#e6db74">&#39;adjust_WooCommerce_get_order_item_totals&#39;</span> );
+<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">adjust_WooCommerce_get_order_item_totals</span>( $totals ) {
+  <span style="color:#a6e22e">unset</span>($totals[<span style="color:#e6db74">&#39;cart_subtotal&#39;</span>]  );
+  <span style="color:#66d9ef">return</span> $totals;
+}</code></pre></div></p>
+
+<h2 id="12-change-total-text-on-woocommerce-order-confirmation-template">12.  Change “total” Text on WooCommerce Order Confirmation Template</h2>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#a6e22e">add_filter</span>(<span style="color:#e6db74">&#39;gettext&#39;</span>, <span style="color:#e6db74">&#39;wc_renaming_checkout_total&#39;</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">3</span>);
+<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">wc_renaming_checkout_total</span>( $translated_text, $untranslated_text, $domain ) {
+
+    <span style="color:#66d9ef">if</span>( <span style="color:#f92672">!</span><span style="color:#a6e22e">is_admin</span>()) {
+        <span style="color:#66d9ef">if</span>( $untranslated_text <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Total:&#39;</span> )
+            $translated_text <span style="color:#f92672">=</span> <span style="color:#a6e22e">__</span>( <span style="color:#e6db74">&#39;Totaal excl. BTW:&#39;</span>,<span style="color:#e6db74">&#39;theme_slug_domain&#39;</span> );
+    }
+    
+    <span style="color:#66d9ef">if</span>( <span style="color:#f92672">!</span><span style="color:#a6e22e">is_admin</span>() <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">is_checkout</span> ) {
+        <span style="color:#66d9ef">if</span>( $untranslated_text <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Total&#39;</span> )
+            $translated_text <span style="color:#f92672">=</span> <span style="color:#a6e22e">__</span>( <span style="color:#e6db74">&#39;Totaal excl. BTW&#39;</span>,<span style="color:#e6db74">&#39;theme_slug_domain&#39;</span> );
+    }
+    
+    
+    <span style="color:#66d9ef">return</span> $translated_text;
+} </code></pre></div>
+This will replace the “Total” with “Totaal excl. BTW” on the order confirmation email, as well as on Wooommerce checkout page.</p>
+
+<p>© 2018 Atanas Yonkov</p>
+
+<p><strong>Read more: <div></strong><a href="https://yonkov.github.io/post/change-product-title-based-on-product-variations-in-woocommerce/">1. Change Product Title Based on Variations WooCommerce</a>
+<p><a href="https://yonkov.github.io/post/how-to-style-a-very-long-drop-down-menu-in-divi/">2. How to Customize a Very Long Drop Down Menu in Divi</a></p>
+<p style="margin-top:-30px"><a href="https://yonkov.github.io/post/how-to-change-the-color-of-woocommerce-add-to-cart-button-in-divi/">3. How to Change the Color of the “Add to Cart” button in Divi</a></p></div></p>
+
+					</div>
+				</article>
+
+			</div>
+		</div> 
+
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+	</div>	
+
+</main>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><br>
+						<a href="mailto:yonkov.atanas@gmail.com">yonkov.atanas@gmail.com</a><br>
+						<br>
+						
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Follow me</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+                        
+                            
+                                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram fa-2"></i></a>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <a href="https://github.com/yonkov" target="_blank"><i class="fa fa-github fa-2"></i></a>
+                            
+                        
+                            
+                        
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Personal Info</h3>
+				<div class="widget-body">
+					<p>Welcome to my professional website! I work as a devoted web developer and a freelancer. My ultimate goal is customer satisfaction. I focus on quality and creating value for my clients. </p>
+					
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Form widget</h3>
+				<div class="widget-body">
+					<p><br>
+						<a href="mailto:yonkov.atanas@gmail.com">yonkov.atanas@gmail.com</a><br>
+						<br>
+                        
+					</p>
+				</div>
+			</div>
+
+		</div> 
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p></p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2017, Atanas Yonkov<br>
+						Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> - 
+                        Powered by: <a href="https://gohugo.io/" rel="poweredby">Hugo</a>
+                    </p>
+				</div>
+			</div>
+
+		</div> 
+	</div>
+</footer>
+
+
+
+    
+      
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://yonkov.github.io/js/template.js"></script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['TyxoObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//s.tyxo.com/c.js','tx');
+tx('create', 'TX-927463385881');
+tx('pageview');
+</script>
+
+</body>
+</html>

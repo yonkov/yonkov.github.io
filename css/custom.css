@@ -53,3 +53,13 @@ pre code {
     transform: scale(1.04);
 
 }
+.post .entry-content h2 {
+	font-size:26px;
+}
+
+p, body{
+	text-align:justify;
+}
+article.post h2.entry-title {
+	font-size:32px;
+}
