@@ -7,6 +7,10 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/privacy-policy/</loc>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/post/12-custom-woocommerce-functions-that-will-make-you-stand-out/</loc>
     <lastmod>2018-07-10T18:47:58+03:00</lastmod>
   </url>
@@ -77,13 +81,13 @@
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/tags/</loc>
+    <loc>https://yonkov.github.io/categories/</loc>
     <lastmod>2017-11-21T21:02:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/categories/</loc>
+    <loc>https://yonkov.github.io/tags/</loc>
     <lastmod>2017-11-21T21:02:46+02:00</lastmod>
     <priority>0</priority>
   </url>
