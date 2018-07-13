@@ -1,3 +1,10 @@
+.language-switcher{
+  position:relative;
+  left:20px;
+}
+.language-switcher a{
+  color:#000000;
+}
 @media screen and (max-width: 767px) {
 .navbar-toggle {
 	display: block;

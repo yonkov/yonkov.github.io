@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Microsoft Excel - один из самых популярных инструментов анализа данных в мире. Все больше фирмы используют это программное обеспечение и много людей ежедневно пользуются Excel. Однако, по моему опыту, только немногие из них в полной мере используют возможности, которые может предложить эта программа. Я представляю Вам мой список из топ 20 самых важных формул Excel, которые каждый должен использовать для повышения эффективности. Функции Excel также очень рекомендуются для вычислений, так как они могут значительно уменьшить количество ошибок.">
+	<meta name="author"      content="Atanas Yonkov">
+	<title>20 формул Ексел, которые вам необходимы прямо сейчас</title>
+
+	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
+
+	
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	
+	
+	<link rel="preload" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"></noscript>
+	
+	
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700"></noscript>
+	
+	
+	<link rel="stylesheet" href="https://yonkov.github.io/css/styles.css">
+	<link rel="preload" href="https://yonkov.github.io/css/custom.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://yonkov.github.io/css/custom.css"></noscript>
+	
+	<link href="https://yonkov.github.io/css/styles.css?v=1531508735" rel="stylesheet">
+	
+		<script>
+		 
+		(function(w){
+	"use strict";
+	 
+	var loadCSS = function( href, before, media ){
+		
+		
+		
+			
+		
+		var doc = w.document;
+		var ss = doc.createElement( "link" );
+		var ref;
+		if( before ){
+			ref = before;
+		}
+		else {
+			var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+			ref = refs[ refs.length - 1];
+		}
+
+		var sheets = doc.styleSheets;
+		ss.rel = "stylesheet";
+		ss.href = href;
+		
+		ss.media = "only x";
+
+		
+		function ready( cb ){
+			if( doc.body ){
+				return cb();
+			}
+			setTimeout(function(){
+				ready( cb );
+			});
+		}
+		
+			
+			
+		ready( function(){
+			ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+		});
+		
+		var onloadcssdefined = function( cb ){
+			var resolvedHref = ss.href;
+			var i = sheets.length;
+			while( i-- ){
+				if( sheets[ i ].href === resolvedHref ){
+					return cb();
+				}
+			}
+			setTimeout(function() {
+				onloadcssdefined( cb );
+			});
+		};
+
+		function loadCB(){
+			if( ss.addEventListener ){
+				ss.removeEventListener( "load", loadCB );
+			}
+			ss.media = media || "all";
+		}
+
+		
+		if( ss.addEventListener ){
+			ss.addEventListener( "load", loadCB);
+		}
+		ss.onloadcssdefined = onloadcssdefined;
+		onloadcssdefined( loadCB );
+		return ss;
+	};
+	
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ));
+		
+		 
+	(function( w ){
+	  
+	  if( !w.loadCSS ){
+		return;
+	  }
+	  var rp = loadCSS.relpreload = {};
+	  rp.support = function(){
+		try {
+		  return w.document.createElement( "link" ).relList.supports( "preload" );
+		} catch (e) {
+		  return false;
+		}
+	  };
+
+	  
+	  rp.poly = function(){
+		var links = w.document.getElementsByTagName( "link" );
+		for( var i = 0; i < links.length; i++ ){
+		  var link = links[ i ];
+		  if( link.rel === "preload" && link.getAttribute( "as" ) === "style" ){
+			w.loadCSS( link.href, link, link.getAttribute( "media" ) );
+			link.rel = null;
+		  }
+		}
+	  };
+
+	  
+	  if( !rp.support() ){
+		rp.poly();
+		var run = w.setInterval( rp.poly, 300 );
+		if( w.addEventListener ){
+		  w.addEventListener( "load", function(){
+			rp.poly();
+			w.clearInterval( run );
+		  } );
+		}
+		if( w.attachEvent ){
+		  w.attachEvent( "onload", function(){
+			w.clearInterval( run );
+		  } );
+		}
+	  }
+	}( this ));
+	</script>	
+	
+</head>
+<body class="home">
+
+<header id="header">
+	<div id="head" class="parallax" parallax-speed="2">
+		<h1 id="logo" class="text-center">
+			<img class="img-circle" src="https://yonkov.github.io/images/guy.jpg" alt="me">
+			<span class="title">Атанас Йонков</span>
+			<span class="tagline">Блоггер, Веб-разработчик<br>
+				<a href="">yonkov.atanas@gmail.com</a>
+            </span>
+		</h1>
+	</div>
+
+    <nav class="navbar navbar-default navbar-sticky">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav">
+                
+                <li>
+                    <a href="/ru">Главная</a>
+                </li>
+                
+                <li>
+                    <a href="/ru/post/">Блог</a>
+                </li>
+                
+				
+    
+    <li>
+		<span class="language-switcher" style=""> 
+		<i class="fa fa-globe"></i>
+		<a href ="https://yonkov.github.io/post/20-excel-formulas-you-should-start-using-now/" style="">en:   </a>
+		</span>
+    </li>
+    
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+</header>
+<main id="main">
+
+	<div class="container">
+
+		<div class="row topspace">
+			<div class="col-sm-8 col-sm-offset-2">
+
+ 				<article class="post">
+					<header class="entry-header">
+ 						
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/ru/post/20-excel-formulas-you-should-start-using-now/" rel="bookmark">20 формул Ексел, которые вам необходимы прямо сейчас</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2017-11-12 12:00:00 &#43;0000 &#43;0000">November 12, 2017</time></span>
+ 						</div>
+					</header>
+					<div class="entry-content">
+						
+
+<p>Microsoft Excel - один из самых популярных инструментов анализа данных в мире. Все больше фирмы используют это программное обеспечение и много людей ежедневно пользуются Excel. Однако, по моему опыту, только немногие из них в полной мере используют возможности, которые может предложить эта программа. Я представляю Вам мой список из топ 20 самых важных формул Excel, которые каждый должен использовать для повышения эффективности. Функции Excel также очень рекомендуются для вычислений, так как они могут значительно уменьшить количество ошибок. И последнее, но не менее важное: изучение этих функций - прекрасная возможность улучшить Ваши знания Excel и стать уверенным пользователем MS Excel.<div>
+	<header>
+		<h5 style="margin: 0 0 10px 23px;">Table of Contents</h5>
+	</header>
+	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#1-sum">1. Sum</a></li>
+<li><a href="#2-average">2. Average</a></li>
+<li><a href="#3-if">3. If</a></li>
+<li><a href="#4-sumif">4. Sumif</a></li>
+<li><a href="#5-countif">5. Countif</a></li>
+<li><a href="#6-counta">6. Counta</a></li>
+<li><a href="#7-vlookup">7. Vlookup</a></li>
+<li><a href="#8-left-right-mid">8. Left, Right, Mid</a></li>
+<li><a href="#9-trim">9. Trim</a></li>
+<li><a href="#10-concatenate">10. Concatenate</a></li>
+<li><a href="#11-len">11. Len</a></li>
+<li><a href="#12-max">12. Max</a></li>
+<li><a href="#13-min">13. Min</a></li>
+<li><a href="#14-days">14. Days</a></li>
+<li><a href="#15-networkdays">15. Networkdays</a></li>
+<li><a href="#16-sqrt">16. SQRT</a></li>
+<li><a href="#17-now">17. Now</a></li>
+<li><a href="#18-round">18. Round</a></li>
+<li><a href="#19-roundup">19.Roundup</a></li>
+<li><a href="#20-rounddown">20. Rounddown</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</div></p>
+
+<h3 id="1-sum">1. Sum</h3>
+
+<p>«Sum» - это, наверное, самая простая, но и самая важная функция Exceл. Вы можете использовать эта формула для вычисления суммы диапазона ячеек.</p>
+
+<pre><code>= SUM(A1:A10) or = SUM(A1,A10)
+</code></pre>
+
+<p>В этом примере первая формула суммирует ячейки от A1 до A10. Вторая суммирует только ячейки A1 и A10. Вы можете попробовать с ним и попытаться использовать разные диапазоны, чтобы привыкнуть к этой функций. Обратите внимание, что вы также можете использовать числа внутри этой функции вместо ссылок.</p>
+
+<h3 id="2-average">2. Average</h3>
+
+<p>Еще одна очень важная функция. Как следует из названия, эта формула оценивает среднее число из диапазона ячеек. Предположим, что мы имеем диапазон чисел в столбце A.</p>
+
+<pre><code>= AVERAGE(A1:A10)
+</code></pre>
+
+<p>Это вернет среднее значение ячеек от A1 до A10.</p>
+
+<h3 id="3-if">3. If</h3>
+
+<p>Другая очень необходимая формула. Она относительно простая в использовании, но и очень мощная. Вы можете использовать эту функцию, чтобы проверить, является ли данный оператор истинным или ложным, и чтобы вернуть указанное число.</p>
+
+<p><img src="https://yonkov.github.io/images/excel-examples/if.jpg" alt="if" /></p>
+
+<pre><code>= IF(A2&gt;100,&quot;yes&quot;,&quot;no&quot;)
+</code></pre>
+
+<p>Здесь формула проверит если продажи в ячейке «A2» более 100 €. Если это заявление верно, формула возвращает «да». Если продажи ниже 100 евро, формула возвращает «нет».</p>
+
+<h3 id="4-sumif">4. Sumif</h3>
+
+<p>Sumif - еще одна очень важная формула Excel. Формула будет суммировать числа, если выполняется определенное условие.</p>
+
+<p><img src="https://yonkov.github.io/images/excel-examples/sumif.jpg" alt="if" /></p>
+
+<pre><code>= SUMIF(A1:A20,A2,B1:B20)
+</code></pre>
+
+<p>Давайте рассмотрим приведенный выше пример. У нас есть торговые агенты, которые регистрируют определенное количество продаж. Мы хотим узнать общее количество продаж для каждого агента. Функция = SUMIF (A1: A20, A2, B1: B20) суммирует значения ячеек B1: B20, которые соответствуют тексту в ячейке A2 (в случае «Ивайло»). Парень зарегистрировал общий объем продаж 325 €. Мы можем использовать формулу для расчета оборота других агентов.</p>
+
+<h3 id="5-countif">5. Countif</h3>
+
+<p>Countif - очень полезная функция, которая работает как sumif. Он суммируется при определенном условии. Разница между sum и count состоит в том, что функция count суммирует количество ячеек, где определенное условие истинно. Напротив, суммирующая функция суммирует значения внутри ячеек.</p>
+
+<p><img src="https://yonkov.github.io/images/excel-examples/countif.jpg" alt="if" /></p>
+
+<pre><code>= COUNTIF(A1:A10,&quot;&gt;100&quot;)
+</code></pre>
+
+<p>Формула в приведенном выше примере проверяет, сколько продаж были выше чем 100 евро и возвращает количество продаж. Вы также можете включить более одного критерия, используя countif для этой цели.</p>
+
+<p>PS: Если вы не уверены в синтаксисе функции, вы всегда можете использовать функцию «insert function» в Excel (просто нажмите знак функции в левой части функциональной панели). В следующем примере мы продемонстрируем, как это работает.</p>
+
+<h3 id="6-counta">6. Counta</h3>
+
+<p>Эта формула подсчитывает количество ячеек определенного диапазона, которые не являются пустыми. Это очень полезно, когда у вас есть тысячи строк, и вы хотите знать, где все это кончается.</p>
+
+<pre><code>= COUNTA(A:A) 
+</code></pre>
+
+<p>Это даст вам количество строк, которые содержат значение, текст или любой другой символ.</p>
+
+<h3 id="7-vlookup">7. Vlookup</h3>
+
+<p>Вероятно, самая мощная функция Excel. Очень полезно, когда вам приходится иметь дело с более чем одной таблицей, разными листами или даже другого файла. Vlookup позволяет вам извлекать данные из одной таблицы в другую.</p>
+
+<p>Продолжим этот пример, добавив еще один столбец «А» с номерами клиентов.</p>
+
+<p><img src="https://yonkov.github.io/images/excel-examples/vlookup1.jpg" alt="vlookup example 1" /></p>
+
+<p>Обратите внимание, что есть информация о продажах и номерах клиентов, но имена клиентов отсутствуют. Однако у нас есть еще один лист Excel (Sheet2) с именами клиентов и номерами клиентов.</p>
+
+<p><img src="https://yonkov.github.io/images/excel-examples/vlookup2.jpg" alt="vlookup example 2" /></p>
+
+<p>Вместо того, чтобы тратить свое время, чтобы посмотреть с Sheet1 на Sheet2 и искать совпадение вручную для каждой отдельной строки, мы можем использовать следующую формулу:</p>
+
+<pre><code>= VLOOKUP(A2,Sheet2!$A$1:$B$100,2,0)
+</code></pre>
+
+<p>Эта формула ищет значение в ячейке A2 (112 в нашем случае) в листе2, столбцы A &amp; B (знаки «$» означают, что мы всегда хотим иметь постоянный диапазон поиска). Затем функция возвращает значение из второго столбца. Последняя часть формулы, мы пишем 0. Таким образом, мы делаем Excel не искать совпадение в порядке чисел.</p>
+
+<p>Теперь попробуйте создать собственную формулу vlookup, используя опцию insert function.</p>
+
+<p>В нашем случае это выглядит так:</p>
+
+<p><img src="https://yonkov.github.io/images/excel-examples/vlookup3.jpg" alt="vlookup example 3" /></p>
+
+<h3 id="8-left-right-mid">8. Left, Right, Mid</h3>
+
+<p>Left, right и mid функции - очень важные функции, которые позволяют извлекать определенное количество символов из строки</p>
+
+<p><img src="../../images/excel-examples/left-right-mid.jpg" alt="left, right and mid functions" /></p>
+
+<pre><code> = Left(A1,1) or = MID(A1,4,6) or = RIGHT(A1,5)
+</code></pre>
+
+<p>В нашем примере с формулой left мы берем первый символ с левой стороны. С формулой right мы можем сделать то же самое, но с символами справа налево. Имейте в виду, что пустое пространство  также является символом.</p>
+
+<h3 id="9-trim">9. Trim</h3>
+
+<p>Еще одна исключительная функция MS Excel. Функция trim удаляет пустые пространства после слов, когда их больше одного. Это может случиться довольно часто в Excel. Возможно, что информация извлекается из разных баз данных и заполняется ненужными пустым пространством между словами. Это может быть огромной проблемой, потому что ваши формули Excel могут не работать. Чтобы избавиться от раздражающих пустых пространств, мы используем формулу trim.
+    = TRIM(A1)</p>
+
+<p>В этом примере формула удалит лишние пробелы, если она найдет несколько.</p>
+
+<h3 id="10-concatenate">10. Concatenate</h3>
+
+<p>Это удобная функция Excel, которая помогает, когда мы хотим объединить ячейки.
+Здесь мы хотим объединить ячейки A1, A2 и A3. Это можно сделать с помощью следующей функции:</p>
+
+<pre><code>= CONCATENATE(A1,A2,A3)
+</code></pre>
+
+<p>Таким образом, у нас не будет пробелов между словами. Чтобы добавить пробелы между «I» и «love», нам нужно добавить пробел. Это можно решить, добавив кавычки внутри функции:</p>
+
+<pre><code>= CONCATENATE(A1,&quot; &quot;,A2,&quot; &quot;,A3)
+</code></pre>
+
+<p><br><img src="https://yonkov.github.io/images/excel-examples/concatenate.png" alt="concatenate function example" /></p>
+
+<p>PS: Вы также можете объединить ячейки, просто добавив:</p>
+
+<pre><code>= A1&amp;&quot; &quot;&amp;A2&amp;&quot; &quot;&amp;A3
+</code></pre>
+
+<p>Попробуйте сами!</p>
+
+<h3 id="11-len">11. Len</h3>
+
+<p>Еще одна прекрасная формула, которая может применяться во многих ситуациях. Она широко используется для построения более сложных формул.</p>
+
+<pre><code>= LEN(A1)
+</code></pre>
+
+<p>Эта функция будет подсчитывать количество символов в ячейке.</p>
+
+<h3 id="12-max">12. Max</h3>
+
+<p>Функция max возвращает наибольшее значение из диапазона.</p>
+
+<pre><code>= MAX(A2:A8)
+</code></pre>
+
+<p>Эта формула будет выглядеть в ячейках A2: A8, и тогда она извлечет самое высокое значение из этого диапазона.</p>
+
+<h3 id="13-min">13. Min</h3>
+
+<p>Функция min функционирует аналогично функции max, однако она дает противоположный результат. Он извлекает самое низкое значение из диапазона данных.</p>
+
+<pre><code>= MIN(A2:A8)
+</code></pre>
+
+<p>Формула из приведенного выше примера вернет наименьшее число из выбранных ячеек в столбце «A».</p>
+
+<h3 id="14-days">14. Days</h3>
+
+<p>Это функция, когда вам нужно вычислить количество дней между двумя днями в электронной таблице.</p>
+
+<pre><code>= DAYS(B1,A1)
+</code></pre>
+
+<p>Формула вернет количество прошедших дней.</p>
+
+<p><img src="https://yonkov.github.io/images/excel-examples/days.jpg" alt="days function example" /></p>
+
+<h3 id="15-networkdays">15. Networkdays</h3>
+
+<p>Иногда вы хотите работать только с рабочими днями. Эта функция работает очень похоже на приведенный выше пример. Разница в том, что он возвращает рабочие дни, прошедшие, за исключением выходных.</p>
+
+<h3 id="16-sqrt">16. SQRT</h3>
+
+<p>Это довольно просто и довольно полезно одновременно. Как следует из названия, формула дает квадратный корень из числа</p>
+
+<pre><code>= SQRT(1444)
+</code></pre>
+
+<p>Это вернет квадратный корень из 1444 (38). Вы также можете использовать ссылку на ячейку здесь, как и во многих других формулах Excel.</p>
+
+<h3 id="17-now">17. Now</h3>
+
+<p>Иногда вам нужно знать текущую дату, когда вы открываете электронную таблицу Excel.</p>
+
+<pre><code>= NOW()
+</code></pre>
+
+<p>Это вернет текущую дату. Не забудьте установить формат на сегодняшний день. Вы можете попробовать с ним столько, сколько хотите. Вы можете, например, добавлять или вычитать дни. = Now () -14 вернет дату до двух недель.</p>
+
+<h3 id="18-round">18. Round</h3>
+
+<p>Функция Round очень полезна, когда вам приходится работать с округленными номерами. Excel может отображать числа для определенного символа, но сохраняет исходный номер и использует его для вычислений. Однако в некоторых случаях это может быть проблемой, и нам нужно работать только с округленными номерами. В таких случаях функция ROUND обращается к нашей помощи.
+    = ROUND(B1,2)</p>
+
+<p>В этом примере число округляется до второго десятичного знака.</p>
+
+<h3 id="19-roundup">19.Roundup</h3>
+
+<p>Это вариация формулы round, которая может очень помочь в некоторых случаях. Онa округляет значение до ближайшего целого числа. Это очень полезно в сочетании с другими формулами Excel.
+Давайте посмотрим на этот пример:</p>
+
+<pre><code>= ROUNDUP(MONTH(B3)/3,0)
+</code></pre>
+
+<p>Здесь мы хотим найти в каком квартале текущего года находится текущую дату. Секрет этой формулы - простая математика. Функция принимает номер месяца, например, январь равен 1, февраль равен 2 и т. Д., А затем делит его на 3, округляя до ближайшего большего числа.</p>
+
+<p><img src="https://yonkov.github.io/images/excel-examples/roundup.jpg" alt="roundup" /></p>
+
+<h3 id="20-rounddown">20. Rounddown</h3>
+
+<p>Rounddown работает аналогично Roundup, однако она округляет число до ближайшего целого числа</p>
+
+<pre><code>= ROUNDDOWN(20.65,0)
+</code></pre>
+
+<p><br>Это вернет 20.</p>
+
+<p>Excel имеет много полезных функций. В этой статье я попытался представить наиболее важные формулы в MS Excel наилучшим образом. Я считаю, что эти функции являются очень хорошей базой для тех из вас, кто хочет развивать свои умения Excel. Посредством освоения этих формул вы можете легко справляться с повседневными ситуациями, которые могут возникать при работе с Excel, и это действительно хорошая возможность для дальнейшего развития ваших навыков.</p>
+
+<p>© 2017 Атанас Йонков</p>
+
+<p><strong>Прочитайте больше:</strong> <a href="https://yonkov.github.io/ru/post/18-ready-to-use-vba-codes-that-will-save-your-day/">18 готовые макросы в VBA Excel</a></p>
+
+<hr>
+
+<h6>Literature:</h6>
+
+<h6>1. ExcelChamps.com: <a href="http://excelbyjoe.com/the-top-20-excel-functions-you-need-to-know-if-youre-an-excel-user/">The Top 15 Excel Functions you NEED to know - Excel by Joe.</a></h6>
+<h6>3. BG Excel.info: Top 11 most popular Excel functions.</h6>
+
+					</div>
+				</article>
+
+			</div>
+		</div> 
+
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+	</div>	
+
+</main>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><br>
+						<a href="mailto:yonkov.atanas@gmail.com">yonkov.atanas@gmail.com</a><br>
+						<br>
+						
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Follow me</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+                        
+                            
+                                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram fa-2"></i></a>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <a href="https://github.com/yonkov" target="_blank"><i class="fa fa-github fa-2"></i></a>
+                            
+                        
+                            
+                        
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Personal Info</h3>
+				<div class="widget-body">
+					<p>Welcome to my professional website! I work as a devoted web developer and a freelancer. My ultimate goal is customer satisfaction. I focus on quality and creating value for my clients. </p>
+					
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Form widget</h3>
+				<div class="widget-body">
+					<p><br>
+						<a href="mailto:yonkov.atanas@gmail.com">yonkov.atanas@gmail.com</a><br>
+						<br>
+                        
+					</p>
+				</div>
+			</div>
+
+		</div> 
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p></p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2017, Атанас Йонков<br>
+						Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> - 
+                        Powered by: <a href="https://gohugo.io/" rel="poweredby">Hugo</a>
+                    </p>
+				</div>
+			</div>
+
+		</div> 
+	</div>
+</footer>
+
+
+
+    
+      
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://yonkov.github.io/js/template.js"></script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['TyxoObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//s.tyxo.com/c.js','tx');
+tx('create', 'TX-927463385881');
+tx('pageview');
+</script>
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "content": {
+    "message": "This website uses cookies to analyze traffic and for advertisements. By continuing you agree to the use of these cookies.",
+    "dismiss": "Ok, I accept",
+    "href": "https://yonkov.github.io/privacy-policy"
+  }
+})});
+</script>
+</body>
+</html>

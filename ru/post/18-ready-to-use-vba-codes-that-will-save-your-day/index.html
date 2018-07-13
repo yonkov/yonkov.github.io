@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="В этом уроке я покажу Вам самые популярные коды в VBA Excel, которые вы можете использовать для оптимизации своей работы. VBA - это язык программирования, который может использоваться для расширения возможностей MS Excel и других приложений MS Office. Это чрезвычайно полезно для пользователей MS Excel, поскольку VBA может использоваться для автоматизации вашей работы и значительно увеличит Вашу эффективность. В этой статье Вы познакомитесь с VBA и я вам покажу некоторые из наиболее полезных, готовых к использованию примеров VBA.">
+	<meta name="author"      content="Atanas Yonkov">
+	<title>18 готовые макросы в VBA Excel</title>
+
+	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
+
+	
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	
+	
+	<link rel="preload" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"></noscript>
+	
+	
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700"></noscript>
+	
+	
+	<link rel="stylesheet" href="https://yonkov.github.io/css/styles.css">
+	<link rel="preload" href="https://yonkov.github.io/css/custom.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://yonkov.github.io/css/custom.css"></noscript>
+	
+	<link href="https://yonkov.github.io/css/styles.css?v=1531508735" rel="stylesheet">
+	
+		<script>
+		 
+		(function(w){
+	"use strict";
+	 
+	var loadCSS = function( href, before, media ){
+		
+		
+		
+			
+		
+		var doc = w.document;
+		var ss = doc.createElement( "link" );
+		var ref;
+		if( before ){
+			ref = before;
+		}
+		else {
+			var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+			ref = refs[ refs.length - 1];
+		}
+
+		var sheets = doc.styleSheets;
+		ss.rel = "stylesheet";
+		ss.href = href;
+		
+		ss.media = "only x";
+
+		
+		function ready( cb ){
+			if( doc.body ){
+				return cb();
+			}
+			setTimeout(function(){
+				ready( cb );
+			});
+		}
+		
+			
+			
+		ready( function(){
+			ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+		});
+		
+		var onloadcssdefined = function( cb ){
+			var resolvedHref = ss.href;
+			var i = sheets.length;
+			while( i-- ){
+				if( sheets[ i ].href === resolvedHref ){
+					return cb();
+				}
+			}
+			setTimeout(function() {
+				onloadcssdefined( cb );
+			});
+		};
+
+		function loadCB(){
+			if( ss.addEventListener ){
+				ss.removeEventListener( "load", loadCB );
+			}
+			ss.media = media || "all";
+		}
+
+		
+		if( ss.addEventListener ){
+			ss.addEventListener( "load", loadCB);
+		}
+		ss.onloadcssdefined = onloadcssdefined;
+		onloadcssdefined( loadCB );
+		return ss;
+	};
+	
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ));
+		
+		 
+	(function( w ){
+	  
+	  if( !w.loadCSS ){
+		return;
+	  }
+	  var rp = loadCSS.relpreload = {};
+	  rp.support = function(){
+		try {
+		  return w.document.createElement( "link" ).relList.supports( "preload" );
+		} catch (e) {
+		  return false;
+		}
+	  };
+
+	  
+	  rp.poly = function(){
+		var links = w.document.getElementsByTagName( "link" );
+		for( var i = 0; i < links.length; i++ ){
+		  var link = links[ i ];
+		  if( link.rel === "preload" && link.getAttribute( "as" ) === "style" ){
+			w.loadCSS( link.href, link, link.getAttribute( "media" ) );
+			link.rel = null;
+		  }
+		}
+	  };
+
+	  
+	  if( !rp.support() ){
+		rp.poly();
+		var run = w.setInterval( rp.poly, 300 );
+		if( w.addEventListener ){
+		  w.addEventListener( "load", function(){
+			rp.poly();
+			w.clearInterval( run );
+		  } );
+		}
+		if( w.attachEvent ){
+		  w.attachEvent( "onload", function(){
+			w.clearInterval( run );
+		  } );
+		}
+	  }
+	}( this ));
+	</script>	
+	
+</head>
+<body class="home">
+
+<header id="header">
+	<div id="head" class="parallax" parallax-speed="2">
+		<h1 id="logo" class="text-center">
+			<img class="img-circle" src="https://yonkov.github.io/images/guy.jpg" alt="me">
+			<span class="title">Атанас Йонков</span>
+			<span class="tagline">Блоггер, Веб-разработчик<br>
+				<a href="">yonkov.atanas@gmail.com</a>
+            </span>
+		</h1>
+	</div>
+
+    <nav class="navbar navbar-default navbar-sticky">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav">
+                
+                <li>
+                    <a href="/ru">Главная</a>
+                </li>
+                
+                <li>
+                    <a href="/ru/post/">Блог</a>
+                </li>
+                
+				
+    
+    <li>
+		<span class="language-switcher" style=""> 
+		<i class="fa fa-globe"></i>
+		<a href ="https://yonkov.github.io/post/18-ready-to-use-vba-codes-that-will-save-your-day/" style="">en:   </a>
+		</span>
+    </li>
+    
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+</header>
+<main id="main">
+
+	<div class="container">
+
+		<div class="row topspace">
+			<div class="col-sm-8 col-sm-offset-2">
+
+ 				<article class="post">
+					<header class="entry-header">
+ 						
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/ru/post/18-ready-to-use-vba-codes-that-will-save-your-day/" rel="bookmark">18 готовые макросы в VBA Excel</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2018-07-11 21:02:46 &#43;0200 &#43;0200">July 11, 2018</time></span>
+ 						</div>
+					</header>
+					<div class="entry-content">
+						
+
+<p>В этом уроке я покажу Вам самые популярные коды в VBA Excel, которые вы можете использовать для оптимизации своей работы. VBA - это язык программирования, который может использоваться для расширения возможностей MS Excel и других приложений MS Office. Это чрезвычайно полезно для пользователей MS Excel, поскольку VBA может использоваться для автоматизации вашей работы и значительно увеличит Вашу эффективность. В этой статье Вы познакомитесь с VBA и я вам покажу некоторые из наиболее полезных, готовых к использованию примеров VBA. Вы можете использовать эти готовые примеры для создания собственных скриптов, соответствующих Вашим потребностям.</p>
+
+<p>Вам не нужен опыт программирования, чтобы воспользоваться преимуществами информации в этой статье, но вы должны иметь базовые знания Excel. Если вы еще учитесь работать с Excel, я бы рекомендовал Вам прочитать статью <a href="https://yonkov.github.io/ru/post/20-excel-formulas-you-should-start-using-now/"> 20 Формул Ексел, Которые Вам Нужно Научить Сейчас</a>, чтобы научить больше о функциональных возможностях Excel.</p>
+
+<p>Я подготовил для вас несколько из самых важных примеров VBA Excel с большой функциональностью, которую вы можете использовать для оптимизации своей работы. Чтобы их использовать, вам нужно их записать их в файл. Следующий параграф посвящен инсталлирования макроса Excel. Пропустите эту часть, если вы уже знакомы с этим.
+<div>
+	<header>
+		<h5 style="margin: 0 0 10px 23px;">Table of Contents</h5>
+	</header>
+	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#1-скопировать-данные-из-одного-файла-в-другой">1. Скопировать данные из одного файла в другой.</a></li>
+<li><a href="#2-показать-скрытые-строки">2. Показать скрытые строки</a></li>
+<li><a href="#3-удалить-пустые-строки-и-столбцы">3. Удалить пустые строки и столбцы</a></li>
+<li><a href="#4-найдите-пустую-ячейку">4. Найдите пустую ячейку</a></li>
+<li><a href="#5-замените-пустые-ячейки-на-значение">5. Замените пустые ячейки на значение.</a></li>
+<li><a href="#6-сортировка-данных">6. Сортировка данных</a></li>
+<li><a href="#7-удалить-пустые-пространства">7. Удалить пустые пространства</a></li>
+<li><a href="#8-выделите-дублированные-значения">8. Выделите дублированные значения</a></li>
+<li><a href="#9-выделите-первые-десять-числа">9. Выделите первые десять числа</a></li>
+<li><a href="#10-выделите-больше-чем-чисел">10. Выделите больше чем чисел</a></li>
+<li><a href="#11-выделите-ячейки-с-комментариями">11. Выделите ячейки с комментариями</a></li>
+<li><a href="#12-выделите-ячейки-со-словами-с-ошибками">12. Выделите ячейки со словами с ошибками</a></li>
+<li><a href="#13-создать-сводную-таблицу">13. Создать сводную таблицу</a></li>
+<li><a href="#14-приложить-активную-книгу-по-электронной-почте">14. Приложить активную книгу по электронной почте</a></li>
+<li><a href="#15-отправлять-все-диаграммы-excel-в-презентацию-powerpoint">15. Отправлять все диаграммы Excel в презентацию PowerPoint</a></li>
+<li><a href="#16-отправить-таблицу-excel-в-ms-word">16. Отправить таблицу Excel в MS Word</a></li>
+<li><a href="#17-извлечь-определенное-слово-из-ячейки">17. Извлечь определенное слово из ячейки</a></li>
+<li><a href="#18-защитите-свою-книгу">18. Защитите свою книгу</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</div></p>
+
+<h4> Как включить макросы в Excel</h4>
+
+<p>В Excel нажмите комбинацию клавиш alt + F11. Это приведет вас к редактору VBA в MS Excel. Затем щелкните правой кнопкой мыши папку Microsoft Excel Objects слева и выберите Insert =&gt; Module. Это место, где сохраняются макросы. Чтобы использовать макрос, вам нужно сохранить документ Excel как макрос. Из табуляции File =&gt; Save as, выберите Save as macro-enabled Workbok (расширение .xlsm) Теперь пришло время написать свой первый макрос!</p>
+
+<h4 id="1-скопировать-данные-из-одного-файла-в-другой">1. Скопировать данные из одного файла в другой.</h4>
+
+<p>Очень полезный макрос, поскольку он показывает, как скопировать ряд данных изнутри vba и как создать и назвать новую книгу. Вы можете изменить этот макрос в соответствии с вашими собственными требованиями:</p>
+
+<pre><code>Sub CopyFiletoAnotherWorkbook()
+'Copy the data
+    Sheets(&quot;Example 1&quot;).Range(&quot;B4:C15&quot;).Copy
+'Create a new workbook
+    Workbooks.Add
+'Paste the data
+    ActiveSheet.Paste
+'Turn off application alerts
+    Application.DisplayAlerts = False
+'Save the newly file. Change the name of the directory.
+    ActiveWorkbook.SaveAs Filename:=&quot;C:\Temp\MyNewBook.xlsx&quot;
+'Turn application alerts back on
+    Application.DisplayAlerts = True
+End Sub
+</code></pre>
+
+<h4 id="2-показать-скрытые-строки">2. Показать скрытые строки</h4>
+
+<p>Иногда большие файлы Excel можно содержать скрытые строки для большей ясности И для лучшего удобства пользователей. Вот один макрос, который отобразит все строки из активной рабочей таблицы:</p>
+
+<pre><code>Sub ShowHiddenRows()
+Columns.EntireColumn.Hidden = False
+Rows.EntireRow.Hidden = False
+End Sub
+</code></pre>
+
+<h4 id="3-удалить-пустые-строки-и-столбцы">3. Удалить пустые строки и столбцы</h4>
+
+<p>Пустые строки в Excel - может быть проблемой для обработки данных. Вот как избавиться от них:</p>
+
+<pre><code>Sub DeleteEmptyRowsAndColumns()
+'Declare your variables.
+    Dim MyRange As Range
+    Dim iCounter As Long
+'Define the target Range.
+    Set MyRange = ActiveSheet.UsedRange
+    'Start reverse looping through the range of Rows.
+    For iCounter = MyRange.Rows.Count To 1 Step -1
+'If entire row is empty then delete it.
+       If Application.CountA(Rows(iCounter).EntireRow) = 0 Then
+           Rows(iCounter).Delete
+           'Remove comment to See which are the empty rows
+           'MsgBox &quot;row &quot; &amp; iCounter &amp; &quot; is empty&quot;
+       End If
+'Increment the counter down
+    Next iCounter
+'Step 6:  Start reverse looping through the range of Columns.
+    For iCounter = MyRange.Columns.Count To 1 Step -1
+'Step 7: If entire column is empty then delete it.
+           If Application.CountA(Columns(iCounter).EntireColumn) = 0 Then
+            Columns(iCounter).Delete
+           End If
+'Step 8: Increment the counter down
+    Next iCounter       
+End Sub
+</code></pre>
+
+<h4 id="4-найдите-пустую-ячейку">4. Найдите пустую ячейку</h4>
+
+<pre><code>Sub FindEmptyCell()
+ActiveCell.Offset(1, 0).Select
+   Do While Not IsEmpty(ActiveCell)
+      ActiveCell.Offset(1, 0).Select
+   Loop
+End Sub
+</code></pre>
+
+<h4 id="5-замените-пустые-ячейки-на-значение">5. Замените пустые ячейки на значение.</h4>
+
+<p>Как упоминалось ранее, пустые ячейки препятствуют обработке данных и созданию сводных таблиц. Вот один примерный код, который заменяет все пустые ячейки на 0. Этот макрос имеет очень большое приложение, потому что Вы можете использовать его для поиска и замены результатов N/A, а также других символов, таких как точки, запятые или повторяющиеся значения:</p>
+
+<pre><code>Sub FindAndReplace()
+'Declare your variables
+    Dim MyRange As Range
+    Dim MyCell As Range
+'Save the Workbook before changing cells?
+    Select Case MsgBox(&quot;Can't Undo this action.  &quot; &amp; _
+                        &quot;Save Workbook First?&quot;, vbYesNoCancel)
+        Case Is = vbYes
+        ThisWorkbook.Save
+        Case Is = vbCancel
+        Exit Sub
+    End Select
+'Define the target Range.
+    Set MyRange = Selection
+'Start looping through the range.
+    For Each MyCell In MyRange
+'Check for zero length then add 0.
+        If Len(MyCell.Value) = 0 Then
+            MyCell = 0
+        End If
+'Get the next cell in the range
+    Next MyCell
+End Sub
+</code></pre>
+
+<h4 id="6-сортировка-данных">6. Сортировка данных</h4>
+
+<p>Следующий макрос сортирует по возрастанию все числа из столбца активной ячейки. Просто дважды нажмите любую ячейку из столбца, который вы хотите отсортировать.
+NB: вам нужно поместить код в Sheet 1, а не в модуль для работы:</p>
+
+<pre><code>Private Sub Worksheet_BeforeDoubleClick (ByVal Target as Range, Cancel As Boolean)
+'Declare your Variables
+    Dim LastRow As Long
+'Find last row
+    LastRow = Cells (Rows.Count, 1) .End (xlUp) .Row
+'Sort ascending on double-clicked column
+    Rows (&quot;6:&quot; &amp; LastRow) .Sort _
+    Key1: = Cells (6, ActiveCell.Column), _
+    Order1: = xlAscending
+End Sub
+</code></pre>
+
+<h4 id="7-удалить-пустые-пространства">7. Удалить пустые пространства</h4>
+
+<p>Иногда данные в книге содержат дополнительные пробелы (пробелы), которые могут мешать анализу данных и коррумпировать формулы. Вот один макрос, который удалит все пробелы из предварительно выбранного диапазона ячеек:</p>
+
+<pre><code>Sub TrimTheSpaces()
+'Declare your variables
+    Dim MyRange As Range
+    Dim MyCell As Range
+'Save the Workbook before changing cells
+    Select Case MsgBox(&quot;Can't Undo this action.  &quot; &amp; _
+                        &quot;Save Workbook First?&quot;, vbYesNoCancel)
+        Case Is = vbYes
+        ThisWorkbook.Save
+        Case Is = vbCancel
+        Exit Sub
+    End Select
+'Define the target Range.
+    Set MyRange = Selection
+'Start looping through the range.
+    For Each MyCell In MyRange
+'Trim the Spaces.
+        If Not IsEmpty(MyCell) Then
+            MyCell = Trim(MyCell)
+        End If
+'Get the next cell in the range
+    Next MyCell
+End Sub
+</code></pre>
+
+<h4 id="8-выделите-дублированные-значения">8. Выделите дублированные значения</h4>
+
+<p>Иногда в нескольких столбцах, которые мы хотели бы осветить, есть повторяющиеся значения. Этот макрос делает именно это:</p>
+
+<pre><code>Sub HighlightDuplicates()
+'Declare your variables
+    Dim MyRange As Range
+    Dim MyCell As Range
+'Define the target Range.
+    Set MyRange = Selection 
+'Start looping through the range.
+    For Each MyCell In MyRange 
+'Ensure the cell has Text formatting.
+        If WorksheetFunction.CountIf(MyRange, MyCell.Value) &gt; 1 Then
+            MyCell.Interior.ColorIndex = 36
+        End If
+'Get the next cell in the range
+    Next MyCell
+End Sub
+</code></pre>
+
+<h4 id="9-выделите-первые-десять-числа">9. Выделите первые десять числа</h4>
+
+<p>Этот код будет отображать первую десятку самых высоких чисел из набора ячеек:</p>
+
+<pre><code>Sub TopTen()
+Selection.FormatConditions.AddTop10
+Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1)
+        .TopBottom = xlTop10Top
+        'Change the rank here to highlight a different number of values
+        .Rank = 10
+        .Percent = False
+    End With
+    With Selection.FormatConditions(1).Font
+        .Color = -16752384
+        .TintAndShade = 0
+    End With
+    With Selection.FormatConditions(1).Interior
+        .PatternColorIndex = xlAutomatic
+        .Color = 13561798
+        .TintAndShade = 0
+    End With
+Selection.FormatConditions(1).StopIfTrue = False
+End Sub
+</code></pre>
+
+<p>Вы можете легко настроить код, чтобы выделить различное количество чисел.</p>
+
+<h4 id="10-выделите-больше-чем-чисел">10. Выделите больше чем чисел</h4>
+
+<p>Когда вы запустите этот код, появится окно. Вам надо написать число, которое вы хотите сравнить с выбранными ячейками.</p>
+
+<pre><code>Sub HighlightGreaterThanValues()
+Dim i As Integer
+i = InputBox(&quot;Enter Greater Than Value&quot;, &quot;Enter Value&quot;)
+Selection.FormatConditions.Delete
+'Change the Operator to xlLower to highlight lower than values
+Selection.FormatConditions.Add Type:=xlCellValue, Operator:=xlGreater, Formula1:=i
+Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1)
+        .Font.Color = RGB(0, 0, 0)
+        .Interior.Color = RGB(31, 218, 154)
+    End With
+End Sub
+</code></pre>
+
+<p>Вы можете настроить этот код, чтобы выделить более низкие чисел.</p>
+
+<h4 id="11-выделите-ячейки-с-комментариями">11. Выделите ячейки с комментариями</h4>
+
+<p>Простой макрос, который выделяет все ячейки, содержащие комментарии:</p>
+
+<pre><code>Sub highlightCommentCells()
+Selection.SpecialCells(xlCellTypeComments).Select
+Selection.Style= &quot;Note&quot;
+End Sub
+</code></pre>
+
+<h4 id="12-выделите-ячейки-со-словами-с-ошибками">12. Выделите ячейки со словами с ошибками</h4>
+
+<p>Это очень полезно, когда вы работаете с функциями, которые принимают строки, однако кто-то ввел строку с ошибкой, и ваши формулы не работают. Вот как решить эту проблему:</p>
+
+<pre><code>Sub ColorMispelledCells()
+For Each cl In ActiveSheet.UsedRange
+    If Not Application.CheckSpelling(Word:=cl.Text) Then _
+    cl.Interior.ColorIndex = 28
+Next cl
+End Sub
+</code></pre>
+
+<h4 id="13-создать-сводную-таблицу">13. Создать сводную таблицу</h4>
+
+<p>Вот как создать сводную таблицу в MS Excel (версия 2007). Особенно полезно, когда вы делаете индивидуальный отчет каждый день. Вы можете оптимизировать создание сводной таблицы следующим образом:</p>
+
+<pre><code>Sub PivotTableForExcel2007()
+Dim SourceRange As Range
+Set SourceRange = Sheets(&quot;Sheet1&quot;).Range(&quot;A3:N86&quot;)
+ActiveWorkbook.PivotCaches.Create( _
+SourceType:=xlDatabase, _
+SourceData:=SourceRange, _
+Version:=xlPivotTableVersion12).CreatePivotTable _
+TableDestination:=&quot;&quot;, _
+TableName:=&quot;&quot;, _
+DefaultVersion:=xlPivotTableVersion12
+End Sub
+</code></pre>
+
+<h4 id="14-приложить-активную-книгу-по-электронной-почте">14. Приложить активную книгу по электронной почте</h4>
+
+<p>Мой любимый код VBA. Он позволяет вам прикреплять и отправлять файл, с которым вы работаете, с предопределенным адресом электронной почты, заголовком сообщения и телом сообщения! Сначала Вам нужно сделать референцию в Excel на Microsoft Outlook (в редакторе Excel VBA, нажмите tools =&gt; references и выберите Microsoft Outlook).</p>
+
+<pre><code>Sub SendFIleAsAttachment()
+'Declare your variables
+'Set reference to Microsoft Outlook Object library
+    Dim OLApp As Outlook.Application
+    Dim OLMail As Object
+'Open Outlook start a new mail item
+    Set OLApp = New Outlook.Application
+    Set OLMail = OLApp.CreateItem(0)
+    OLApp.Session.Logon  
+'Build your mail item and send
+    With OLMail
+    .To = &quot;admin@datapigtechnologies.com; mike@datapigtechnologies.com&quot;
+    .CC = &quot;&quot;
+    .BCC = &quot;&quot;
+    .Subject = &quot;This is the Subject line&quot;
+    .Body = &quot;Hi there&quot;
+    .Attachments.Add ActiveWorkbook.FullName
+    .Display  'Change to .Send to send without reviewing
+    End With
+'Memory cleanup
+    Set OLMail = Nothing
+    Set OLApp = Nothing
+End Sub
+</code></pre>
+
+<h4 id="15-отправлять-все-диаграммы-excel-в-презентацию-powerpoint">15. Отправлять все диаграммы Excel в презентацию PowerPoint</h4>
+
+<p>Очень удобный макрос, который позволяет вам добавлять все ваши графики Excel в презентацию Powerpoint одним щелчком мыши:</p>
+
+<pre><code>Sub SendExcelFiguresToPowerPoint()
+'Set reference to Microsoft Powerpoint Object Library
+'Declare your variables
+    Dim PP As PowerPoint.Application
+    Dim PPPres As PowerPoint.Presentation
+    Dim PPSlide As PowerPoint.Slide
+    Dim i As Integer
+'Check for charts; exit if no charts exist
+    Sheets(&quot;Slide Data&quot;).Select
+        If ActiveSheet.ChartObjects.Count &lt; 1 Then
+            MsgBox &quot;No charts existing the active sheet&quot;
+            Exit Sub
+        End If
+'Open PowerPoint and create new presentation
+    Set PP = New PowerPoint.Application
+    Set PPPres = PP.Presentations.Add
+    PP.Visible = True
+'Start the loop based on chart count
+        For i = 1 To ActiveSheet.ChartObjects.Count
+        'Copy the chart as a picture
+            ActiveSheet.ChartObjects(i).Chart.CopyPicture _
+            Size:=xlScreen, Format:=xlPicture
+            Application.Wait (Now + TimeValue(&quot;0:00:1&quot;))
+        'Count slides and add new slide as next available slide number
+            ppSlideCount = PPPres.Slides.Count
+            Set PPSlide = PPPres.Slides.Add(SlideCount + 1, ppLayoutBlank)
+            PPSlide.Select
+        'Paste the picture and adjust its position; Go to next chart
+            PPSlide.Shapes.Paste.Select
+            PP.ActiveWindow.Selection.ShapeRange.Align msoAlignCenters, True
+            PP.ActiveWindow.Selection.ShapeRange.Align msoAlignMiddles, True
+        Next i
+'Memory Cleanup
+    Set PPSlide = Nothing
+    Set PPPres = Nothing
+    Set PP = Nothing
+End Sub
+</code></pre>
+
+<h4 id="16-отправить-таблицу-excel-в-ms-word">16. Отправить таблицу Excel в MS Word</h4>
+
+<p>Таблицы Excel обычно помещаются внутри текстовых документов. Вот один автоматический способ экспорта таблицы Excel в MS Word:</p>
+
+<pre><code>Sub ExcelTableInWord()
+'Set reference to Microsoft Word Object library
+'Declare your variables
+    Dim MyRange As Excel.Range
+    Dim wd As Word.Application
+    Dim wdDoc As Word.Document
+    Dim WdRange As Word.Range
+'Copy the defined range
+   Sheets(&quot;Revenue Table&quot;).Range(&quot;B4:F10&quot;).Cop
+'Open the target Word document
+    Set wd = New Word.Application
+    Set wdDoc = wd.Documents.Open _
+    (ThisWorkbook.Path &amp; &quot;\&quot; &amp; &quot;PasteTable.docx&quot;)
+    wd.Visible = True
+'Set focus on the target bookmark
+    Set WdRange = wdDoc.Bookmarks(&quot;DataTableHere&quot;).Rangе
+'Delete the old table and paste new
+    On Error Resume Next
+    WdRange.Tables(1).Delete
+    WdRange.Paste 'paste in the table   
+'Adjust column widths
+    WdRange.Tables(1).Columns.SetWidth _
+    (MyRange.Width / MyRange.Columns.Count), wdAdjustSameWidth
+'Reinsert the bookmark
+    wdDoc.Bookmarks.Add &quot;DataTableHere&quot;, WdRange
+'Memory cleanup
+    Set wd = Nothing
+    Set wdDoc = Nothing
+    Set WdRange = Nothing
+End Sub
+</code></pre>
+
+<h4 id="17-извлечь-определенное-слово-из-ячейки">17. Извлечь определенное слово из ячейки</h4>
+
+<p>Мы можем использовать формулы, если хотим извлечь определенное количество символов. Но что, если мы хотим извлечь только одно слово из предложения или диапазон слов в ячейке? Для этого мы можем сами создать функцию Excel с помощью VBA. Это одна из самых удобных функций VBA, поскольку она позволяет создавать собственные формулы, которые отсутствуют в MS Excel. Давайте продолжим и создадим две функции: findword() и findwordrev():</p>
+
+<pre><code>Function FindWord(Source As String, Position As Integer) As String
+  On Error Resume Next
+  FindWord = Split(WorksheetFunction.Trim(Source), &quot; &quot;)(Position - 1)
+  On Error GoTo 0
+End Function
+
+Function FindWordRev(Source As String, Position As Integer) As String
+  Dim Arr() As String
+  Arr = VBA.Split(WorksheetFunction.Trim(Source), &quot; &quot;)
+  On Error Resume Next
+  FindWordRev = Arr(UBound(Arr) - Position + 1)
+  On Error GoTo 0
+End Function
+</code></pre>
+
+<p>Очень приятно, мы уже создали две новые функции в Excel! Теперь попробуйте использовать их в Excel. Функция = FindWordRev (A1,1) берет последнее слово из ячейки A1. Функция = FindWord (A1,3) берет третье слово из ячейки A1 и т. Д.</p>
+
+<h4 id="18-защитите-свою-книгу">18. Защитите свою книгу</h4>
+
+<p>Иногда мы хотим защитить данные в нашем файле, чтобы только мы могли его изменить. Вот как это сделать с VBA:</p>
+
+<pre><code>Sub ProtectSheets()
+'Declare your variables
+    Dim ws As Worksheet
+'Start looping through all worksheets
+    For Each ws In ActiveWorkbook.Worksheets
+'Protect and loop to next worksheet
+    ws.Protect Password:=&quot;1234&quot;
+    Next ws
+ End Sub
+</code></pre>
+
+<p>Поздравления! Поскольку вы все еще читаете это, вы действительно заинтересованы в изучении VBA. Как вы уже сами видели, язык программирования VBA чрезвычайно полезен и может сэкономить нам много времени. Надеюсь, вы нашли эту информацию полезной и использовали ее, чтобы стать мастером в MS Excel, VBA и компьютерных наук в целом.</p>
+
+<p>© 2018 Атанас Йонков</p>
+
+<hr>
+
+<h6>Литература:</h6>
+
+<h6>1. ExcelChamps.com: <a href="https://excelchamps.com/blog/useful-macro-codes-for-vba-newcomers">Top 100 Useful Excel Macro [VBA] Codes Examples.</a></h6>
+<h6>2. Michael Alexander, John Walkenbach (2012). 101 Ready-To-Use Excel Macros.</h6>
+<h6>3. BG Excel.info: 14 ready-to-use Macros for Excel.</h6>
+
+					</div>
+				</article>
+
+			</div>
+		</div> 
+
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+	</div>	
+
+</main>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><br>
+						<a href="mailto:yonkov.atanas@gmail.com">yonkov.atanas@gmail.com</a><br>
+						<br>
+						
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Follow me</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+                        
+                            
+                                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram fa-2"></i></a>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <a href="https://github.com/yonkov" target="_blank"><i class="fa fa-github fa-2"></i></a>
+                            
+                        
+                            
+                        
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Personal Info</h3>
+				<div class="widget-body">
+					<p>Welcome to my professional website! I work as a devoted web developer and a freelancer. My ultimate goal is customer satisfaction. I focus on quality and creating value for my clients. </p>
+					
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Form widget</h3>
+				<div class="widget-body">
+					<p><br>
+						<a href="mailto:yonkov.atanas@gmail.com">yonkov.atanas@gmail.com</a><br>
+						<br>
+                        
+					</p>
+				</div>
+			</div>
+
+		</div> 
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p></p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2017, Атанас Йонков<br>
+						Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> - 
+                        Powered by: <a href="https://gohugo.io/" rel="poweredby">Hugo</a>
+                    </p>
+				</div>
+			</div>
+
+		</div> 
+	</div>
+</footer>
+
+
+
+    
+      
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://yonkov.github.io/js/template.js"></script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['TyxoObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//s.tyxo.com/c.js','tx');
+tx('create', 'TX-927463385881');
+tx('pageview');
+</script>
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "content": {
+    "message": "This website uses cookies to analyze traffic and for advertisements. By continuing you agree to the use of these cookies.",
+    "dismiss": "Ok, I accept",
+    "href": "https://yonkov.github.io/privacy-policy"
+  }
+})});
+</script>
+</body>
+</html>
