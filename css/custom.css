@@ -1,11 +1,16 @@
-.language-switcher{
-  position:relative;
-  left:20px;
-}
 .language-switcher a{
   color:#000000;
 }
+.language-switcher a:hover {
+    text-decoration: none;
+	color: #800000;
+	font-weight: 400;
+}
 @media screen and (max-width: 767px) {
+.language-switcher{
+  position:relative;
+  left:25px;
+}
 .navbar-toggle {
 	display: block;
 	float: none;
@@ -43,7 +48,7 @@ pre code {
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color: #800000;
     background-color: #fff;
-	font-weight:500;
+	font-weight:400;
 }
 
 .btn-action {

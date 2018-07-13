@@ -11,7 +11,7 @@ body{font-size:15px;font-size:.9375rem;font-family:"Open sans",Helvetica,Arial,s
 .dropdown ul.dropdown-menu > li > a{padding:5px 30px}
 .navbar-default{background-color:#fff;border-color:#ccc}
 .navbar-default .navbar-nav > li > a{color:#454545}
-.navbar-default .navbar-nav > li > a:hover,.navbar-default .navbar-nav > li > a:focus{color:#000;background-color:#fff}
+.navbar-default .navbar-nav > li > a:hover,.navbar-default .navbar-nav > li > a:focus{background-color:#fff}
 .navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > a:hover,.navbar-default .navbar-nav > .active > a:focus{color:#000;background-color:#fff}
 .navbar-default .dropdown ul.dropdown-menu > li > a{color:#454545}
 .navbar-default .dropdown ul.dropdown-menu > li > a:hover{background-color:#eee;color:#000}
