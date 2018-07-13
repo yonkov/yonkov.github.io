@@ -25,7 +25,7 @@
 	<link rel="preload" href="https://yonkov.github.io/css/custom.css" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://yonkov.github.io/css/custom.css"></noscript>
 	
-	<link href="https://yonkov.github.io/css/styles.css?v=1531517447" rel="stylesheet">
+	<link href="https://yonkov.github.io/css/styles.css?v=1531517999" rel="stylesheet">
 	
 		<script>
 		 
@@ -274,18 +274,18 @@ PRIMARY KEY (`id`)
 <p>Create a db.php file and put it in the root directory of your webserver. (If you are running XAMPP on Windows, this is htdocs. If you run an Apache webserver on Ubuntu, you need to put the file in var/www/html).
 Paste the following code in your code editor:
 <p style="color: #e93675;">db.php</p>
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">	<span style="color:#75715e">&lt;?php</span>
-	$servername <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;localhost&#34;</span>;
-	$username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span>;
-	$password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
-	$dbname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;DB_1&#34;</span>;
-	<span style="color:#75715e">// Create connection
-</span><span style="color:#75715e"></span>	$conn <span style="color:#f92672">=</span> <span style="color:#a6e22e">mysqli_connect</span>($servername, $username, $password, $dbname);
-	<span style="color:#75715e">// Check connection
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>$conn) {
-		<span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#34;Connection failed: &#34;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">mysqli_connect_error</span>());
+    <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">	<span style="color:#1e889b">&lt;?php</span>
+	<span style="color:#00688b">$servername</span> = <span style="color:#cd5555">&#34;localhost&#34;</span>;
+	<span style="color:#00688b">$username</span> = <span style="color:#cd5555">&#34;root&#34;</span>;
+	<span style="color:#00688b">$password</span> = <span style="color:#cd5555">&#34;&#34;</span>;
+	<span style="color:#00688b">$dbname</span> = <span style="color:#cd5555">&#34;DB_1&#34;</span>;
+	<span style="color:#228b22">// Create connection
+</span><span style="color:#228b22"></span>	<span style="color:#00688b">$conn</span> = mysqli_connect(<span style="color:#00688b">$servername</span>, <span style="color:#00688b">$username</span>, <span style="color:#00688b">$password</span>, <span style="color:#00688b">$dbname</span>);
+	<span style="color:#228b22">// Check connection
+</span><span style="color:#228b22"></span>	<span style="color:#8b008b;font-weight:bold">if</span> (!<span style="color:#00688b">$conn</span>) {
+		<span style="color:#8b008b;font-weight:bold">die</span>(<span style="color:#cd5555">&#34;Connection failed: &#34;</span> . mysqli_connect_error());
 	}
-	<span style="color:#75715e">?&gt;</span>
+	<span style="color:#1e889b">?&gt;</span>
 	</code></pre></div>
 Please make sure you put the correct username and password. Save the file as db.php. Now, in your web browser, go to <a href="http://localhost/db.php">http://localhost/db.php</a> and make sure you have established connection with the database.</p>
 
@@ -294,35 +294,35 @@ Please make sure you put the correct username and password. Save the file as db.
 <p>We need to create a home page. However, we might want to have a default page template, e.g. header and footer that are constant on all the pages. This can save as a lot of time, instead of having to code each page manually. For the purpose, create three new php files:
 Header.php, Footer.php and Index.php.
 <p style="color: #e93675;">header.php</p>
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34;
-</span><span style="color:#75715e">	&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;</span>
-	&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">xmlns</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.w3.org/1999/xhtml&#34;</span> <span style="color:#a6e22e">xml:lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
-	&lt;<span style="color:#f92672">head</span>&gt;
-		&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Content-Type&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/html; charset=UTF-8&#34;</span> /&gt;
-		&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;description&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;A short description.&#34;</span> /&gt;
-		&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;keywords&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;put, keywords, here&#34;</span> /&gt;
-		&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;robots&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;noindex&#34;</span> /&gt;
-		&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&#34;</span>&gt;
-		&lt;<span style="color:#f92672">title</span>&gt;PHP-MySQL Website from Scratch&lt;/<span style="color:#f92672">title</span>&gt;	
+    <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#1e889b">&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34;
+</span><span style="color:#1e889b">	&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;</span>
+	&lt;<span style="color:#8b008b;font-weight:bold">html</span> <span style="color:#658b00">xmlns</span>=<span style="color:#cd5555">&#34;http://www.w3.org/1999/xhtml&#34;</span> <span style="color:#658b00">xml:lang</span>=<span style="color:#cd5555">&#34;en&#34;</span> <span style="color:#658b00">lang</span>=<span style="color:#cd5555">&#34;en&#34;</span>&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">head</span>&gt;
+		&lt;<span style="color:#8b008b;font-weight:bold">meta</span> <span style="color:#658b00">http-equiv</span>=<span style="color:#cd5555">&#34;Content-Type&#34;</span> <span style="color:#658b00">content</span>=<span style="color:#cd5555">&#34;text/html; charset=UTF-8&#34;</span> /&gt;
+		&lt;<span style="color:#8b008b;font-weight:bold">meta</span> <span style="color:#658b00">name</span>=<span style="color:#cd5555">&#34;description&#34;</span> <span style="color:#658b00">content</span>=<span style="color:#cd5555">&#34;A short description.&#34;</span> /&gt;
+		&lt;<span style="color:#8b008b;font-weight:bold">meta</span> <span style="color:#658b00">name</span>=<span style="color:#cd5555">&#34;keywords&#34;</span> <span style="color:#658b00">content</span>=<span style="color:#cd5555">&#34;put, keywords, here&#34;</span> /&gt;
+		&lt;<span style="color:#8b008b;font-weight:bold">meta</span> <span style="color:#658b00">name</span>=<span style="color:#cd5555">&#34;robots&#34;</span> <span style="color:#658b00">content</span>=<span style="color:#cd5555">&#34;noindex&#34;</span> /&gt;
+		&lt;<span style="color:#8b008b;font-weight:bold">meta</span> <span style="color:#658b00">name</span>=<span style="color:#cd5555">&#34;viewport&#34;</span> <span style="color:#658b00">content</span>=<span style="color:#cd5555">&#34;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&#34;</span>&gt;
+		&lt;<span style="color:#8b008b;font-weight:bold">title</span>&gt;PHP-MySQL Website from Scratch&lt;/<span style="color:#8b008b;font-weight:bold">title</span>&gt;	
 		
-		<span style="color:#75715e">&lt;!-- Latest compiled and minified CSS --&gt;</span>
-		&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&#34;</span> &gt;
+		<span style="color:#228b22">&lt;!-- Latest compiled and minified CSS --&gt;</span>
+		&lt;<span style="color:#8b008b;font-weight:bold">link</span> <span style="color:#658b00">rel</span>=<span style="color:#cd5555">&#34;stylesheet&#34;</span> <span style="color:#658b00">href</span>=<span style="color:#cd5555">&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&#34;</span> &gt;
 
-		<span style="color:#75715e">&lt;!-- Optional theme --&gt;</span>
-		&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css&#34;</span> &gt;
+		<span style="color:#228b22">&lt;!-- Optional theme --&gt;</span>
+		&lt;<span style="color:#8b008b;font-weight:bold">link</span> <span style="color:#658b00">rel</span>=<span style="color:#cd5555">&#34;stylesheet&#34;</span> <span style="color:#658b00">href</span>=<span style="color:#cd5555">&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css&#34;</span> &gt;
 
-		&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;style.css&#34;</span> &gt;
-	&lt;/<span style="color:#f92672">head</span>&gt;</code></pre></div>
+		&lt;<span style="color:#8b008b;font-weight:bold">link</span> <span style="color:#658b00">rel</span>=<span style="color:#cd5555">&#34;stylesheet&#34;</span> <span style="color:#658b00">href</span>=<span style="color:#cd5555">&#34;style.css&#34;</span> &gt;
+	&lt;/<span style="color:#8b008b;font-weight:bold">head</span>&gt;</code></pre></div>
 Great, we have created a header and we can now use it on all our php pages. I will show you how to do this in a minute. We have also added links to bootstrap css. Now let&rsquo;s go on, create a footer:
 <p style="color: #e93675;">footer.php</p>
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;footer&#34;</span>&gt; 	©2017&lt;/<span style="color:#f92672">div</span>&gt;
-		<span style="color:#75715e">&lt;!-- jQuery library --&gt;</span>
-		&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js&#34;</span> 
-		<span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+    <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#8b008b;font-weight:bold">div</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;footer&#34;</span>&gt; 	©2017&lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt;
+		<span style="color:#228b22">&lt;!-- jQuery library --&gt;</span>
+		&lt;<span style="color:#8b008b;font-weight:bold">script</span> <span style="color:#658b00">src</span>=<span style="color:#cd5555">&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js&#34;</span> 
+		<span style="color:#658b00">integrity</span>=<span style="color:#cd5555">&#34;sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=&#34;</span> <span style="color:#658b00">crossorigin</span>=<span style="color:#cd5555">&#34;anonymous&#34;</span>&gt;&lt;/<span style="color:#8b008b;font-weight:bold">script</span>&gt;
 
-	<span style="color:#75715e">&lt;!-- Latest compiled and minified JavaScript --&gt;</span>
-	&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js&#34;</span> 
-	<span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;</code></pre></div>
+	<span style="color:#228b22">&lt;!-- Latest compiled and minified JavaScript --&gt;</span>
+	&lt;<span style="color:#8b008b;font-weight:bold">script</span> <span style="color:#658b00">src</span>=<span style="color:#cd5555">&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js&#34;</span> 
+	<span style="color:#658b00">integrity</span>=<span style="color:#cd5555">&#34;sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa&#34;</span> <span style="color:#658b00">crossorigin</span>=<span style="color:#cd5555">&#34;anonymous&#34;</span>&gt;&lt;/<span style="color:#8b008b;font-weight:bold">script</span>&gt;</code></pre></div>
 Basically, what we did here is just adding some links to bootstrap and css, nothing to worry about. Let’s also add some custom css:
 <p style="color: #e93675;">style.css</p></p>
 
@@ -370,12 +370,12 @@ Basically, what we did here is just adding some links to bootstrap and css, noth
 
 <p>Finally, let’s make a very simple homepage. We will change it later, but let&rsquo;s keep it really simple for now.
 <p style="color: #e93675;">index.php</p>
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-	<span style="color:#66d9ef">require</span>(<span style="color:#e6db74">&#39;db.php&#39;</span>);
-	<span style="color:#66d9ef">include</span> <span style="color:#e6db74">&#39;header.php&#39;</span>;
-	<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;center&gt;&lt;h3&gt;Welcome to my Awesome Website!&lt;/h3&gt;&lt;/center&gt;&#34;</span>;
-	<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;&lt;center&gt;&lt;div&gt;New user? Please &lt;a href=&#34;login.php&#34;&gt;Login&lt;/a&gt; or &lt;a href=&#34;register.php&#34;&gt;Register&lt;/a&gt; &lt;/div&gt;&lt;/center&gt;&#39;</span>;
-	<span style="color:#66d9ef">include</span> <span style="color:#e6db74">&#39;footer.php&#39;</span>;</code></pre></div>
+    <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+	<span style="color:#8b008b;font-weight:bold">require</span>(<span style="color:#cd5555">&#39;db.php&#39;</span>);
+	<span style="color:#8b008b;font-weight:bold">include</span> <span style="color:#cd5555">&#39;header.php&#39;</span>;
+	<span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#cd5555">&#34;&lt;center&gt;&lt;h3&gt;Welcome to my Awesome Website!&lt;/h3&gt;&lt;/center&gt;&#34;</span>;
+	<span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#cd5555">&#39;&lt;center&gt;&lt;div&gt;New user? Please &lt;a href=&#34;login.php&#34;&gt;Login&lt;/a&gt; or &lt;a href=&#34;register.php&#34;&gt;Register&lt;/a&gt; &lt;/div&gt;&lt;/center&gt;&#39;</span>;
+	<span style="color:#8b008b;font-weight:bold">include</span> <span style="color:#cd5555">&#39;footer.php&#39;</span>;</code></pre></div>
 Put all of the files in the root directory of your web server. That’s it! Now we have a homepage and we have included the header and the footer. You should be able to access it at <a href="http://localhost/">http://localhost/</a>. Now, we need to create the registration form.</p>
 
 <h3 id="4-create-register-page">4. Create Register page</h3>
@@ -384,31 +384,31 @@ Put all of the files in the root directory of your web server. That’s it! Now 
 
 <p>Create a file called register.php and use the following code:
 <p style="color: #e93675;">register.php</p>
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">	<span style="color:#75715e">&lt;?php</span>
-	<span style="color:#66d9ef">require</span>(<span style="color:#e6db74">&#39;db.php&#39;</span>);
-		<span style="color:#75715e">// If the values are posted, insert them into the database.
-</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($_POST[<span style="color:#e6db74">&#39;username&#39;</span>]) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">isset</span>($_POST[<span style="color:#e6db74">&#39;password&#39;</span>])){
-			$username <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#39;username&#39;</span>];
-		$email <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#39;email&#39;</span>];
-			$password <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#39;password&#39;</span>];
+    <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">	<span style="color:#1e889b">&lt;?php</span>
+	<span style="color:#8b008b;font-weight:bold">require</span>(<span style="color:#cd5555">&#39;db.php&#39;</span>);
+		<span style="color:#228b22">// If the values are posted, insert them into the database.
+</span><span style="color:#228b22"></span>		<span style="color:#8b008b;font-weight:bold">if</span> (isset(<span style="color:#00688b">$_POST</span>[<span style="color:#cd5555">&#39;username&#39;</span>]) &amp;&amp; isset(<span style="color:#00688b">$_POST</span>[<span style="color:#cd5555">&#39;password&#39;</span>])){
+			<span style="color:#00688b">$username</span> = <span style="color:#00688b">$_POST</span>[<span style="color:#cd5555">&#39;username&#39;</span>];
+		<span style="color:#00688b">$email</span> = <span style="color:#00688b">$_POST</span>[<span style="color:#cd5555">&#39;email&#39;</span>];
+			<span style="color:#00688b">$password</span> = <span style="color:#00688b">$_POST</span>[<span style="color:#cd5555">&#39;password&#39;</span>];
 	 
-	 $sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;INSERT INTO user (username, password, email)
-</span><span style="color:#e6db74">	VALUES (&#39;</span><span style="color:#e6db74">$username</span><span style="color:#e6db74">&#39;, &#39;</span><span style="color:#e6db74">$password</span><span style="color:#e6db74">&#39;, &#39;</span><span style="color:#e6db74">$email</span><span style="color:#e6db74">&#39;)&#34;</span>;
+	 <span style="color:#00688b">$sql</span> = <span style="color:#cd5555">&#34;INSERT INTO user (username, password, email)
+</span><span style="color:#cd5555">	VALUES (&#39;</span><span style="color:#cd5555">$username</span><span style="color:#cd5555">&#39;, &#39;</span><span style="color:#cd5555">$password</span><span style="color:#cd5555">&#39;, &#39;</span><span style="color:#cd5555">$email</span><span style="color:#cd5555">&#39;)&#34;</span>;
 
-	<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">mysqli_query</span>($conn, $sql)) {
-		<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;center&gt;&lt;h3&gt;New record created successfully!&lt;br/&gt;Click here to &lt;a href=&#39;login.php&#39;&gt;Login&lt;/a&gt;&lt;/h3&gt;&lt;/center&gt;&#34;</span>;
-	} <span style="color:#66d9ef">else</span> {
-		<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Error: &#34;</span> <span style="color:#f92672">.</span> $sql <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;&lt;br&gt;&#34;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">mysqli_error</span>($conn);
+	<span style="color:#8b008b;font-weight:bold">if</span> (mysqli_query(<span style="color:#00688b">$conn</span>, <span style="color:#00688b">$sql</span>)) {
+		<span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#cd5555">&#34;&lt;center&gt;&lt;h3&gt;New record created successfully!&lt;br/&gt;Click here to &lt;a href=&#39;login.php&#39;&gt;Login&lt;/a&gt;&lt;/h3&gt;&lt;/center&gt;&#34;</span>;
+	} <span style="color:#8b008b;font-weight:bold">else</span> {
+		<span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#cd5555">&#34;Error: &#34;</span> . <span style="color:#00688b">$sql</span> . <span style="color:#cd5555">&#34;&lt;br&gt;&#34;</span> . mysqli_error(<span style="color:#00688b">$conn</span>);
 	}
 
-	<span style="color:#a6e22e">mysqli_close</span>($conn);       
+	mysqli_close(<span style="color:#00688b">$conn</span>);       
 			
 		}
 
-		<span style="color:#75715e">?&gt;</span>
+		<span style="color:#1e889b">?&gt;</span>
 	&lt;html&gt;
 	&lt;head&gt;
-		<span style="color:#75715e">&lt;?php</span> <span style="color:#66d9ef">include</span> <span style="color:#e6db74">&#39;header.php&#39;</span>; <span style="color:#75715e">?&gt;</span>
+		<span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">include</span> <span style="color:#cd5555">&#39;header.php&#39;</span>; <span style="color:#1e889b">?&gt;</span>
 		&lt;meta name=&#34;robots&#34; content=&#34;noindex&#34; /&gt;
 	&lt;/head&gt;
 	&lt;body&gt;
@@ -416,8 +416,8 @@ Put all of the files in the root directory of your web server. That’s it! Now 
 	&lt;div class=&#34;container&#34;&gt;
 		  &lt;form class=&#34;form-signin&#34; method=&#34;POST&#34;&gt;
 		  
-		  <span style="color:#75715e">&lt;?php</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">isset</span>($smsg)){ <span style="color:#75715e">?&gt;</span>&lt;div class=&#34;alert alert-success&#34; role=&#34;alert&#34;&gt; <span style="color:#75715e">&lt;?php</span> <span style="color:#66d9ef">echo</span> $smsg; <span style="color:#75715e">?&gt;</span> &lt;/div&gt;<span style="color:#75715e">&lt;?php</span> } <span style="color:#75715e">?&gt;</span>
-		  <span style="color:#75715e">&lt;?php</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">isset</span>($fmsg)){ <span style="color:#75715e">?&gt;</span>&lt;div class=&#34;alert alert-danger&#34; role=&#34;alert&#34;&gt; <span style="color:#75715e">&lt;?php</span> <span style="color:#66d9ef">echo</span> $fmsg; <span style="color:#75715e">?&gt;</span> &lt;/div&gt;<span style="color:#75715e">&lt;?php</span> } <span style="color:#75715e">?&gt;</span>
+		  <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">if</span>(isset(<span style="color:#00688b">$smsg</span>)){ <span style="color:#1e889b">?&gt;</span>&lt;div class=&#34;alert alert-success&#34; role=&#34;alert&#34;&gt; <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#00688b">$smsg</span>; <span style="color:#1e889b">?&gt;</span> &lt;/div&gt;<span style="color:#1e889b">&lt;?php</span> } <span style="color:#1e889b">?&gt;</span>
+		  <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">if</span>(isset(<span style="color:#00688b">$fmsg</span>)){ <span style="color:#1e889b">?&gt;</span>&lt;div class=&#34;alert alert-danger&#34; role=&#34;alert&#34;&gt; <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#00688b">$fmsg</span>; <span style="color:#1e889b">?&gt;</span> &lt;/div&gt;<span style="color:#1e889b">&lt;?php</span> } <span style="color:#1e889b">?&gt;</span>
 			&lt;h2 class=&#34;form-signin-heading&#34;&gt;Please Register&lt;/h2&gt;
 			&lt;div class=&#34;input-group&#34;&gt;
 		  &lt;span class=&#34;input-group-addon&#34; id=&#34;basic-addon1&#34;&gt;@&lt;/span&gt;
@@ -448,40 +448,40 @@ Put all of the files in the root directory of your web server. That’s it! Now 
 
 <p>Create a file called login.php and paste the following code:
 <p style="color: #e93675;">login.php</p>
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">	<span style="color:#75715e">&lt;?php</span>
-	<span style="color:#66d9ef">include</span> <span style="color:#e6db74">&#39;header.php&#39;</span>;
-	<span style="color:#75715e">//Start the Session
-</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">session_start</span>();
-	 <span style="color:#66d9ef">require</span>(<span style="color:#e6db74">&#39;db.php&#39;</span>);
-	<span style="color:#75715e">//If the form is submitted or not.
-</span><span style="color:#75715e"></span>	<span style="color:#75715e">//If the form is submitted
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($_POST[<span style="color:#e6db74">&#39;username&#39;</span>]) <span style="color:#66d9ef">and</span> <span style="color:#a6e22e">isset</span>($_POST[<span style="color:#e6db74">&#39;password&#39;</span>])){
-	<span style="color:#75715e">//Assigning posted values to variables.
-</span><span style="color:#75715e"></span>	$username <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#39;username&#39;</span>];
-	$password <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#39;password&#39;</span>];
-	<span style="color:#75715e">//Checking the values are existing in the database or not
-</span><span style="color:#75715e"></span>	$query <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM user WHERE username=&#39;</span><span style="color:#e6db74">$username</span><span style="color:#e6db74">&#39; and password=&#39;</span><span style="color:#e6db74">$password</span><span style="color:#e6db74">&#39;&#34;</span>;
+    <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">	<span style="color:#1e889b">&lt;?php</span>
+	<span style="color:#8b008b;font-weight:bold">include</span> <span style="color:#cd5555">&#39;header.php&#39;</span>;
+	<span style="color:#228b22">//Start the Session
+</span><span style="color:#228b22"></span>	session_start();
+	 <span style="color:#8b008b;font-weight:bold">require</span>(<span style="color:#cd5555">&#39;db.php&#39;</span>);
+	<span style="color:#228b22">//If the form is submitted or not.
+</span><span style="color:#228b22"></span>	<span style="color:#228b22">//If the form is submitted
+</span><span style="color:#228b22"></span>	<span style="color:#8b008b;font-weight:bold">if</span> (isset(<span style="color:#00688b">$_POST</span>[<span style="color:#cd5555">&#39;username&#39;</span>]) <span style="color:#8b008b;font-weight:bold">and</span> isset(<span style="color:#00688b">$_POST</span>[<span style="color:#cd5555">&#39;password&#39;</span>])){
+	<span style="color:#228b22">//Assigning posted values to variables.
+</span><span style="color:#228b22"></span>	<span style="color:#00688b">$username</span> = <span style="color:#00688b">$_POST</span>[<span style="color:#cd5555">&#39;username&#39;</span>];
+	<span style="color:#00688b">$password</span> = <span style="color:#00688b">$_POST</span>[<span style="color:#cd5555">&#39;password&#39;</span>];
+	<span style="color:#228b22">//Checking the values are existing in the database or not
+</span><span style="color:#228b22"></span>	<span style="color:#00688b">$query</span> = <span style="color:#cd5555">&#34;SELECT * FROM user WHERE username=&#39;</span><span style="color:#cd5555">$username</span><span style="color:#cd5555">&#39; and password=&#39;</span><span style="color:#cd5555">$password</span><span style="color:#cd5555">&#39;&#34;</span>;
 	 
-	$result <span style="color:#f92672">=</span> <span style="color:#a6e22e">mysqli_query</span>($conn, $query) <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">die</span>(<span style="color:#a6e22e">mysqli_error</span>($conn));
-	$count <span style="color:#f92672">=</span> <span style="color:#a6e22e">mysqli_num_rows</span>($result);
-	<span style="color:#75715e">//If the posted values are equal to the database values, then session will be created for the user.
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">if</span> ($count <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>){
-	$_SESSION[<span style="color:#e6db74">&#39;username&#39;</span>] <span style="color:#f92672">=</span> $username;
-	}<span style="color:#66d9ef">else</span>{
-	<span style="color:#75715e">//If the login credentials doesn&#39;t match, he will be shown with an error message.
-</span><span style="color:#75715e"></span>	$fmsg <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Invalid Login Credentials.&#34;</span>;
+	<span style="color:#00688b">$result</span> = mysqli_query(<span style="color:#00688b">$conn</span>, <span style="color:#00688b">$query</span>) <span style="color:#8b008b;font-weight:bold">or</span> <span style="color:#8b008b;font-weight:bold">die</span>(mysqli_error(<span style="color:#00688b">$conn</span>));
+	<span style="color:#00688b">$count</span> = mysqli_num_rows(<span style="color:#00688b">$result</span>);
+	<span style="color:#228b22">//If the posted values are equal to the database values, then session will be created for the user.
+</span><span style="color:#228b22"></span>	<span style="color:#8b008b;font-weight:bold">if</span> (<span style="color:#00688b">$count</span> == <span style="color:#b452cd">1</span>){
+	<span style="color:#00688b">$_SESSION</span>[<span style="color:#cd5555">&#39;username&#39;</span>] = <span style="color:#00688b">$username</span>;
+	}<span style="color:#8b008b;font-weight:bold">else</span>{
+	<span style="color:#228b22">//If the login credentials doesn&#39;t match, he will be shown with an error message.
+</span><span style="color:#228b22"></span>	<span style="color:#00688b">$fmsg</span> = <span style="color:#cd5555">&#34;Invalid Login Credentials.&#34;</span>;
 	}
 	}
-	<span style="color:#75715e">//if the user is logged in Greets the user with message
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($_SESSION[<span style="color:#e6db74">&#39;username&#39;</span>])){
-	$username <span style="color:#f92672">=</span> $_SESSION[<span style="color:#e6db74">&#39;username&#39;</span>];
-	<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Hi &#34;</span> <span style="color:#f92672">.</span> $username <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;&#34;</span>;
-	<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;! You are now logged in.&#34;</span>;
-	<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;br&gt;&lt;a href=&#39;index.php&#39;&gt; Home&lt;/a&gt;&lt;a href=&#39;dashboard.php&#39;&gt; Dashboard&lt;a href=&#39;logout.php&#39;&gt; Logout&lt;/a&gt;&#34;</span>;
+	<span style="color:#228b22">//if the user is logged in Greets the user with message
+</span><span style="color:#228b22"></span>	<span style="color:#8b008b;font-weight:bold">if</span> (isset(<span style="color:#00688b">$_SESSION</span>[<span style="color:#cd5555">&#39;username&#39;</span>])){
+	<span style="color:#00688b">$username</span> = <span style="color:#00688b">$_SESSION</span>[<span style="color:#cd5555">&#39;username&#39;</span>];
+	<span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#cd5555">&#34;Hi &#34;</span> . <span style="color:#00688b">$username</span> . <span style="color:#cd5555">&#34;&#34;</span>;
+	<span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#cd5555">&#34;! You are now logged in.&#34;</span>;
+	<span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#cd5555">&#34;&lt;br&gt;&lt;a href=&#39;index.php&#39;&gt; Home&lt;/a&gt;&lt;a href=&#39;dashboard.php&#39;&gt; Dashboard&lt;a href=&#39;logout.php&#39;&gt; Logout&lt;/a&gt;&#34;</span>;
 	 
-	}<span style="color:#66d9ef">else</span>{
-	<span style="color:#75715e">//When the user visits the page first time, simple login form will be displayed.
-</span><span style="color:#75715e"></span>	<span style="color:#75715e">?&gt;</span>
+	}<span style="color:#8b008b;font-weight:bold">else</span>{
+	<span style="color:#228b22">//When the user visits the page first time, simple login form will be displayed.
+</span><span style="color:#228b22"></span>	<span style="color:#1e889b">?&gt;</span>
 	&lt;html&gt;
 	&lt;head&gt;
 		&lt;title&gt;User Login Using PHP &amp; MySQL&lt;/title&gt;
@@ -492,7 +492,7 @@ Put all of the files in the root directory of your web server. That’s it! Now 
 
 	&lt;div class=&#34;container&#34;&gt;
 		  &lt;form class=&#34;form-signin&#34; method=&#34;POST&#34;&gt;
-		  <span style="color:#75715e">&lt;?php</span> <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">isset</span>($fmsg)){ <span style="color:#75715e">?&gt;</span>&lt;div class=&#34;alert alert-danger&#34; role=&#34;alert&#34;&gt; <span style="color:#75715e">&lt;?php</span> <span style="color:#66d9ef">echo</span> $fmsg; <span style="color:#75715e">?&gt;</span> &lt;/div&gt;<span style="color:#75715e">&lt;?php</span> } <span style="color:#75715e">?&gt;</span>
+		  <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">if</span>(isset(<span style="color:#00688b">$fmsg</span>)){ <span style="color:#1e889b">?&gt;</span>&lt;div class=&#34;alert alert-danger&#34; role=&#34;alert&#34;&gt; <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#00688b">$fmsg</span>; <span style="color:#1e889b">?&gt;</span> &lt;/div&gt;<span style="color:#1e889b">&lt;?php</span> } <span style="color:#1e889b">?&gt;</span>
 			&lt;h2 class=&#34;form-signin-heading&#34;&gt;Please Login&lt;/h2&gt;
 			&lt;div class=&#34;input-group&#34;&gt;
 		  &lt;span class=&#34;input-group-addon&#34; id=&#34;basic-addon1&#34;&gt;@&lt;/span&gt;
@@ -508,7 +508,7 @@ Put all of the files in the root directory of your web server. That’s it! Now 
 	&lt;/body&gt;
 
 	&lt;/html&gt;
-	<span style="color:#75715e">&lt;?php</span> } <span style="color:#75715e">?&gt;</span></code></pre></div></p>
+	<span style="color:#1e889b">&lt;?php</span> } <span style="color:#1e889b">?&gt;</span></code></pre></div></p>
 
 <p>The explanations are inside the above code, please read them carefully. What you need to understand is that php does a check with the database whether the submitted data exists in the user table that we have already created in MYSQL. If this is the case, the user can log in to the restricted area. This is the area for logged-in users, e.g. the dashboard.</p>
 
@@ -517,21 +517,21 @@ Put all of the files in the root directory of your web server. That’s it! Now 
 <p>You need to have a dashboard page for the registered users. You first need to have a file called auth.php to memorize the session. In this way, any non-authorised (not logged-in) users who try to access the dashboard or any other restricted area of your site, will be redirected to login.php. You should require auth.php for all the pages in your restricted area.
 <p style="color: #e93675;">auth.php</p></p>
 
-<pre><code><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-	<span style="color:#a6e22e">session_start</span>();
-	<span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">isset</span>($_SESSION[<span style="color:#e6db74">&#39;username&#39;</span>])){
-	   <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;Location:login.php&#34;</span>);
+<pre><code><div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+	session_start();
+	<span style="color:#8b008b;font-weight:bold">if</span>(!isset(<span style="color:#00688b">$_SESSION</span>[<span style="color:#cd5555">&#39;username&#39;</span>])){
+	   header(<span style="color:#cd5555">&#34;Location:login.php&#34;</span>);
 	}
-	<span style="color:#75715e">?&gt;</span></code></pre></div>
+	<span style="color:#1e889b">?&gt;</span></code></pre></div>
 </code></pre>
 
 <p>Now create the dashboard.php file:
 <p style="color: #e93675;">dashboard.php</p>
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-	<span style="color:#66d9ef">require</span>(<span style="color:#e6db74">&#39;db.php&#39;</span>);
-	<span style="color:#66d9ef">include</span>(<span style="color:#e6db74">&#34;auth.php&#34;</span>);
-	<span style="color:#66d9ef">include</span>(<span style="color:#e6db74">&#34;header.php&#34;</span>);
-	<span style="color:#75715e">?&gt;</span>
+    <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+	<span style="color:#8b008b;font-weight:bold">require</span>(<span style="color:#cd5555">&#39;db.php&#39;</span>);
+	<span style="color:#8b008b;font-weight:bold">include</span>(<span style="color:#cd5555">&#34;auth.php&#34;</span>);
+	<span style="color:#8b008b;font-weight:bold">include</span>(<span style="color:#cd5555">&#34;header.php&#34;</span>);
+	<span style="color:#1e889b">?&gt;</span>
 	&lt;!DOCTYPE html&gt;
 	&lt;html&gt;
 	&lt;head&gt;
@@ -556,15 +556,15 @@ Put all of the files in the root directory of your web server. That’s it! Now 
 
 <p>And logout.php file:
 <p style="color: #e93675;">logout.php</p>
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-	<span style="color:#a6e22e">session_start</span>();
-	<span style="color:#75715e">// Destroying All Sessions
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">session_destroy</span>())
+    <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+	session_start();
+	<span style="color:#228b22">// Destroying All Sessions
+</span><span style="color:#228b22"></span>	<span style="color:#8b008b;font-weight:bold">if</span>(session_destroy())
 	{
-	<span style="color:#75715e">// Redirecting To Home Page
-</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;Location: login.php&#34;</span>);
+	<span style="color:#228b22">// Redirecting To Home Page
+</span><span style="color:#228b22"></span>	header(<span style="color:#cd5555">&#34;Location: login.php&#34;</span>);
 	}
-	<span style="color:#75715e">?&gt;</span></code></pre></div></p>
+	<span style="color:#1e889b">?&gt;</span></code></pre></div></p>
 
 <p><br></p>
 
@@ -572,87 +572,87 @@ Put all of the files in the root directory of your web server. That’s it! Now 
 
 <p>Now, remove the old index.php file and paste this code in index.php:
 <p style="color: #e93675;">index.php</p>
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-	<span style="color:#66d9ef">require</span>(<span style="color:#e6db74">&#39;db.php&#39;</span>);
-	<span style="color:#66d9ef">include</span> <span style="color:#e6db74">&#39;header.php&#39;</span>;
-	<span style="color:#75715e">//Check if a user is logged in or not
-</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">session_start</span>();
-		<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($_SESSION[<span style="color:#e6db74">&#39;username&#39;</span>])){
-		$username <span style="color:#f92672">=</span> $_SESSION[<span style="color:#e6db74">&#39;username&#39;</span>];
-		<span style="color:#75715e">//Display a message for logged-in users only
-</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;center&gt;&lt;h3&gt;Hello &#34;</span> <span style="color:#f92672">.</span> $username <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;
-</span><span style="color:#e6db74">		!&lt;/h3&gt;&lt;/center&gt;&#34;</span>;
-		<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;center&gt;&lt;div&gt;&lt;p&gt;&lt;a href=&#39;dashboard.php&#39;&gt; Dashboard&lt;/a&gt;&lt;a href=&#39;logout.php&#39;&gt; Logout&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/center&gt;&#34;</span>;
+    <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+	<span style="color:#8b008b;font-weight:bold">require</span>(<span style="color:#cd5555">&#39;db.php&#39;</span>);
+	<span style="color:#8b008b;font-weight:bold">include</span> <span style="color:#cd5555">&#39;header.php&#39;</span>;
+	<span style="color:#228b22">//Check if a user is logged in or not
+</span><span style="color:#228b22"></span>	session_start();
+		<span style="color:#8b008b;font-weight:bold">if</span> (isset(<span style="color:#00688b">$_SESSION</span>[<span style="color:#cd5555">&#39;username&#39;</span>])){
+		<span style="color:#00688b">$username</span> = <span style="color:#00688b">$_SESSION</span>[<span style="color:#cd5555">&#39;username&#39;</span>];
+		<span style="color:#228b22">//Display a message for logged-in users only
+</span><span style="color:#228b22"></span>		<span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#cd5555">&#34;&lt;center&gt;&lt;h3&gt;Hello &#34;</span> . <span style="color:#00688b">$username</span> . <span style="color:#cd5555">&#34;
+</span><span style="color:#cd5555">		!&lt;/h3&gt;&lt;/center&gt;&#34;</span>;
+		<span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#cd5555">&#34;&lt;center&gt;&lt;div&gt;&lt;p&gt;&lt;a href=&#39;dashboard.php&#39;&gt; Dashboard&lt;/a&gt;&lt;a href=&#39;logout.php&#39;&gt; Logout&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/center&gt;&#34;</span>;
 
 		}
-		<span style="color:#66d9ef">else</span>{
-		<span style="color:#75715e">//Display different text if a user is not logged in.
-</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;center&gt;&lt;h3&gt;Welcome to my Awesome Website!&lt;/h3&gt;&lt;/center&gt;&#34;</span>;
-				<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;&lt;center&gt;&lt;div&gt;New user? Please &lt;a href=&#34;login.php&#34;&gt;Login&lt;/a&gt; or &lt;a href=&#34;register.php&#34;&gt;Register&lt;/a&gt;
-</span><span style="color:#e6db74">				&lt;/div&gt;&lt;/center&gt;&#39;</span>;
+		<span style="color:#8b008b;font-weight:bold">else</span>{
+		<span style="color:#228b22">//Display different text if a user is not logged in.
+</span><span style="color:#228b22"></span>		<span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#cd5555">&#34;&lt;center&gt;&lt;h3&gt;Welcome to my Awesome Website!&lt;/h3&gt;&lt;/center&gt;&#34;</span>;
+				<span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#cd5555">&#39;&lt;center&gt;&lt;div&gt;New user? Please &lt;a href=&#34;login.php&#34;&gt;Login&lt;/a&gt; or &lt;a href=&#34;register.php&#34;&gt;Register&lt;/a&gt;
+</span><span style="color:#cd5555">				&lt;/div&gt;&lt;/center&gt;&#39;</span>;
 		}
-	<span style="color:#75715e">?&gt;</span> 
+	<span style="color:#1e889b">?&gt;</span> 
 	&lt;html&gt;
 	&lt;body&gt;
 		&lt;header&gt; 
 			&lt;div class=&#34;container&#34;&gt;
 				&lt;h3&gt;About This Project&lt;/h3&gt;
 			
-		<span style="color:#75715e">&lt;?php</span>
-		<span style="color:#75715e">//If the user is logged-in
-</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($_SESSION[<span style="color:#e6db74">&#39;username&#39;</span>])){
-		$username <span style="color:#f92672">=</span> $_SESSION[<span style="color:#e6db74">&#39;username&#39;</span>];
-		<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;
-</span><span style="color:#e6db74">	&lt;nav class=&#34;navbar navbar-inverse navbar-fixed-top&#34;&gt;
-</span><span style="color:#e6db74">		&lt;div class=&#34;container&#34;&gt;
-</span><span style="color:#e6db74">			&lt;div class=&#34;navbar-header&#34;&gt;
-</span><span style="color:#e6db74">				&lt;button type=&#34;button&#34; class=&#34;navbar-toggle collapsed&#34; data-toggle=&#34;collapse&#34; data-target=&#34;#navbar&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;navbar&#34;&gt;
-</span><span style="color:#e6db74">					&lt;span class=&#34;sr-only&#34;&gt;Toggle navigation&lt;/span&gt;
-</span><span style="color:#e6db74">					&lt;span class=&#34;icon-bar&#34;&gt;&lt;/span&gt;
-</span><span style="color:#e6db74">					&lt;span class=&#34;icon-bar&#34;&gt;&lt;/span&gt;
-</span><span style="color:#e6db74">					&lt;span class=&#34;icon-bar&#34;&gt;&lt;/span&gt;
-</span><span style="color:#e6db74">				&lt;/button&gt;
-</span><span style="color:#e6db74">				&lt;a class=&#34;navbar-brand&#34; href=&#34;#&#34;&gt;My Awesome Website&lt;/a&gt;
-</span><span style="color:#e6db74">			&lt;/div&gt;
-</span><span style="color:#e6db74">		&lt;div id=&#34;navbar&#34; class=&#34;navbar-collapse collapse&#34;&gt;
-</span><span style="color:#e6db74">				&lt;ul class=&#34;nav navbar-nav navbar-right&#34;&gt;
-</span><span style="color:#e6db74">					&lt;li class=&#34;active&#34;&gt;&lt;a href=&#34;index.php&#34;&gt;
-</span><span style="color:#e6db74">						&lt;span class=&#34;glyphicon glyphicon-home&#34;&gt;&lt;/span&gt; 
-</span><span style="color:#e6db74">						Home&lt;/a&gt;&lt;/li&gt;
-</span><span style="color:#e6db74">					&lt;li&gt;&lt;a href=&#34;#contact&#34;&gt;Contact&lt;/a&gt;&lt;/li&gt;
-</span><span style="color:#e6db74">					&lt;li&gt;&lt;a href=&#34;dashboard.php&#34;&gt; Dashboard&lt;/a&gt;&lt;/li&gt;
-</span><span style="color:#e6db74">					&lt;li&gt;&lt;a href=&#34;logout.php&#34;&gt; Logout&lt;/a&gt;&lt;/li&gt;&#39;</span>;
+		<span style="color:#1e889b">&lt;?php</span>
+		<span style="color:#228b22">//If the user is logged-in
+</span><span style="color:#228b22"></span>		<span style="color:#8b008b;font-weight:bold">if</span> (isset(<span style="color:#00688b">$_SESSION</span>[<span style="color:#cd5555">&#39;username&#39;</span>])){
+		<span style="color:#00688b">$username</span> = <span style="color:#00688b">$_SESSION</span>[<span style="color:#cd5555">&#39;username&#39;</span>];
+		<span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#cd5555">&#39;
+</span><span style="color:#cd5555">	&lt;nav class=&#34;navbar navbar-inverse navbar-fixed-top&#34;&gt;
+</span><span style="color:#cd5555">		&lt;div class=&#34;container&#34;&gt;
+</span><span style="color:#cd5555">			&lt;div class=&#34;navbar-header&#34;&gt;
+</span><span style="color:#cd5555">				&lt;button type=&#34;button&#34; class=&#34;navbar-toggle collapsed&#34; data-toggle=&#34;collapse&#34; data-target=&#34;#navbar&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;navbar&#34;&gt;
+</span><span style="color:#cd5555">					&lt;span class=&#34;sr-only&#34;&gt;Toggle navigation&lt;/span&gt;
+</span><span style="color:#cd5555">					&lt;span class=&#34;icon-bar&#34;&gt;&lt;/span&gt;
+</span><span style="color:#cd5555">					&lt;span class=&#34;icon-bar&#34;&gt;&lt;/span&gt;
+</span><span style="color:#cd5555">					&lt;span class=&#34;icon-bar&#34;&gt;&lt;/span&gt;
+</span><span style="color:#cd5555">				&lt;/button&gt;
+</span><span style="color:#cd5555">				&lt;a class=&#34;navbar-brand&#34; href=&#34;#&#34;&gt;My Awesome Website&lt;/a&gt;
+</span><span style="color:#cd5555">			&lt;/div&gt;
+</span><span style="color:#cd5555">		&lt;div id=&#34;navbar&#34; class=&#34;navbar-collapse collapse&#34;&gt;
+</span><span style="color:#cd5555">				&lt;ul class=&#34;nav navbar-nav navbar-right&#34;&gt;
+</span><span style="color:#cd5555">					&lt;li class=&#34;active&#34;&gt;&lt;a href=&#34;index.php&#34;&gt;
+</span><span style="color:#cd5555">						&lt;span class=&#34;glyphicon glyphicon-home&#34;&gt;&lt;/span&gt; 
+</span><span style="color:#cd5555">						Home&lt;/a&gt;&lt;/li&gt;
+</span><span style="color:#cd5555">					&lt;li&gt;&lt;a href=&#34;#contact&#34;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+</span><span style="color:#cd5555">					&lt;li&gt;&lt;a href=&#34;dashboard.php&#34;&gt; Dashboard&lt;/a&gt;&lt;/li&gt;
+</span><span style="color:#cd5555">					&lt;li&gt;&lt;a href=&#34;logout.php&#34;&gt; Logout&lt;/a&gt;&lt;/li&gt;&#39;</span>;
 	}
-		<span style="color:#75715e">//If the user is logged-out
-</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">else</span>{
-		<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;
-</span><span style="color:#e6db74">		&lt;nav class=&#34;navbar navbar-inverse navbar-fixed-top&#34;&gt;
-</span><span style="color:#e6db74">			&lt;div class=&#34;container&#34;&gt;
-</span><span style="color:#e6db74">				&lt;div class=&#34;navbar-header&#34;&gt;
-</span><span style="color:#e6db74">					&lt;button type=&#34;button&#34; class=&#34;navbar-toggle collapsed&#34; data-toggle=&#34;collapse&#34; data-target=&#34;#navbar&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;navbar&#34;&gt;
-</span><span style="color:#e6db74">						&lt;span class=&#34;sr-only&#34;&gt;Toggle navigation&lt;/span&gt;
-</span><span style="color:#e6db74">						&lt;span class=&#34;icon-bar&#34;&gt;&lt;/span&gt;
-</span><span style="color:#e6db74">						&lt;span class=&#34;icon-bar&#34;&gt;&lt;/span&gt;
-</span><span style="color:#e6db74">						&lt;span class=&#34;icon-bar&#34;&gt;&lt;/span&gt;
-</span><span style="color:#e6db74">					&lt;/button&gt;
-</span><span style="color:#e6db74">					&lt;a class=&#34;navbar-brand&#34; href=&#34;#&#34;&gt;My Awesome Website&lt;/a&gt;
-</span><span style="color:#e6db74">				&lt;/div&gt;
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">			&lt;div id=&#34;navbar&#34; class=&#34;navbar-collapse collapse&#34;&gt;
-</span><span style="color:#e6db74">					&lt;ul class=&#34;nav navbar-nav navbar-right&#34;&gt;
-</span><span style="color:#e6db74">						&lt;li class=&#34;active&#34;&gt;&lt;a href=&#34;index.php&#34;&gt;
-</span><span style="color:#e6db74">							&lt;span class=&#34;glyphicon glyphicon-home&#34;&gt;&lt;/span&gt; 
-</span><span style="color:#e6db74">							Home&lt;/a&gt;&lt;/li&gt;
-</span><span style="color:#e6db74">						&lt;li&gt;&lt;a href=&#34;#contact&#34;&gt;Contact&lt;/a&gt;&lt;/li&gt;
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">			&lt;li&gt;&lt;a href=&#34;login.php&#34;&gt;&lt;span class=&#34;glyphicon 
-</span><span style="color:#e6db74">					glyphicon-log-in&#34;&gt;&lt;/span&gt; Login&lt;/a&gt;&lt;/li&gt;
-</span><span style="color:#e6db74">					&lt;li&gt;&lt;a href=&#34;register.php&#34;&gt;&lt;span class=&#34;glyphicon 
-</span><span style="color:#e6db74">					glyphicon-user&#34;&gt;&lt;/span&gt; Register&lt;/a&gt;&lt;/li&gt;&#39;</span>;
+		<span style="color:#228b22">//If the user is logged-out
+</span><span style="color:#228b22"></span>		<span style="color:#8b008b;font-weight:bold">else</span>{
+		<span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#cd5555">&#39;
+</span><span style="color:#cd5555">		&lt;nav class=&#34;navbar navbar-inverse navbar-fixed-top&#34;&gt;
+</span><span style="color:#cd5555">			&lt;div class=&#34;container&#34;&gt;
+</span><span style="color:#cd5555">				&lt;div class=&#34;navbar-header&#34;&gt;
+</span><span style="color:#cd5555">					&lt;button type=&#34;button&#34; class=&#34;navbar-toggle collapsed&#34; data-toggle=&#34;collapse&#34; data-target=&#34;#navbar&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;navbar&#34;&gt;
+</span><span style="color:#cd5555">						&lt;span class=&#34;sr-only&#34;&gt;Toggle navigation&lt;/span&gt;
+</span><span style="color:#cd5555">						&lt;span class=&#34;icon-bar&#34;&gt;&lt;/span&gt;
+</span><span style="color:#cd5555">						&lt;span class=&#34;icon-bar&#34;&gt;&lt;/span&gt;
+</span><span style="color:#cd5555">						&lt;span class=&#34;icon-bar&#34;&gt;&lt;/span&gt;
+</span><span style="color:#cd5555">					&lt;/button&gt;
+</span><span style="color:#cd5555">					&lt;a class=&#34;navbar-brand&#34; href=&#34;#&#34;&gt;My Awesome Website&lt;/a&gt;
+</span><span style="color:#cd5555">				&lt;/div&gt;
+</span><span style="color:#cd5555">
+</span><span style="color:#cd5555">			&lt;div id=&#34;navbar&#34; class=&#34;navbar-collapse collapse&#34;&gt;
+</span><span style="color:#cd5555">					&lt;ul class=&#34;nav navbar-nav navbar-right&#34;&gt;
+</span><span style="color:#cd5555">						&lt;li class=&#34;active&#34;&gt;&lt;a href=&#34;index.php&#34;&gt;
+</span><span style="color:#cd5555">							&lt;span class=&#34;glyphicon glyphicon-home&#34;&gt;&lt;/span&gt; 
+</span><span style="color:#cd5555">							Home&lt;/a&gt;&lt;/li&gt;
+</span><span style="color:#cd5555">						&lt;li&gt;&lt;a href=&#34;#contact&#34;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+</span><span style="color:#cd5555">
+</span><span style="color:#cd5555">			&lt;li&gt;&lt;a href=&#34;login.php&#34;&gt;&lt;span class=&#34;glyphicon 
+</span><span style="color:#cd5555">					glyphicon-log-in&#34;&gt;&lt;/span&gt; Login&lt;/a&gt;&lt;/li&gt;
+</span><span style="color:#cd5555">					&lt;li&gt;&lt;a href=&#34;register.php&#34;&gt;&lt;span class=&#34;glyphicon 
+</span><span style="color:#cd5555">					glyphicon-user&#34;&gt;&lt;/span&gt; Register&lt;/a&gt;&lt;/li&gt;&#39;</span>;
 
 		}
 		
-	<span style="color:#75715e">?&gt;</span>       
+	<span style="color:#1e889b">?&gt;</span>       
 			&lt;/div&gt;
 		&lt;/header&gt;
 		&lt;section class=&#34;container&#34; &gt;
@@ -667,7 +667,7 @@ Put all of the files in the root directory of your web server. That’s it! Now 
 
 		
 		&lt;footer class=&#34;container&#34;&gt;
-		   <span style="color:#75715e">&lt;?php</span> <span style="color:#66d9ef">include</span> <span style="color:#e6db74">&#39;footer.php&#39;</span>; <span style="color:#75715e">?&gt;</span>
+		   <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">include</span> <span style="color:#cd5555">&#39;footer.php&#39;</span>; <span style="color:#1e889b">?&gt;</span>
 		&lt;/footer&gt;
 	  
 	&lt;/body&gt;

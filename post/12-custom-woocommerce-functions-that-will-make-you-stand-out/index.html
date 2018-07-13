@@ -25,7 +25,7 @@
 	<link rel="preload" href="https://yonkov.github.io/css/custom.css" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://yonkov.github.io/css/custom.css"></noscript>
 	
-	<link href="https://yonkov.github.io/css/styles.css?v=1531517447" rel="stylesheet">
+	<link href="https://yonkov.github.io/css/styles.css?v=1531517999" rel="stylesheet">
 	
 		<script>
 		 
@@ -256,22 +256,22 @@
 
 <p>Sometimes, you may want to move your product gallery images to the right side of the single product page. Here is how to do that:</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#a6e22e">add_filter</span> ( <span style="color:#e6db74">&#39;WooCommerce_product_thumbnails_columns&#39;</span>, <span style="color:#e6db74">&#39;change_gallery_columns&#39;</span> );
-<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">change_gallery_columns</span>() {
-     <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>; 
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+add_filter ( <span style="color:#cd5555">&#39;WooCommerce_product_thumbnails_columns&#39;</span>, <span style="color:#cd5555">&#39;change_gallery_columns&#39;</span> );
+<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">change_gallery_columns</span>() {
+     <span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#b452cd">1</span>; 
 }</code></pre></div>
 
 <h2 id="2-rename-product-tabs">2. Rename Product Tabs</h2>
 
 <p>Sometimes you would like to rename the product tabs on the single product page.</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#a6e22e">add_filter</span>( <span style="color:#e6db74">&#39;WooCommerce_product_tabs&#39;</span>, <span style="color:#e6db74">&#39;woo_rename_tab&#39;</span>, <span style="color:#ae81ff">98</span>);
-<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">woo_rename_tab</span>($tabs) {
-	$tabs[<span style="color:#e6db74">&#39;description&#39;</span>][<span style="color:#e6db74">&#39;title&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Omschrijving&#39;</span>;
-	$tabs[<span style="color:#e6db74">&#39;additional_information&#39;</span>][<span style="color:#e6db74">&#39;title&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Extra informatie&#39;</span>;
-	<span style="color:#66d9ef">return</span> $tabs;
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+add_filter( <span style="color:#cd5555">&#39;WooCommerce_product_tabs&#39;</span>, <span style="color:#cd5555">&#39;woo_rename_tab&#39;</span>, <span style="color:#b452cd">98</span>);
+<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">woo_rename_tab</span>(<span style="color:#00688b">$tabs</span>) {
+	<span style="color:#00688b">$tabs</span>[<span style="color:#cd5555">&#39;description&#39;</span>][<span style="color:#cd5555">&#39;title&#39;</span>] = <span style="color:#cd5555">&#39;Omschrijving&#39;</span>;
+	<span style="color:#00688b">$tabs</span>[<span style="color:#cd5555">&#39;additional_information&#39;</span>][<span style="color:#cd5555">&#39;title&#39;</span>] = <span style="color:#cd5555">&#39;Extra informatie&#39;</span>;
+	<span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#00688b">$tabs</span>;
 }</code></pre></div>
 
 <p>This function will rename the Description tab to Omschrijving and the Additional Information tab to  Extra informatie. You are free to customize it according to your own needs</p>
@@ -280,20 +280,20 @@
 
 <p>Sometimes you may also want to include a custom product tab on the Single product page. Paste the following code in your child theme’s functions.php:</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#a6e22e">add_filter</span>( <span style="color:#e6db74">&#39;WooCommerce_product_tabs&#39;</span>, <span style="color:#e6db74">&#39;new_product_tab&#39;</span> );
-<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">new_product_tab</span>( $tabs ) {
-	<span style="color:#75715e">/* Adds the new tab */</span>
-	$tabs[<span style="color:#e6db74">&#39;test_tab&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
-		<span style="color:#e6db74">&#39;title&#39;</span> 	<span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">__</span>( <span style="color:#e6db74">&#39;Custom Tab, &#39;</span><span style="color:#a6e22e">WooCommerce</span><span style="color:#e6db74">&#39; ),
-</span><span style="color:#e6db74">		&#39;</span><span style="color:#a6e22e">priority</span><span style="color:#e6db74">&#39; 	=&gt; 50,  
-</span><span style="color:#e6db74">		&#39;</span><span style="color:#a6e22e">callback</span><span style="color:#e6db74">&#39; 	=&gt; &#39;</span><span style="color:#a6e22e">new_product_tab_content</span><span style="color:#e6db74">&#39;
-</span><span style="color:#e6db74">	);
-</span><span style="color:#e6db74">	return $tabs;  /* Return all  tabs including the new New Custom Product Tab  to display */
-</span><span style="color:#e6db74">}
-</span><span style="color:#e6db74">/* The new tab content */
-</span><span style="color:#e6db74">function new_product_tab_content() {
-</span><span style="color:#e6db74">echo &#39;</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">p</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Your</span> <span style="color:#a6e22e">custom</span> <span style="color:#a6e22e">tab</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">&lt;/</span><span style="color:#a6e22e">p</span><span style="color:#f92672">&gt;</span><span style="color:#960050;background-color:#1e0010">&#39;</span>;
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+add_filter( <span style="color:#cd5555">&#39;WooCommerce_product_tabs&#39;</span>, <span style="color:#cd5555">&#39;new_product_tab&#39;</span> );
+<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">new_product_tab</span>( <span style="color:#00688b">$tabs</span> ) {
+	<span style="color:#228b22">/* Adds the new tab */</span>
+	<span style="color:#00688b">$tabs</span>[<span style="color:#cd5555">&#39;test_tab&#39;</span>] = <span style="color:#8b008b;font-weight:bold">array</span>(
+		<span style="color:#cd5555">&#39;title&#39;</span> 	=&gt; __( <span style="color:#cd5555">&#39;Custom Tab, &#39;</span>WooCommerce<span style="color:#cd5555">&#39; ),
+</span><span style="color:#cd5555">		&#39;</span>priority<span style="color:#cd5555">&#39; 	=&gt; 50,  
+</span><span style="color:#cd5555">		&#39;</span>callback<span style="color:#cd5555">&#39; 	=&gt; &#39;</span>new_product_tab_content<span style="color:#cd5555">&#39;
+</span><span style="color:#cd5555">	);
+</span><span style="color:#cd5555">	return $tabs;  /* Return all  tabs including the new New Custom Product Tab  to display */
+</span><span style="color:#cd5555">}
+</span><span style="color:#cd5555">/* The new tab content */
+</span><span style="color:#cd5555">function new_product_tab_content() {
+</span><span style="color:#cd5555">echo &#39;</span>&lt;p&gt;Your custom tab content&lt;/p&gt;<span style="color:#a61717;background-color:#e3d2d2">&#39;</span>;
 }</code></pre></div>
 
 <p>(Sometimes, you may want to further customize the product tabs. For example, you may want to add custom text for each product. Here is an amazing WordPress plugin that can help you achieve this: <a href="https://wordpress.org/plugins/yikes-inc-easy-custom-woocommerce-product-tabs/">Custom Product Tabs for WooCommerce</a>)</p>
@@ -301,54 +301,54 @@
 <h2 id="4-reorder-single-product-page-content">4. Reorder Single Product Page Content</h2>
 
 <p>Sometimes, you may wish to move a section in your WooCommerce single product page. For example, you may want to move the product data tabs from the bottom of the page to a position just below the image title:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#75715e">/* Reorder single product page content */</span>
-<span style="color:#a6e22e">remove_action</span>( <span style="color:#e6db74">&#39;WooCommerce_after_single_product_summary&#39;</span>, <span style="color:#e6db74">&#39;WooCommerce_output_product_data_tabs&#39;</span>, <span style="color:#ae81ff">10</span> );
-<span style="color:#a6e22e">add_action</span>( <span style="color:#e6db74">&#39;WooCommerce_single_product_summary&#39;</span>, <span style="color:#e6db74">&#39;WooCommerce_output_product_data_tabs&#39;</span>, <span style="color:#ae81ff">7</span> );</code></pre></div></p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+<span style="color:#228b22">/* Reorder single product page content */</span>
+remove_action( <span style="color:#cd5555">&#39;WooCommerce_after_single_product_summary&#39;</span>, <span style="color:#cd5555">&#39;WooCommerce_output_product_data_tabs&#39;</span>, <span style="color:#b452cd">10</span> );
+add_action( <span style="color:#cd5555">&#39;WooCommerce_single_product_summary&#39;</span>, <span style="color:#cd5555">&#39;WooCommerce_output_product_data_tabs&#39;</span>, <span style="color:#b452cd">7</span> );</code></pre></div></p>
 
 <p>If you want to learn more about how to customize and reorder the content of the single product page, here is a nice tutorial on that subject: <a href="https://www.cloudways.com/blog/reorder-content-on-woocommerce-single-product-page/">Reorder Content on WooCommerce Single Product Page</a>.</p>
 
 <h2 id="5-remove-zooming-effect-in-woocommerce">5. Remove Zooming Effect in WooCommerce</h2>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#a6e22e">remove_theme_support</span>( <span style="color:#e6db74">&#39;wc-product-gallery-zoom&#39;</span> );</code></pre></div>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+remove_theme_support( <span style="color:#cd5555">&#39;wc-product-gallery-zoom&#39;</span> );</code></pre></div>
 
 <h2 id="6-hide-product-price-range-on-single-product-page">6. Hide Product Price Range on Single Product Page</h2>
 
 <p>Sometimes, when you have product variations, it is a good idea to get rid of the price variations because they do not always add extra value to the customer. Paste this code to your child theme’s functions.php file:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#a6e22e">add_action</span>( <span style="color:#e6db74">&#39;WooCommerce_single_product_summary&#39;</span>, <span style="color:#e6db74">&#39;hide_single_product_variable_price_range&#39;</span>, <span style="color:#ae81ff">1</span> );
-<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">hide_single_product_variable_price_range</span>(){
-    <span style="color:#66d9ef">global</span> $product;
-    <span style="color:#66d9ef">if</span>( $product<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">is_type</span>(<span style="color:#e6db74">&#39;variable&#39;</span>) )<span style="color:#f92672">:</span>
-		<span style="color:#a6e22e">remove_action</span>(<span style="color:#e6db74">&#39;WooCommerce_single_product_summary&#39;</span>, <span style="color:#e6db74">&#39;WooCommerce_template_single_price&#39;</span>, <span style="color:#ae81ff">10</span> );
-    <span style="color:#66d9ef">endif</span>;
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+add_action( <span style="color:#cd5555">&#39;WooCommerce_single_product_summary&#39;</span>, <span style="color:#cd5555">&#39;hide_single_product_variable_price_range&#39;</span>, <span style="color:#b452cd">1</span> );
+<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">hide_single_product_variable_price_range</span>(){
+    <span style="color:#8b008b;font-weight:bold">global</span> <span style="color:#00688b">$product</span>;
+    <span style="color:#8b008b;font-weight:bold">if</span>( <span style="color:#00688b">$product</span>-&gt;<span style="color:#658b00">is_type</span>(<span style="color:#cd5555">&#39;variable&#39;</span>) ):
+		remove_action(<span style="color:#cd5555">&#39;WooCommerce_single_product_summary&#39;</span>, <span style="color:#cd5555">&#39;WooCommerce_template_single_price&#39;</span>, <span style="color:#b452cd">10</span> );
+    <span style="color:#8b008b;font-weight:bold">endif</span>;
 }</code></pre></div></p>
 
 <h2 id="7-hide-product-price-range-entirely">7.   Hide Product Price Range Entirely</h2>
 
 <p>If you remove the product price range on the single product page, it will still appear on WooCommerce product archives page. You may want to hide it entirely. Use the following code:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#a6e22e">add_filter</span>( <span style="color:#e6db74">&#39;WooCommerce_variable_sale_price_html&#39;</span>, <span style="color:#e6db74">&#39;detect_variation_price_format&#39;</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">2</span> );
-<span style="color:#a6e22e">add_filter</span>( <span style="color:#e6db74">&#39;WooCommerce_variable_price_html&#39;</span>, <span style="color:#e6db74">&#39;detect_variation_price_format&#39;</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">2</span> );
-<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">detect_variation_price_format</span>( $price, $product ) {
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+add_filter( <span style="color:#cd5555">&#39;WooCommerce_variable_sale_price_html&#39;</span>, <span style="color:#cd5555">&#39;detect_variation_price_format&#39;</span>, <span style="color:#b452cd">10</span>, <span style="color:#b452cd">2</span> );
+add_filter( <span style="color:#cd5555">&#39;WooCommerce_variable_price_html&#39;</span>, <span style="color:#cd5555">&#39;detect_variation_price_format&#39;</span>, <span style="color:#b452cd">10</span>, <span style="color:#b452cd">2</span> );
+<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">detect_variation_price_format</span>( <span style="color:#00688b">$price</span>, <span style="color:#00688b">$product</span> ) {
 
-<span style="color:#75715e">// Main Price
-</span><span style="color:#75715e"></span>$prices <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>( $product<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">get_variation_price</span>( <span style="color:#e6db74">&#39;min&#39;</span>, <span style="color:#66d9ef">true</span> ), $product<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">get_variation_price</span>( <span style="color:#e6db74">&#39;max&#39;</span>, <span style="color:#66d9ef">true</span> ) );
-$price <span style="color:#f92672">=</span> $prices[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">!==</span> $prices[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">?</span> <span style="color:#a6e22e">sprintf</span>( <span style="color:#a6e22e">__</span>( <span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#e6db74">&#39;WooCommerce&#39;</span> ), <span style="color:#a6e22e">wc_price</span>( $prices[<span style="color:#ae81ff">0</span>] ) ) <span style="color:#f92672">:</span> <span style="color:#a6e22e">wc_price</span>( $prices[<span style="color:#ae81ff">0</span>] );
+<span style="color:#228b22">// Main Price
+</span><span style="color:#228b22"></span><span style="color:#00688b">$prices</span> = <span style="color:#8b008b;font-weight:bold">array</span>( <span style="color:#00688b">$product</span>-&gt;<span style="color:#658b00">get_variation_price</span>( <span style="color:#cd5555">&#39;min&#39;</span>, <span style="color:#8b008b;font-weight:bold">true</span> ), <span style="color:#00688b">$product</span>-&gt;<span style="color:#658b00">get_variation_price</span>( <span style="color:#cd5555">&#39;max&#39;</span>, <span style="color:#8b008b;font-weight:bold">true</span> ) );
+<span style="color:#00688b">$price</span> = <span style="color:#00688b">$prices</span>[<span style="color:#b452cd">0</span>] !== <span style="color:#00688b">$prices</span>[<span style="color:#b452cd">1</span>] ? sprintf( __( <span style="color:#cd5555">&#39;&#39;</span>, <span style="color:#cd5555">&#39;WooCommerce&#39;</span> ), wc_price( <span style="color:#00688b">$prices</span>[<span style="color:#b452cd">0</span>] ) ) : wc_price( <span style="color:#00688b">$prices</span>[<span style="color:#b452cd">0</span>] );
 
-<span style="color:#75715e">// Sale Price
-</span><span style="color:#75715e"></span>$prices <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>( $product<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">get_variation_regular_price</span>( <span style="color:#e6db74">&#39;min&#39;</span>, <span style="color:#66d9ef">true</span> ), $product<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">get_variation_regular_price</span>( <span style="color:#e6db74">&#39;max&#39;</span>, <span style="color:#66d9ef">true</span> ) );
+<span style="color:#228b22">// Sale Price
+</span><span style="color:#228b22"></span><span style="color:#00688b">$prices</span> = <span style="color:#8b008b;font-weight:bold">array</span>( <span style="color:#00688b">$product</span>-&gt;<span style="color:#658b00">get_variation_regular_price</span>( <span style="color:#cd5555">&#39;min&#39;</span>, <span style="color:#8b008b;font-weight:bold">true</span> ), <span style="color:#00688b">$product</span>-&gt;<span style="color:#658b00">get_variation_regular_price</span>( <span style="color:#cd5555">&#39;max&#39;</span>, <span style="color:#8b008b;font-weight:bold">true</span> ) );
 
-<span style="color:#a6e22e">sort</span>( $prices );
+sort( <span style="color:#00688b">$prices</span> );
 
-$saleprice <span style="color:#f92672">=</span> $prices[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">!==</span> $prices[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">?</span> <span style="color:#a6e22e">sprintf</span>( <span style="color:#a6e22e">__</span>( <span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#e6db74">&#39;WooCommerce&#39;</span> ), <span style="color:#a6e22e">wc_price</span>( $prices[<span style="color:#ae81ff">0</span>] ) ) <span style="color:#f92672">:</span> <span style="color:#a6e22e">wc_price</span>( $prices[<span style="color:#ae81ff">0</span>] );
+<span style="color:#00688b">$saleprice</span> = <span style="color:#00688b">$prices</span>[<span style="color:#b452cd">0</span>] !== <span style="color:#00688b">$prices</span>[<span style="color:#b452cd">1</span>] ? sprintf( __( <span style="color:#cd5555">&#39;&#39;</span>, <span style="color:#cd5555">&#39;WooCommerce&#39;</span> ), wc_price( <span style="color:#00688b">$prices</span>[<span style="color:#b452cd">0</span>] ) ) : wc_price( <span style="color:#00688b">$prices</span>[<span style="color:#b452cd">0</span>] );
 
-<span style="color:#66d9ef">if</span> ( $price <span style="color:#f92672">!==</span> $saleprice ) {
-$price <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&lt;del&gt;&#39;</span> <span style="color:#f92672">.</span> $saleprice <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/del&gt; &lt;ins&gt;&#39;</span> <span style="color:#f92672">.</span> $price <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/ins&gt;&#39;</span>;
+<span style="color:#8b008b;font-weight:bold">if</span> ( <span style="color:#00688b">$price</span> !== <span style="color:#00688b">$saleprice</span> ) {
+<span style="color:#00688b">$price</span> = <span style="color:#cd5555">&#39;&lt;del&gt;&#39;</span> . <span style="color:#00688b">$saleprice</span> . <span style="color:#cd5555">&#39;&lt;/del&gt; &lt;ins&gt;&#39;</span> . <span style="color:#00688b">$price</span> . <span style="color:#cd5555">&#39;&lt;/ins&gt;&#39;</span>;
 }
 
-<span style="color:#66d9ef">return</span> ;
+<span style="color:#8b008b;font-weight:bold">return</span> ;
 }</code></pre></div></p>
 
 <h2 id="8-display-image-title-on-single-product-page-with-variations">8. Display Image Title on Single Product Page With Variations</h2>
@@ -356,81 +356,81 @@ $price <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&lt
 <p>Product variation gallery on the single product page is nice but it will be even better to add image captions on the single product page. This can add a great value to your users, because they will be able to differentiate the product not only by its image but also thanks to your custom text. In this way, you can change the product title, when an image from the product gallery is selected
 The code takes the image title and prints it below the image on the single product page. You can customize the image title from your media library. Go to Dashboard – media – library and select the image you want to edit. You will see image tabs on the right side of the page. Click on the Image Title field and put your custom text there.
 After that, paste the following code in your child theme’s functions.php:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">gcw_insert_captions</span>( $html, $attachment_id ) {
-	$captions <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
-	$title <span style="color:#f92672">=</span> <span style="color:#a6e22e">get_post_field</span>( <span style="color:#e6db74">&#39;post_title&#39;</span>, $attachment_id );
-	<span style="color:#66d9ef">if</span>( <span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>( $title ) ) {
-		$captions <span style="color:#f92672">.=</span> <span style="color:#e6db74">&#39;&lt;h5&gt;&lt;br&gt;&#39;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">esc_html</span>( $title ) <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/h5&gt;&#39;</span>;
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">gcw_insert_captions</span>( <span style="color:#00688b">$html</span>, <span style="color:#00688b">$attachment_id</span> ) {
+	<span style="color:#00688b">$captions</span> = <span style="color:#cd5555">&#39;&#39;</span>;
+	<span style="color:#00688b">$title</span> = get_post_field( <span style="color:#cd5555">&#39;post_title&#39;</span>, <span style="color:#00688b">$attachment_id</span> );
+	<span style="color:#8b008b;font-weight:bold">if</span>( !<span style="color:#8b008b;font-weight:bold">empty</span>( <span style="color:#00688b">$title</span> ) ) {
+		<span style="color:#00688b">$captions</span> .= <span style="color:#cd5555">&#39;&lt;h5&gt;&lt;br&gt;&#39;</span> . esc_html( <span style="color:#00688b">$title</span> ) . <span style="color:#cd5555">&#39;&lt;/h5&gt;&#39;</span>;
 	}
-	$description <span style="color:#f92672">=</span> <span style="color:#a6e22e">get_post_field</span>( <span style="color:#e6db74">&#39;post_excerpt&#39;</span>, $attachment_id );
-	<span style="color:#66d9ef">if</span>( <span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>( $description ) ) {
-		$captions <span style="color:#f92672">.=</span> <span style="color:#e6db74">&#39;&lt;p&gt;&#39;</span> <span style="color:#f92672">.</span> $description <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/p&gt;&#39;</span>;
+	<span style="color:#00688b">$description</span> = get_post_field( <span style="color:#cd5555">&#39;post_excerpt&#39;</span>, <span style="color:#00688b">$attachment_id</span> );
+	<span style="color:#8b008b;font-weight:bold">if</span>( !<span style="color:#8b008b;font-weight:bold">empty</span>( <span style="color:#00688b">$description</span> ) ) {
+		<span style="color:#00688b">$captions</span> .= <span style="color:#cd5555">&#39;&lt;p&gt;&#39;</span> . <span style="color:#00688b">$description</span> . <span style="color:#cd5555">&#39;&lt;/p&gt;&#39;</span>;
 	}
-	<span style="color:#66d9ef">if</span>( <span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>( $captions ) ) {
-		$captions <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&lt;div class=&#34;gcw-caption&#34;&gt;&#39;</span> <span style="color:#f92672">.</span> $captions <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/div&gt;&#39;</span>;	
-		$html <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_replace</span>(<span style="color:#e6db74">&#39;~&lt;\/div&gt;$~&#39;</span>, $captions <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/div&gt;&#39;</span>, $html );
+	<span style="color:#8b008b;font-weight:bold">if</span>( !<span style="color:#8b008b;font-weight:bold">empty</span>( <span style="color:#00688b">$captions</span> ) ) {
+		<span style="color:#00688b">$captions</span> = <span style="color:#cd5555">&#39;&lt;div class=&#34;gcw-caption&#34;&gt;&#39;</span> . <span style="color:#00688b">$captions</span> . <span style="color:#cd5555">&#39;&lt;/div&gt;&#39;</span>;	
+		<span style="color:#00688b">$html</span> = preg_replace(<span style="color:#cd5555">&#39;~&lt;\/div&gt;$~&#39;</span>, <span style="color:#00688b">$captions</span> . <span style="color:#cd5555">&#39;&lt;/div&gt;&#39;</span>, <span style="color:#00688b">$html</span> );
 	}
-	<span style="color:#66d9ef">return</span> $html;
+	<span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#00688b">$html</span>;
 }
-<span style="color:#a6e22e">add_filter</span>( <span style="color:#e6db74">&#39;WooCommerce_single_product_image_thumbnail_html&#39;</span>, <span style="color:#e6db74">&#39;gcw_insert_captions&#39;</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">2</span> );</code></pre></div>
+add_filter( <span style="color:#cd5555">&#39;WooCommerce_single_product_image_thumbnail_html&#39;</span>, <span style="color:#cd5555">&#39;gcw_insert_captions&#39;</span>, <span style="color:#b452cd">10</span>, <span style="color:#b452cd">2</span> );</code></pre></div>
 The code takes the image title and prints it below the image on the single product page. For more information on how to do this and further customization, you can check the following article: <a href="https://yonkov.github.io/post/change-product-title-based-on-product-variations-in-woocommerce/">Change Product Title Based on Product Variations in WooCommerce</a></p>
 
 <h2 id="9-replace-choose-an-option-text-with-custom-text">9. Replace “choose an option” Text with Custom Text</h2>
 
 <p>This code applied on the single product page with product variations. It is extremely useful when you want to make it more clear what are the available options that your customer may choose from:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">filter_WooCommerce_dropdown_variation_attribute_options_args</span>( $array ) { 
-    <span style="color:#75715e">// Find the name of the attribute for the slug we passed in to the function
-</span><span style="color:#75715e"></span>    $attribute_name <span style="color:#f92672">=</span> <span style="color:#a6e22e">wc_attribute_label</span>($array[<span style="color:#e6db74">&#39;attribute&#39;</span>]);
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">filter_WooCommerce_dropdown_variation_attribute_options_args</span>( <span style="color:#00688b">$array</span> ) { 
+    <span style="color:#228b22">// Find the name of the attribute for the slug we passed in to the function
+</span><span style="color:#228b22"></span>    <span style="color:#00688b">$attribute_name</span> = wc_attribute_label(<span style="color:#00688b">$array</span>[<span style="color:#cd5555">&#39;attribute&#39;</span>]);
 
-    <span style="color:#75715e">// Create a string for our select
-</span><span style="color:#75715e"></span>    $select_text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Kies &#39;</span> <span style="color:#f92672">.</span> $attribute_name;
+    <span style="color:#228b22">// Create a string for our select
+</span><span style="color:#228b22"></span>    <span style="color:#00688b">$select_text</span> = <span style="color:#cd5555">&#39;Kies &#39;</span> . <span style="color:#00688b">$attribute_name</span>;
 
-    $array[<span style="color:#e6db74">&#39;show_option_none&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">__</span>( $select_text, <span style="color:#e6db74">&#39;WooCommerce&#39;</span> );
-    <span style="color:#66d9ef">return</span> $array;
+    <span style="color:#00688b">$array</span>[<span style="color:#cd5555">&#39;show_option_none&#39;</span>] = __( <span style="color:#00688b">$select_text</span>, <span style="color:#cd5555">&#39;WooCommerce&#39;</span> );
+    <span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#00688b">$array</span>;
 }; 
 
-<span style="color:#75715e">// add the filter 
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">add_filter</span>( <span style="color:#e6db74">&#39;WooCommerce_dropdown_variation_attribute_options_args&#39;</span>, <span style="color:#e6db74">&#39;filter_WooCommerce_dropdown_variation_attribute_options_args&#39;</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">1</span> );</code></pre></div></p>
+<span style="color:#228b22">// add the filter 
+</span><span style="color:#228b22"></span>add_filter( <span style="color:#cd5555">&#39;WooCommerce_dropdown_variation_attribute_options_args&#39;</span>, <span style="color:#cd5555">&#39;filter_WooCommerce_dropdown_variation_attribute_options_args&#39;</span>, <span style="color:#b452cd">10</span>, <span style="color:#b452cd">1</span> );</code></pre></div></p>
 
 <h2 id="10-display-product-excerpt-on-woocommerce-product-archive-page">10.  Display Product Excerpt on WooCommerce Product Archive Page</h2>
 
 <p>One of my favorite functions. It allows you to add custom text on the WooCommerce product archive page – the page that displays the list with all your products.
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">vitahc_excerpt_in_product_archives</span>() {
-	<span style="color:#a6e22e">the_excerpt</span>();
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">vitahc_excerpt_in_product_archives</span>() {
+	the_excerpt();
 }
-<span style="color:#a6e22e">add_action</span>(<span style="color:#e6db74">&#39;woocommerce_after_shop_loop_item_title&#39;</span>,<span style="color:#e6db74">&#39;vitahc_excerpt_in_product_archives&#39;</span>, <span style="color:#ae81ff">40</span>);</code></pre></div></p>
+add_action(<span style="color:#cd5555">&#39;woocommerce_after_shop_loop_item_title&#39;</span>,<span style="color:#cd5555">&#39;vitahc_excerpt_in_product_archives&#39;</span>, <span style="color:#b452cd">40</span>);</code></pre></div></p>
 
 <h2 id="11-hide-subtotal-on-woocommerce-order-confirmation-template">11.  Hide Subtotal on WooCommerce Order Confirmation Template</h2>
 
 <p>Customize the email customer gets as a confirmation for a new order
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#a6e22e">add_filter</span>( <span style="color:#e6db74">&#39;WooCommerce_get_order_item_totals&#39;</span>, <span style="color:#e6db74">&#39;adjust_WooCommerce_get_order_item_totals&#39;</span> );
-<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">adjust_WooCommerce_get_order_item_totals</span>( $totals ) {
-  <span style="color:#a6e22e">unset</span>($totals[<span style="color:#e6db74">&#39;cart_subtotal&#39;</span>]  );
-  <span style="color:#66d9ef">return</span> $totals;
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+add_filter( <span style="color:#cd5555">&#39;WooCommerce_get_order_item_totals&#39;</span>, <span style="color:#cd5555">&#39;adjust_WooCommerce_get_order_item_totals&#39;</span> );
+<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">adjust_WooCommerce_get_order_item_totals</span>( <span style="color:#00688b">$totals</span> ) {
+  unset(<span style="color:#00688b">$totals</span>[<span style="color:#cd5555">&#39;cart_subtotal&#39;</span>]  );
+  <span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#00688b">$totals</span>;
 }</code></pre></div></p>
 
 <h2 id="12-change-total-text-on-woocommerce-order-confirmation-template">12.  Change “total” Text on WooCommerce Order Confirmation Template</h2>
 
-<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#a6e22e">add_filter</span>(<span style="color:#e6db74">&#39;gettext&#39;</span>, <span style="color:#e6db74">&#39;wc_renaming_checkout_total&#39;</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">3</span>);
-<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">wc_renaming_checkout_total</span>( $translated_text, $untranslated_text, $domain ) {
+<p><div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+add_filter(<span style="color:#cd5555">&#39;gettext&#39;</span>, <span style="color:#cd5555">&#39;wc_renaming_checkout_total&#39;</span>, <span style="color:#b452cd">20</span>, <span style="color:#b452cd">3</span>);
+<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">wc_renaming_checkout_total</span>( <span style="color:#00688b">$translated_text</span>, <span style="color:#00688b">$untranslated_text</span>, <span style="color:#00688b">$domain</span> ) {
 
-    <span style="color:#66d9ef">if</span>( <span style="color:#f92672">!</span><span style="color:#a6e22e">is_admin</span>()) {
-        <span style="color:#66d9ef">if</span>( $untranslated_text <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Total:&#39;</span> )
-            $translated_text <span style="color:#f92672">=</span> <span style="color:#a6e22e">__</span>( <span style="color:#e6db74">&#39;Totaal excl. BTW:&#39;</span>,<span style="color:#e6db74">&#39;theme_slug_domain&#39;</span> );
+    <span style="color:#8b008b;font-weight:bold">if</span>( !is_admin()) {
+        <span style="color:#8b008b;font-weight:bold">if</span>( <span style="color:#00688b">$untranslated_text</span> == <span style="color:#cd5555">&#39;Total:&#39;</span> )
+            <span style="color:#00688b">$translated_text</span> = __( <span style="color:#cd5555">&#39;Totaal excl. BTW:&#39;</span>,<span style="color:#cd5555">&#39;theme_slug_domain&#39;</span> );
     }
     
-    <span style="color:#66d9ef">if</span>( <span style="color:#f92672">!</span><span style="color:#a6e22e">is_admin</span>() <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">is_checkout</span> ) {
-        <span style="color:#66d9ef">if</span>( $untranslated_text <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Total&#39;</span> )
-            $translated_text <span style="color:#f92672">=</span> <span style="color:#a6e22e">__</span>( <span style="color:#e6db74">&#39;Totaal excl. BTW&#39;</span>,<span style="color:#e6db74">&#39;theme_slug_domain&#39;</span> );
+    <span style="color:#8b008b;font-weight:bold">if</span>( !is_admin() &amp;&amp; is_checkout ) {
+        <span style="color:#8b008b;font-weight:bold">if</span>( <span style="color:#00688b">$untranslated_text</span> == <span style="color:#cd5555">&#39;Total&#39;</span> )
+            <span style="color:#00688b">$translated_text</span> = __( <span style="color:#cd5555">&#39;Totaal excl. BTW&#39;</span>,<span style="color:#cd5555">&#39;theme_slug_domain&#39;</span> );
     }
     
     
-    <span style="color:#66d9ef">return</span> $translated_text;
+    <span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#00688b">$translated_text</span>;
 } </code></pre></div>
 This will replace the “Total” with “Totaal excl. BTW” on the order confirmation email, as well as on Wooommerce checkout page.</p>
 

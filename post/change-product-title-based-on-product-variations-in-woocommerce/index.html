@@ -26,7 +26,7 @@ The default WooCommerce behaviour does not allow you to change the page title on
 	<link rel="preload" href="https://yonkov.github.io/css/custom.css" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://yonkov.github.io/css/custom.css"></noscript>
 	
-	<link href="https://yonkov.github.io/css/styles.css?v=1531517447" rel="stylesheet">
+	<link href="https://yonkov.github.io/css/styles.css?v=1531517999" rel="stylesheet">
 	
 		<script>
 		 
@@ -226,25 +226,25 @@ The default WooCommerce behaviour does not allow you to change the page title on
 						<p>WooCommerce is an awesome e-commerce plugin that you can use to create beautiful ecommerce stores. However, sometimes you may also need to customise or change its functionalities, based on your customer’s specific requirements. Luckily, WooCommerce is a highly customizable Wordpress plugin. You can use the provided actions to give your clients the best user experience possible.</p>
 
 <p>The default WooCommerce behaviour does not allow you to change the page title on the single product page. However, you may want to update the page title, when a new product gallery image is clicked. In this way, the users can more easily understand the differences between the different products. Paste the following code in your child theme’s functions.php file:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
-<span style="color:#66d9ef">function</span> <span style="color:#f92672"></span><span style="color:#a6e22e">gcw_insert_captions</span>( $html, $attachment_id ) {
-	$captions <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
-	$title <span style="color:#f92672">=</span> <span style="color:#a6e22e">get_post_field</span>( <span style="color:#e6db74">&#39;post_title&#39;</span>, $attachment_id );
-	<span style="color:#66d9ef">if</span>( <span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>( $title ) ) {
-		$captions <span style="color:#f92672">.=</span> <span style="color:#e6db74">&#39;&lt;h2&gt;&lt;br&gt;&#39;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">esc_html</span>( $title ) <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/h2&gt;&#39;</span>;
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">gcw_insert_captions</span>( <span style="color:#00688b">$html</span>, <span style="color:#00688b">$attachment_id</span> ) {
+	<span style="color:#00688b">$captions</span> = <span style="color:#cd5555">&#39;&#39;</span>;
+	<span style="color:#00688b">$title</span> = get_post_field( <span style="color:#cd5555">&#39;post_title&#39;</span>, <span style="color:#00688b">$attachment_id</span> );
+	<span style="color:#8b008b;font-weight:bold">if</span>( !<span style="color:#8b008b;font-weight:bold">empty</span>( <span style="color:#00688b">$title</span> ) ) {
+		<span style="color:#00688b">$captions</span> .= <span style="color:#cd5555">&#39;&lt;h2&gt;&lt;br&gt;&#39;</span> . esc_html( <span style="color:#00688b">$title</span> ) . <span style="color:#cd5555">&#39;&lt;/h2&gt;&#39;</span>;
 	}
-	$description <span style="color:#f92672">=</span> <span style="color:#a6e22e">get_post_field</span>( <span style="color:#e6db74">&#39;post_excerpt&#39;</span>, $attachment_id );
-	<span style="color:#66d9ef">if</span>( <span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>( $description ) ) {
-		$captions <span style="color:#f92672">.=</span> <span style="color:#e6db74">&#39;&lt;p&gt;&#39;</span> <span style="color:#f92672">.</span> $description <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/p&gt;&#39;</span>;
+	<span style="color:#00688b">$description</span> = get_post_field( <span style="color:#cd5555">&#39;post_excerpt&#39;</span>, <span style="color:#00688b">$attachment_id</span> );
+	<span style="color:#8b008b;font-weight:bold">if</span>( !<span style="color:#8b008b;font-weight:bold">empty</span>( <span style="color:#00688b">$description</span> ) ) {
+		<span style="color:#00688b">$captions</span> .= <span style="color:#cd5555">&#39;&lt;p&gt;&#39;</span> . <span style="color:#00688b">$description</span> . <span style="color:#cd5555">&#39;&lt;/p&gt;&#39;</span>;
 	}
-	<span style="color:#66d9ef">if</span>( <span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>( $captions ) ) {
-		$captions <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&lt;div class=&#34;gcw-caption&#34;&gt;&#39;</span> <span style="color:#f92672">.</span> $captions <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/div&gt;&#39;</span>;
+	<span style="color:#8b008b;font-weight:bold">if</span>( !<span style="color:#8b008b;font-weight:bold">empty</span>( <span style="color:#00688b">$captions</span> ) ) {
+		<span style="color:#00688b">$captions</span> = <span style="color:#cd5555">&#39;&lt;div class=&#34;gcw-caption&#34;&gt;&#39;</span> . <span style="color:#00688b">$captions</span> . <span style="color:#cd5555">&#39;&lt;/div&gt;&#39;</span>;
 		
-		$html <span style="color:#f92672">=</span> <span style="color:#a6e22e">preg_replace</span>(<span style="color:#e6db74">&#39;~&lt;\/div&gt;$~&#39;</span>, $captions <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/div&gt;&#39;</span>, $html );
+		<span style="color:#00688b">$html</span> = preg_replace(<span style="color:#cd5555">&#39;~&lt;\/div&gt;$~&#39;</span>, <span style="color:#00688b">$captions</span> . <span style="color:#cd5555">&#39;&lt;/div&gt;&#39;</span>, <span style="color:#00688b">$html</span> );
 	}
-	<span style="color:#66d9ef">return</span> $html;
+	<span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#00688b">$html</span>;
 }
-<span style="color:#a6e22e">add_filter</span>( <span style="color:#e6db74">&#39;woocommerce_single_product_image_thumbnail_html&#39;</span>, <span style="color:#e6db74">&#39;gcw_insert_captions&#39;</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">2</span> );
+add_filter( <span style="color:#cd5555">&#39;woocommerce_single_product_image_thumbnail_html&#39;</span>, <span style="color:#cd5555">&#39;gcw_insert_captions&#39;</span>, <span style="color:#b452cd">10</span>, <span style="color:#b452cd">2</span> );
 	</code></pre></div></p>
 
 <p>The above code gets the image title and prints it just under the main Woocommerce image. To add a title to the image, you need to go to Media -&gt; Library and add your text to your image of choice.
