@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
+	<meta name="description" content="In this tutorial, I am going to show you how to create a multilingual website using Hugo. I am a big fan of Hugo, an awesome open-source static site generator with tons of cool features. It makes building websites fun again and it also supports multilingual mode. This means you can easily translate your Hugo website in any language you want! Follow me and I will teach you how to do it.">
 	<meta name="author"      content="Atanas Yonkov">
-	<title>Static Ip in Windows Xp</title>
+	<title>How to Make a Mulilingual Website with Hugo</title>
 
 	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
 
@@ -206,43 +206,125 @@
 </nav>
 
 </header>
-
 <main id="main">
 
 	<div class="container">
+
 		<div class="row topspace">
 			<div class="col-sm-8 col-sm-offset-2">
 
-                
-				<article class="post">
+ 				<article class="post">
+					<header class="entry-header">
+ 						
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/how-to-make-a-mulilingual-website-with-hugo/" rel="bookmark">How to Make a Mulilingual Website with Hugo</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2018-07-18 21:02:46 &#43;0200 &#43;0200">July 18, 2018</time></span>
+ 						</div>
+					</header>
 					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/how-to-set-up-static-ip-in-windows-xp-and-windows-7/" rel="bookmark">How to Set up Static IP in Windows XP and Windows 7</a></h2>
-							</header>
-								Static IP means that your computer is assigned an IP address that does not change each time the PC is restarted. It is required in some situations, for example, to access an ftp server or a web server from another computer inside the network. To do this, you need to change the IP version 4 (TCP / IP) properties. First, go to the start menu and type cmd in the search bar.
-								
-								
-								<a href="/post/how-to-set-up-static-ip-in-windows-xp-and-windows-7/">Read More…</a>
-							</div>
-						  
-						</article>
+						
+
+<p>In this tutorial, I am going to show you how to create a multilingual website using Hugo. I am a big fan of Hugo, an awesome open-source static site generator with tons of cool features. It makes building websites fun again and it also
+supports multilingual mode. This means you can easily translate your Hugo website in any language you want! Follow me and I will teach you how to do it.</p>
+
+<p>First, you need to do some changes in your config.toml configuration. Add the following piece of code at the top of your configuration:
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">DefaultContentLanguage = <span style="color:#cd5555">&#34;en&#34;</span></code></pre></div>
+In this way, you choose a default language for your Hugo configuration (in this example English). Now, you need to specify language-specific parameters that will be different for each language. Let&rsquo;s set up the website title, description and main menu:</p>
+
+<p><div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[Languages]
+[Languages.en]
+	title = <span style="color:#cd5555">&#34;Atanas Yonkov&#34;</span>
+	name = <span style="color:#cd5555">&#34;Atanas Yonkov&#34;</span>
+	description = <span style="color:#cd5555">&#34;Blogger, Web Developer&#34;</span>
+	weight = <span style="color:#b452cd">0</span>
+[[Languages.en.menu.main]]
+	url    = <span style="color:#cd5555">&#34;/&#34;</span>
+	name   = <span style="color:#cd5555">&#34;Home&#34;</span>
+	weight = <span style="color:#b452cd">1</span>
+[[Languages.en.menu.main]]
+	url = <span style="color:#cd5555">&#34;/post&#34;</span>
+	name = <span style="color:#cd5555">&#34;Blog&#34;</span>
+	weight = <span style="color:#b452cd">2</span></code></pre></div>
+You should replace the menu items with the ones that you use on your website. You can also add more menu items if you want. These values are unique for the English language. Now, let&rsquo;s set up the parameters for the non-default language (in our case Russian):</p>
+
+<p><div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[Languages.ru]
+	title = <span style="color:#cd5555">&#34;Атанас Йонков&#34;</span>
+	name = <span style="color:#cd5555">&#34;Атанас Йонков&#34;</span>
+	description = <span style="color:#cd5555">&#34;Блоггер, Веб-разработчик&#34;</span>
+	weight = <span style="color:#b452cd">1</span>
+[[Languages.ru.menu.main]]
+	name = <span style="color:#cd5555">&#34;Главная&#34;</span>
+	url = <span style="color:#cd5555">&#34;/ru&#34;</span>
+	weight = <span style="color:#b452cd">3</span>
+[[Languages.ru.menu.main]]
+	name = <span style="color:#cd5555">&#34;Блог&#34;</span>
+	url = <span style="color:#cd5555">&#34;/ru/post/&#34;</span>
+	weight = <span style="color:#b452cd">4</span></code></pre></div>
+Please note that everything that is not defined in the [languages] block is not language-specific and it will fall to the global value for that key.</p>
+
+<p>Cool! Now, when you go to https:/yourwebpage.com/ru, you should be able to see the non-default language version of your homepage. Some parts of it (title, menu bars) should now be translated into Russian.
+However, we still haven&rsquo;t translated the content. Let me show you how to do that in the next paragraph.</p>
+
+<h2 id="how-to-translate-the-content">How to translate the content?</h2>
+
+<p>It is very easy to do so! Just go to the content folder and choose the markdown file that you would like to translate. Then, add the language extension for your non-default language:</p>
+
+<p><div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">/post/about.md
+/post/about.ru.md</code></pre></div>
+Do not forget to set the correct language parameter in the top part of your markdown file (language= &ldquo;English&rdquo; and language= &ldquo;Russian&rdquo; for each verson respectively).</p>
+
+<p>Now, when you visit https:/yourwebpage.com/ru/post/about.md, you should be able to see the Russian version of the page. In this way, you can go on and translate all of your pages and posts in Hugo.</p>
+
+<h2 id="how-to-create-a-language-switcher">How to create a language switcher?</h2>
+
+<p>It is easy to create a list of links to your translated content in Hugo. What you need to do is create a partial called allLanguages.html and put it in your layouts/partials folder. Paste the following code in it:</p>
+
+<p><div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if .IsTranslated }}
+{{ range .Translations }}
+    &lt;<span style="color:#8b008b;font-weight:bold">li</span>&gt;
+		&lt;<span style="color:#8b008b;font-weight:bold">span</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;language-switcher&#34;</span> <span style="color:#658b00">style</span>=<span style="color:#cd5555">&#34;&#34;</span>&gt; 
+			&lt;<span style="color:#8b008b;font-weight:bold">i</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;fa fa-globe&#34;</span>&gt;&lt;/<span style="color:#8b008b;font-weight:bold">i</span>&gt;
+			&lt;<span style="color:#8b008b;font-weight:bold">a</span> <span style="color:#658b00">href </span>=<span style="color:#cd5555">&#34;{{ .Permalink }}&#34;</span> <span style="color:#658b00">style</span>=<span style="color:#cd5555">&#34;&#34;</span>&gt;{{ .Lang }}: {{ if .IsPage }} {{ end }} &lt;/<span style="color:#8b008b;font-weight:bold">a</span>&gt;
+		&lt;/<span style="color:#8b008b;font-weight:bold">span</span>&gt;
+    &lt;/<span style="color:#8b008b;font-weight:bold">li</span>&gt;
+{{ end}}
+{{ end }}</code></pre></div>
+What this code does is adding a language switcher with a language icon from font awesome (you should add a link to font awesome in your css file, if your theme does not use it). You need to include this partial somewhere in your template files. This is specific for your theme and your personal preferences. In my case, I put it in menu.html partial, at the end of my menu bar:</p>
+
+<p><div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#8b008b;font-weight:bold">ul</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;nav navbar-nav&#34;</span>&gt;
+    {{ range .Site.Menus.main }}
+		&lt;<span style="color:#8b008b;font-weight:bold">li</span>&gt;
+			&lt;<span style="color:#8b008b;font-weight:bold">a</span> <span style="color:#658b00">href</span>=<span style="color:#cd5555">&#34;{{ .URL }}&#34;</span>&gt;{{ .Name }}&lt;/<span style="color:#8b008b;font-weight:bold">a</span>&gt;
+        &lt;/<span style="color:#8b008b;font-weight:bold">li</span>&gt;
+        {{end}}
+	{{ partial &#34;allLanguages.html&#34; . }}
+&lt;/<span style="color:#8b008b;font-weight:bold">ul</span>&gt;</code></pre></div>
+The important part here is to include allLanguages.html somewhere in your partial html files. Now, you should be able to see the language switcher on all the translated web pages.</p>
+
 					</div>
 				</article>
-                
 
 			</div>
-		</div>
+		</div> 
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
 
-		<center class="">
-			<ul class="pagination">
-                
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
 
-			</ul>
-		</center>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
 
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
 
 	</div>	
 
