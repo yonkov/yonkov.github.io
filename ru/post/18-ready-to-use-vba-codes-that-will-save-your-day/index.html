@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="В этом уроке я покажу Вам самые популярные коды в VBA Excel, которые вы сможете использовать для оптимизации своей работы. VBA - это язык программирования, который может использоваться для расширения возможностей MS Excel и других приложений MS Office. Это чрезвычайно полезно для пользователей MS Excel, поскольку VBA может использоваться для автоматизации вашей работы и значительно увеличить Вашу эффективность. В этой статье Вы познакомитесь с VBA и я вам покажу некоторые из наиболее полезных, готовых к использованию примеров VBA.">
+	<meta name="description" content="В этом уроке я покажу Вам самые популярные макросы в VBA Excel, которые вы сможете использовать для оптимизации своей работы. VBA - это язык программирования, который может использоваться для расширения возможностей MS Excel и других приложений MS Office. Это чрезвычайно полезно для пользователей MS Excel, поскольку VBA может использоваться для автоматизации вашей работы и значительно увеличить Вашу эффективность. В этой статье Вы познакомитесь с VBA и я вам покажу некоторые из наиболее полезных, готовых к использованию примеров VBA.">
 	<meta name="author"      content="Atanas Yonkov">
 	<title>18 готовых макросов VBA Excel</title>
 
@@ -25,7 +25,7 @@
 	<link rel="preload" href="https://yonkov.github.io/css/custom.css" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://yonkov.github.io/css/custom.css"></noscript>
 	
-	<link href="https://yonkov.github.io/css/styles.css?v=1531948962" rel="stylesheet">
+	<link href="https://yonkov.github.io/css/styles.css?v=1532353864" rel="stylesheet">
 	
 		<script>
 		 
@@ -225,11 +225,11 @@
 					<div class="entry-content">
 						
 
-<p>В этом уроке я покажу Вам самые популярные коды в VBA Excel, которые вы сможете использовать для оптимизации своей работы. VBA - это язык программирования, который может использоваться для расширения возможностей MS Excel и других приложений MS Office. Это чрезвычайно полезно для пользователей MS Excel, поскольку VBA может использоваться для автоматизации вашей работы и значительно увеличить Вашу эффективность. В этой статье Вы познакомитесь с VBA и я вам покажу некоторые из наиболее полезных, готовых к использованию примеров VBA. Вы сможете использовать эти примеры для создания собственных скриптов, соответствующих Вашим потребностям.</p>
+<p>В этом уроке я покажу Вам самые популярные макросы в VBA Excel, которые вы сможете использовать для оптимизации своей работы. VBA - это язык программирования, который может использоваться для расширения возможностей MS Excel и других приложений MS Office. Это чрезвычайно полезно для пользователей MS Excel, поскольку VBA может использоваться для автоматизации вашей работы и значительно увеличить Вашу эффективность. В этой статье Вы познакомитесь с VBA и я вам покажу некоторые из наиболее полезных, готовых к использованию примеров VBA. Вы сможете использовать эти примеры для создания собственных скриптов, соответствующих Вашим потребностям.</p>
 
 <p>Вам не нужен опыт программирования, чтобы воспользоваться информаций из этой статьи, но вы должны иметь базовые знания Excel. Если вы еще учитесь работать с Excel, я бы рекомендовал Вам прочитать статью <a href="https://yonkov.github.io/ru/post/20-excel-formulas-you-should-start-using-now/"> 20 формул Excel, которые вам нeобходимо выучить сейчас</a>, чтобы узнать больше о функциональных возможностях Excel.</p>
 
-<p>Я подготовил для вас несколько самых важных примеров VBA Excel с большой функциональностью, которую вы сможете использовать для оптимизации своей работы. Чтобы их использовать, вам необходимо записать их в файл. Следующий параграф посвящен установке макроса Excel. Пропустите эту часть, если вы уже знакомы с этим.
+<p>Я подготовил для вас несколько самых полезных примеров VBA Excel с большой функциональностью, которую вы сможете использовать для оптимизации своей работы. Чтобы их использовать, вам необходимо записать их в файл. Следующий параграф посвящен установке макроса Excel. Пропустите эту часть, если вы уже знакомы с этим.
 <div>
 	<header>
 		<h5 style="margin: 0 0 10px 23px;">Table of Contents</h5>
@@ -250,7 +250,7 @@
 <li><a href="#6-сортировка-данных">6. Сортировка данных</a></li>
 <li><a href="#7-удаление-пустых-пространств">7. Удаление пустых пространств</a></li>
 <li><a href="#8-выделение-дубликатов-цветом">8. Выделение дубликатов цветом</a></li>
-<li><a href="#9-выделение-первых-десяти-чисел">9. Выделение первых десяти чисел</a></li>
+<li><a href="#9-выделение-десяти-самых-высоких-чисел">9. Выделение десяти самых высоких чисел</a></li>
 <li><a href="#10-выделение-данных-больших-чем-данные-число">10. Выделение данных больших чем данные число</a></li>
 <li><a href="#11-выделение-ячеек-комментариями">11. Выделение ячеек комментариями</a></li>
 <li><a href="#12-выделение-ячеек-со-словами-с-ошибками">12. Выделение ячеек со словами с ошибками</a></li>
@@ -275,194 +275,187 @@
 
 <p>Очень полезный макрос, поскольку он показывает, как скопировать ряд данных изнутри vba и как создать и назвать новую книгу. Вы можете изменить этот макрос в соответствии с вашими собственными требованиями:</p>
 
-<pre><code>Sub CopyFiletoAnotherWorkbook()
-'Copy the data
-    Sheets(&quot;Example 1&quot;).Range(&quot;B4:C15&quot;).Copy
-'Create a new workbook
-    Workbooks.Add
-'Paste the data
-    ActiveSheet.Paste
-'Turn off application alerts
-    Application.DisplayAlerts = False
-'Save the newly file. Change the name of the directory.
-    ActiveWorkbook.SaveAs Filename:=&quot;C:\Temp\MyNewBook.xlsx&quot;
-'Turn application alerts back on
-    Application.DisplayAlerts = True
-End Sub
-</code></pre>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> CopyFiletoAnotherWorkbook()
+    <span class="hljs-comment" style="color: green;">'Copy the data</span>
+        Sheets(<span class="hljs-string" style="color: rgb(163, 21, 21);">"Example 1"</span>).Range(<span class="hljs-string" style="color: rgb(163, 21, 21);">"B4:C15"</span>).Copy
+    <span class="hljs-comment" style="color: green;">'Create a new workbook</span>
+        Workbooks.Add
+    <span class="hljs-comment" style="color: green;">'Paste the data</span>
+        ActiveSheet.Paste
+    <span class="hljs-comment" style="color: green;">'Turn off application alerts</span>
+        Application.DisplayAlerts = <span class="hljs-literal" style="color: rgb(163, 21, 21);">False</span>
+    <span class="hljs-comment" style="color: green;">'Save the newly file. Change the name of the directory.</span>
+        ActiveWorkbook.SaveAs Filename:=<span class="hljs-string" style="color: rgb(163, 21, 21);">"C:\Temp\MyNewBook.xlsx"</span>
+    <span class="hljs-comment" style="color: green;">'Turn application alerts back on</span>
+        Application.DisplayAlerts = <span class="hljs-literal" style="color: rgb(163, 21, 21);">True</span>
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
 <h4 id="2-отображение-скрытых-строк">2. Отображение скрытых строк</h4>
 
 <p>Иногда большие файлы Excel можно содержать скрытые строки для большей ясности И для лучшего удобства пользователей. Вот один макрос, который отобразит все строки из активной рабочей таблицы:</p>
 
-<pre><code>Sub ShowHiddenRows()
-Columns.EntireColumn.Hidden = False
-Rows.EntireRow.Hidden = False
-End Sub
-</code></pre>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> ShowHiddenRows()
+    Columns.EntireColumn.Hidden = <span class="hljs-literal" style="color: rgb(163, 21, 21);">False</span>
+    Rows.EntireRow.Hidden = <span class="hljs-literal" style="color: rgb(163, 21, 21);">False</span>
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
 <h4 id="3-удаление-пустых-строк-и-столбов">3. Удаление пустых строк и столбов</h4>
 
 <p>Пустые строки в Excel - может быть проблемой для обработки данных. Вот как избавиться от них:</p>
 
-<pre><code>Sub DeleteEmptyRowsAndColumns()
-'Declare your variables.
-    Dim MyRange As Range
-    Dim iCounter As Long
-'Define the target Range.
-    Set MyRange = ActiveSheet.UsedRange
-    'Start reverse looping through the range of Rows.
-    For iCounter = MyRange.Rows.Count To 1 Step -1
-'If entire row is empty then delete it.
-       If Application.CountA(Rows(iCounter).EntireRow) = 0 Then
-           Rows(iCounter).Delete
-           'Remove comment to See which are the empty rows
-           'MsgBox &quot;row &quot; &amp; iCounter &amp; &quot; is empty&quot;
-       End If
-'Increment the counter down
-    Next iCounter
-'Step 6:  Start reverse looping through the range of Columns.
-    For iCounter = MyRange.Columns.Count To 1 Step -1
-'Step 7: If entire column is empty then delete it.
-           If Application.CountA(Columns(iCounter).EntireColumn) = 0 Then
-            Columns(iCounter).Delete
-           End If
-'Step 8: Increment the counter down
-    Next iCounter       
-End Sub
-</code></pre>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> DeleteEmptyRowsAndColumns()
+    <span class="hljs-comment" style="color: green;">'Declare your variables.</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> MyRange <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> Range
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> iCounter <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">Long</span>
+    <span class="hljs-comment" style="color: green;">'Define the target Range.</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> MyRange = ActiveSheet.UsedRange
+        <span class="hljs-comment" style="color: green;">'Start reverse looping through the range of Rows.</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">For</span> iCounter = MyRange.Rows.Count <span class="hljs-keyword" style="color: rgb(0, 0, 255);">To</span> <span class="hljs-number">1</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Step</span> <span class="hljs-number">-1</span>
+    <span class="hljs-comment" style="color: green;">'If entire row is empty then delete it.</span>
+           <span class="hljs-keyword" style="color: rgb(0, 0, 255);">If</span> Application.CountA(Rows(iCounter).EntireRow) = <span class="hljs-number">0</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Then</span>
+               Rows(iCounter).Delete
+               <span class="hljs-comment" style="color: green;">'Remove comment to See which are the empty rows</span>
+               <span class="hljs-comment" style="color: green;">'MsgBox "row " &amp; iCounter &amp; " is empty"</span>
+           <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">If</span>
+    <span class="hljs-comment" style="color: green;">'Increment the counter down</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span> iCounter
+    <span class="hljs-comment" style="color: green;">'Step 6:  Start reverse looping through the range of Columns.</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">For</span> iCounter = MyRange.Columns.Count <span class="hljs-keyword" style="color: rgb(0, 0, 255);">To</span> <span class="hljs-number">1</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Step</span> <span class="hljs-number">-1</span>
+    <span class="hljs-comment" style="color: green;">'Step 7: If entire column is empty then delete it.</span>
+               <span class="hljs-keyword" style="color: rgb(0, 0, 255);">If</span> Application.CountA(Columns(iCounter).EntireColumn) = <span class="hljs-number">0</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Then</span>
+                Columns(iCounter).Delete
+               <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">If</span>
+    <span class="hljs-comment" style="color: green;">'Step 8: Increment the counter down</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span> iCounter      
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
 <h4 id="4-нахождение-пустых-ячеек">4. Нахождение пустых ячеек</h4>
 
-<pre><code>Sub FindEmptyCell()
-ActiveCell.Offset(1, 0).Select
-   Do While Not IsEmpty(ActiveCell)
-      ActiveCell.Offset(1, 0).Select
-   Loop
-End Sub
-</code></pre>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> FindEmptyCell()
+    ActiveCell.Offset(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>).<span class="hljs-keyword" style="color: rgb(0, 0, 255);">Select</span>
+       <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Do</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">While</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Not</span> IsEmpty(ActiveCell)
+          ActiveCell.Offset(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>).<span class="hljs-keyword" style="color: rgb(0, 0, 255);">Select</span>
+       <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Loop</span>
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
+    
 
 <h4 id="5-смена-пустых-ячеек-на-значение">5. Смена пустых ячеек на значение.</h4>
 
 <p>Как упоминалось ранее, пустые ячейки препятствуют обработке данных и созданию сводных таблиц. Вот один примерный код, который заменяет все пустые ячейки на 0. Этот макрос имеет очень большое приложение, потому что Вы можете использовать его для поиска и замены результатов N/A, а также других символов, таких как точки, запятые или повторяющиеся значения:</p>
 
-<pre><code>Sub FindAndReplace()
-'Declare your variables
-    Dim MyRange As Range
-    Dim MyCell As Range
-'Save the Workbook before changing cells?
-    Select Case MsgBox(&quot;Can't Undo this action.  &quot; &amp; _
-                        &quot;Save Workbook First?&quot;, vbYesNoCancel)
-        Case Is = vbYes
-        ThisWorkbook.Save
-        Case Is = vbCancel
-        Exit Sub
-    End Select
-'Define the target Range.
-    Set MyRange = Selection
-'Start looping through the range.
-    For Each MyCell In MyRange
-'Check for zero length then add 0.
-        If Len(MyCell.Value) = 0 Then
-            MyCell = 0
-        End If
-'Get the next cell in the range
-    Next MyCell
-End Sub
-</code></pre>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> FindAndReplace()
+    <span class="hljs-comment" style="color: green;">'Declare your variables</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> MyRange <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> Range
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> MyCell <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> Range
+    <span class="hljs-comment" style="color: green;">'Save the Workbook before changing cells?</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Select</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Case</span> MsgBox(<span class="hljs-string" style="color: rgb(163, 21, 21);">"Can't Undo this action.  "</span> &amp; _
+                            <span class="hljs-string" style="color: rgb(163, 21, 21);">"Save Workbook First?"</span>, vbYesNoCancel)
+            <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Case</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Is</span> = vbYes
+            ThisWorkbook.Save
+            <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Case</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Is</span> = vbCancel
+            <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Exit</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Select</span>
+    <span class="hljs-comment" style="color: green;">'Define the target Range.</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> MyRange = Selection
+    <span class="hljs-comment" style="color: green;">'Start looping through the range.</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">For</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Each</span> MyCell <span class="hljs-keyword" style="color: rgb(0, 0, 255);">In</span> MyRange
+    <span class="hljs-comment" style="color: green;">'Check for zero length then add 0.</span>
+            <span class="hljs-keyword" style="color: rgb(0, 0, 255);">If</span> Len(MyCell.Value) = <span class="hljs-number">0</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Then</span>
+                MyCell = <span class="hljs-number">0</span>
+            <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">If</span>
+    <span class="hljs-comment" style="color: green;">'Get the next cell in the range</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span> MyCell
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
 <h4 id="6-сортировка-данных">6. Сортировка данных</h4>
 
-<p>Следующий макрос сортирует по возрастанию все числа из столбца активной ячейки. Просто дважды нажмите любую ячейку из столбца, который вы хотите отсортировать.
-NB: вам нужно поместить код в Sheet 1, а не в модуль для работы:</p>
+<p>Следующий макрос сортирует по возрастанию все числа из столбца активной ячейки. Просто дважды нажмите любую ячейку из столбца, который вы хотите отсортировать.</p>
 
-<pre><code>Private Sub Worksheet_BeforeDoubleClick (ByVal Target as Range, Cancel As Boolean)
-'Declare your Variables
-    Dim LastRow As Long
-'Find last row
-    LastRow = Cells (Rows.Count, 1) .End (xlUp) .Row
-'Sort ascending on double-clicked column
-    Rows (&quot;6:&quot; &amp; LastRow) .Sort _
-    Key1: = Cells (6, ActiveCell.Column), _
-    Order1: = xlAscending
-End Sub
-</code></pre>
+<p>NB: Здесь нам нужно поставить этот код в Sheet1 (папка Microsoft Excel Objects), а не в Module1 (папка Modules):</p>
+
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Private</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> Worksheet_BeforeDoubleClick (<span class="hljs-keyword" style="color: rgb(0, 0, 255);">ByVal</span> Target <span class="hljs-keyword" style="color: rgb(0, 0, 255);">as</span> Range, Cancel <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">Boolean</span>)
+    <span class="hljs-comment" style="color: green;">'Declare your Variables</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> LastRow <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">Long</span>
+    <span class="hljs-comment" style="color: green;">'Find last row</span>
+        LastRow = Cells (Rows.Count, <span class="hljs-number">1</span>) .<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> (xlUp) .Row
+    <span class="hljs-comment" style="color: green;">'Sort ascending on double-clicked column</span>
+        Rows (<span class="hljs-string" style="color: rgb(163, 21, 21);">"6:"</span> &amp; LastRow) .Sort _
+        Key1: = Cells (<span class="hljs-number">6</span>, ActiveCell.Column), _
+        Order1: = xlAscending
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
 <h4 id="7-удаление-пустых-пространств">7. Удаление пустых пространств</h4>
 
 <p>Иногда данные в книге содержат дополнительные пробелы (whitespace charachters), которые могут мешать анализу данных и коррумпировать формулы. Вот один макрос, который удалит все пробелы из предварительно выбранного диапазона ячеек:</p>
 
-<pre><code>Sub TrimTheSpaces()
-'Declare your variables
-    Dim MyRange As Range
-    Dim MyCell As Range
-'Save the Workbook before changing cells
-    Select Case MsgBox(&quot;Can't Undo this action.  &quot; &amp; _
-                        &quot;Save Workbook First?&quot;, vbYesNoCancel)
-        Case Is = vbYes
-        ThisWorkbook.Save
-        Case Is = vbCancel
-        Exit Sub
-    End Select
-'Define the target Range.
-    Set MyRange = Selection
-'Start looping through the range.
-    For Each MyCell In MyRange
-'Trim the Spaces.
-        If Not IsEmpty(MyCell) Then
-            MyCell = Trim(MyCell)
-        End If
-'Get the next cell in the range
-    Next MyCell
-End Sub
-</code></pre>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> TrimTheSpaces()
+    <span class="hljs-comment" style="color: green;">'Declare your variables</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> MyRange <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> Range
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> MyCell <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> Range
+    <span class="hljs-comment" style="color: green;">'Save the Workbook before changing cells</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Select</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Case</span> MsgBox(<span class="hljs-string" style="color: rgb(163, 21, 21);">"Can't Undo this action.  "</span> &amp; _
+                            <span class="hljs-string" style="color: rgb(163, 21, 21);">"Save Workbook First?"</span>, vbYesNoCancel)
+            <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Case</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Is</span> = vbYes
+            ThisWorkbook.Save
+            <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Case</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Is</span> = vbCancel
+            <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Exit</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Select</span>
+    <span class="hljs-comment" style="color: green;">'Define the target Range.</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> MyRange = Selection
+    <span class="hljs-comment" style="color: green;">'Start looping through the range.</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">For</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Each</span> MyCell <span class="hljs-keyword" style="color: rgb(0, 0, 255);">In</span> MyRange
+    <span class="hljs-comment" style="color: green;">'Trim the Spaces.</span>
+            <span class="hljs-keyword" style="color: rgb(0, 0, 255);">If</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Not</span> IsEmpty(MyCell) <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Then</span>
+                MyCell = Trim(MyCell)
+            <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">If</span>
+    <span class="hljs-comment" style="color: green;">'Get the next cell in the range</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span> MyCell
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
 <h4 id="8-выделение-дубликатов-цветом">8. Выделение дубликатов цветом</h4>
 
 <p>Иногда в нескольких столбцах, которые мы хотели бы осветить, есть повторяющиеся значения. Этот макрос делает именно это:</p>
 
-<pre><code>Sub HighlightDuplicates()
-'Declare your variables
-    Dim MyRange As Range
-    Dim MyCell As Range
-'Define the target Range.
-    Set MyRange = Selection 
-'Start looping through the range.
-    For Each MyCell In MyRange 
-'Ensure the cell has Text formatting.
-        If WorksheetFunction.CountIf(MyRange, MyCell.Value) &gt; 1 Then
-            MyCell.Interior.ColorIndex = 36
-        End If
-'Get the next cell in the range
-    Next MyCell
-End Sub
-</code></pre>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> HighlightDuplicates()
+    <span class="hljs-comment" style="color: green;">'Declare your variables</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> MyRange <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> Range
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> MyCell <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> Range
+    <span class="hljs-comment" style="color: green;">'Define the target Range.</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> MyRange = Selection 
+    <span class="hljs-comment" style="color: green;">'Start looping through the range.</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">For</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Each</span> MyCell <span class="hljs-keyword" style="color: rgb(0, 0, 255);">In</span> MyRange 
+    <span class="hljs-comment" style="color: green;">'Ensure the cell has Text formatting.</span>
+            <span class="hljs-keyword" style="color: rgb(0, 0, 255);">If</span> WorksheetFunction.CountIf(MyRange, MyCell.Value) &gt; <span class="hljs-number">1</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Then</span>
+                MyCell.Interior.ColorIndex = <span class="hljs-number">36</span>
+            <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">If</span>
+    <span class="hljs-comment" style="color: green;">'Get the next cell in the range</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span> MyCell
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
-<h4 id="9-выделение-первых-десяти-чисел">9. Выделение первых десяти чисел</h4>
+<h4 id="9-выделение-десяти-самых-высоких-чисел">9. Выделение десяти самых высоких чисел</h4>
 
-<p>Этот код будет отображать первую десятку самых высоких чисел из набора ячеек:</p>
+<p>Этот код будет отображать десять самых высоких чисел из набора ячеек:</p>
 
-<pre><code>Sub TopTen()
-Selection.FormatConditions.AddTop10
-Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
-    With Selection.FormatConditions(1)
-        .TopBottom = xlTop10Top
-        'Change the rank here to highlight a different number of values
-        .Rank = 10
-        .Percent = False
-    End With
-    With Selection.FormatConditions(1).Font
-        .Color = -16752384
-        .TintAndShade = 0
-    End With
-    With Selection.FormatConditions(1).Interior
-        .PatternColorIndex = xlAutomatic
-        .Color = 13561798
-        .TintAndShade = 0
-    End With
-Selection.FormatConditions(1).StopIfTrue = False
-End Sub
-</code></pre>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> TopTen()
+    Selection.FormatConditions.AddTop10
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">With</span> Selection.FormatConditions(<span class="hljs-number">1</span>)
+            .TopBottom = xlTop10Top
+            <span class="hljs-comment" style="color: green;">'Change the rank here to highlight a different number of values</span>
+            .Rank = <span class="hljs-number">10</span>
+            .Percent = <span class="hljs-literal" style="color: rgb(163, 21, 21);">False</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">With</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">With</span> Selection.FormatConditions(<span class="hljs-number">1</span>).Font
+            .Color = <span class="hljs-number">-16752384</span>
+            .TintAndShade = <span class="hljs-number">0</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">With</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">With</span> Selection.FormatConditions(<span class="hljs-number">1</span>).Interior
+            .PatternColorIndex = xlAutomatic
+            .Color = <span class="hljs-number">13561798</span>
+            .TintAndShade = <span class="hljs-number">0</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">With</span>
+    Selection.FormatConditions(<span class="hljs-number">1</span>).StopIfTrue = <span class="hljs-literal" style="color: rgb(163, 21, 21);">False</span>
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
 <p>Вы можете легко настроить код, чтобы выделить различное количество чисел.</p>
 
@@ -470,19 +463,18 @@ End Sub
 
 <p>Когда вы запустите этот код, появится окно. Вам надо написать число, которое вы хотите сравнить с выбранными ячейками.</p>
 
-<pre><code>Sub HighlightGreaterThanValues()
-Dim i As Integer
-i = InputBox(&quot;Enter Greater Than Value&quot;, &quot;Enter Value&quot;)
-Selection.FormatConditions.Delete
-'Change the Operator to xlLower to highlight lower than values
-Selection.FormatConditions.Add Type:=xlCellValue, Operator:=xlGreater, Formula1:=i
-Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
-    With Selection.FormatConditions(1)
-        .Font.Color = RGB(0, 0, 0)
-        .Interior.Color = RGB(31, 218, 154)
-    End With
-End Sub
-</code></pre>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> HighlightGreaterThanValues()
+    <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> i <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">Integer</span>
+    i = InputBox(<span class="hljs-string" style="color: rgb(163, 21, 21);">"Enter Greater Than Value"</span>, <span class="hljs-string" style="color: rgb(163, 21, 21);">"Enter Value"</span>)
+    Selection.FormatConditions.Delete
+    <span class="hljs-comment" style="color: green;">'Change the Operator to xlLower to highlight lower than values</span>
+    Selection.FormatConditions.Add Type:=xlCellValue, <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Operator</span>:=xlGreater, Formula1:=i
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">With</span> Selection.FormatConditions(<span class="hljs-number">1</span>)
+            .Font.Color = RGB(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+            .Interior.Color = RGB(<span class="hljs-number">31</span>, <span class="hljs-number">218</span>, <span class="hljs-number">154</span>)
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">With</span>
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
 <p>Вы тоже можете настроить этот код, чтобы выделить более низкие чисел.</p>
 
@@ -490,167 +482,164 @@ End Sub
 
 <p>Простой макрос, который выделяет все ячейки, содержащие комментарии:</p>
 
-<pre><code>Sub highlightCommentCells()
-Selection.SpecialCells(xlCellTypeComments).Select
-Selection.Style= &quot;Note&quot;
-End Sub
-</code></pre>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> HighlightCommentCells()
+    Selection.SpecialCells(xlCellTypeComments).<span class="hljs-keyword" style="color: rgb(0, 0, 255);">Select</span>
+    Selection.Style= <span class="hljs-string" style="color: rgb(163, 21, 21);">"Note"</span>
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
+ 
 
 <h4 id="12-выделение-ячеек-со-словами-с-ошибками">12. Выделение ячеек со словами с ошибками</h4>
 
 <p>Это очень полезно, когда вы работаете с функциями, которые принимают строки, однако кто-то ввел строку с ошибкой, и ваши формулы не работают. Вот как решить эту проблему:</p>
 
-<pre><code>Sub ColorMispelledCells()
-For Each cl In ActiveSheet.UsedRange
-    If Not Application.CheckSpelling(Word:=cl.Text) Then _
-    cl.Interior.ColorIndex = 28
-Next cl
-End Sub
-</code></pre>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> ColorMispelledCells()
+    <span class="hljs-keyword" style="color: rgb(0, 0, 255);">For</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Each</span> cl <span class="hljs-keyword" style="color: rgb(0, 0, 255);">In</span> ActiveSheet.UsedRange
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">If</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Not</span> Application.CheckSpelling(Word:=cl.<span class="hljs-keyword" style="color: rgb(0, 0, 255);">Text</span>) <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Then</span> _
+        cl.Interior.ColorIndex = <span class="hljs-number">28</span>
+    <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span> cl
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
+    
 
 <h4 id="13-создание-сводной-таблицы">13. Создание сводной таблицы</h4>
 
 <p>Вот как создать сводную таблицу в MS Excel (версия 2007). Особенно полезно, когда вы делаете индивидуальный отчет каждый день. Вы можете оптимизировать создание сводной таблицы следующим образом:</p>
 
-<pre><code>Sub PivotTableForExcel2007()
-Dim SourceRange As Range
-Set SourceRange = Sheets(&quot;Sheet1&quot;).Range(&quot;A3:N86&quot;)
-ActiveWorkbook.PivotCaches.Create( _
-SourceType:=xlDatabase, _
-SourceData:=SourceRange, _
-Version:=xlPivotTableVersion12).CreatePivotTable _
-TableDestination:=&quot;&quot;, _
-TableName:=&quot;&quot;, _
-DefaultVersion:=xlPivotTableVersion12
-End Sub
-</code></pre>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> PivotTableForExcel2007()
+    <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> SourceRange <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> Range
+    <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> SourceRange = Sheets(<span class="hljs-string" style="color: rgb(163, 21, 21);">"Sheet1"</span>).Range(<span class="hljs-string" style="color: rgb(163, 21, 21);">"A3:N86"</span>)
+    ActiveWorkbook.PivotCaches.Create( _
+    SourceType:=xlDatabase, _
+    SourceData:=SourceRange, _
+    Version:=xlPivotTableVersion12).CreatePivotTable _
+    TableDestination:=<span class="hljs-string" style="color: rgb(163, 21, 21);">""</span>, _
+    TableName:=<span class="hljs-string" style="color: rgb(163, 21, 21);">""</span>, _
+    DefaultVersion:=xlPivotTableVersion12
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
+ 
 
 <h4 id="14-отправка-активного-файла-по-электронной-почте">14. Отправка активного файла по электронной почте</h4>
 
 <p>Мой любимый код VBA. Он позволяет вам прикреплять и отправлять файл, с которым вы работаете, с предопределенным адресом электронной почты, заголовком сообщения и телом сообщения! Сначала Вам нужно сделать референцию в Excel на Microsoft Outlook (в редакторе Excel VBA, нажмите tools =&gt; references и выберите Microsoft Outlook).</p>
 
-<pre><code>Sub SendFIleAsAttachment()
-'Declare your variables
-'Set reference to Microsoft Outlook Object library
-    Dim OLApp As Outlook.Application
-    Dim OLMail As Object
-'Open Outlook start a new mail item
-    Set OLApp = New Outlook.Application
-    Set OLMail = OLApp.CreateItem(0)
-    OLApp.Session.Logon  
-'Build your mail item and send
-    With OLMail
-    .To = &quot;admin@datapigtechnologies.com; mike@datapigtechnologies.com&quot;
-    .CC = &quot;&quot;
-    .BCC = &quot;&quot;
-    .Subject = &quot;This is the Subject line&quot;
-    .Body = &quot;Hi there&quot;
-    .Attachments.Add ActiveWorkbook.FullName
-    .Display  'Change to .Send to send without reviewing
-    End With
-'Memory cleanup
-    Set OLMail = Nothing
-    Set OLApp = Nothing
-End Sub
-</code></pre>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> SendFIleAsAttachment()
+    <span class="hljs-comment" style="color: green;">'Declare your variables</span>
+    <span class="hljs-comment" style="color: green;">'Set reference to Microsoft Outlook Object library</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> OLApp <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> Outlook.Application
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> OLMail <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">Object</span>
+    <span class="hljs-comment" style="color: green;">'Open Outlook start a new mail item</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> OLApp = <span class="hljs-keyword" style="color: rgb(0, 0, 255);">New</span> Outlook.Application
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> OLMail = OLApp.CreateItem(<span class="hljs-number">0</span>)
+        OLApp.Session.Logon  
+    <span class="hljs-comment" style="color: green;">'Build your mail item and send</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">With</span> OLMail
+        .<span class="hljs-keyword" style="color: rgb(0, 0, 255);">To</span> = <span class="hljs-string" style="color: rgb(163, 21, 21);">"admin@datapigtechnologies.com; mike@datapigtechnologies.com"</span>
+        .CC = <span class="hljs-string" style="color: rgb(163, 21, 21);">""</span>
+        .BCC = <span class="hljs-string" style="color: rgb(163, 21, 21);">""</span>
+        .Subject = <span class="hljs-string" style="color: rgb(163, 21, 21);">"This is the Subject line"</span>
+        .Body = <span class="hljs-string" style="color: rgb(163, 21, 21);">"Hi there"</span>
+        .Attachments.Add ActiveWorkbook.FullName
+        .Display  <span class="hljs-comment" style="color: green;">'Change to .Send to send without reviewing</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">With</span>
+    <span class="hljs-comment" style="color: green;">'Memory cleanup</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> OLMail = <span class="hljs-literal" style="color: rgb(163, 21, 21);">Nothing</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> OLApp = <span class="hljs-literal" style="color: rgb(163, 21, 21);">Nothing</span>
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
 <h4 id="15-вставка-всех-графиков-excel-в-презентацию-powerpoint">15. Вставка всех графиков Excel в презентацию PowerPoint</h4>
 
 <p>Очень удобный макрос, который позволяет вам добавлять все ваши графики Excel в презентацию Powerpoint одним щелчком мыши:</p>
 
-<pre><code>Sub SendExcelFiguresToPowerPoint()
-'Set reference to Microsoft Powerpoint Object Library
-'Declare your variables
-    Dim PP As PowerPoint.Application
-    Dim PPPres As PowerPoint.Presentation
-    Dim PPSlide As PowerPoint.Slide
-    Dim i As Integer
-'Check for charts; exit if no charts exist
-    Sheets(&quot;Slide Data&quot;).Select
-        If ActiveSheet.ChartObjects.Count &lt; 1 Then
-            MsgBox &quot;No charts existing the active sheet&quot;
-            Exit Sub
-        End If
-'Open PowerPoint and create new presentation
-    Set PP = New PowerPoint.Application
-    Set PPPres = PP.Presentations.Add
-    PP.Visible = True
-'Start the loop based on chart count
-        For i = 1 To ActiveSheet.ChartObjects.Count
-        'Copy the chart as a picture
-            ActiveSheet.ChartObjects(i).Chart.CopyPicture _
-            Size:=xlScreen, Format:=xlPicture
-            Application.Wait (Now + TimeValue(&quot;0:00:1&quot;))
-        'Count slides and add new slide as next available slide number
-            ppSlideCount = PPPres.Slides.Count
-            Set PPSlide = PPPres.Slides.Add(SlideCount + 1, ppLayoutBlank)
-            PPSlide.Select
-        'Paste the picture and adjust its position; Go to next chart
-            PPSlide.Shapes.Paste.Select
-            PP.ActiveWindow.Selection.ShapeRange.Align msoAlignCenters, True
-            PP.ActiveWindow.Selection.ShapeRange.Align msoAlignMiddles, True
-        Next i
-'Memory Cleanup
-    Set PPSlide = Nothing
-    Set PPPres = Nothing
-    Set PP = Nothing
-End Sub
-</code></pre>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> SendExcelFiguresToPowerPoint()
+    <span class="hljs-comment" style="color: green;">'Set reference to Microsoft Powerpoint Object Library</span>
+    <span class="hljs-comment" style="color: green;">'Declare your variables</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> PP <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> PowerPoint.Application
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> PPPres <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> PowerPoint.Presentation
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> PPSlide <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> PowerPoint.Slide
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> i <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">Integer</span>
+    <span class="hljs-comment" style="color: green;">'Check for charts; exit if no charts exist</span>
+        Sheets(<span class="hljs-string" style="color: rgb(163, 21, 21);">"Slide Data"</span>).<span class="hljs-keyword" style="color: rgb(0, 0, 255);">Select</span>
+            <span class="hljs-keyword" style="color: rgb(0, 0, 255);">If</span> ActiveSheet.ChartObjects.Count &lt; <span class="hljs-number">1</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Then</span>
+                MsgBox <span class="hljs-string" style="color: rgb(163, 21, 21);">"No charts existing the active sheet"</span>
+                <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Exit</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span>
+            <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">If</span>
+    <span class="hljs-comment" style="color: green;">'Open PowerPoint and create new presentation</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> PP = <span class="hljs-keyword" style="color: rgb(0, 0, 255);">New</span> PowerPoint.Application
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> PPPres = PP.Presentations.Add
+        PP.Visible = <span class="hljs-literal" style="color: rgb(163, 21, 21);">True</span>
+    <span class="hljs-comment" style="color: green;">'Start the loop based on chart count</span>
+            <span class="hljs-keyword" style="color: rgb(0, 0, 255);">For</span> i = <span class="hljs-number">1</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">To</span> ActiveSheet.ChartObjects.Count
+            <span class="hljs-comment" style="color: green;">'Copy the chart as a picture</span>
+                ActiveSheet.ChartObjects(i).Chart.CopyPicture _
+                Size:=xlScreen, Format:=xlPicture
+                Application.Wait (Now + TimeValue(<span class="hljs-string" style="color: rgb(163, 21, 21);">"0:00:1"</span>))
+            <span class="hljs-comment" style="color: green;">'Count slides and add new slide as next available slide number</span>
+                ppSlideCount = PPPres.Slides.Count
+                <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> PPSlide = PPPres.Slides.Add(SlideCount + <span class="hljs-number">1</span>, ppLayoutBlank)
+                PPSlide.<span class="hljs-keyword" style="color: rgb(0, 0, 255);">Select</span>
+            <span class="hljs-comment" style="color: green;">'Paste the picture and adjust its position; Go to next chart</span>
+                PPSlide.Shapes.Paste.<span class="hljs-keyword" style="color: rgb(0, 0, 255);">Select</span>
+                PP.ActiveWindow.Selection.ShapeRange.Align msoAlignCenters, <span class="hljs-literal" style="color: rgb(163, 21, 21);">True</span>
+                PP.ActiveWindow.Selection.ShapeRange.Align msoAlignMiddles, <span class="hljs-literal" style="color: rgb(163, 21, 21);">True</span>
+            <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span> i
+    <span class="hljs-comment" style="color: green;">'Memory Cleanup</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> PPSlide = <span class="hljs-literal" style="color: rgb(163, 21, 21);">Nothing</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> PPPres = <span class="hljs-literal" style="color: rgb(163, 21, 21);">Nothing</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> PP = <span class="hljs-literal" style="color: rgb(163, 21, 21);">Nothing</span>
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
 <h4 id="16-вставка-таблицы-excel-в-ms-word">16. Вставка таблицы Excel в MS Word</h4>
 
 <p>Таблицы Excel обычно помещаются внутри текстовых документов. Вот один автоматический способ экспорта таблицы Excel в MS Word:</p>
 
-<pre><code>Sub ExcelTableInWord()
-'Set reference to Microsoft Word Object library
-'Declare your variables
-    Dim MyRange As Excel.Range
-    Dim wd As Word.Application
-    Dim wdDoc As Word.Document
-    Dim WdRange As Word.Range
-'Copy the defined range
-   Sheets(&quot;Revenue Table&quot;).Range(&quot;B4:F10&quot;).Cop
-'Open the target Word document
-    Set wd = New Word.Application
-    Set wdDoc = wd.Documents.Open _
-    (ThisWorkbook.Path &amp; &quot;\&quot; &amp; &quot;PasteTable.docx&quot;)
-    wd.Visible = True
-'Set focus on the target bookmark
-    Set WdRange = wdDoc.Bookmarks(&quot;DataTableHere&quot;).Rangе
-'Delete the old table and paste new
-    On Error Resume Next
-    WdRange.Tables(1).Delete
-    WdRange.Paste 'paste in the table   
-'Adjust column widths
-    WdRange.Tables(1).Columns.SetWidth _
-    (MyRange.Width / MyRange.Columns.Count), wdAdjustSameWidth
-'Reinsert the bookmark
-    wdDoc.Bookmarks.Add &quot;DataTableHere&quot;, WdRange
-'Memory cleanup
-    Set wd = Nothing
-    Set wdDoc = Nothing
-    Set WdRange = Nothing
-End Sub
-</code></pre>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> ExcelTableInWord()
+    <span class="hljs-comment" style="color: green;">'Set reference to Microsoft Word Object library</span>
+    <span class="hljs-comment" style="color: green;">'Declare your variables</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> MyRange <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> Excel.Range
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> wd <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> Word.Application
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> wdDoc <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> Word.Document
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> WdRange <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> Word.Range
+    <span class="hljs-comment" style="color: green;">'Copy the defined range</span>
+       Sheets(<span class="hljs-string" style="color: rgb(163, 21, 21);">"Revenue Table"</span>).Range(<span class="hljs-string" style="color: rgb(163, 21, 21);">"B4:F10"</span>).Cop
+    <span class="hljs-comment" style="color: green;">'Open the target Word document</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> wd = <span class="hljs-keyword" style="color: rgb(0, 0, 255);">New</span> Word.Application
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> wdDoc = wd.Documents.Open _
+        (ThisWorkbook.Path &amp; <span class="hljs-string" style="color: rgb(163, 21, 21);">"\"</span> &amp; <span class="hljs-string" style="color: rgb(163, 21, 21);">"PasteTable.docx"</span>)
+        wd.Visible = <span class="hljs-literal" style="color: rgb(163, 21, 21);">True</span>
+    <span class="hljs-comment" style="color: green;">'Set focus on the target bookmark</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> WdRange = wdDoc.Bookmarks(<span class="hljs-string" style="color: rgb(163, 21, 21);">"DataTableHere"</span>).Rangе
+    <span class="hljs-comment" style="color: green;">'Delete the old table and paste new</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Resume</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span>
+        WdRange.Tables(<span class="hljs-number">1</span>).Delete
+        WdRange.Paste <span class="hljs-comment" style="color: green;">'paste in the table   </span>
+    <span class="hljs-comment" style="color: green;">'Adjust column widths</span>
+        WdRange.Tables(<span class="hljs-number">1</span>).Columns.SetWidth _
+        (MyRange.Width / MyRange.Columns.Count), wdAdjustSameWidth
+    <span class="hljs-comment" style="color: green;">'Reinsert the bookmark</span>
+        wdDoc.Bookmarks.Add <span class="hljs-string" style="color: rgb(163, 21, 21);">"DataTableHere"</span>, WdRange
+    <span class="hljs-comment" style="color: green;">'Memory cleanup</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> wd = <span class="hljs-literal" style="color: rgb(163, 21, 21);">Nothing</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> wdDoc = <span class="hljs-literal" style="color: rgb(163, 21, 21);">Nothing</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Set</span> WdRange = <span class="hljs-literal" style="color: rgb(163, 21, 21);">Nothing</span>
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
+    
 
 <h4 id="17-извлечение-части-текста-из-ячейки">17. Извлечение части текста из ячейки</h4>
 
 <p>Мы можем использовать формулы, если хотим извлечь определенное количество символов. Но что, если мы хотим извлечь только одно слово из предложения или диапазон слов в ячейке? Для этого мы можем сами создать функцию Excel с помощью VBA. Это одна из самых удобных функций VBA, поскольку она позволяет создавать собственные формулы, которые отсутствуют в MS Excel. Давайте продолжим и создадим две функции: findword() и findwordrev():</p>
 
-<pre><code>Function FindWord(Source As String, Position As Integer) As String
-  On Error Resume Next
-  FindWord = Split(WorksheetFunction.Trim(Source), &quot; &quot;)(Position - 1)
-  On Error GoTo 0
-End Function
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Function</span> FindWord(Source <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">String</span>, Position <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">Integer</span>) <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">String</span>
+  <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Resume</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span>
+  FindWord = Split(WorksheetFunction.Trim(Source), <span class="hljs-string" style="color: rgb(163, 21, 21);">" "</span>)(Position - <span class="hljs-number">1</span>)
+  <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">GoTo</span> <span class="hljs-number">0</span>
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Function</span>
 
-Function FindWordRev(Source As String, Position As Integer) As String
-  Dim Arr() As String
-  Arr = VBA.Split(WorksheetFunction.Trim(Source), &quot; &quot;)
-  On Error Resume Next
-  FindWordRev = Arr(UBound(Arr) - Position + 1)
-  On Error GoTo 0
-End Function
-</code></pre>
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">Function</span> FindWordRev(Source <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">String</span>, Position <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">Integer</span>) <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">String</span>
+  <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> Arr() <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">String</span>
+  Arr = VBA.Split(WorksheetFunction.Trim(Source), <span class="hljs-string" style="color: rgb(163, 21, 21);">" "</span>)
+  <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Resume</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span>
+  FindWordRev = Arr(UBound(Arr) - Position + <span class="hljs-number">1</span>)
+  <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">GoTo</span> <span class="hljs-number">0</span>
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Function</span></pre>
 
 <p>Отлично, мы уже создали две новые функции в Excel! Теперь попробуйте использовать их в Excel. Функция = FindWordRev (A1,1) берет последнее слово из ячейки A1. Функция = FindWord (A1,3) берет третье слово из ячейки A1 и т. Д.</p>
 
@@ -658,16 +647,15 @@ End Function
 
 <p>Иногда мы хотим защитить данных нашего файла, чтобы только мы могли его изменять. Вот как это сделать с VBA:</p>
 
-<pre><code>Sub ProtectSheets()
-'Declare your variables
-    Dim ws As Worksheet
-'Start looping through all worksheets
-    For Each ws In ActiveWorkbook.Worksheets
-'Protect and loop to next worksheet
-    ws.Protect Password:=&quot;1234&quot;
-    Next ws
- End Sub
-</code></pre>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> ProtectSheets()
+    <span class="hljs-comment" style="color: green;">'Declare your variables</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> ws <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> Worksheet
+    <span class="hljs-comment" style="color: green;">'Start looping through all worksheets</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">For</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Each</span> ws <span class="hljs-keyword" style="color: rgb(0, 0, 255);">In</span> ActiveWorkbook.Worksheets
+    <span class="hljs-comment" style="color: green;">'Protect and loop to next worksheet</span>
+        ws.Protect Password:=<span class="hljs-string" style="color: rgb(163, 21, 21);">"1234"</span>
+        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span> ws
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
 <p>Поздравления! Поскольку вы все еще читаете это, вы действительно заинтересованы в изучении VBA. Как вы уже сами видели, язык программирования VBA чрезвычайно полезен и может сэкономить нам много времени. Надеюсь, вы нашли эту информацию полезной и использовали ее, чтобы стать мастером MS Excel, VBA и компьютерных наук в целом.</p>
 

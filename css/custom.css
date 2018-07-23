@@ -78,3 +78,8 @@ p, body{
 article.post h2.entry-title {
 	font-size:32px;
 }
+/*VB Syntax Highlighter*/
+pre.hljs{
+  font-family: monospace;
+  white-space: pre;  
+}
