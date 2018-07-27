@@ -25,7 +25,7 @@
 	<link rel="preload" href="https://yonkov.github.io/css/custom.css" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://yonkov.github.io/css/custom.css"></noscript>
 	
-	<link href="https://yonkov.github.io/css/styles.css?v=1532360336" rel="stylesheet">
+	<link href="https://yonkov.github.io/css/styles.css?v=1532695123" rel="stylesheet">
 	
 		<script>
 		 
@@ -665,17 +665,17 @@ NB: You need to put the code in Sheet 1 and not in a module to work:</p>
 <p>We can use formulas if we want to extract certain number of symbols. But what if we want to extract only the second word from a sentence or a range of words in a cell? To do this, we can create a custom Excel function with VBA. This is one of the most iportant VBA functionalities, because it lets you create your own functions that are non-existent in MS Excel. Let&rsquo;s go on and create two functions: findword() and findwordrev(). Here&rsquo;s the vba code for this:</p>
 
 <pre class="hljs" style="display: block; overflow-x: auto; padding: 0; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Function</span> FindWord(Source <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">String</span>, Position <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">Integer</span>) <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">String</span>
-  <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Resume</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span>
-  FindWord = Split(WorksheetFunction.Trim(Source), <span class="hljs-string" style="color: rgb(163, 21, 21);">" "</span>)(Position - <span class="hljs-number">1</span>)
-  <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">GoTo</span> <span class="hljs-number">0</span>
+     <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Resume</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span>
+     FindWord = Split(WorksheetFunction.Trim(Source), <span class="hljs-string" style="color: rgb(163, 21, 21);">" "</span>)(Position - <span class="hljs-number">1</span>)
+     <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">GoTo</span> <span class="hljs-number">0</span>
 <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Function</span>
 
 <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Function</span> FindWordRev(Source <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">String</span>, Position <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">Integer</span>) <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">String</span>
-  <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> Arr() <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">String</span>
-  Arr = VBA.Split(WorksheetFunction.Trim(Source), <span class="hljs-string" style="color: rgb(163, 21, 21);">" "</span>)
-  <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Resume</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span>
-  FindWordRev = Arr(UBound(Arr) - Position + <span class="hljs-number">1</span>)
-  <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">GoTo</span> <span class="hljs-number">0</span>
+     <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> Arr() <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">String</span>
+     Arr = VBA.Split(WorksheetFunction.Trim(Source), <span class="hljs-string" style="color: rgb(163, 21, 21);">" "</span>)
+     <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Resume</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span>
+     FindWordRev = Arr(UBound(Arr) - Position + <span class="hljs-number">1</span>)
+     <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">GoTo</span> <span class="hljs-number">0</span>
 <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Function</span></pre>
 
 <p>Very nice, we have created two cstom Excel functions. Now, try to use them in Excel. The function = FindWordRev (A1,1) takes the last word from cell A1. The function = FindWord (A1,3) takes the third word from cell A1, etc.</p>

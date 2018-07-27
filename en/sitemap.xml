@@ -233,12 +233,6 @@
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/tags/excel-functions/</loc>
-    <lastmod>2017-11-12T12:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://yonkov.github.io/tags/how-to-make-a-dynamic-website/</loc>
     <lastmod>2017-11-10T19:48:56+02:00</lastmod>
     <priority>0</priority>
@@ -330,6 +324,12 @@
   
   <url>
     <loc>https://yonkov.github.io/tags/top-20-excel-functions/</loc>
+    <lastmod>2017-11-12T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/tags/useful-excel-functions/</loc>
     <lastmod>2017-11-12T12:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

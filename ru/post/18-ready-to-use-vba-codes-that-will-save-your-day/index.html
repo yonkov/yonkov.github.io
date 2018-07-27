@@ -25,7 +25,7 @@
 	<link rel="preload" href="https://yonkov.github.io/css/custom.css" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://yonkov.github.io/css/custom.css"></noscript>
 	
-	<link href="https://yonkov.github.io/css/styles.css?v=1532360336" rel="stylesheet">
+	<link href="https://yonkov.github.io/css/styles.css?v=1532695123" rel="stylesheet">
 	
 		<script>
 		 
@@ -246,7 +246,7 @@
 <li><a href="#2-отображение-скрытых-строк">2. Отображение скрытых строк</a></li>
 <li><a href="#3-удаление-пустых-строк-и-столбов">3. Удаление пустых строк и столбов</a></li>
 <li><a href="#4-нахождение-пустых-ячеек">4. Нахождение пустых ячеек</a></li>
-<li><a href="#5-смена-пустых-ячеек-на-значение">5. Смена пустых ячеек на значение.</a></li>
+<li><a href="#5-заполнение-пустых-ячеек">5. Заполнение пустых ячеек</a></li>
 <li><a href="#6-сортировка-данных">6. Сортировка данных</a></li>
 <li><a href="#7-удаление-пустых-пространств">7. Удаление пустых пространств</a></li>
 <li><a href="#8-выделение-дубликатов-цветом">8. Выделение дубликатов цветом</a></li>
@@ -339,7 +339,7 @@
 <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
     
 
-<h4 id="5-смена-пустых-ячеек-на-значение">5. Смена пустых ячеек на значение.</h4>
+<h4 id="5-заполнение-пустых-ячеек">5. Заполнение пустых ячеек</h4>
 
 <p>Как упоминалось ранее, пустые ячейки препятствуют обработке данных и созданию сводных таблиц. Вот один примерный код, который заменяет все пустые ячейки на 0. Этот макрос имеет очень большое приложение, потому что Вы можете использовать его для поиска и замены результатов N/A, а также других символов, таких как точки, запятые или повторяющиеся значения:</p>
 
@@ -628,17 +628,17 @@
 <p>Мы можем использовать формулы, если хотим извлечь определенное количество символов. Но что, если мы хотим извлечь только одно слово из предложения или диапазон слов в ячейке? Для этого мы можем сами создать функцию Excel с помощью VBA. Это одна из самых удобных функций VBA, поскольку она позволяет создавать собственные формулы, которые отсутствуют в MS Excel. Давайте продолжим и создадим две функции: findword() и findwordrev():</p>
 
 <pre class="hljs" style="display: block; overflow-x: auto; padding: 0; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Function</span> FindWord(Source <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">String</span>, Position <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">Integer</span>) <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">String</span>
-  <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Resume</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span>
-  FindWord = Split(WorksheetFunction.Trim(Source), <span class="hljs-string" style="color: rgb(163, 21, 21);">" "</span>)(Position - <span class="hljs-number">1</span>)
-  <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">GoTo</span> <span class="hljs-number">0</span>
+     <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Resume</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span>
+     FindWord = Split(WorksheetFunction.Trim(Source), <span class="hljs-string" style="color: rgb(163, 21, 21);">" "</span>)(Position - <span class="hljs-number">1</span>)
+     <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">GoTo</span> <span class="hljs-number">0</span>
 <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Function</span>
 
 <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Function</span> FindWordRev(Source <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">String</span>, Position <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">Integer</span>) <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">String</span>
-  <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> Arr() <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">String</span>
-  Arr = VBA.Split(WorksheetFunction.Trim(Source), <span class="hljs-string" style="color: rgb(163, 21, 21);">" "</span>)
-  <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Resume</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span>
-  FindWordRev = Arr(UBound(Arr) - Position + <span class="hljs-number">1</span>)
-  <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">GoTo</span> <span class="hljs-number">0</span>
+     <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> Arr() <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">String</span>
+     Arr = VBA.Split(WorksheetFunction.Trim(Source), <span class="hljs-string" style="color: rgb(163, 21, 21);">" "</span>)
+     <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Resume</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span>
+     FindWordRev = Arr(UBound(Arr) - Position + <span class="hljs-number">1</span>)
+     <span class="hljs-keyword" style="color: rgb(0, 0, 255);">On</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Error</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">GoTo</span> <span class="hljs-number">0</span>
 <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Function</span></pre>
 
 <p>Отлично, мы уже создали две новые функции в Excel! Теперь попробуйте использовать их в Excel. Функция = FindWordRev (A1,1) берет последнее слово из ячейки A1. Функция = FindWord (A1,3) берет третье слово из ячейки A1 и т. Д.</p>
