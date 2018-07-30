@@ -9,5 +9,23 @@
 	<atom:link href="https://yonkov.github.io/ru/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Макросы Excel Примеры</title>
+      <link>https://yonkov.github.io/ru/tags/%D0%BC%D0%B0%D0%BA%D1%80%D0%BE%D1%81%D1%8B-excel-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B/</link>
+      <pubDate>Wed, 11 Jul 2018 21:02:46 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/ru/tags/%D0%BC%D0%B0%D0%BA%D1%80%D0%BE%D1%81%D1%8B-excel-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Популярные Макросы В Vba Excel</title>
+      <link>https://yonkov.github.io/ru/tags/%D0%BF%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5-%D0%BC%D0%B0%D0%BA%D1%80%D0%BE%D1%81%D1%8B-%D0%B2-vba-excel/</link>
+      <pubDate>Wed, 11 Jul 2018 21:02:46 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/ru/tags/%D0%BF%D0%BE%D0%BF%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5-%D0%BC%D0%B0%D0%BA%D1%80%D0%BE%D1%81%D1%8B-%D0%B2-vba-excel/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
