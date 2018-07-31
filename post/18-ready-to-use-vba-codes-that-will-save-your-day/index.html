@@ -25,7 +25,7 @@
 	<link rel="preload" href="https://yonkov.github.io/css/custom.css" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://yonkov.github.io/css/custom.css"></noscript>
 	
-	<link href="https://yonkov.github.io/css/styles.css?v=1533070769" rel="stylesheet">
+	<link href="https://yonkov.github.io/css/styles.css?v=1533071754" rel="stylesheet">
 	
 		<script>
 		 
@@ -263,14 +263,7 @@ You do not need programming experience to take advantage of the information in t
 <li><a href="#2-show-hidden-rows">2. Show hidden rows</a></li>
 <li><a href="#3-delete-empty-rows-and-columns">3. Delete empty rows and columns</a></li>
 <li><a href="#4-find-a-blank-cell">4. Find a blank cell</a></li>
-<li><a href="#5-replace-empty-cells-with-a-value">5. Replace empty cells with a value.</a></li>
-<li><a href="#6-sort-numbers">6. Sort numbers</a></li>
-<li><a href="#7-remove-empty-spaces">7. Remove empty spaces</a></li>
-<li><a href="#8-highlight-dublicated-values">8. Highlight dublicated values</a></li>
-<li><a href="#9-highlight-top-ten-values">9. Highlight top ten values</a></li>
-<li><a href="#10-highlight-greater-than-values">10. Highlight greater than values</a></li>
-<li><a href="#11-highlight-cells-with-comments">11. Highlight cells with comments</a></li>
-<li><a href="#12-highlight-cells-with-misspelled-words">12. Highlight Cells with Misspelled words</a></li>
+<li><a href="#13-create-a-pivot-table">13. Create a pivot table</a></li>
 <li><a href="#14-attach-active-workbook-in-an-email">14. Attach active workbook in an Email</a></li>
 <li><a href="#15-send-all-excel-charts-to-a-powerpoint-presentation">15. Send all Excel charts to a PowerPoint presentation</a></li>
 <li><a href="#16-send-excel-table-in-ms-word">16. Send Excel table in MS Word</a></li>
@@ -357,7 +350,7 @@ In Excel, press the key combination alt + F11. This will take you to the VBA edi
 
 <h4 id="4-find-a-blank-cell">4. Find a blank cell</h4>
 
-<p><div style="text-align: center;">
+<div style="text-align: center;">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Yonkov.github.io -->
     <ins class="adsbygoogle"
@@ -373,11 +366,11 @@ In Excel, press the key combination alt + F11. This will take you to the VBA edi
        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Do</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">While</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Not</span> IsEmpty(ActiveCell)
           ActiveCell.Offset(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>).<span class="hljs-keyword" style="color: rgb(0, 0, 255);">Select</span>
        <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Loop</span>
-<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre></p>
+<span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
-<h4 id="5-replace-empty-cells-with-a-value">5. Replace empty cells with a value.</h4>
+#### 5. Replace empty cells with a value.
 
-<p>As previously mentioned, blank cells interfere with data processing and the creation of pivot tables. Here is a code which replaces all blank cells with 0. This macro has a very large application because you can use it to find and replace N/A results, as well as other characters such as dots, commas or duplicate values:</p>
+As previously mentioned, blank cells interfere with data processing and the creation of pivot tables. Here is a code which replaces all blank cells with 0. This macro has a very large application because you can use it to find and replace N/A results, as well as other characters such as dots, commas or duplicate values:
 
 <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> FindAndReplace()
     <span class="hljs-comment" style="color: green;">'Declare your variables</span>
@@ -403,10 +396,10 @@ In Excel, press the key combination alt + F11. This will take you to the VBA edi
         <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span> MyCell
 <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
-<h4 id="6-sort-numbers">6. Sort numbers</h4>
+#### 6. Sort numbers
 
-<p>The following macro sorts in ascending order all numbers from the active cell’s column. Just double click any cell from a column you would like to sort.
-NB: You need to put the code in Sheet 1 and not in a module to work:</p>
+The following macro sorts in ascending order all numbers from the active cell’s column. Just double click any cell from a column you would like to sort. 
+NB: You need to put the code in Sheet 1 and not in a module to work:
 
 <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Private</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> Worksheet_BeforeDoubleClick (<span class="hljs-keyword" style="color: rgb(0, 0, 255);">ByVal</span> Target <span class="hljs-keyword" style="color: rgb(0, 0, 255);">as</span> Range, Cancel <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">Boolean</span>)
     <span class="hljs-comment" style="color: green;">'Declare your Variables</span>
@@ -419,9 +412,9 @@ NB: You need to put the code in Sheet 1 and not in a module to work:</p>
         Order1: = xlAscending
 <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
-<h4 id="7-remove-empty-spaces">7. Remove empty spaces</h4>
+#### 7. Remove empty spaces
 
-<p>Occasionally, data in the workbook contains additional spaces (spaces) that can interfere with data analysis and to corrupt of formulas. Here&rsquo;s a macro that will remove all the spaces from a preselected range of cells:</p>
+Occasionally, data in the workbook contains additional spaces (spaces) that can interfere with data analysis and to corrupt of formulas. Here's a macro that will remove all the spaces from a preselected range of cells:
 
 <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> TrimTheSpaces()
     <span class="hljs-comment" style="color: green;">'Declare your variables</span>
@@ -447,9 +440,9 @@ NB: You need to put the code in Sheet 1 and not in a module to work:</p>
         <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span> MyCell
 <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
-<h4 id="8-highlight-dublicated-values">8. Highlight dublicated values</h4>
+#### 8. Highlight dublicated values
 
-<p>Sometimes there are duplicate values in the several columns we would like to illuminate. Here&rsquo;s a macro that does just that:</p>
+Sometimes there are duplicate values in the several columns we would like to illuminate. Here's a macro that does just that:
 
 <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> HighlightDuplicates()
     <span class="hljs-comment" style="color: green;">'Declare your variables</span>
@@ -467,9 +460,8 @@ NB: You need to put the code in Sheet 1 and not in a module to work:</p>
         <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Next</span> MyCell
 <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
-<h4 id="9-highlight-top-ten-values">9. Highlight top ten values</h4>
-
-<p><div style="text-align: center;">
+#### 9. Highlight top ten values
+<div style="text-align: center;">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Yonkov.github.io -->
     <ins class="adsbygoogle"
@@ -480,7 +472,7 @@ NB: You need to put the code in Sheet 1 and not in a module to work:</p>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-This code will highlight the top ten values from a selection of cells:</p>
+This code will highlight the top ten values from a selection of cells:
 
 <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> TopTen()
     Selection.FormatConditions.AddTop10
@@ -503,11 +495,11 @@ This code will highlight the top ten values from a selection of cells:</p>
     Selection.FormatConditions(<span class="hljs-number">1</span>).StopIfTrue = <span class="hljs-literal" style="color: rgb(163, 21, 21);">False</span>
 <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
-<p>You can easily tweak the code to highlight different number of values.</p>
+You can easily tweak the code to highlight different number of values.
 
-<h4 id="10-highlight-greater-than-values">10. Highlight greater than values</h4>
+#### 10. Highlight greater than values
 
-<p>When you run this code, a window will prompt. It will ask you the value you want to compare the cells you have selected.</p>
+When you run this code, a window will prompt. It will ask you the value you want to compare the cells you have selected.
 
 <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> HighlightGreaterThanValues()
     <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> i <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> <span class="hljs-built_in" style="color: rgb(0, 0, 255);">Integer</span>
@@ -522,21 +514,19 @@ This code will highlight the top ten values from a selection of cells:</p>
         <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">With</span>
 <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
 
-<p>You can tweak this code to highlight lower values as well.</p>
+You can tweak this code to highlight lower values as well.
 
-<h4 id="11-highlight-cells-with-comments">11. Highlight cells with comments</h4>
-
-<p>A simple macro that highlights all the cells that contain comments:</p>
+#### 11. Highlight cells with comments
+A simple macro that highlights all the cells that contain comments:
 
 <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> HighlightCommentCells()
     Selection.SpecialCells(xlCellTypeComments).<span class="hljs-keyword" style="color: rgb(0, 0, 255);">Select</span>
     Selection.Style= <span class="hljs-string" style="color: rgb(163, 21, 21);">"Note"</span>
 <span class="hljs-keyword" style="color: rgb(0, 0, 255);">End</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span></pre>
  
+#### 12. Highlight Cells with Misspelled words
 
-<h4 id="12-highlight-cells-with-misspelled-words">12. Highlight Cells with Misspelled words</h4>
-
-<p>This is extremely useful when you work with functions that take strings, however, someone entered the string with a mistake and your formulas are not working. Here is how to fix this issue:</p>
+This is extremely useful when you work with functions that take strings, however, someone entered the string with a mistake and your formulas are not working. Here is how to fix this issue:
 
 <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> ColorMispelledCells()
     <span class="hljs-keyword" style="color: rgb(0, 0, 255);">For</span> <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Each</span> cl <span class="hljs-keyword" style="color: rgb(0, 0, 255);">In</span> ActiveSheet.UsedRange
@@ -555,9 +545,10 @@ This code will highlight the top ten values from a selection of cells:</p>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-#### 13. Create a pivot table
 
-Here is how to create a pivot table from MS Excel (2007 version). Especially useful, when you are making a custom report every day. You can optimize the pivot table creation in the following way:
+<h4 id="13-create-a-pivot-table">13. Create a pivot table</h4>
+
+<p>Here is how to create a pivot table from MS Excel (2007 version). Especially useful, when you are making a custom report every day. You can optimize the pivot table creation in the following way:</p>
 
 <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; #f5f5f5 none repeat scroll 0% 0%; color: rgb(0, 0, 0);"><span class="hljs-keyword" style="color: rgb(0, 0, 255);">Sub</span> PivotTableForExcel2007()
     <span class="hljs-keyword" style="color: rgb(0, 0, 255);">Dim</span> SourceRange <span class="hljs-keyword" style="color: rgb(0, 0, 255);">As</span> Range
