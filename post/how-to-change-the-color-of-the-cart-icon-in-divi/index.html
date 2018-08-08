@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
+	<meta name="description" content="In this article, I am going to show you how to change the color of the WooCommerce shopping cart icon in your Divi theme. By default, the cart icon appears on your main menu bar after a successful Woocommerce installation. It is very important to style the cart icon in accordance with the other items from your primary menu, since it is one of the first things that the customer will see on your website.">
 	<meta name="author"      content="Atanas Yonkov">
-	<title>Woocommerce</title>
+	<title>How to Change the Color of the Cart Icon in Divi</title>
 
 	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
 
@@ -205,61 +205,72 @@
 </nav>
 
 </header>
-
 <main id="main">
 
 	<div class="container">
+
 		<div class="row topspace">
 			<div class="col-sm-8 col-sm-offset-2">
 
-                
-				<article class="post">
+ 				<article class="post">
+					<header class="entry-header">
+ 						
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/how-to-change-the-color-of-the-cart-icon-in-divi/" rel="bookmark">How to Change the Color of the Cart Icon in Divi</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2018-08-08 17:08:06 &#43;0300 EEST">August 8, 2018</time></span>
+ 						</div>
+					</header>
 					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/how-to-change-the-color-of-the-cart-icon-in-divi/" rel="bookmark">How to Change the Color of the Cart Icon in Divi</a></h2>
-							</header>
-								In this article, I am going to show you how to change the color of the WooCommerce shopping cart icon in your Divi theme. By default, the cart icon appears on your main menu bar after a successful Woocommerce installation. It is very important to style the cart icon in accordance with the other items from your primary menu, since it is one of the first things that the customer will see on your website.
-								
-								
-								<a href="/post/how-to-change-the-color-of-the-cart-icon-in-divi/">Read More…</a>
-							</div>
-						  
-						</article>
+						
+
+<p>In this article, I am going to show you how to change the color of the WooCommerce shopping cart icon in your Divi theme. By default, the cart icon appears on your main menu bar after a successful Woocommerce installation. It is very important to style the cart icon in accordance with the other items from your primary menu, since it is one of the first things that the customer will see on your website. As we all know, the devil is in the details, and I am sure you do not want to lose a customer because your website design is not as good as your competitors’. So, here is a simple css hack that lets you customize the shopping cart icon.</p>
+
+<h3 id="how-to-change-the-color-of-the-shopping-cart-icon-in-divi-with-css">How to Change the Color of the Shopping Cart icon in Divi with CSS</h3>
+
+<p>Add the following css code in your Divi theme. There are a couple of options to do it, but I would recommend to navigate from the Wordpress Admin Toolbar to ThemeCustomizer =&gt; Additional CSS and paste the following code:</p>
+
+<pre><code> .et-cart-info span::before {
+    color: #007ABB;
+}
+</code></pre>
+
+<p>The code will change the shopping cart color from black to blue. Feel free to change the color&rsquo;s hex value to any other value you like.</p>
+
+<p>If you also want to change the color of the search icon, you can modify your css code to include the search bar in the following way:</p>
+
+<pre><code> .et-cart-info span::before, #et_search_icon {
+    color: #007ABB;
+}
+</code></pre>
+
+<p>Happy coding!</p>
+
+<p><strong>Read more:</strong> <a href="https://yonkov.github.io/post/how-to-change-the-color-of-woocommerce-add-to-cart-button-in-divi/">How to Change the Color of the “Add to Cart” Button in Divi</a></p>
+
 					</div>
 				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/how-to-change-the-color-of-woocommerce-add-to-cart-button-in-divi/" rel="bookmark">How to Change the Color of the “Add to Cart” button in Divi</a></h2>
-							</header>
-								In this tutorial, I am going to show you how to change the style of the “Add to Cart” button in your Divi theme. The Woocommerce &ldquo;Add to Cart&rdquo; button is the first thing that the customer sees on your product page, so it is really important to style it with a color that corresponds well with your theme. After all, you do not want to lose sales because your website design is not as good as your competitors’.
-								
-								
-								<a href="/post/how-to-change-the-color-of-woocommerce-add-to-cart-button-in-divi/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
 
 			</div>
-		</div>
+		</div> 
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
 
-		<center class="">
-			<ul class="pagination">
-                
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
 
-			</ul>
-		</center>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
 
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
 
 	</div>	
 

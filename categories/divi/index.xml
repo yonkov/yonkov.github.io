@@ -5,10 +5,19 @@
     <link>https://yonkov.github.io/categories/divi/</link>
     <description>Recent content in Divi on Atanas Yonkov</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 05 Jun 2018 17:53:08 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 08 Aug 2018 17:08:06 +0300</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/categories/divi/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Change the Color of the Cart Icon in Divi</title>
+      <link>https://yonkov.github.io/post/how-to-change-the-color-of-the-cart-icon-in-divi/</link>
+      <pubDate>Wed, 08 Aug 2018 17:08:06 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/how-to-change-the-color-of-the-cart-icon-in-divi/</guid>
+      <description>In this article, I am going to show you how to change the color of the WooCommerce shopping cart icon in your Divi theme. By default, the cart icon appears on your main menu bar after a successful Woocommerce installation. It is very important to style the cart icon in accordance with the other items from your primary menu, since it is one of the first things that the customer will see on your website.</description>
+    </item>
     
     <item>
       <title>How to Customize a Very Long Drop Down Menu in Divi</title>
