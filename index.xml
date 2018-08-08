@@ -123,15 +123,14 @@ The default WooCommerce behaviour does not allow you to change the page title on
     </item>
     
     <item>
-      <title>4 Reasons Why Hugo is Awesome</title>
+      <title>7 Reasons Why Hugo is the Best</title>
       <link>https://yonkov.github.io/post/4-awesome-things-you-can-do-with-hugo/</link>
       <pubDate>Tue, 07 Nov 2017 21:23:59 +0200</pubDate>
       
       <guid>https://yonkov.github.io/post/4-awesome-things-you-can-do-with-hugo/</guid>
-      <description>Hugo is an awesome open-source static website generator, which you can use to create beautiful portfolio websites and blogs. So, what makes Hugo so great?
-Speed Hugo is absurdly fast! The developers claim that a Hugo webpage can be built for less than 1 milisecond!
-Functionalities Create a list page or a post using default templates
-There are two types of templates you can use in Hugo. These are the single page templates and list page templates.</description>
+      <description>Hugo is an awesome open-source static site generator, which you can use to create beautiful portfolio websites and blogs. So, what are the ingredients that make Hugo so great?
+Speed Hugo is absurdly fast! The developers claim that one webpage can be built for less than 1 milisecond!
+Ease of use Hugo is not only faster but also easier to use compared to other available website generators out there. While it certainly requires some technical knowledge to set it up, it has an awesome documentation and it is definitely the most user-friendly site generator I have worked with.</description>
     </item>
     
     <item>
