@@ -21,7 +21,7 @@
 	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700"></noscript>
 	
 	
-	<link href="https://yonkov.github.io/css/styles.css?v=1533765572" rel="stylesheet">
+	<link href="https://yonkov.github.io/css/styles.css?v=1533826274" rel="stylesheet">
 	<link rel="preload" href="https://yonkov.github.io/css/custom.css" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://yonkov.github.io/css/custom.css"></noscript>
 	
@@ -259,7 +259,8 @@
 add_filter ( <span style="color:#cd5555">&#39;WooCommerce_product_thumbnails_columns&#39;</span>, <span style="color:#cd5555">&#39;change_gallery_columns&#39;</span> );
 <span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">change_gallery_columns</span>() {
      <span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#b452cd">1</span>; 
-}</code></pre></div>
+}
+</code></pre></div>
 
 <h2 id="2-rename-product-tabs">2. Rename Product Tabs</h2>
 
@@ -271,7 +272,8 @@ add_filter( <span style="color:#cd5555">&#39;WooCommerce_product_tabs&#39;</span
 	<span style="color:#00688b">$tabs</span>[<span style="color:#cd5555">&#39;description&#39;</span>][<span style="color:#cd5555">&#39;title&#39;</span>] = <span style="color:#cd5555">&#39;Omschrijving&#39;</span>;
 	<span style="color:#00688b">$tabs</span>[<span style="color:#cd5555">&#39;additional_information&#39;</span>][<span style="color:#cd5555">&#39;title&#39;</span>] = <span style="color:#cd5555">&#39;Extra informatie&#39;</span>;
 	<span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#00688b">$tabs</span>;
-}</code></pre></div>
+}
+</code></pre></div>
 
 <p>This function will rename the Description tab to Omschrijving and the Additional Information tab to  Extra informatie. You are free to customize it according to your own needs</p>
 
@@ -293,7 +295,8 @@ add_filter( <span style="color:#cd5555">&#39;WooCommerce_product_tabs&#39;</span
 </span><span style="color:#cd5555">/* The new tab content */
 </span><span style="color:#cd5555">function new_product_tab_content() {
 </span><span style="color:#cd5555">echo &#39;</span>&lt;p&gt;Your custom tab content&lt;/p&gt;<span style="color:#a61717;background-color:#e3d2d2">&#39;</span>;
-}</code></pre></div>
+}
+</code></pre></div>
 
 <p>(Sometimes, you may want to further customize the product tabs. For example, you may want to add custom text for each product. Here is an amazing WordPress plugin that can help you achieve this: <a href="https://wordpress.org/plugins/yikes-inc-easy-custom-woocommerce-product-tabs/">Custom Product Tabs for WooCommerce</a>)</p>
 
@@ -303,14 +306,16 @@ add_filter( <span style="color:#cd5555">&#39;WooCommerce_product_tabs&#39;</span
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
 <span style="color:#228b22">/* Reorder single product page content */</span>
 remove_action( <span style="color:#cd5555">&#39;WooCommerce_after_single_product_summary&#39;</span>, <span style="color:#cd5555">&#39;WooCommerce_output_product_data_tabs&#39;</span>, <span style="color:#b452cd">10</span> );
-add_action( <span style="color:#cd5555">&#39;WooCommerce_single_product_summary&#39;</span>, <span style="color:#cd5555">&#39;WooCommerce_output_product_data_tabs&#39;</span>, <span style="color:#b452cd">7</span> );</code></pre></div></p>
+add_action( <span style="color:#cd5555">&#39;WooCommerce_single_product_summary&#39;</span>, <span style="color:#cd5555">&#39;WooCommerce_output_product_data_tabs&#39;</span>, <span style="color:#b452cd">7</span> );
+</code></pre></div></p>
 
 <p>If you want to learn more about how to customize and reorder the content of the single product page, here is a nice tutorial on that subject: <a href="https://www.cloudways.com/blog/reorder-content-on-woocommerce-single-product-page/">Reorder Content on WooCommerce Single Product Page</a>.</p>
 
 <h2 id="5-remove-zooming-effect-in-woocommerce">5. Remove Zooming Effect in WooCommerce</h2>
 
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
-remove_theme_support( <span style="color:#cd5555">&#39;wc-product-gallery-zoom&#39;</span> );</code></pre></div>
+remove_theme_support( <span style="color:#cd5555">&#39;wc-product-gallery-zoom&#39;</span> );
+</code></pre></div>
 
 <h2 id="6-hide-product-price-range-on-single-product-page">6. Hide Product Price Range on Single Product Page</h2>
 
@@ -322,7 +327,8 @@ add_action( <span style="color:#cd5555">&#39;WooCommerce_single_product_summary&
     <span style="color:#8b008b;font-weight:bold">if</span>( <span style="color:#00688b">$product</span>-&gt;<span style="color:#658b00">is_type</span>(<span style="color:#cd5555">&#39;variable&#39;</span>) ):
 		remove_action(<span style="color:#cd5555">&#39;WooCommerce_single_product_summary&#39;</span>, <span style="color:#cd5555">&#39;WooCommerce_template_single_price&#39;</span>, <span style="color:#b452cd">10</span> );
     <span style="color:#8b008b;font-weight:bold">endif</span>;
-}</code></pre></div></p>
+}
+</code></pre></div></p>
 
 <h2 id="7-hide-product-price-range-entirely">7.   Hide Product Price Range Entirely</h2>
 
@@ -348,7 +354,8 @@ sort( <span style="color:#00688b">$prices</span> );
 }
 
 <span style="color:#8b008b;font-weight:bold">return</span> ;
-}</code></pre></div></p>
+}
+</code></pre></div></p>
 
 <h2 id="8-display-image-title-on-single-product-page-with-variations">8. Display Image Title on Single Product Page With Variations</h2>
 
@@ -372,7 +379,8 @@ After that, paste the following code in your child theme’s functions.php:
 	}
 	<span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#00688b">$html</span>;
 }
-add_filter( <span style="color:#cd5555">&#39;WooCommerce_single_product_image_thumbnail_html&#39;</span>, <span style="color:#cd5555">&#39;gcw_insert_captions&#39;</span>, <span style="color:#b452cd">10</span>, <span style="color:#b452cd">2</span> );</code></pre></div>
+add_filter( <span style="color:#cd5555">&#39;WooCommerce_single_product_image_thumbnail_html&#39;</span>, <span style="color:#cd5555">&#39;gcw_insert_captions&#39;</span>, <span style="color:#b452cd">10</span>, <span style="color:#b452cd">2</span> );
+</code></pre></div>
 The code takes the image title and prints it below the image on the single product page. For more information on how to do this and further customization, you can check the following article: <a href="https://yonkov.github.io/post/change-product-title-based-on-product-variations-in-woocommerce/">Change Product Title Based on Product Variations in WooCommerce</a></p>
 
 <h2 id="9-replace-choose-an-option-text-with-custom-text">9. Replace “choose an option” Text with Custom Text</h2>
@@ -391,7 +399,8 @@ The code takes the image title and prints it below the image on the single produ
 }; 
 
 <span style="color:#228b22">// add the filter 
-</span><span style="color:#228b22"></span>add_filter( <span style="color:#cd5555">&#39;WooCommerce_dropdown_variation_attribute_options_args&#39;</span>, <span style="color:#cd5555">&#39;filter_WooCommerce_dropdown_variation_attribute_options_args&#39;</span>, <span style="color:#b452cd">10</span>, <span style="color:#b452cd">1</span> );</code></pre></div></p>
+</span><span style="color:#228b22"></span>add_filter( <span style="color:#cd5555">&#39;WooCommerce_dropdown_variation_attribute_options_args&#39;</span>, <span style="color:#cd5555">&#39;filter_WooCommerce_dropdown_variation_attribute_options_args&#39;</span>, <span style="color:#b452cd">10</span>, <span style="color:#b452cd">1</span> );
+</code></pre></div></p>
 
 <h2 id="10-display-product-excerpt-on-woocommerce-product-archive-page">10.  Display Product Excerpt on WooCommerce Product Archive Page</h2>
 
@@ -400,7 +409,8 @@ The code takes the image title and prints it below the image on the single produ
 <span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">vitahc_excerpt_in_product_archives</span>() {
 	the_excerpt();
 }
-add_action(<span style="color:#cd5555">&#39;woocommerce_after_shop_loop_item_title&#39;</span>,<span style="color:#cd5555">&#39;vitahc_excerpt_in_product_archives&#39;</span>, <span style="color:#b452cd">40</span>);</code></pre></div></p>
+add_action(<span style="color:#cd5555">&#39;woocommerce_after_shop_loop_item_title&#39;</span>,<span style="color:#cd5555">&#39;vitahc_excerpt_in_product_archives&#39;</span>, <span style="color:#b452cd">40</span>);
+</code></pre></div></p>
 
 <h2 id="11-hide-subtotal-on-woocommerce-order-confirmation-template">11.  Hide Subtotal on WooCommerce Order Confirmation Template</h2>
 
@@ -410,7 +420,8 @@ add_filter( <span style="color:#cd5555">&#39;WooCommerce_get_order_item_totals&#
 <span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">adjust_WooCommerce_get_order_item_totals</span>( <span style="color:#00688b">$totals</span> ) {
   unset(<span style="color:#00688b">$totals</span>[<span style="color:#cd5555">&#39;cart_subtotal&#39;</span>]  );
   <span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#00688b">$totals</span>;
-}</code></pre></div></p>
+}
+</code></pre></div></p>
 
 <h2 id="12-change-total-text-on-woocommerce-order-confirmation-template">12.  Change “total” Text on WooCommerce Order Confirmation Template</h2>
 
@@ -430,7 +441,8 @@ add_filter(<span style="color:#cd5555">&#39;gettext&#39;</span>, <span style="co
     
     
     <span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#00688b">$translated_text</span>;
-} </code></pre></div>
+} 
+</code></pre></div>
 This will replace the “Total” with “Totaal excl. BTW” on the order confirmation email, as well as on Wooommerce checkout page.</p>
 
 <p>© 2018 Atanas Yonkov</p>

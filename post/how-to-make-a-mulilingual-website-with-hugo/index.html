@@ -21,7 +21,7 @@
 	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700"></noscript>
 	
 	
-	<link href="https://yonkov.github.io/css/styles.css?v=1533765572" rel="stylesheet">
+	<link href="https://yonkov.github.io/css/styles.css?v=1533826274" rel="stylesheet">
 	<link rel="preload" href="https://yonkov.github.io/css/custom.css" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://yonkov.github.io/css/custom.css"></noscript>
 	
@@ -243,7 +243,7 @@ In this way, you choose a default language for your Hugo configuration (in this 
 [[Languages.en.menu.main]]
 	url = <span style="color:#cd5555">&#34;/post&#34;</span>
 	name = <span style="color:#cd5555">&#34;Blog&#34;</span>
-	weight = <span style="color:#b452cd">2</span></code></pre></div>
+	weight = <span style="color:#b452cd">2</span></code></pre></div><br />
 You should replace the menu items with the ones that you use on your website. You can also add more menu items if you want. These values are unique for the English language. Now, let&rsquo;s set up the parameters for the non-default language (in our case Russian):</p>
 
 <p><div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[Languages.ru]
@@ -258,7 +258,7 @@ You should replace the menu items with the ones that you use on your website. Yo
 [[Languages.ru.menu.main]]
 	name = <span style="color:#cd5555">&#34;Блог&#34;</span>
 	url = <span style="color:#cd5555">&#34;/ru/post/&#34;</span>
-	weight = <span style="color:#b452cd">4</span></code></pre></div>
+	weight = <span style="color:#b452cd">4</span></code></pre></div><br />
 Please note that everything that is not defined in the [languages] block is not language-specific and it will fall to the global value for that key.</p>
 
 <p>Cool! Now, when you go to https:/yourwebpage.com/ru, you should be able to see the non-default language version of your homepage. Some parts of it (title, menu bars) should now be translated into Russian.
@@ -269,7 +269,7 @@ However, we still haven&rsquo;t translated the content. Let me show you how to d
 <p>It is very easy to do so! Just go to the content folder and choose the markdown file that you would like to translate. Then, add the language extension for your non-default language:</p>
 
 <p><div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">/post/about.md
-/post/about.ru.md</code></pre></div>
+/post/about.ru.md</code></pre></div><br />
 Do not forget to set the correct language parameter in the top part of your markdown file (language= &ldquo;English&rdquo; and language= &ldquo;Russian&rdquo; for each verson respectively).</p>
 
 <p>Now, when you visit https:/yourwebpage.com/ru/post/about.md, you should be able to see the Russian version of the page. In this way, you can go on and translate all of your pages and posts in Hugo.</p>
@@ -287,7 +287,7 @@ Do not forget to set the correct language parameter in the top part of your mark
 		&lt;/<span style="color:#8b008b;font-weight:bold">span</span>&gt;
     &lt;/<span style="color:#8b008b;font-weight:bold">li</span>&gt;
 {{ end}}
-{{ end }}</code></pre></div>
+{{ end }}</code></pre></div><br />
 What this code does is adding a language switcher with a language icon from font awesome (you should add a link to font awesome in your css file, if your theme does not use it). You need to include this partial somewhere in your template files. This is specific for your theme and your personal preferences. In my case, I put it in menu.html partial, at the end of my menu bar:</p>
 
 <p><div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#8b008b;font-weight:bold">ul</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;nav navbar-nav&#34;</span>&gt;

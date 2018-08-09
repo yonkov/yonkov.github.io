@@ -21,7 +21,7 @@
 	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700"></noscript>
 	
 	
-	<link href="https://yonkov.github.io/css/styles.css?v=1533765572" rel="stylesheet">
+	<link href="https://yonkov.github.io/css/styles.css?v=1533826274" rel="stylesheet">
 	<link rel="preload" href="https://yonkov.github.io/css/custom.css" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://yonkov.github.io/css/custom.css"></noscript>
 	
@@ -285,7 +285,8 @@ Paste the following code in your code editor:
 		<span style="color:#8b008b;font-weight:bold">die</span>(<span style="color:#cd5555">&#34;Connection failed: &#34;</span> . mysqli_connect_error());
 	}
 	<span style="color:#1e889b">?&gt;</span>
-	</code></pre></div>
+	
+</code></pre></div>
 Please make sure you put the correct username and password. Save the file as db.php. Now, in your web browser, go to <a href="http://localhost/db.php">http://localhost/db.php</a> and make sure you have established connection with the database.</p>
 
 <h3 id="3-create-homepage">3. Create Homepage</h3>
@@ -314,7 +315,7 @@ Header.php, Footer.php and Index.php.
 	&lt;/<span style="color:#8b008b;font-weight:bold">head</span>&gt;</code></pre></div>
 Great, we have created a header and we can now use it on all our php pages. I will show you how to do this in a minute. We have also added links to bootstrap css. Now let&rsquo;s go on, create a footer:
 <p style="color: #e93675;">footer.php</p>
-    <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#8b008b;font-weight:bold">div</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;footer&#34;</span>&gt; 	©2017&lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt;
+    <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#8b008b;font-weight:bold">div</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;footer&#34;</span>&gt; 	&amp;copy;2017&lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt;
 		<span style="color:#228b22">&lt;!-- jQuery library --&gt;</span>
 		&lt;<span style="color:#8b008b;font-weight:bold">script</span> <span style="color:#658b00">src</span>=<span style="color:#cd5555">&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js&#34;</span> 
 		<span style="color:#658b00">integrity</span>=<span style="color:#cd5555">&#34;sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=&#34;</span> <span style="color:#658b00">crossorigin</span>=<span style="color:#cd5555">&#34;anonymous&#34;</span>&gt;&lt;/<span style="color:#8b008b;font-weight:bold">script</span>&gt;
@@ -374,7 +375,8 @@ Basically, what we did here is just adding some links to bootstrap and css, noth
 	<span style="color:#8b008b;font-weight:bold">include</span> <span style="color:#cd5555">&#39;header.php&#39;</span>;
 	<span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#cd5555">&#34;&lt;center&gt;&lt;h3&gt;Welcome to my Awesome Website!&lt;/h3&gt;&lt;/center&gt;&#34;</span>;
 	<span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#cd5555">&#39;&lt;center&gt;&lt;div&gt;New user? Please &lt;a href=&#34;login.php&#34;&gt;Login&lt;/a&gt; or &lt;a href=&#34;register.php&#34;&gt;Register&lt;/a&gt; &lt;/div&gt;&lt;/center&gt;&#39;</span>;
-	<span style="color:#8b008b;font-weight:bold">include</span> <span style="color:#cd5555">&#39;footer.php&#39;</span>;</code></pre></div>
+	<span style="color:#8b008b;font-weight:bold">include</span> <span style="color:#cd5555">&#39;footer.php&#39;</span>;
+</code></pre></div><br />
 Put all of the files in the root directory of your web server. That’s it! Now we have a homepage and we have included the header and the footer. You should be able to access it at <a href="http://localhost/">http://localhost/</a>. Now, we need to create the registration form.</p>
 
 <h3 id="4-create-register-page">4. Create Register page</h3>
@@ -405,39 +407,40 @@ Put all of the files in the root directory of your web server. That’s it! Now 
 		}
 
 		<span style="color:#1e889b">?&gt;</span>
-	&lt;html&gt;
-	&lt;head&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">html</span>&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">head</span>&gt;
 		<span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">include</span> <span style="color:#cd5555">&#39;header.php&#39;</span>; <span style="color:#1e889b">?&gt;</span>
-		&lt;meta name=&#34;robots&#34; content=&#34;noindex&#34; /&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
+		&lt;<span style="color:#8b008b;font-weight:bold">meta</span> <span style="color:#658b00">name</span>=<span style="color:#cd5555">&#34;robots&#34;</span> <span style="color:#658b00">content</span>=<span style="color:#cd5555">&#34;noindex&#34;</span> /&gt;
+	&lt;/<span style="color:#8b008b;font-weight:bold">head</span>&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">body</span>&gt;
 
-	&lt;div class=&#34;container&#34;&gt;
-		  &lt;form class=&#34;form-signin&#34; method=&#34;POST&#34;&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">div</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;container&#34;</span>&gt;
+		  &lt;<span style="color:#8b008b;font-weight:bold">form</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;form-signin&#34;</span> <span style="color:#658b00">method</span>=<span style="color:#cd5555">&#34;POST&#34;</span>&gt;
 		  
-		  <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">if</span>(isset(<span style="color:#00688b">$smsg</span>)){ <span style="color:#1e889b">?&gt;</span>&lt;div class=&#34;alert alert-success&#34; role=&#34;alert&#34;&gt; <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#00688b">$smsg</span>; <span style="color:#1e889b">?&gt;</span> &lt;/div&gt;<span style="color:#1e889b">&lt;?php</span> } <span style="color:#1e889b">?&gt;</span>
-		  <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">if</span>(isset(<span style="color:#00688b">$fmsg</span>)){ <span style="color:#1e889b">?&gt;</span>&lt;div class=&#34;alert alert-danger&#34; role=&#34;alert&#34;&gt; <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#00688b">$fmsg</span>; <span style="color:#1e889b">?&gt;</span> &lt;/div&gt;<span style="color:#1e889b">&lt;?php</span> } <span style="color:#1e889b">?&gt;</span>
-			&lt;h2 class=&#34;form-signin-heading&#34;&gt;Please Register&lt;/h2&gt;
-			&lt;div class=&#34;input-group&#34;&gt;
-		  &lt;span class=&#34;input-group-addon&#34; id=&#34;basic-addon1&#34;&gt;@&lt;/span&gt;
-		  &lt;input type=&#34;text&#34; name=&#34;username&#34; class=&#34;form-control&#34; placeholder=&#34;Username&#34; required&gt;
-		&lt;/div&gt;
-			&lt;label for=&#34;inputEmail&#34; class=&#34;sr-only&#34;&gt;Email address&lt;/label&gt;
-			&lt;input type=&#34;email&#34; name=&#34;email&#34; id=&#34;inputEmail&#34; class=&#34;form-control&#34; placeholder=&#34;Email address&#34; required autofocus&gt;
-			&lt;label for=&#34;inputPassword&#34; class=&#34;sr-only&#34;&gt;Password&lt;/label&gt;
-			&lt;input type=&#34;password&#34; name=&#34;password&#34; id=&#34;inputPassword&#34; class=&#34;form-control&#34; placeholder=&#34;Password&#34; required&gt;
-			&lt;div class=&#34;checkbox&#34;&gt;
-			  &lt;label&gt;
-				&lt;input type=&#34;checkbox&#34; value=&#34;remember-me&#34;&gt; Remember me
-			  &lt;/label&gt;
-			&lt;/div&gt;
-			&lt;button class=&#34;btn btn-lg btn-primary btn-block&#34; type=&#34;submit&#34;&gt;Register&lt;/button&gt; 
-		  &lt;/form&gt;
-	&lt;/div&gt;
+		  <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">if</span>(isset(<span style="color:#00688b">$smsg</span>)){ <span style="color:#1e889b">?&gt;</span>&lt;<span style="color:#8b008b;font-weight:bold">div</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;alert alert-success&#34;</span> <span style="color:#658b00">role</span>=<span style="color:#cd5555">&#34;alert&#34;</span>&gt; <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#00688b">$smsg</span>; <span style="color:#1e889b">?&gt;</span> &lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt;<span style="color:#1e889b">&lt;?php</span> } <span style="color:#1e889b">?&gt;</span>
+		  <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">if</span>(isset(<span style="color:#00688b">$fmsg</span>)){ <span style="color:#1e889b">?&gt;</span>&lt;<span style="color:#8b008b;font-weight:bold">div</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;alert alert-danger&#34;</span> <span style="color:#658b00">role</span>=<span style="color:#cd5555">&#34;alert&#34;</span>&gt; <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#00688b">$fmsg</span>; <span style="color:#1e889b">?&gt;</span> &lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt;<span style="color:#1e889b">&lt;?php</span> } <span style="color:#1e889b">?&gt;</span>
+			&lt;<span style="color:#8b008b;font-weight:bold">h2</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;form-signin-heading&#34;</span>&gt;Please Register&lt;/<span style="color:#8b008b;font-weight:bold">h2</span>&gt;
+			&lt;<span style="color:#8b008b;font-weight:bold">div</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;input-group&#34;</span>&gt;
+		  &lt;<span style="color:#8b008b;font-weight:bold">span</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;input-group-addon&#34;</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;basic-addon1&#34;</span>&gt;@&lt;/<span style="color:#8b008b;font-weight:bold">span</span>&gt;
+		  &lt;<span style="color:#8b008b;font-weight:bold">input</span> <span style="color:#658b00">type</span>=<span style="color:#cd5555">&#34;text&#34;</span> <span style="color:#658b00">name</span>=<span style="color:#cd5555">&#34;username&#34;</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;form-control&#34;</span> <span style="color:#658b00">placeholder</span>=<span style="color:#cd5555">&#34;Username&#34;</span> <span style="color:#658b00">required</span>&gt;
+		&lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt;
+			&lt;<span style="color:#8b008b;font-weight:bold">label</span> <span style="color:#658b00">for</span>=<span style="color:#cd5555">&#34;inputEmail&#34;</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;sr-only&#34;</span>&gt;Email address&lt;/<span style="color:#8b008b;font-weight:bold">label</span>&gt;
+			&lt;<span style="color:#8b008b;font-weight:bold">input</span> <span style="color:#658b00">type</span>=<span style="color:#cd5555">&#34;email&#34;</span> <span style="color:#658b00">name</span>=<span style="color:#cd5555">&#34;email&#34;</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;inputEmail&#34;</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;form-control&#34;</span> <span style="color:#658b00">placeholder</span>=<span style="color:#cd5555">&#34;Email address&#34;</span> <span style="color:#658b00">required</span> <span style="color:#658b00">autofocus</span>&gt;
+			&lt;<span style="color:#8b008b;font-weight:bold">label</span> <span style="color:#658b00">for</span>=<span style="color:#cd5555">&#34;inputPassword&#34;</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;sr-only&#34;</span>&gt;Password&lt;/<span style="color:#8b008b;font-weight:bold">label</span>&gt;
+			&lt;<span style="color:#8b008b;font-weight:bold">input</span> <span style="color:#658b00">type</span>=<span style="color:#cd5555">&#34;password&#34;</span> <span style="color:#658b00">name</span>=<span style="color:#cd5555">&#34;password&#34;</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;inputPassword&#34;</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;form-control&#34;</span> <span style="color:#658b00">placeholder</span>=<span style="color:#cd5555">&#34;Password&#34;</span> <span style="color:#658b00">required</span>&gt;
+			&lt;<span style="color:#8b008b;font-weight:bold">div</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;checkbox&#34;</span>&gt;
+			  &lt;<span style="color:#8b008b;font-weight:bold">label</span>&gt;
+				&lt;<span style="color:#8b008b;font-weight:bold">input</span> <span style="color:#658b00">type</span>=<span style="color:#cd5555">&#34;checkbox&#34;</span> <span style="color:#658b00">value</span>=<span style="color:#cd5555">&#34;remember-me&#34;</span>&gt; Remember me
+			  &lt;/<span style="color:#8b008b;font-weight:bold">label</span>&gt;
+			&lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt;
+			&lt;<span style="color:#8b008b;font-weight:bold">button</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;btn btn-lg btn-primary btn-block&#34;</span> <span style="color:#658b00">type</span>=<span style="color:#cd5555">&#34;submit&#34;</span>&gt;Register&lt;/<span style="color:#8b008b;font-weight:bold">button</span>&gt; 
+		  &lt;/<span style="color:#8b008b;font-weight:bold">form</span>&gt;
+	&lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt;
 
-	&lt;/body&gt;
+	&lt;/<span style="color:#8b008b;font-weight:bold">body</span>&gt;
 
-	&lt;/html&gt;</code></pre></div></p>
+	&lt;/<span style="color:#8b008b;font-weight:bold">html</span>&gt;
+</code></pre></div></p>
 
 <p>This php code is creating a line in the &ldquo;user&rdquo; table from the database db_1, whenever a new user fills in the registration form. Now, go to <a href="http://localhost/register.php">http://localhost/register.php</a> to check if everything works.</p>
 
@@ -481,33 +484,34 @@ Put all of the files in the root directory of your web server. That’s it! Now 
 	}<span style="color:#8b008b;font-weight:bold">else</span>{
 	<span style="color:#228b22">//When the user visits the page first time, simple login form will be displayed.
 </span><span style="color:#228b22"></span>	<span style="color:#1e889b">?&gt;</span>
-	&lt;html&gt;
-	&lt;head&gt;
-		&lt;title&gt;User Login Using PHP &amp; MySQL&lt;/title&gt;
-		&lt;meta name=&#34;robots&#34; content=&#34;noindex&#34; /&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">html</span>&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">head</span>&gt;
+		&lt;<span style="color:#8b008b;font-weight:bold">title</span>&gt;User Login Using PHP <span style="color:#a61717;background-color:#e3d2d2">&amp;</span> MySQL&lt;/<span style="color:#8b008b;font-weight:bold">title</span>&gt;
+		&lt;<span style="color:#8b008b;font-weight:bold">meta</span> <span style="color:#658b00">name</span>=<span style="color:#cd5555">&#34;robots&#34;</span> <span style="color:#658b00">content</span>=<span style="color:#cd5555">&#34;noindex&#34;</span> /&gt;
 		
-	&lt;/head&gt;
-	&lt;body&gt;
+	&lt;/<span style="color:#8b008b;font-weight:bold">head</span>&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">body</span>&gt;
 
-	&lt;div class=&#34;container&#34;&gt;
-		  &lt;form class=&#34;form-signin&#34; method=&#34;POST&#34;&gt;
-		  <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">if</span>(isset(<span style="color:#00688b">$fmsg</span>)){ <span style="color:#1e889b">?&gt;</span>&lt;div class=&#34;alert alert-danger&#34; role=&#34;alert&#34;&gt; <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#00688b">$fmsg</span>; <span style="color:#1e889b">?&gt;</span> &lt;/div&gt;<span style="color:#1e889b">&lt;?php</span> } <span style="color:#1e889b">?&gt;</span>
-			&lt;h2 class=&#34;form-signin-heading&#34;&gt;Please Login&lt;/h2&gt;
-			&lt;div class=&#34;input-group&#34;&gt;
-		  &lt;span class=&#34;input-group-addon&#34; id=&#34;basic-addon1&#34;&gt;@&lt;/span&gt;
-		  &lt;input type=&#34;text&#34; name=&#34;username&#34; class=&#34;form-control&#34; placeholder=&#34;Username&#34; required&gt;
-		&lt;/div&gt;
-			&lt;label for=&#34;inputPassword&#34; class=&#34;sr-only&#34;&gt;Password&lt;/label&gt;
-			&lt;input type=&#34;password&#34; name=&#34;password&#34; id=&#34;inputPassword&#34; class=&#34;form-control&#34; placeholder=&#34;Password&#34; required&gt;
-			&lt;button class=&#34;btn btn-lg btn-primary btn-block&#34; type=&#34;submit&#34;&gt;Login&lt;/button&gt;
-			&lt;a class=&#34;btn btn-lg btn-primary btn-block&#34; href=&#34;register.php&#34;&gt;Register&lt;/a&gt;
-		  &lt;/form&gt;
-	&lt;/div&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">div</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;container&#34;</span>&gt;
+		  &lt;<span style="color:#8b008b;font-weight:bold">form</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;form-signin&#34;</span> <span style="color:#658b00">method</span>=<span style="color:#cd5555">&#34;POST&#34;</span>&gt;
+		  <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">if</span>(isset(<span style="color:#00688b">$fmsg</span>)){ <span style="color:#1e889b">?&gt;</span>&lt;<span style="color:#8b008b;font-weight:bold">div</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;alert alert-danger&#34;</span> <span style="color:#658b00">role</span>=<span style="color:#cd5555">&#34;alert&#34;</span>&gt; <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#00688b">$fmsg</span>; <span style="color:#1e889b">?&gt;</span> &lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt;<span style="color:#1e889b">&lt;?php</span> } <span style="color:#1e889b">?&gt;</span>
+			&lt;<span style="color:#8b008b;font-weight:bold">h2</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;form-signin-heading&#34;</span>&gt;Please Login&lt;/<span style="color:#8b008b;font-weight:bold">h2</span>&gt;
+			&lt;<span style="color:#8b008b;font-weight:bold">div</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;input-group&#34;</span>&gt;
+		  &lt;<span style="color:#8b008b;font-weight:bold">span</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;input-group-addon&#34;</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;basic-addon1&#34;</span>&gt;@&lt;/<span style="color:#8b008b;font-weight:bold">span</span>&gt;
+		  &lt;<span style="color:#8b008b;font-weight:bold">input</span> <span style="color:#658b00">type</span>=<span style="color:#cd5555">&#34;text&#34;</span> <span style="color:#658b00">name</span>=<span style="color:#cd5555">&#34;username&#34;</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;form-control&#34;</span> <span style="color:#658b00">placeholder</span>=<span style="color:#cd5555">&#34;Username&#34;</span> <span style="color:#658b00">required</span>&gt;
+		&lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt;
+			&lt;<span style="color:#8b008b;font-weight:bold">label</span> <span style="color:#658b00">for</span>=<span style="color:#cd5555">&#34;inputPassword&#34;</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;sr-only&#34;</span>&gt;Password&lt;/<span style="color:#8b008b;font-weight:bold">label</span>&gt;
+			&lt;<span style="color:#8b008b;font-weight:bold">input</span> <span style="color:#658b00">type</span>=<span style="color:#cd5555">&#34;password&#34;</span> <span style="color:#658b00">name</span>=<span style="color:#cd5555">&#34;password&#34;</span> <span style="color:#658b00">id</span>=<span style="color:#cd5555">&#34;inputPassword&#34;</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;form-control&#34;</span> <span style="color:#658b00">placeholder</span>=<span style="color:#cd5555">&#34;Password&#34;</span> <span style="color:#658b00">required</span>&gt;
+			&lt;<span style="color:#8b008b;font-weight:bold">button</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;btn btn-lg btn-primary btn-block&#34;</span> <span style="color:#658b00">type</span>=<span style="color:#cd5555">&#34;submit&#34;</span>&gt;Login&lt;/<span style="color:#8b008b;font-weight:bold">button</span>&gt;
+			&lt;<span style="color:#8b008b;font-weight:bold">a</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;btn btn-lg btn-primary btn-block&#34;</span> <span style="color:#658b00">href</span>=<span style="color:#cd5555">&#34;register.php&#34;</span>&gt;Register&lt;/<span style="color:#8b008b;font-weight:bold">a</span>&gt;
+		  &lt;/<span style="color:#8b008b;font-weight:bold">form</span>&gt;
+	&lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt;
 
-	&lt;/body&gt;
+	&lt;/<span style="color:#8b008b;font-weight:bold">body</span>&gt;
 
-	&lt;/html&gt;
-	<span style="color:#1e889b">&lt;?php</span> } <span style="color:#1e889b">?&gt;</span></code></pre></div></p>
+	&lt;/<span style="color:#8b008b;font-weight:bold">html</span>&gt;
+	<span style="color:#1e889b">&lt;?php</span> } <span style="color:#1e889b">?&gt;</span>
+</code></pre></div></p>
 
 <p>The explanations are inside the above code, please read them carefully. What you need to understand is that php does a check with the database whether the submitted data exists in the user table that we have already created in MYSQL. If this is the case, the user can log in to the restricted area. This is the area for logged-in users, e.g. the dashboard.</p>
 
@@ -521,7 +525,8 @@ Put all of the files in the root directory of your web server. That’s it! Now 
 	<span style="color:#8b008b;font-weight:bold">if</span>(!isset(<span style="color:#00688b">$_SESSION</span>[<span style="color:#cd5555">&#39;username&#39;</span>])){
 	   header(<span style="color:#cd5555">&#34;Location:login.php&#34;</span>);
 	}
-	<span style="color:#1e889b">?&gt;</span></code></pre></div>
+	<span style="color:#1e889b">?&gt;</span>
+</code></pre></div>
 </code></pre>
 
 <p>Now create the dashboard.php file:
@@ -531,23 +536,24 @@ Put all of the files in the root directory of your web server. That’s it! Now 
 	<span style="color:#8b008b;font-weight:bold">include</span>(<span style="color:#cd5555">&#34;auth.php&#34;</span>);
 	<span style="color:#8b008b;font-weight:bold">include</span>(<span style="color:#cd5555">&#34;header.php&#34;</span>);
 	<span style="color:#1e889b">?&gt;</span>
-	&lt;!DOCTYPE html&gt;
-	&lt;html&gt;
-	&lt;head&gt;
-	&lt;meta charset=&#34;utf-8&#34;&gt;
-	&lt;meta name=&#34;robots&#34; content=&#34;noindex&#34; /&gt;
-	&lt;title&gt;Dashboard - Secured Page&lt;/title&gt;
-	&lt;link rel=&#34;stylesheet&#34; href=&#34;css/style.css&#34; /&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-	&lt;div class=&#34;form&#34;&gt;
-	&lt;p&gt;Dashboard&lt;/p&gt;
-	&lt;p&gt;This is your profile page.&lt;/p&gt;
-	&lt;a href=&#34;index.php&#34;&gt;Home&lt;/a&gt;
-	&lt;a href=&#34;logout.php&#34;&gt;Logout&lt;/a&gt;
-	&lt;/div&gt;
-	&lt;/body&gt;
-	&lt;/html&gt;</code></pre></div></p>
+	<span style="color:#1e889b">&lt;!DOCTYPE html&gt;</span>
+	&lt;<span style="color:#8b008b;font-weight:bold">html</span>&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">head</span>&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">meta</span> <span style="color:#658b00">charset</span>=<span style="color:#cd5555">&#34;utf-8&#34;</span>&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">meta</span> <span style="color:#658b00">name</span>=<span style="color:#cd5555">&#34;robots&#34;</span> <span style="color:#658b00">content</span>=<span style="color:#cd5555">&#34;noindex&#34;</span> /&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">title</span>&gt;Dashboard - Secured Page&lt;/<span style="color:#8b008b;font-weight:bold">title</span>&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">link</span> <span style="color:#658b00">rel</span>=<span style="color:#cd5555">&#34;stylesheet&#34;</span> <span style="color:#658b00">href</span>=<span style="color:#cd5555">&#34;css/style.css&#34;</span> /&gt;
+	&lt;/<span style="color:#8b008b;font-weight:bold">head</span>&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">body</span>&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">div</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;form&#34;</span>&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">p</span>&gt;Dashboard&lt;/<span style="color:#8b008b;font-weight:bold">p</span>&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">p</span>&gt;This is your profile page.&lt;/<span style="color:#8b008b;font-weight:bold">p</span>&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">a</span> <span style="color:#658b00">href</span>=<span style="color:#cd5555">&#34;index.php&#34;</span>&gt;Home&lt;/<span style="color:#8b008b;font-weight:bold">a</span>&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">a</span> <span style="color:#658b00">href</span>=<span style="color:#cd5555">&#34;logout.php&#34;</span>&gt;Logout&lt;/<span style="color:#8b008b;font-weight:bold">a</span>&gt;
+	&lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt;
+	&lt;/<span style="color:#8b008b;font-weight:bold">body</span>&gt;
+	&lt;/<span style="color:#8b008b;font-weight:bold">html</span>&gt;
+</code></pre></div></p>
 
 <p>This is how your dashboard page should look like in your browser:</p>
 
@@ -563,7 +569,8 @@ Put all of the files in the root directory of your web server. That’s it! Now 
 	<span style="color:#228b22">// Redirecting To Home Page
 </span><span style="color:#228b22"></span>	header(<span style="color:#cd5555">&#34;Location: login.php&#34;</span>);
 	}
-	<span style="color:#1e889b">?&gt;</span></code></pre></div></p>
+	<span style="color:#1e889b">?&gt;</span>
+</code></pre></div></p>
 
 <p><br></p>
 
@@ -591,11 +598,11 @@ Put all of the files in the root directory of your web server. That’s it! Now 
 </span><span style="color:#cd5555">				&lt;/div&gt;&lt;/center&gt;&#39;</span>;
 		}
 	<span style="color:#1e889b">?&gt;</span> 
-	&lt;html&gt;
-	&lt;body&gt;
-		&lt;header&gt; 
-			&lt;div class=&#34;container&#34;&gt;
-				&lt;h3&gt;About This Project&lt;/h3&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">html</span>&gt;
+	&lt;<span style="color:#8b008b;font-weight:bold">body</span>&gt;
+		&lt;<span style="color:#8b008b;font-weight:bold">header</span>&gt; 
+			&lt;<span style="color:#8b008b;font-weight:bold">div</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;container&#34;</span>&gt;
+				&lt;<span style="color:#8b008b;font-weight:bold">h3</span>&gt;About This Project&lt;/<span style="color:#8b008b;font-weight:bold">h3</span>&gt;
 			
 		<span style="color:#1e889b">&lt;?php</span>
 		<span style="color:#228b22">//If the user is logged-in
@@ -652,25 +659,26 @@ Put all of the files in the root directory of your web server. That’s it! Now 
 		}
 		
 	<span style="color:#1e889b">?&gt;</span>       
-			&lt;/div&gt;
-		&lt;/header&gt;
-		&lt;section class=&#34;container&#34; &gt;
-			&lt;div class=&#34;row&#34;&gt;
-				&lt;div class=&#34;col-md-9 content&#34;&gt;
-					 &lt;p class=&#34;text-justify&#34;&gt;This is an educational open-source project. It is a dynamic website, built from scratch using PHP and MySQL. The main functionality of the website is to allow users to register and log in. When a user registers, the data is stored in the database. When a user tries to log in, the database is checked. In case of a match, the user logs in. The data of the website changes when a user is logged in. That is why this is a dynamic website. The website uses some very basic styling from Bootstrap. Bootstrap is a CSS and JavaScript framework for developing responsive, mobile first websites.&lt;/p&gt;
-				&lt;/div&gt;
-			&lt;/div&gt;
+			&lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt;
+		&lt;/<span style="color:#8b008b;font-weight:bold">header</span>&gt;
+		&lt;<span style="color:#8b008b;font-weight:bold">section</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;container&#34;</span> &gt;
+			&lt;<span style="color:#8b008b;font-weight:bold">div</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;row&#34;</span>&gt;
+				&lt;<span style="color:#8b008b;font-weight:bold">div</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;col-md-9 content&#34;</span>&gt;
+					 &lt;<span style="color:#8b008b;font-weight:bold">p</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;text-justify&#34;</span>&gt;This is an educational open-source project. It is a dynamic website, built from scratch using PHP and MySQL. The main functionality of the website is to allow users to register and log in. When a user registers, the data is stored in the database. When a user tries to log in, the database is checked. In case of a match, the user logs in. The data of the website changes when a user is logged in. That is why this is a dynamic website. The website uses some very basic styling from Bootstrap. Bootstrap is a CSS and JavaScript framework for developing responsive, mobile first websites.&lt;/<span style="color:#8b008b;font-weight:bold">p</span>&gt;
+				&lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt;
+			&lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt;
 			
-		&lt;/section&gt;
+		&lt;/<span style="color:#8b008b;font-weight:bold">section</span>&gt;
 		
 
 		
-		&lt;footer class=&#34;container&#34;&gt;
+		&lt;<span style="color:#8b008b;font-weight:bold">footer</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;container&#34;</span>&gt;
 		   <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">include</span> <span style="color:#cd5555">&#39;footer.php&#39;</span>; <span style="color:#1e889b">?&gt;</span>
-		&lt;/footer&gt;
+		&lt;/<span style="color:#8b008b;font-weight:bold">footer</span>&gt;
 	  
-	&lt;/body&gt;
-	&lt;/html&gt;</code></pre></div></p>
+	&lt;/<span style="color:#8b008b;font-weight:bold">body</span>&gt;
+	&lt;/<span style="color:#8b008b;font-weight:bold">html</span>&gt;
+</code></pre></div></p>
 
 <p>Now, when you go to <a href="http://localhost/">http://localhost/</a>, it should resolve to your new website!</p>
 
