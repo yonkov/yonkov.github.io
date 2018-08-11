@@ -3,9 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
+	<meta name="description" content="In this tutorial, I am going to show you the things that I did to successfully export my Wordpress website to Hugo static site generator.
+Why would like to export your WordPress website to Hugo?
+WordPress is the most popular framework fo building websites. This is because it is open-source, it has user-friendly CMS, allows for customization and has tons of documentation online. However, sometimes you do not need a dynamic website with a database.">
 	<meta name="author"      content="Atanas Yonkov">
-	<title>Tags</title>
+	<title>How to Convert Your Wordpress Site to Hugo</title>
 
 	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
 
@@ -198,15 +200,6 @@
                 </li>
                 
 				
-    
-    <li>
-		<span class="language-switcher" style=""> 
-		<i class="fa fa-globe"></i>
-		<a href ="https://yonkov.github.io/ru/tags/" style="">ru:  </a>
-		</span>
-    </li>
-    
-
             </ul>
 
         </div>
@@ -214,208 +207,131 @@
 </nav>
 
 </header>
-
 <main id="main">
 
 	<div class="container">
+
 		<div class="row topspace">
 			<div class="col-sm-8 col-sm-offset-2">
 
-                
-				<article class="post">
+ 				<article class="post">
+					<header class="entry-header">
+ 						
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/how-to-convert-your-wordpress-site-to-hugo/" rel="bookmark">How to Convert Your Wordpress Site to Hugo</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2018-08-11 12:13:23 &#43;0300 EEST">August 11, 2018</time></span>
+ 						</div>
+					</header>
 					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/tags/" rel="bookmark"></a></h2>
-							</header>
-								
-								
-						</article>
+						
+
+<p>In this tutorial, I am going to show you the things that I did to successfully export my Wordpress website to Hugo static site generator.</p>
+
+<p><strong>Why would like to export your WordPress website to Hugo?</strong></p>
+
+<p>WordPress is the most popular framework fo building websites. This is because it is open-source, it has user-friendly CMS, allows for customization and has tons of documentation online.
+However, sometimes you do not need a dynamic website with a database. Sometimes a simple HTML website with no database queries is enough to run a small blog or a portfolio website. Why would you need that?</p>
+
+<p><strong>Speed</strong></p>
+
+<p>The advantage of not having a database means that static websites are generally siginficantly faster than dynamic websites. Fast websites is really important for a good user experience.</p>
+
+<p><strong>Security</strong></p>
+
+<p>The static website has no database. That means there is nothing to be hacked. You edit your content from your computer and upload it to the server. No login credentials, username or password.</p>
+
+<p>Yet, static websites have one big disadvantage. You need to manually generate html for each of your pages.
+This is not a problem when your website has 3-4 pages but it may become overkill if you have a blog and you need to update it on a weekly basis.
+Here is where Hugo site generator comes into help. Hugo uses GoLang – programming languages that uses pre-defined templates and lets you export your markdown into html. In this way, you just write a new blog post and et hugo do the rest.</p>
+
+<p>This article presumes that you have some basic experience with Hugo (you have installed Hugo on your computer, set up a theme and used markdown to show content).</p>
+
+<p><strong><em>Here is my plan:</em></strong></p>
+
+<ol>
+<li>Convert WordPress into static website</li>
+<li>Convert the static website to Hugo</li>
+</ol>
+
+<p>There are a couple of WordPress plugins avaiable that let you export your website to a static website.
+The thing that really worked for me was the Simply Static plugin that 100% succeeded to export my WordPress website using the Divi theme.</p>
+
+<h2 id="1-install-simply-static-plugin">1. Install Simply Static plugin</h2>
+
+<p>Go to your WordPress and install <a href="https://wordpress.org/plugins/simply-static/">Simply Static</a> plugin. Export your WordPress website using “Save for offline use” option. Download the zip file.</p>
+
+<h2 id="2-create-a-new-hugo-website">2. Create a new Hugo website.</h2>
+
+<p>Copy the following line in the command prompt:</p>
+
+<pre><code>hugo new site testSite
+</code></pre>
+
+<p>This should create a folder testSite with your brand new hugo installation inside your hugo.exe root folder.
+Copy the hugo.exe file from your hugo root directory and paste it inside the testSite folder.
+Now locate the static folder inside testSide foder and paste all your static website content in the static folder in your new hugo installation.
+Finally, move your index page into the layouts directory. You can now build your new website. Run the following command:</p>
+
+<pre><code>hugo server
+</code></pre>
+
+<p>Now, when you go to localhost in your browser, you should be able to see that your static website is successfully generated with Hugo!</p>
+
+<h2 id="3-extract-partias">3. Extract Partias</h2>
+
+<p>Now you can generate your website with Hugo but you cannot really take advantage of Huo functionalities. Here you need to do some manual work to set it up. However, it is going to worth it! First, you should create partials for the header and the footer in layous/partials. Copy all the heade staff in header.html and the footer stuff in footer.html. Now replace the header and footer parts of your index.html with te following codes:</p>
+
+<pre><code>{{ partial &quot;header.html&quot; . }}
+&lt;!-- the main part of the page --&gt;
+{{ partial &quot;footer.html&quot; . }}
+</code></pre>
+
+<p>Check localhost in your browser to make sure everything is working fine</p>
+
+<h2 id="4-create-page-templates">4. Create Page Templates</h2>
+
+<p>You would also need to create page templates for your single pages and optionally a list page to list your blog posts.
+Here is an example of your single.html template:</p>
+
+<pre><code>{{ partial &quot;header.html&quot; . }}
+{{ .Content }}
+{{ partial &quot;footer.html&quot; . }}
+</code></pre>
+
+<p>If you need more support setting up page templates, please check the official documetation on the subject: <a href="https://gohugo.io/templates/single-page-templates/">https://gohugo.io/templates/single-page-templates/</a></p>
+
+<h2 id="5-create-markdown-files-for-your-posts-and-pages">5. Create markdown files for your posts and pages</h2>
+
+<p>For example if you have an about page at static/about/index.html, you can now create content/about.md. You can actually copy the html straight to about.md. Continue the process for the blog posts.</p>
+
+<h2 id="6-add-new-content">6. Add new content</h2>
+
+<p>At this point, when you add a new markdown page to content and run hugo, the new content should be generated correctly.</p>
+
 					</div>
 				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/tags/dropdown-menu-in-divi/" rel="bookmark">Dropdown Menu in Divi</a></h2>
-							</header>
-								
-								
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/tags/excel-formulas/" rel="bookmark">Excel Formulas</a></h2>
-							</header>
-								
-								
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/tags/how-to-make-a-dynamic-website/" rel="bookmark">How to Make a Dynamic Website</a></h2>
-							</header>
-								
-								
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/tags/login-form-php-7/" rel="bookmark">Login Form Php 7</a></h2>
-							</header>
-								
-								
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/tags/php-mysql-website-from-scratch/" rel="bookmark">Php Mysql Website From Scratch</a></h2>
-							</header>
-								
-								
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/tags/registration-form-php-7/" rel="bookmark">Registration Form Php 7</a></h2>
-							</header>
-								
-								
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/tags/static-ip-in-windows-7/" rel="bookmark">Static Ip in Windows 7</a></h2>
-							</header>
-								
-								
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/tags/static-ip-in-windows-xp/" rel="bookmark">Static Ip in Windows Xp</a></h2>
-							</header>
-								
-								
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/tags/sub-menu-items/" rel="bookmark">Sub Menu Items</a></h2>
-							</header>
-								
-								
-						</article>
-					</div>
-				</article>
-                
 
 			</div>
-		</div>
+		</div> 
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
 
-		<center class="">
-			<ul class="pagination">
-                
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
 
-<ul class="pagination">
-    
-    <li class="page-item">
-        <a href="/tags/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-    </li>
-    
-    <li class="page-item disabled">
-    <a href="" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-    </li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item active"><a class="page-link" href="/tags/">1</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="/tags/page/2/">2</a></li>
-    
-    
-    <li class="page-item">
-    <a href="/tags/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-    </li>
-    
-    <li class="page-item">
-        <a href="/tags/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-    </li>
-    
-</ul>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
 
-			</ul>
-		</center>
-
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
 
 	</div>	
 

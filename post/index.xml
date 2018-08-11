@@ -11,6 +11,17 @@
     
     
     <item>
+      <title>How to Convert Your Wordpress Site to Hugo</title>
+      <link>https://yonkov.github.io/post/how-to-convert-your-wordpress-site-to-hugo/</link>
+      <pubDate>Sat, 11 Aug 2018 12:13:23 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/how-to-convert-your-wordpress-site-to-hugo/</guid>
+      <description>In this tutorial, I am going to show you the things that I did to successfully export my Wordpress website to Hugo static site generator.
+Why would like to export your WordPress website to Hugo?
+WordPress is the most popular framework fo building websites. This is because it is open-source, it has user-friendly CMS, allows for customization and has tons of documentation online. However, sometimes you do not need a dynamic website with a database.</description>
+    </item>
+    
+    <item>
       <title>How to Change the Color of the Cart Icon in Divi</title>
       <link>https://yonkov.github.io/post/how-to-change-the-color-of-the-cart-icon-in-divi/</link>
       <pubDate>Wed, 08 Aug 2018 17:08:06 +0300</pubDate>

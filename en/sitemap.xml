@@ -11,6 +11,11 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/post/how-to-convert-your-wordpress-site-to-hugo/</loc>
+    <lastmod>2018-08-11T12:13:23+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/post/how-to-change-the-color-of-the-cart-icon-in-divi/</loc>
     <lastmod>2018-08-08T17:08:06+03:00</lastmod>
   </url>
@@ -189,7 +194,7 @@
   
   <url>
     <loc>https://yonkov.github.io/</loc>
-    <lastmod>2018-08-08T17:08:06+03:00</lastmod>
+    <lastmod>2018-08-11T12:13:23+03:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"

@@ -5,7 +5,7 @@
     <link>https://yonkov.github.io/</link>
     <description>Recent content on Atanas Yonkov</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 08 Aug 2018 17:08:06 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 11 Aug 2018 12:13:23 +0300</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -29,6 +29,17 @@
 This privacy policy document describes in detail the types of personal information is collected and recorded by yonkov.github.io and how it is used.
 Log Files Yonkov.github.io is a static website and as such it does not require or store log files
 Cookies and Web Beacons Yonkov.</description>
+    </item>
+    
+    <item>
+      <title>How to Convert Your Wordpress Site to Hugo</title>
+      <link>https://yonkov.github.io/post/how-to-convert-your-wordpress-site-to-hugo/</link>
+      <pubDate>Sat, 11 Aug 2018 12:13:23 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/how-to-convert-your-wordpress-site-to-hugo/</guid>
+      <description>In this tutorial, I am going to show you the things that I did to successfully export my Wordpress website to Hugo static site generator.
+Why would like to export your WordPress website to Hugo?
+WordPress is the most popular framework fo building websites. This is because it is open-source, it has user-friendly CMS, allows for customization and has tons of documentation online. However, sometimes you do not need a dynamic website with a database.</description>
     </item>
     
     <item>
