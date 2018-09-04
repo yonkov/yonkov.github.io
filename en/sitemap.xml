@@ -190,7 +190,7 @@
   
   <url>
     <loc>https://yonkov.github.io/categories/</loc>
-    <lastmod>2017-11-21T21:02:46+02:00</lastmod>
+    <lastmod>2017-11-16T15:24:01+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -212,7 +212,7 @@
   
   <url>
     <loc>https://yonkov.github.io/categories/</loc>
-    <lastmod>2017-11-21T21:02:46+02:00</lastmod>
+    <lastmod>2017-11-16T15:24:01+02:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -239,14 +239,42 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/categories/excel/</loc>
+    <lastmod>2017-11-12T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://yonkov.github.io/ru/categories/excel/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yonkov.github.io/categories/excel/"
+                />
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/tags/excel-formulas/</loc>
     <lastmod>2017-11-12T12:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/categories/excel-vba/</loc>
+    <lastmod>2017-11-21T21:02:46+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/tags/how-to-make-a-dynamic-website/</loc>
     <lastmod>2017-11-10T19:48:56+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/categories/hugo/</loc>
+    <lastmod>2018-08-11T12:13:23+03:00</lastmod>
     <priority>0</priority>
   </url>
   

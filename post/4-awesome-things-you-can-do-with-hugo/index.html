@@ -6,38 +6,47 @@
 	<meta name="description" content="Hugo is an awesome open-source static site generator, which you can use to create beautiful portfolio websites and blogs. Hugo started as a side project in 2013 and quickly became one of the most popular frameworks for building static websites. So, what are the ingredients that make Hugo so great? Here are the most important reasons why you should power your website with Hugo.
 Speed Hugo is absurdly fast! The developers claim that one webpage can be built for less than 1 milisecond!">
 	<meta name="author"      content="Atanas Yonkov">
-	<title>7 Reasons Why Hugo is Awesome</title>
+	
+	
 
+<script type="application/ld+json">{
+"@context":"http://schema.org",
+"@type":"TechArticle",
+"url":"https://yonkov.github.io/post/4-awesome-things-you-can-do-with-hugo/",
+"author": "Atanas Yonkov",
+"headline":"7 Reasons Why Hugo is Awesome",
+"description":"",
+"datePublished":"2017-11-07 21:23:59 &#43;0200 EET",
+"wordCount": "449",
+"publisher": {
+"@type": "Website",
+"name": "Yonkov.github.io"
+}
+}
+</script>
+
+
+	<title>7 Reasons Why Hugo is Awesome</title>
 	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
 
 	
 	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
 	
-	
 	<link rel="preload" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"></noscript>
-	
 	
 	<link rel="preload" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700"></noscript>
 	
-	
-	<link href="https://yonkov.github.io/css/styles.css?v=1535637241" rel="stylesheet">
-	<link rel="preload" href="https://yonkov.github.io/css/custom.css" as="style" onload="this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="https://yonkov.github.io/css/custom.css"></noscript>
-	
-	
+	<link href="/css/styles.css" rel="stylesheet">
+	<link rel="preload" href="/css/custom.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="/css/custom.css"></noscript>
+	<link href="/css/styles.css" rel="stylesheet">
+		
 		<script>
-		 
 		(function(w){
 	"use strict";
-	 
 	var loadCSS = function( href, before, media ){
-		
-		
-		
-			
-		
 		var doc = w.document;
 		var ss = doc.createElement( "link" );
 		var ref;
@@ -48,14 +57,10 @@ Speed Hugo is absurdly fast! The developers claim that one webpage can be built 
 			var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
 			ref = refs[ refs.length - 1];
 		}
-
 		var sheets = doc.styleSheets;
 		ss.rel = "stylesheet";
 		ss.href = href;
-		
 		ss.media = "only x";
-
-		
 		function ready( cb ){
 			if( doc.body ){
 				return cb();
@@ -64,13 +69,9 @@ Speed Hugo is absurdly fast! The developers claim that one webpage can be built 
 				ready( cb );
 			});
 		}
-		
-			
-			
 		ready( function(){
 			ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
 		});
-		
 		var onloadcssdefined = function( cb ){
 			var resolvedHref = ss.href;
 			var i = sheets.length;
@@ -83,15 +84,12 @@ Speed Hugo is absurdly fast! The developers claim that one webpage can be built 
 				onloadcssdefined( cb );
 			});
 		};
-
 		function loadCB(){
 			if( ss.addEventListener ){
 				ss.removeEventListener( "load", loadCB );
 			}
 			ss.media = media || "all";
 		}
-
-		
 		if( ss.addEventListener ){
 			ss.addEventListener( "load", loadCB);
 		}
@@ -99,7 +97,6 @@ Speed Hugo is absurdly fast! The developers claim that one webpage can be built 
 		onloadcssdefined( loadCB );
 		return ss;
 	};
-	
 	if( typeof exports !== "undefined" ){
 		exports.loadCSS = loadCSS;
 	}
@@ -107,10 +104,7 @@ Speed Hugo is absurdly fast! The developers claim that one webpage can be built 
 		w.loadCSS = loadCSS;
 	}
 }( typeof global !== "undefined" ? global : this ));
-		
-		 
 	(function( w ){
-	  
 	  if( !w.loadCSS ){
 		return;
 	  }
@@ -122,8 +116,6 @@ Speed Hugo is absurdly fast! The developers claim that one webpage can be built 
 		  return false;
 		}
 	  };
-
-	  
 	  rp.poly = function(){
 		var links = w.document.getElementsByTagName( "link" );
 		for( var i = 0; i < links.length; i++ ){
@@ -134,8 +126,6 @@ Speed Hugo is absurdly fast! The developers claim that one webpage can be built 
 		  }
 		}
 	  };
-
-	  
 	  if( !rp.support() ){
 		rp.poly();
 		var run = w.setInterval( rp.poly, 300 );
@@ -155,7 +145,6 @@ Speed Hugo is absurdly fast! The developers claim that one webpage can be built 
 	</script>	
 </head>
 <body class="home">
-
 <header id="header">
 	<div id="head" class="parallax" parallax-speed="2">
 		<h1 id="logo" class="text-center">
@@ -204,7 +193,7 @@ Speed Hugo is absurdly fast! The developers claim that one webpage can be built 
         </div>
     </div>
 </nav>
-
+	
 </header>
 <main id="main">
 
@@ -215,11 +204,33 @@ Speed Hugo is absurdly fast! The developers claim that one webpage can be built 
 
  				<article class="post">
 					<header class="entry-header">
- 						
+ 						<div id="breadcrumbs" class="entry-meta" style="font-size:15px;">
+<a href="/">Home</a>
+    
+        
+    
+        
+            / <a href="/post">Blog</a>
+        
+    
+        
+            / <a href="/4-awesome-things-you-can-do-with-hugo">4 awesome things you can do with hugo</a>
+        
+    
+        
+    
+</div>
  						<h1 class="entry-title"><a href="https://yonkov.github.io/post/4-awesome-things-you-can-do-with-hugo/" rel="bookmark">7 Reasons Why Hugo is Awesome</a></h1>
 						<div class="entry-meta">
  							<span class="posted-on"><time class="entry-date published" date="2017-11-07 21:23:59 &#43;0200 EET">November 7, 2017</time></span>
- 						</div>
+						</div>
+						<div id="blog-categories" style="font-style:italic;font-size:15px; text-align:center; padding: 0 0 10px;">
+	
+	  <em>Category: </em>
+	  <em><a href="/categories/hugo">Hugo</a></em>
+		
+	
+</div>
 					</header>
 					<div class="entry-content">
 						

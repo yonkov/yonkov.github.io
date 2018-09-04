@@ -7,38 +7,47 @@
 Why would like to convert your WordPress website to Hugo?
 WordPress is the most popular framework fo building websites. This is because it is open-source, it has user-friendly CMS, allows for customization and has tons of documentation online. However, sometimes you do not need a dynamic website with a database.">
 	<meta name="author"      content="Atanas Yonkov">
-	<title>How to Convert Your Wordpress Site to Hugo</title>
+	
+	
 
+<script type="application/ld+json">{
+"@context":"http://schema.org",
+"@type":"TechArticle",
+"url":"https://yonkov.github.io/post/how-to-convert-your-wordpress-site-to-hugo/",
+"author": "Atanas Yonkov",
+"headline":"How to Convert Your Wordpress Site to Hugo",
+"description":"",
+"datePublished":"2018-08-11 12:13:23 &#43;0300 EEST",
+"wordCount": "737",
+"publisher": {
+"@type": "Website",
+"name": "Yonkov.github.io"
+}
+}
+</script>
+
+
+	<title>How to Convert Your Wordpress Site to Hugo</title>
 	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
 
 	
 	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
 	
-	
 	<link rel="preload" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"></noscript>
-	
 	
 	<link rel="preload" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700"></noscript>
 	
-	
-	<link href="https://yonkov.github.io/css/styles.css?v=1535637241" rel="stylesheet">
-	<link rel="preload" href="https://yonkov.github.io/css/custom.css" as="style" onload="this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="https://yonkov.github.io/css/custom.css"></noscript>
-	
-	
+	<link href="/css/styles.css" rel="stylesheet">
+	<link rel="preload" href="/css/custom.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="/css/custom.css"></noscript>
+	<link href="/css/styles.css" rel="stylesheet">
+		
 		<script>
-		 
 		(function(w){
 	"use strict";
-	 
 	var loadCSS = function( href, before, media ){
-		
-		
-		
-			
-		
 		var doc = w.document;
 		var ss = doc.createElement( "link" );
 		var ref;
@@ -49,14 +58,10 @@ WordPress is the most popular framework fo building websites. This is because it
 			var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
 			ref = refs[ refs.length - 1];
 		}
-
 		var sheets = doc.styleSheets;
 		ss.rel = "stylesheet";
 		ss.href = href;
-		
 		ss.media = "only x";
-
-		
 		function ready( cb ){
 			if( doc.body ){
 				return cb();
@@ -65,13 +70,9 @@ WordPress is the most popular framework fo building websites. This is because it
 				ready( cb );
 			});
 		}
-		
-			
-			
 		ready( function(){
 			ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
 		});
-		
 		var onloadcssdefined = function( cb ){
 			var resolvedHref = ss.href;
 			var i = sheets.length;
@@ -84,15 +85,12 @@ WordPress is the most popular framework fo building websites. This is because it
 				onloadcssdefined( cb );
 			});
 		};
-
 		function loadCB(){
 			if( ss.addEventListener ){
 				ss.removeEventListener( "load", loadCB );
 			}
 			ss.media = media || "all";
 		}
-
-		
 		if( ss.addEventListener ){
 			ss.addEventListener( "load", loadCB);
 		}
@@ -100,7 +98,6 @@ WordPress is the most popular framework fo building websites. This is because it
 		onloadcssdefined( loadCB );
 		return ss;
 	};
-	
 	if( typeof exports !== "undefined" ){
 		exports.loadCSS = loadCSS;
 	}
@@ -108,10 +105,7 @@ WordPress is the most popular framework fo building websites. This is because it
 		w.loadCSS = loadCSS;
 	}
 }( typeof global !== "undefined" ? global : this ));
-		
-		 
 	(function( w ){
-	  
 	  if( !w.loadCSS ){
 		return;
 	  }
@@ -123,8 +117,6 @@ WordPress is the most popular framework fo building websites. This is because it
 		  return false;
 		}
 	  };
-
-	  
 	  rp.poly = function(){
 		var links = w.document.getElementsByTagName( "link" );
 		for( var i = 0; i < links.length; i++ ){
@@ -135,8 +127,6 @@ WordPress is the most popular framework fo building websites. This is because it
 		  }
 		}
 	  };
-
-	  
 	  if( !rp.support() ){
 		rp.poly();
 		var run = w.setInterval( rp.poly, 300 );
@@ -156,7 +146,6 @@ WordPress is the most popular framework fo building websites. This is because it
 	</script>	
 </head>
 <body class="home">
-
 <header id="header">
 	<div id="head" class="parallax" parallax-speed="2">
 		<h1 id="logo" class="text-center">
@@ -205,7 +194,7 @@ WordPress is the most popular framework fo building websites. This is because it
         </div>
     </div>
 </nav>
-
+	
 </header>
 <main id="main">
 
@@ -216,11 +205,33 @@ WordPress is the most popular framework fo building websites. This is because it
 
  				<article class="post">
 					<header class="entry-header">
- 						
+ 						<div id="breadcrumbs" class="entry-meta" style="font-size:15px;">
+<a href="/">Home</a>
+    
+        
+    
+        
+            / <a href="/post">Blog</a>
+        
+    
+        
+            / <a href="/how-to-convert-your-wordpress-site-to-hugo">How to convert your wordpress site to hugo</a>
+        
+    
+        
+    
+</div>
  						<h1 class="entry-title"><a href="https://yonkov.github.io/post/how-to-convert-your-wordpress-site-to-hugo/" rel="bookmark">How to Convert Your Wordpress Site to Hugo</a></h1>
 						<div class="entry-meta">
  							<span class="posted-on"><time class="entry-date published" date="2018-08-11 12:13:23 &#43;0300 EEST">August 11, 2018</time></span>
- 						</div>
+						</div>
+						<div id="blog-categories" style="font-style:italic;font-size:15px; text-align:center; padding: 0 0 10px;">
+	
+	  <em>Category: </em>
+	  <em><a href="/categories/hugo">Hugo</a></em>
+		
+	
+</div>
 					</header>
 					<div class="entry-content">
 						

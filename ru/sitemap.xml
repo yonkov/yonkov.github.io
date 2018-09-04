@@ -123,6 +123,22 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/ru/categories/excel/</loc>
+    <lastmod>2018-07-11T21:02:46+02:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yonkov.github.io/categories/excel/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://yonkov.github.io/ru/categories/excel/"
+                />
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/ru/post/</loc>
     <lastmod>2018-07-11T21:02:46+02:00</lastmod>
     <priority>0</priority>
@@ -183,6 +199,12 @@
                 hreflang="ru"
                 href="https://yonkov.github.io/ru/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/ru/categories/vba/</loc>
+    <lastmod>2018-07-11T21:02:46+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>

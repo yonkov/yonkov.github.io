@@ -5,7 +5,7 @@
     <link>https://yonkov.github.io/categories/</link>
     <description>Recent content in Categories on Atanas Yonkov</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 21 Nov 2017 21:02:46 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 16 Nov 2017 15:24:01 +0200</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +13,7 @@
     <item>
       <title></title>
       <link>https://yonkov.github.io/categories/</link>
-      <pubDate>Tue, 21 Nov 2017 21:02:46 +0200</pubDate>
+      <pubDate>Thu, 16 Nov 2017 15:24:01 +0200</pubDate>
       
       <guid>https://yonkov.github.io/categories/</guid>
       <description></description>
@@ -25,6 +25,33 @@
       <pubDate>Wed, 08 Aug 2018 17:08:06 +0300</pubDate>
       
       <guid>https://yonkov.github.io/categories/divi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Excel</title>
+      <link>https://yonkov.github.io/categories/excel/</link>
+      <pubDate>Sun, 12 Nov 2017 12:00:00 +0000</pubDate>
+      
+      <guid>https://yonkov.github.io/categories/excel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Excel Vba</title>
+      <link>https://yonkov.github.io/categories/excel-vba/</link>
+      <pubDate>Tue, 21 Nov 2017 21:02:46 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/categories/excel-vba/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://yonkov.github.io/categories/hugo/</link>
+      <pubDate>Sat, 11 Aug 2018 12:13:23 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/categories/hugo/</guid>
       <description></description>
     </item>
     

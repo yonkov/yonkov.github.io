@@ -5,38 +5,47 @@
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="В этом уроке я покажу Вам самые популярные макросы в VBA Excel, которые вы сможете использовать для оптимизации своей работы. VBA - это язык программирования, который может использоваться для расширения возможностей MS Excel и других приложений MS Office. Это чрезвычайно полезно для пользователей MS Excel, поскольку VBA может использоваться для автоматизации вашей работы и значительно увеличить Вашу эффективность. В этой статье Вы познакомитесь с VBA и я вам покажу некоторые из наиболее полезных, готовых к использованию примеров VBA.">
 	<meta name="author"      content="Atanas Yonkov">
-	<title>18 готовых макросов VBA Excel</title>
+	
+	
 
+<script type="application/ld+json">{
+"@context":"http://schema.org",
+"@type":"TechArticle",
+"url":"https://yonkov.github.io/ru/post/18-ready-to-use-vba-codes-that-will-save-your-day/",
+"author": "Atanas Yonkov",
+"headline":"18 готовых макросов VBA Excel",
+"description":"",
+"datePublished":"2018-07-11 21:02:46 &#43;0200 &#43;0200",
+"wordCount": "2144",
+"publisher": {
+"@type": "Website",
+"name": "Yonkov.github.io"
+}
+}
+</script>
+
+
+	<title>18 готовых макросов VBA Excel</title>
 	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
 
 	
 	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
 	
-	
 	<link rel="preload" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"></noscript>
-	
 	
 	<link rel="preload" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700"></noscript>
 	
-	
-	<link href="https://yonkov.github.io/css/styles.css?v=1535637241" rel="stylesheet">
-	<link rel="preload" href="https://yonkov.github.io/css/custom.css" as="style" onload="this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="https://yonkov.github.io/css/custom.css"></noscript>
-	
-	
+	<link href="/css/styles.css" rel="stylesheet">
+	<link rel="preload" href="/css/custom.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="/css/custom.css"></noscript>
+	<link href="/css/styles.css" rel="stylesheet">
+		
 		<script>
-		 
 		(function(w){
 	"use strict";
-	 
 	var loadCSS = function( href, before, media ){
-		
-		
-		
-			
-		
 		var doc = w.document;
 		var ss = doc.createElement( "link" );
 		var ref;
@@ -47,14 +56,10 @@
 			var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
 			ref = refs[ refs.length - 1];
 		}
-
 		var sheets = doc.styleSheets;
 		ss.rel = "stylesheet";
 		ss.href = href;
-		
 		ss.media = "only x";
-
-		
 		function ready( cb ){
 			if( doc.body ){
 				return cb();
@@ -63,13 +68,9 @@
 				ready( cb );
 			});
 		}
-		
-			
-			
 		ready( function(){
 			ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
 		});
-		
 		var onloadcssdefined = function( cb ){
 			var resolvedHref = ss.href;
 			var i = sheets.length;
@@ -82,15 +83,12 @@
 				onloadcssdefined( cb );
 			});
 		};
-
 		function loadCB(){
 			if( ss.addEventListener ){
 				ss.removeEventListener( "load", loadCB );
 			}
 			ss.media = media || "all";
 		}
-
-		
 		if( ss.addEventListener ){
 			ss.addEventListener( "load", loadCB);
 		}
@@ -98,7 +96,6 @@
 		onloadcssdefined( loadCB );
 		return ss;
 	};
-	
 	if( typeof exports !== "undefined" ){
 		exports.loadCSS = loadCSS;
 	}
@@ -106,10 +103,7 @@
 		w.loadCSS = loadCSS;
 	}
 }( typeof global !== "undefined" ? global : this ));
-		
-		 
 	(function( w ){
-	  
 	  if( !w.loadCSS ){
 		return;
 	  }
@@ -121,8 +115,6 @@
 		  return false;
 		}
 	  };
-
-	  
 	  rp.poly = function(){
 		var links = w.document.getElementsByTagName( "link" );
 		for( var i = 0; i < links.length; i++ ){
@@ -133,8 +125,6 @@
 		  }
 		}
 	  };
-
-	  
 	  if( !rp.support() ){
 		rp.poly();
 		var run = w.setInterval( rp.poly, 300 );
@@ -154,7 +144,6 @@
 	</script>	
 </head>
 <body class="home">
-
 <header id="header">
 	<div id="head" class="parallax" parallax-speed="2">
 		<h1 id="logo" class="text-center">
@@ -204,7 +193,7 @@
         </div>
     </div>
 </nav>
-
+	
 </header>
 <main id="main">
 
@@ -215,11 +204,37 @@
 
  				<article class="post">
 					<header class="entry-header">
- 						
+ 						<div id="breadcrumbs" class="entry-meta" style="font-size:15px;">
+<a href="/">Home</a>
+    
+        
+    
+        
+            / <a href="/ru">Ru</a>
+        
+    
+        
+            / <a href="/post">Blog</a>
+        
+    
+        
+            / <a href="/18-ready-to-use-vba-codes-that-will-save-your-day">18 ready to use vba codes that will save your day</a>
+        
+    
+        
+    
+</div>
  						<h1 class="entry-title"><a href="https://yonkov.github.io/ru/post/18-ready-to-use-vba-codes-that-will-save-your-day/" rel="bookmark">18 готовых макросов VBA Excel</a></h1>
 						<div class="entry-meta">
  							<span class="posted-on"><time class="entry-date published" date="2018-07-11 21:02:46 &#43;0200 &#43;0200">July 11, 2018</time></span>
- 						</div>
+						</div>
+						<div id="blog-categories" style="font-style:italic;font-size:15px; text-align:center; padding: 0 0 10px;">
+	
+	  <em>Categories: </em>
+	  <em><a href="/categories/excel">Excel</a></em>, <em><a href="/categories/vba">VBA</a></em>
+		
+	
+</div>
 					</header>
 					<div class="entry-content">
 						

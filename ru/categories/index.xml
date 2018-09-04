@@ -9,5 +9,23 @@
 	<atom:link href="https://yonkov.github.io/ru/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Excel</title>
+      <link>https://yonkov.github.io/ru/categories/excel/</link>
+      <pubDate>Wed, 11 Jul 2018 21:02:46 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/ru/categories/excel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vba</title>
+      <link>https://yonkov.github.io/ru/categories/vba/</link>
+      <pubDate>Wed, 11 Jul 2018 21:02:46 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/ru/categories/vba/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
