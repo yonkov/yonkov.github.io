@@ -205,6 +205,16 @@
     <loc>https://yonkov.github.io/ru/categories/vba/</loc>
     <lastmod>2018-07-11T21:02:46+02:00</lastmod>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yonkov.github.io/categories/vba/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://yonkov.github.io/ru/categories/vba/"
+                />
   </url>
   
   <url>

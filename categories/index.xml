@@ -31,18 +31,9 @@
     <item>
       <title>Excel</title>
       <link>https://yonkov.github.io/categories/excel/</link>
-      <pubDate>Sun, 12 Nov 2017 12:00:00 +0000</pubDate>
-      
-      <guid>https://yonkov.github.io/categories/excel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Excel Vba</title>
-      <link>https://yonkov.github.io/categories/excel-vba/</link>
       <pubDate>Tue, 21 Nov 2017 21:02:46 +0200</pubDate>
       
-      <guid>https://yonkov.github.io/categories/excel-vba/</guid>
+      <guid>https://yonkov.github.io/categories/excel/</guid>
       <description></description>
     </item>
     
@@ -52,6 +43,15 @@
       <pubDate>Sat, 11 Aug 2018 12:13:23 +0300</pubDate>
       
       <guid>https://yonkov.github.io/categories/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vba</title>
+      <link>https://yonkov.github.io/categories/vba/</link>
+      <pubDate>Tue, 21 Nov 2017 21:02:46 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/categories/vba/</guid>
       <description></description>
     </item>
     
