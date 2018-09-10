@@ -3,9 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="In this tutorial, I am going to show you the things that I did to successfully migrate my WordPress website to Hugo static site generator.
-Why would like to convert your WordPress website to Hugo?
-WordPress is the most popular framework fo building websites. This is because it is open-source, it has user-friendly CMS, allows for customization and has tons of documentation online. However, sometimes you do not need a dynamic website with a database.">
+	<meta name="description" content="How to Add Knowledge Graph to WordPress manually (without the use of plugins)">
 	<meta name="author"      content="Atanas Yonkov">
 	
 	
@@ -13,14 +11,14 @@ WordPress is the most popular framework fo building websites. This is because it
 <script type="application/ld+json">{
 "@context":"http://schema.org",
 "@type":"TechArticle",
-"url":"https://yonkov.github.io/post/how-to-convert-your-wordpress-site-to-hugo/",
+"url":"https://yonkov.github.io/post/easy-way-to-add-knowledge-graph-to-wordpress-without-a-plugin/",
 "author": "Atanas Yonkov",
 "creator" : "Atanas Yonkov",
 "copyrightHolder" : "Atanas Yonkov",
-"headline":"How to Convert Your Wordpress Site to Hugo",
-"description":"",
-"datePublished":"2018-08-11 12:13:23 &#43;0300 EEST",
-"wordCount": "737",
+"headline":"Easy Way to Add Knowledge Graph to WordPress Without a Plugin",
+"description":"How to Add Knowledge Graph to WordPress manually (without the use of plugins)",
+"datePublished":"2018-09-10 17:08:06 &#43;0300 EEST",
+"wordCount": "394",
 "publisher": {
 "@type": "Website",
 "name": "Yonkov.github.io"
@@ -29,7 +27,7 @@ WordPress is the most popular framework fo building websites. This is because it
 </script>
 
 
-	<title>How to Convert Your Wordpress Site to Hugo</title>
+	<title>Easy Way to Add Knowledge Graph to WordPress Without a Plugin</title>
 	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
 	
 	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
@@ -210,109 +208,77 @@ WordPress is the most popular framework fo building websites. This is because it
         
     
         
-            / <a href="/how-to-convert-your-wordpress-site-to-hugo">How to convert your wordpress site to hugo</a>
+            / <a href="/easy-way-to-add-knowledge-graph-to-wordpress-without-a-plugin">Easy way to add knowledge graph to wordpress without a plugin</a>
         
     
         
     
 </div>
- 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/how-to-convert-your-wordpress-site-to-hugo/" rel="bookmark">How to Convert Your Wordpress Site to Hugo</a></h1>
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/easy-way-to-add-knowledge-graph-to-wordpress-without-a-plugin/" rel="bookmark">Easy Way to Add Knowledge Graph to WordPress Without a Plugin</a></h1>
 						<div class="entry-meta">
- 							<span class="posted-on"><time class="entry-date published" date="2018-08-11 12:13:23 &#43;0300 EEST">August 11, 2018</time></span>
+ 							<span class="posted-on"><time class="entry-date published" date="2018-09-10 17:08:06 &#43;0300 EEST">September 10, 2018</time></span>
 						</div>
 						<div id="blog-categories" style="font-style:italic;font-size:15px; text-align:center; padding: 0 0 10px;">
 	
-	  <em>Category: </em>
-	  <em><a href="/categories/hugo">Hugo</a></em>
+	  <em>Categories: </em>
+	  <em><a href="/categories/wordpress">Wordpress</a></em>, <em><a href="/categories/seo">SEO</a></em>
 		
 	
 </div>
 					</header>
 					<div class="entry-content">
-						
+						<p>In this article, I am going to show you how to easily add Knowledge Graph to WordPress manually (without the use of plugins)</p>
 
-<p>In this tutorial, I am going to show you the things that I did to successfully migrate my WordPress website to Hugo static site generator.</p>
+<p>The Google’s Knowledge Graph is the big block of information that appears on the right-hand side of Google’s search results. The Knowledge Graph contains relevant, context-specific information, regarding your search. For example, if you search for Pablo Picasso in Google, you will see images and information regarding the famous painter on the right-hand side of your screen. In a similar way, If you search for a company, e.g. “Apple”, you will find lots of useful information such as address, contact, short description about the business, products, as well as information about its founders and executives.</p>
 
-<p><strong>Why would like to convert your WordPress website to Hugo?</strong></p>
+<p>Adding <a href="https://schema.org/">schema markup</a> to WordPress can help Google find the relevant information and create a Knowledge Graph for your website. Knowledge Graph can be added via different encodings, the most popular being Microdata, RDF-a and JSON-LD. We will have a closer look at JSON-LD file format, since it is in my opinion the most user-friendly and it is also the prefered method by Google.</p>
 
-<p>WordPress is the most popular framework fo building websites. This is because it is open-source, it has user-friendly CMS, allows for customization and has tons of documentation online.
-However, sometimes you do not need a dynamic website with a database. Sometimes a simple HTML website with no database queries is enough to run a small blog or a portfolio website. Why would you need that?</p>
+<p>Please note that whether your website will appear in the Google&rsquo;s Knowledge Graph or not depends entirely on Google. In any case, adding the necessary information will have a positive effect on your website’s SEO.</p>
 
-<p><strong>Speed</strong></p>
+<p>To add Knowledgre Graph schema markup to WordPress, add the following code to your child theme’s functions.php file:
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">function add_knowledgegraph() {
+echo &#34;\n<span style="color:#228b22">&lt;!-- KNOWLEDGE GRAPH --&gt;</span>&#34;;
+if (is_front_page()) {
+echo &#39;
+&lt;<span style="color:#8b008b;font-weight:bold">script</span> <span style="color:#658b00">type</span>=<span style="color:#cd5555">&#34;application/ld+json&#34;</span>&gt;
+{
+  <span style="color:#cd5555">&#34;@context&#34;</span>: <span style="color:#cd5555">&#34;http://schema.org&#34;</span>,
+  <span style="color:#cd5555">&#34;@type&#34;</span>: <span style="color:#cd5555">&#34;Organization&#34;</span>,
+  <span style="color:#cd5555">&#34;name&#34;</span>: <span style="color:#cd5555">&#34; My awesome website&#34;</span>,
+  <span style="color:#cd5555">&#34;url&#34;</span>: <span style="color:#cd5555">&#34;http://yourwebsite.com&#34;</span>,
+  <span style="color:#cd5555">&#34;logo&#34;</span>: <span style="color:#cd5555">&#34;http://yourwebsite.com/logo.jpg&#34;</span>,
+  <span style="color:#cd5555">&#34;description&#34;</span>: <span style="color:#cd5555">&#34;My awesome website’s description&#34;</span>,
+  <span style="color:#cd5555">&#34;foundingDate&#34;</span>: <span style="color:#cd5555">&#34;2014&#34;</span>,
+  <span style="color:#cd5555">&#34;founders&#34;</span>: [
+	 {
+	 <span style="color:#cd5555">&#34;@type&#34;</span>: <span style="color:#cd5555">&#34;Person&#34;</span>,
+	 <span style="color:#cd5555">&#34;name&#34;</span>: <span style="color:#cd5555">&#34;Mark Spencer&#34;</span>
+	 },
+	 {
+	 <span style="color:#cd5555">&#34;@type&#34;</span>: <span style="color:#cd5555">&#34;Person&#34;</span>,
+	 <span style="color:#cd5555">&#34;name&#34;</span>: <span style="color:#cd5555">&#34;John Doe&#34;</span>
+	} ], 
+  <span style="color:#cd5555">&#34;contactPoint&#34;</span> : [
+    { <span style="color:#cd5555">&#34;@type&#34;</span> : <span style="color:#cd5555">&#34;ContactPoint&#34;</span>,
+      <span style="color:#cd5555">&#34;email&#34;</span>: <span style="color:#cd5555">&#34;example@mail.com&#34;</span>
+    } ],
+  <span style="color:#cd5555">&#34;sameAs&#34;</span> : [
+    <span style="color:#cd5555">&#34;http://www.facebook.com/ &#34;</span>,
+    <span style="color:#cd5555">&#34;https://www.twitter.com/ &#34;</span>,
+    <span style="color:#cd5555">&#34;https://www.linkedin.com/ &#34;</span>
+  ]}
+&lt;/<span style="color:#8b008b;font-weight:bold">script</span>&gt;&#39;;
+}
+echo &#34;\n\n&#34;;	
+}
+add_action(&#39;wp_head&#39;, &#39;add_knowledgegraph&#39;);</code></pre></div>
+The code adds JSON-LD schema markup in the head of your website’s home page. In this way, you can easily add Knowledge Graph schema markup to Wordpress without the use of plugins. You only need to change the right-hand side values with the relevant information. The following example can be used to add different types of schema markup to any post or page.</p>
 
-<p>The advantage of not having a database means that static websites are generally siginficantly faster than dynamic websites. Fast websites is really important for a good user experience.</p>
+<p>Happy coding!</p>
 
-<p><strong>Security</strong></p>
-
-<p>The static website has no database. That means there is nothing to be hacked. You edit your content from your computer and upload it to the server. No login credentials, username or password.</p>
-
-<p>Yet, static websites have one big disadvantage. You need to manually generate html for each of your pages.
-This is not a problem when your website has 3-4 pages but it may become overkill if you have a blog and you need to update it on a weekly basis.
-Here is where Hugo site generator comes into help. Hugo uses GoLang – programming languages that uses pre-defined templates and lets you export your markdown into html. In this way, you just write a new blog post and et hugo do the rest.</p>
-
-<p>This article presumes that you have some basic experience with Hugo (you have installed Hugo on your computer, set up a theme and used markdown to show content).</p>
-
-<p><strong><em>Here is my plan how to migrate my WordPress website to Hugo:</em></strong></p>
-
-<ol>
-<li>Convert WordPress into static website</li>
-<li>Convert the static website to Hugo</li>
-</ol>
-
-<p>There are a couple of WordPress plugins avaiable that let you export your website to a static website.
-The thing that really worked for me was the Simply Static plugin that 100% succeeded to export my WordPress website using the Divi theme.</p>
-
-<h2 id="1-install-simply-static-plugin">1. Install Simply Static plugin</h2>
-
-<p>Go to your WordPress and install <a href="https://wordpress.org/plugins/simply-static/">Simply Static</a> plugin. Export your WordPress website using “Save for offline use” option. Download the zip file.</p>
-
-<h2 id="2-create-a-new-hugo-website">2. Create a new Hugo website.</h2>
-
-<p>Copy the following line in the command prompt:</p>
-
-<pre><code>hugo new site testSite
-</code></pre>
-
-<p>This should create a folder testSite with your brand new hugo installation inside your hugo.exe root folder.
-Copy the hugo.exe file from your hugo root directory and paste it inside the testSite folder.
-Now locate the static folder inside testSide foder and paste all your static website content in the static folder in your new hugo installation.
-Finally, move your index page into the layouts directory. You can now build your new website. Run the following command:</p>
-
-<pre><code>hugo server
-</code></pre>
-
-<p>Now, when you go to localhost in your browser, you should be able to see that your static website is successfully generated with Hugo!</p>
-
-<h2 id="3-extract-partias">3. Extract Partias</h2>
-
-<p>Now you can generate your website with Hugo but you cannot really take advantage of Huo functionalities. Here you need to do some manual work to set it up. However, it is going to worth it! First, you should create partials for the header and the footer in layous/partials. Copy all the heade staff in header.html and the footer stuff in footer.html. Now replace the header and footer parts of your index.html with te following codes:</p>
-
-<pre><code>{{ partial &quot;header.html&quot; . }}
-&lt;!-- the main part of the page --&gt;
-{{ partial &quot;footer.html&quot; . }}
-</code></pre>
-
-<p>Check localhost in your browser to make sure everything is working fine</p>
-
-<h2 id="4-create-page-templates">4. Create Page Templates</h2>
-
-<p>You would also need to create page templates for your single pages and optionally a list page to list your blog posts.
-Here is an example of your single.html template:</p>
-
-<pre><code>{{ partial &quot;header.html&quot; . }}
-{{ .Content }}
-{{ partial &quot;footer.html&quot; . }}
-</code></pre>
-
-<p>If you need more support setting up page templates, please check the official documetation on the subject: <a href="https://gohugo.io/templates/single-page-templates/">https://gohugo.io/templates/single-page-templates/</a></p>
-
-<h2 id="5-create-markdown-files-for-your-posts-and-pages">5. Create markdown files for your posts and pages</h2>
-
-<p>For example if you have an about page at static/about/index.html, you can now create content/about.md. You can actually copy the html straight to about.md. Continue the process for the blog posts.</p>
-
-<h2 id="6-add-new-content">6. Add new content</h2>
-
-<p>At this point, when you add a new markdown page to content and run hugo, the new content should be generated correctly.</p>
+<p>Source:
+<p><a href="https://yoast.com/google-knowledge-graph/">What is Google&rsquo;s Knowledge Graph?</a></p>
+<a href="https://www.elegantthemes.com/blog/tips-tricks/how-to-add-schema-markup-to-wordpress">How to Add Schema Markup to WordPress</a></p>
 
 					</div>
 				</article>

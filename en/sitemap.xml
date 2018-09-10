@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/post/easy-way-to-add-knowledge-graph-to-wordpress-without-a-plugin/</loc>
+    <lastmod>2018-09-10T17:08:06+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/post/how-to-convert-your-wordpress-site-to-hugo/</loc>
     <lastmod>2018-08-11T12:13:23+03:00</lastmod>
   </url>
@@ -183,14 +188,14 @@
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/tags/</loc>
-    <lastmod>2017-11-21T21:02:46+02:00</lastmod>
+    <loc>https://yonkov.github.io/categories/</loc>
+    <lastmod>2017-11-16T15:24:01+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/categories/</loc>
-    <lastmod>2017-11-16T15:24:01+02:00</lastmod>
+    <loc>https://yonkov.github.io/tags/</loc>
+    <lastmod>2017-11-21T21:02:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -287,6 +292,12 @@
   <url>
     <loc>https://yonkov.github.io/tags/registration-form-php-7/</loc>
     <lastmod>2017-11-10T19:48:56+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/categories/seo/</loc>
+    <lastmod>2018-09-10T17:08:06+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -392,7 +403,7 @@
   
   <url>
     <loc>https://yonkov.github.io/categories/wordpress/</loc>
-    <lastmod>2018-08-08T17:08:06+03:00</lastmod>
+    <lastmod>2018-09-10T17:08:06+03:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Seo on Atanas Yonkov</title>
+    <link>https://yonkov.github.io/categories/seo/</link>
+    <description>Recent content in Seo on Atanas Yonkov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 10 Sep 2018 17:08:06 +0300</lastBuildDate>
+    
+	<atom:link href="https://yonkov.github.io/categories/seo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Easy Way to Add Knowledge Graph to WordPress Without a Plugin</title>
+      <link>https://yonkov.github.io/post/easy-way-to-add-knowledge-graph-to-wordpress-without-a-plugin/</link>
+      <pubDate>Mon, 10 Sep 2018 17:08:06 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/easy-way-to-add-knowledge-graph-to-wordpress-without-a-plugin/</guid>
+      <description>In this article, I am going to show you how to easily add Knowledge Graph to WordPress manually (without the use of plugins)
+The Google’s Knowledge Graph is the big block of information that appears on the right-hand side of Google’s search results. The Knowledge Graph contains relevant, context-specific information, regarding your search. For example, if you search for Pablo Picasso in Google, you will see images and information regarding the famous painter on the right-hand side of your screen.</description>
+    </item>
+    
+  </channel>
+</rss>
