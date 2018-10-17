@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/post/how-to-remove-top-menu-transition-effect-in-divi/</loc>
+    <lastmod>2018-10-16T21:02:46+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/post/easy-way-to-add-knowledge-graph-to-wordpress-without-a-plugin/</loc>
     <lastmod>2018-09-10T17:08:06+03:00</lastmod>
   </url>
@@ -188,14 +193,14 @@
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/tags/</loc>
-    <lastmod>2017-11-21T21:02:46+02:00</lastmod>
+    <loc>https://yonkov.github.io/categories/</loc>
+    <lastmod>2017-11-16T15:24:01+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/categories/</loc>
-    <lastmod>2017-11-16T15:24:01+02:00</lastmod>
+    <loc>https://yonkov.github.io/tags/</loc>
+    <lastmod>2018-10-16T21:02:46+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -245,7 +250,7 @@
   
   <url>
     <loc>https://yonkov.github.io/categories/excel/</loc>
-    <lastmod>2017-11-21T21:02:46+02:00</lastmod>
+    <lastmod>2018-10-16T21:02:46+02:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -353,7 +358,7 @@
   
   <url>
     <loc>https://yonkov.github.io/tags/</loc>
-    <lastmod>2017-11-21T21:02:46+02:00</lastmod>
+    <lastmod>2018-10-16T21:02:46+02:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -381,7 +386,7 @@
   
   <url>
     <loc>https://yonkov.github.io/categories/vba/</loc>
-    <lastmod>2017-11-21T21:02:46+02:00</lastmod>
+    <lastmod>2018-10-16T21:02:46+02:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
