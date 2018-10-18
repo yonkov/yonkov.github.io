@@ -5,10 +5,19 @@
     <link>https://yonkov.github.io/categories/divi/</link>
     <description>Recent content in Divi on Atanas Yonkov</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 08 Aug 2018 17:08:06 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 16 Oct 2018 21:02:46 +0200</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/categories/divi/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Remove Top Menu Transition Effect in Divi</title>
+      <link>https://yonkov.github.io/post/how-to-remove-top-menu-transition-effect-in-divi/</link>
+      <pubDate>Tue, 16 Oct 2018 21:02:46 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/post/how-to-remove-top-menu-transition-effect-in-divi/</guid>
+      <description>The Divi theme is one of the most versatile WordPress premium themes with tons of options that also comes together with its powerful page builder. However, in some cases, you want to make some customizations and you simply cannot find a quick fix for them. An example for that is the Divi menu animation. The header always shrinks on page dropdown and while some may argue that this gives a modern feel to your Divi website, this transition effect is certainly not for everyone.</description>
+    </item>
     
     <item>
       <title>How to Change the Color of the Cart Icon in Divi</title>
@@ -25,7 +34,7 @@
       <pubDate>Tue, 05 Jun 2018 17:53:08 +0300</pubDate>
       
       <guid>https://yonkov.github.io/post/how-to-style-a-very-long-drop-down-menu-in-divi/</guid>
-      <description>How to fix the issue with long drop-downs in Wordpress? This is a common question when you have a main menu item with many sub items. You usually come to a point when the content can go below the fold of the screen. In these cases, you will not be able to see the remaining submenu items. Luckily to all of us who are using the Divi theme, there is a nice hidden feature, called &amp;ldquo;mega menu&amp;rdquo;.</description>
+      <description>How to customize the drop down menu in your Divi theme? This is a common question when you have a menu item with many submenu items. You usually come to a point when the content can go below the fold of the screen. In these cases, you will not be able to see the remaining submenu items. Luckily to all of us who are using the Divi theme, there is a nice hidden feature, called &amp;ldquo;mega menu&amp;rdquo;.</description>
     </item>
     
     <item>
