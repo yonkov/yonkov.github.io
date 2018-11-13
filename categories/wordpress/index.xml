@@ -5,10 +5,20 @@
     <link>https://yonkov.github.io/categories/wordpress/</link>
     <description>Recent content in Wordpress on Atanas Yonkov</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 16 Oct 2018 21:02:46 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 13 Nov 2018 15:24:12 +0200</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/categories/wordpress/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Easy Way to Add a Cookie Popup in WordPress Without a Plugin</title>
+      <link>https://yonkov.github.io/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/</link>
+      <pubDate>Tue, 13 Nov 2018 15:24:12 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/</guid>
+      <description>In this tutorial I am going to show you how to easily add a cookie notification popup to a WordPress website without installing any additional plugins.
+Don&amp;rsquo;t get me wrong – I like plugins and I use a few of them on my websites. They are one of the main reasons that made WordPress so popular in the first place. With a simple click you can extend your website&amp;rsquo;s functionalities and give an easy answer to a complex technical problem.</description>
+    </item>
     
     <item>
       <title>How to Remove Top Menu Transition Effect in Divi</title>

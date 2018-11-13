@@ -3,14 +3,32 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
+	<meta name="description" content="Here is what I did to add a cookie consent message to WordPress without the use of any plugins.">
 	<meta name="author"      content="Atanas Yonkov">
 	
 	
-	<title>_index</title>
+
+<script type="application/ld+json">{
+"@context":"http://schema.org",
+"@type":"TechArticle",
+"url":"https://yonkov.github.io/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/",
+"author": "Atanas Yonkov",
+"creator" : "Atanas Yonkov",
+"copyrightHolder" : "Atanas Yonkov",
+"headline":"Easy Way to Add a Cookie Popup in WordPress Without a Plugin",
+"description":"Here is what I did to add a cookie consent message to WordPress without the use of any plugins.",
+"datePublished":"2018-11-13 15:24:12 &#43;0200 EET",
+"wordCount": "534",
+"publisher": {
+"@type": "Website",
+"name": "Yonkov.github.io"
+}
+}
+</script>
+
+
+	<title>Easy Way to Add a Cookie Popup in WordPress Without a Plugin</title>
 	
-	<link rel="alternate" hreflang="ru" href="https://yonkov.github.io/ru/post/" />
-	<link rel="alternate" hreflang="x-default" href="https://yonkov.github.io/en" />
 	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
 	
 	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
@@ -67,170 +85,100 @@
                 </li>
                 
 				
-    
-    <li>
-		<span class="language-switcher" style=""> 
-		<i class="fa fa-globe"></i>
-		<a href ="https://yonkov.github.io/ru/post/" style="">ru:  </a>
-		</span>
-    </li>
-    
-
             </ul>
         </div>
     </div>
 </nav>	
 </header>
 <main id="main">
+
 	<div class="container">
+
 		<div class="row topspace">
 			<div class="col-sm-8 col-sm-offset-2">
 
-                
-				<article class="post">
+ 				<article class="post">
+					<header class="entry-header">
+ 						<div id="breadcrumbs" class="entry-meta" style="font-size:15px;">
+<a href="/">Home</a>
+    
+        
+    
+        
+            / <a href="/post">Blog</a>
+        
+    
+        
+            / <a href="/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin">Easy way to add a cookie popup in wordpress without a plugin</a>
+        
+    
+        
+    
+</div>
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/" rel="bookmark">Easy Way to Add a Cookie Popup in WordPress Without a Plugin</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2018-11-13 15:24:12 &#43;0200 EET">November 13, 2018</time></span>
+						</div>
+						<div id="blog-categories" style="font-style:italic;font-size:15px; text-align:center; padding: 0 0 10px;">
+	
+	  <em>Category: </em>
+	  <em><a href="/categories/wordpress">WordPress</a></em>
+		
+	
+</div>
+					</header>
 					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/18-ready-to-use-vba-codes-that-will-save-your-day/" rel="bookmark">18 ready-to-use VBA Codes that will save your day</a></h2>
-							</header>
-								In this article, I am going to show you some of the most amazing VBA Excel codes that you can use to optimize your work. VBA is a programming language, which can be used to extend the capabilities of MS Excel and other MS Office applications. It is extremely helpful for MS Excel users, because it can be used to automate your work and significantly improve your efficiency. This article will introduce you to VBA and show you some of the most useful, ready to use VBA codes out there.
-								
-								
-								<a href="/post/18-ready-to-use-vba-codes-that-will-save-your-day/">Read More…</a>
-							</div>
-						  
-						</article>
+						
+
+<p>In this tutorial I am going to show you how to easily add a cookie notification popup to a WordPress website without installing any additional plugins.</p>
+
+<p>Don&rsquo;t get me wrong – I like plugins and I use a few of them on my websites. They are one of the main reasons that made WordPress so popular in the first place. With a simple click you can extend your website&rsquo;s functionalities and give an easy answer to a complex technical problem. A few plugins might be a good thing for your website, however, they also come with a cost. The biggest problem with plugins is that they usually have many options that you are probably never going to use. Unnecessary code may increase the server load time and slow down your website, making it less appealing to your visitors. On top of that, sometimes plugin incompatibilities may appear that can even break your entire website. That is why, whenever possible, I always prefer the custom solution. Luckily, you do not need to install a plugin to add a cookie notification popup to your website. So, here is what I did to add cookie consent popup message to my WordPress website without installing any additional WordPress plugins.</p>
+
+<h2 id="why-cookie-consent">Why Cookie Consent?</h2>
+
+<p>European Union&rsquo;s GDPR law requires the website owners to notify the users about any cookies that their website is using. By default, WordPress uses cookies to collect login information that is necessary for users to log in. There are WordPress plugins that may also store visitor&rsquo;s information. If you use analytics tools such as Google Analytics or you show ads via Google AdSense then you also use third-party cookies for storing information and you need to explicitly notify your website&rsquo;s visitors about it. So, let&rsquo;s get started adding cookie consent popup to our site.</p>
+
+<h2 id="how-to-add-cookie-consent-popup-in-wordpress-without-a-plugin">How to Add Cookie Consent Popup in WordPress without a Plugin</h2>
+
+<p>In order to do this, we will use Cookie Consent by Insights. It is an open-source javascript code that will easily let you do just what you need and nothing more.  In fact, you can use this code not only on WordPress but virtually on any other website. Navigate to their <a href="https://cookieconsent.insites.com/download/" target="_blank">website</a> and you will see the following screen:</p>
+
+<p><img src="../../images/cookie-consent.JPG" alt="cookie-consent" /></p>
+
+<p>On the left side are the options to configure the cookie consent notification bar. You have all the options you need to make it work just the way you want it. On the right side is the code that you need to copy after you finish with the configuration. You have the option to choose the popup position, the popup layout, the text, the link to your Privacy policy page and the button&rsquo;s text. What I like the most is that you can actually see in real time on their website how the cookie popup will look like the moment you change any of the settings on the left corner of the screen. When you are done, copy the code and paste it in your child&rsquo;s theme&rsquo;s footer.php, just before the closing body tag.</p>
+
+<p>Now, refresh the page and the cookie consent popup should now be visible. Happy coding!</p>
+
+<p><strong>Read More: </strong> <a href="https://yonkov.github.io/post/easy-way-to-add-knowledge-graph-to-wordpress-without-a-plugin/">Easy Way to Add Knowledge Graph to WordPress Without a Plugin</a></p>
+
 					</div>
 				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/how-to-set-up-static-ip-in-windows-xp-and-windows-7/" rel="bookmark">How to Set up Static IP in Windows XP and Windows 7</a></h2>
-							</header>
-								Static IP means that your computer is assigned an IP address that does not change each time the PC is restarted. It is required in some situations, for example, to access an ftp server or a web server from another computer inside the network. To do this, you need to change the IP version 4 (TCP / IP) properties. First, go to the start menu and type cmd in the search bar.
-								
-								
-								<a href="/post/how-to-set-up-static-ip-in-windows-xp-and-windows-7/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/20-excel-formulas-you-should-start-using-now/" rel="bookmark">20 Excel Formulas You Should Start Using Now</a></h2>
-							</header>
-								MS Excel is one of the most popular data analysis tools in the world. More and more companies greatly depend on this software and quite a lot of people are using it on a daily basis. However, from my experience, not many are taking full advantage of the opportunities that the program can offer. Here is my list of the top 20 most important and useful Excel functions, which everyone should use in order to increase his efficiency.
-								
-								
-								<a href="/post/20-excel-formulas-you-should-start-using-now/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/how-to-make-a-website-from-scratch-using-php-and-mysql/" rel="bookmark">How to Make a Website from Scratch Using PHP and MYSQL</a></h2>
-							</header>
-								In this tutorial, I am going to teach you how to create a dynamic website from scratch using PHP 7 and Mysql. This article is a nice real-life example that can help beginner learners to understand the basics of PHP and MYSQL. It is written for educational purposes, however, it represents a good base that can be used to deliver a fully-operational digital product. Together, we shall create an example website with login and registration form.
-								
-								
-								<a href="/post/how-to-make-a-website-from-scratch-using-php-and-mysql/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/4-awesome-things-you-can-do-with-hugo/" rel="bookmark">7 Reasons Why Hugo is Awesome</a></h2>
-							</header>
-								Hugo is an awesome open-source static site generator, which you can use to create beautiful portfolio websites and blogs. Hugo started as a side project in 2013 and quickly became one of the most popular frameworks for building static websites. So, what are the ingredients that make Hugo so great? Here are the most important reasons why you should power your website with Hugo.
-Speed Hugo is absurdly fast! The developers claim that one webpage can be built for less than 1 milisecond!
-								
-								
-								<a href="/post/4-awesome-things-you-can-do-with-hugo/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
+
 			</div>
-		</div>
-		<center class="">
-			<ul class="pagination">
-                
+		</div> 
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
 
-<ul class="pagination">
-    
-    <li class="page-item">
-        <a href="/post/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-    </li>
-    
-    <li class="page-item">
-    <a href="/post/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-    </li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="/post/">1</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item active"><a class="page-link" href="/post/page/2/">2</a></li>
-    
-    
-    <li class="page-item disabled">
-    <a href="" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-    </li>
-    
-    <li class="page-item">
-        <a href="/post/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-    </li>
-    
-</ul>
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
 
-			</ul>
-		</center>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
 	</div>	
+
 </main>
+
 <footer id="footer">
 	<div class="container">
 		<div class="row">
