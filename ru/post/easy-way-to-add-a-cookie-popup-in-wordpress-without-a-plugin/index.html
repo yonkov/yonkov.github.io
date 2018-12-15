@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Here is what I did to add a cookie consent message to WordPress without the use of any plugins.">
+	<meta name="description" content="В этом уроке я Вам покажу как легко и быстро добавить уведомление о cookie на веб-сайт WordPress без установки каких-либо дополнительных плагинов. После прочтения этой статьи Вы сможете отобразить сообщение cookie при загрузке страницы так, как я показываю его на этом веб-сайте.
+Не поймите меня неправильно - я люблю плагинов, и использую некоторые из них на своих сайтах. Это одна из главных причин, по которой WordPress стал таким популярным. Одним щелчком мыши Вы сможете значительно расширить функциональные возможности вашего сайта.">
 	<meta name="author"      content="Atanas Yonkov">
 	
 	
@@ -11,14 +12,14 @@
 <script type="application/ld+json">{
 "@context":"http://schema.org",
 "@type":"TechArticle",
-"url":"https://yonkov.github.io/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/",
+"url":"https://yonkov.github.io/ru/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/",
 "author": "Atanas Yonkov",
 "creator" : "Atanas Yonkov",
 "copyrightHolder" : "Atanas Yonkov",
-"headline":"Easy Way to Add a Cookie Popup in WordPress Without a Plugin",
-"description":"Here is what I did to add a cookie consent message to WordPress without the use of any plugins.",
-"datePublished":"2018-11-13 15:24:12 &#43;0200 EET",
-"wordCount": "534",
+"headline":"Как настроить уведомление о cookie в WordPress без плагина",
+"description":"",
+"datePublished":"2018-12-15 20:40:41 &#43;0200 EET",
+"wordCount": "416",
 "publisher": {
 "@type": "Website",
 "name": "Yonkov.github.io"
@@ -27,9 +28,9 @@
 </script>
 
 
-	<title>Easy Way to Add a Cookie Popup in WordPress Without a Plugin</title>
+	<title>Как настроить уведомление о cookie в WordPress без плагина</title>
 	
-	<link rel="alternate" hreflang="ru" href="https://yonkov.github.io/ru/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/" />
+	<link rel="alternate" hreflang="en" href="https://yonkov.github.io/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/" />
 	<link rel="alternate" hreflang="x-default" href="https://yonkov.github.io/en" />
 	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
 	
@@ -51,8 +52,8 @@
 	<div id="head" class="parallax" parallax-speed="2">
 		<h1 id="logo" class="text-center">
 			<img class="img-circle" src="https://yonkov.github.io/images/guy.jpg" alt="me">
-			<span class="title">Atanas Yonkov</span>
-			<span class="tagline">Blogger, Web Developer<br>
+			<span class="title">Атанас Йонков</span>
+			<span class="tagline">Блоггер, Веб-разработчик<br>
 				<a href="">yonkov.atanas@gmail.com</a>
             </span>
 		</h1>
@@ -71,19 +72,11 @@
             <ul class="nav navbar-nav">
                 
                 <li>
-                    <a href="/">Home</a>
+                    <a href="/ru">Главная</a>
                 </li>
                 
                 <li>
-                    <a href="/post">Blog</a>
-                </li>
-                
-                <li>
-                    <a href="/about/">About</a>
-                </li>
-                
-                <li>
-                    <a href="/privacy-policy/">Privacy Policy</a>
+                    <a href="/ru/post/">Блог</a>
                 </li>
                 
 				
@@ -91,7 +84,7 @@
     <li>
 		<span class="language-switcher" style=""> 
 		<i class="fa fa-globe"></i>
-		<a href ="https://yonkov.github.io/ru/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/" style="">ru:   </a>
+		<a href ="https://yonkov.github.io/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/" style="">en:   </a>
 		</span>
     </li>
     
@@ -116,6 +109,10 @@
         
     
         
+            / <a href="/ru">Ru</a>
+        
+    
+        
             / <a href="/post">Blog</a>
         
     
@@ -126,9 +123,9 @@
         
     
 </div>
- 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/" rel="bookmark">Easy Way to Add a Cookie Popup in WordPress Without a Plugin</a></h1>
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/ru/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/" rel="bookmark">Как настроить уведомление о cookie в WordPress без плагина</a></h1>
 						<div class="entry-meta">
- 							<span class="posted-on"><time class="entry-date published" date="2018-11-13 15:24:12 &#43;0200 EET">November 13, 2018</time></span>
+ 							<span class="posted-on"><time class="entry-date published" date="2018-12-15 20:40:41 &#43;0200 EET">December 15, 2018</time></span>
 						</div>
 						<div id="blog-categories" style="font-style:italic;font-size:15px; text-align:center; padding: 0 0 10px;">
 	
@@ -141,25 +138,23 @@
 					<div class="entry-content">
 						
 
-<p>In this tutorial I am going to show you how to easily add a cookie notification popup to a WordPress website without installing any additional plugins.</p>
+<p>В этом уроке я Вам покажу как легко и быстро добавить уведомление о cookie на веб-сайт WordPress без установки каких-либо дополнительных плагинов. После прочтения этой статьи Вы сможете отобразить сообщение cookie при загрузке страницы так, как я показываю его на этом веб-сайте.</p>
 
-<p>Don&rsquo;t get me wrong – I like plugins and I use a few of them on my websites. They are one of the main reasons that made WordPress so popular in the first place. With a simple click you can extend your website&rsquo;s functionalities and give an easy answer to a complex technical problem. A few plugins might be a good thing for your website, however, they also come with a cost. The biggest problem with plugins is that they usually have many options that you are probably never going to use. Unnecessary code may increase the server load time and slow down your website, making it less appealing to your visitors. On top of that, sometimes plugin incompatibilities may appear that can even break your entire website. That is why, whenever possible, I always prefer the custom solution. Luckily, you do not need to install a plugin to add a cookie notification popup to your website. So, here is what I did to add cookie consent popup message to my WordPress website without installing any additional WordPress plugins.</p>
+<p>Не поймите меня неправильно - я люблю плагинов, и использую некоторые из них на своих сайтах. Это одна из главных причин, по которой WordPress стал таким популярным. Одним щелчком мыши Вы сможете значительно расширить функциональные возможности вашего сайта. Несколько плагинов могут быть полезным, однако, они также имеют свою цену. Самая большая проблема с плагинами заключается в том, что они обычно имеют много опций, которые Вы, вероятно, никогда не собираетесь использовать. Ненужный код может замедлить загрузки вашего сайта, делая его менее привлекательным для ваших посетителей. Вот почему, когда это возможно, я всегда предпочитаю индивидуальное решение. К счастью, Вам не нужно устанавливать плагин чтобы показать сообщение о cookie на ваш сайт. Итак, вот что я сделал, чтобы добавить сообщение о согласии на использование cookie (popup) на мой веб-сайт WordPress без установки дополнительных плагинов WordPress.</p>
 
-<h2 id="why-cookie-consent">Why Cookie Consent?</h2>
+<h2 id="почему-уведомление-о-cookie">Почему Уведомление о Cookie?</h2>
 
-<p>European Union&rsquo;s GDPR law requires the website owners to notify the users about any cookies that their website is using. By default, WordPress uses cookies to collect login information that is necessary for users to log in. There are WordPress plugins that may also store visitor&rsquo;s information. If you use analytics tools such as Google Analytics or you show ads via Google AdSense then you also use third-party cookies for storing information and you need to explicitly notify your website&rsquo;s visitors about it. So, let&rsquo;s get started adding cookie consent popup to our site.</p>
+<p>Закон Европейского Союза о GDPR требует, чтобы владельцам веб-сайтов надо уведомлять пользователей о любых файлах cookie, которые есть на веб-сайт. Каждый WordPress веб-сайт использует файлы cookie, чтобы собирать информация, которая необходима для входа в систему. Существуют плагины WordPress, которые также могут хранить информацию о посетителях. Если Вы используете аналитические инструменты как Google Analytics, Вы также используете cookie для хранения информации, и Вам необходимо уведомить об этом ваших посетителей. И так, давайте сделать всплывающие окна на использование cookie.</p>
 
-<h2 id="how-to-add-cookie-consent-popup-in-wordpress-without-a-plugin">How to Add Cookie Consent Popup in WordPress without a Plugin</h2>
+<h2 id="как-настроить-всплывающее-окно-согласия-на-использование-cookie">Как настроить всплывающее окно согласия на использование cookie</h2>
 
-<p>In order to do this, we will use Cookie Consent by Insights. It is an open-source javascript code that will easily let you do just what you need and nothing more.  In fact, you can use this code not only on WordPress but virtually on any other website. Navigate to their <a href="https://cookieconsent.insites.com/download/" target="_blank">website</a> and you will see the following screen:</p>
+<p>Для этого мы будем использовать Cookie Consent от Insights. Это open-source javascript код с открытым, который делать то, что нужно, и ничего более. Фактически, Вы сможете использовать этот код не только на WordPress, но и практически на любом другом веб-сайте. Перейдите на их <a href="https://cookieconsent.insites.com/download/" target="_blank"> веб-сайт </a>, и посмотрите на следующий экран:</p>
 
-<p><img src="../../images/cookie-consent.JPG" alt="cookie-consent" /></p>
+<p><img src="../../../images/cookie-consent.JPG" alt="cookie-consent" /></p>
 
-<p>On the left side are the options to configure the cookie consent notification bar. You have all the options you need to make it work just the way you want it. On the right side is the code that you need to copy after you finish with the configuration. You have the option to choose the popup position, the popup layout, the text, the link to your Privacy policy page and the button&rsquo;s text. What I like the most is that you can actually see in real time on their website how the cookie popup will look like the moment you change any of the settings on the left corner of the screen. When you are done, copy the code and paste it in your child&rsquo;s theme&rsquo;s footer.php, just before the closing body tag.</p>
+<p>С левой стороны находятся параметры для настройки панели уведомлений о согласии на использование файлов cookie. На веб-сайте есть все варианты, которые Вам необходимы. Справа находится код, который нужно скопировать после завершения настройки. У вас есть возможность Выбрать позицию всплывающего окна, макет всплывающего окна, текст, ссылку на страницу вашей политики конфиденциальности и текст кнопки. Что мне больше всего нравится, это возможность видеть в реальном времени на веб-сайте, как будет Выглядеть всплывающее окно cookie. Когда Вы закончите, скопируйте код и вставьте его в footer.php вашей child theme, непосредственно перед закрывающим тегом body.</p>
 
-<p>Now, refresh the page and the cookie consent popup should now be visible. Happy coding!</p>
-
-<p><strong>Read More: </strong> <a href="https://yonkov.github.io/post/easy-way-to-add-knowledge-graph-to-wordpress-without-a-plugin/">Easy Way to Add Knowledge Graph to WordPress Without a Plugin</a></p>
+<p>Oбновите страницу и сейчас надо появиться всплывающее окно согласия на использование файлов cookie.</p>
 
 					</div>
 				</article>
@@ -266,7 +261,7 @@
 			<div class="col-md-6 widget">
 				<div class="widget-body">
 					<p class="text-right">
-						Copyright &copy; 2017, Atanas Yonkov<br>
+						Copyright &copy; 2017, Атанас Йонков<br>
 						Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> - 
                         Powered by: <a href="https://gohugo.io/" rel="poweredby">Hugo</a>
                     </p>

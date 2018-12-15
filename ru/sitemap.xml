@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://yonkov.github.io/ru/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/</loc>
+    <lastmod>2018-12-15T20:40:41+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yonkov.github.io/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://yonkov.github.io/ru/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/"
+                />
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/ru/post/18-ready-to-use-vba-codes-that-will-save-your-day/</loc>
     <lastmod>2018-07-11T21:02:46+02:00</lastmod>
     <xhtml:link
@@ -108,6 +123,22 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/ru/tags/</loc>
+    <lastmod>2018-12-15T20:40:41+02:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yonkov.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://yonkov.github.io/ru/tags/"
+                />
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/ru/categories/</loc>
     <priority>0</priority>
     <xhtml:link
@@ -140,7 +171,7 @@
   
   <url>
     <loc>https://yonkov.github.io/ru/post/</loc>
-    <lastmod>2018-07-11T21:02:46+02:00</lastmod>
+    <lastmod>2018-12-15T20:40:41+02:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -188,6 +219,7 @@
   
   <url>
     <loc>https://yonkov.github.io/ru/tags/</loc>
+    <lastmod>2018-12-15T20:40:41+02:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -218,8 +250,24 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/ru/categories/wordpress/</loc>
+    <lastmod>2018-12-15T20:40:41+02:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yonkov.github.io/categories/wordpress/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://yonkov.github.io/ru/categories/wordpress/"
+                />
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/ru/</loc>
-    <lastmod>2018-07-11T21:02:46+02:00</lastmod>
+    <lastmod>2018-12-15T20:40:41+02:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"

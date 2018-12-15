@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Атанас Йонков</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-RU</language>
-    <lastBuildDate>Wed, 11 Jul 2018 21:02:46 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 15 Dec 2018 20:40:41 +0200</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/ru/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Как настроить уведомление о cookie в WordPress без плагина</title>
+      <link>https://yonkov.github.io/ru/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/</link>
+      <pubDate>Sat, 15 Dec 2018 20:40:41 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/ru/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/</guid>
+      <description>В этом уроке я Вам покажу как легко и быстро добавить уведомление о cookie на веб-сайт WordPress без установки каких-либо дополнительных плагинов. После прочтения этой статьи Вы сможете отобразить сообщение cookie при загрузке страницы так, как я показываю его на этом веб-сайте.
+Не поймите меня неправильно - я люблю плагинов, и использую некоторые из них на своих сайтах. Это одна из главных причин, по которой WordPress стал таким популярным. Одним щелчком мыши Вы сможете значительно расширить функциональные возможности вашего сайта.</description>
+    </item>
     
     <item>
       <title>18 готовых макросов VBA Excel</title>
