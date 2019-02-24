@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A detailed guide on how to install VuePress and add CMS to it">
+	<meta name="author"      content="Atanas Yonkov">
+	
+	
+
+<script type="application/ld+json">{
+"@context":"http://schema.org",
+"@type":"TechArticle",
+"url":"https://yonkov.github.io/post/setting-up-vuepress-with-netlify-cms/",
+"author": "Atanas Yonkov",
+"creator" : "Atanas Yonkov",
+"copyrightHolder" : "Atanas Yonkov",
+"headline":"Setting Up Vuepress With Netlify CMS",
+"description":"A detailed guide on how to install VuePress and add CMS to it",
+"datePublished":"2019-02-24 10:05:06 &#43;0200 EET",
+"wordCount": "2155",
+"publisher": {
+"@type": "Website",
+"name": "Yonkov.github.io"
+}
+}
+</script>
+
+
+	<title>Setting Up Vuepress With Netlify CMS</title>
+	
+	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
+	
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	
+	<link rel="preload" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"></noscript>
+	
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700"></noscript>
+	
+	<link href="/css/styles.css" rel="stylesheet">
+	<link rel="preload" href="/css/custom.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="/css/custom.css"></noscript>		
+		<script>!function(e){"use strict";var t=function(t,n,r){var o,a=e.document,l=a.createElement("link");if(n)o=n;else{var i=(a.body||a.getElementsByTagName("head")[0]).childNodes;o=i[i.length-1]}var d=a.styleSheets;l.rel="stylesheet",l.href=t,l.media="only x",function e(t){if(a.body)return t();setTimeout(function(){e(t)})}(function(){o.parentNode.insertBefore(l,n?o:o.nextSibling)});var s=function(e){for(var t=l.href,n=d.length;n--;)if(d[n].href===t)return e();setTimeout(function(){s(e)})};function u(){l.addEventListener&&l.removeEventListener("load",u),l.media=r||"all"}return l.addEventListener&&l.addEventListener("load",u),l.onloadcssdefined=s,s(u),l};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r,r.getAttribute("media")),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){t.poly(),e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);</script>	
+</head>
+<body class="home">
+<header id="header">
+	<div id="head" class="parallax" parallax-speed="2">
+		<h1 id="logo" class="text-center">
+			<img class="img-circle" src="https://yonkov.github.io/images/guy.jpg" alt="me">
+			<span class="title">Atanas Yonkov</span>
+			<span class="tagline">Blogger, Web Developer<br>
+				<a href="">yonkov.atanas@gmail.com</a>
+            </span>
+		</h1>
+	</div>
+    <nav class="navbar navbar-default navbar-sticky">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/post">Blog</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+                
+                <li>
+                    <a href="/privacy-policy/">Privacy Policy</a>
+                </li>
+                
+				
+            </ul>
+        </div>
+    </div>
+</nav>	
+</header>
+<main id="main">
+
+	<div class="container">
+
+		<div class="row topspace">
+			<div class="col-sm-8 col-sm-offset-2">
+
+ 				<article class="post">
+					<header class="entry-header">
+ 						<div id="breadcrumbs" class="entry-meta" style="font-size:15px;">
+<a href="/">Home</a>
+    
+        
+    
+        
+            / <a href="/post">Blog</a>
+        
+    
+        
+            / <a href="/setting-up-vuepress-with-netlify-cms">Setting up vuepress with netlify cms</a>
+        
+    
+        
+    
+</div>
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/setting-up-vuepress-with-netlify-cms/" rel="bookmark">Setting Up Vuepress With Netlify CMS</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2019-02-24 10:05:06 &#43;0200 EET">February 24, 2019</time></span>
+						</div>
+						<div id="blog-categories" style="font-style:italic;font-size:15px; text-align:center; padding: 0 0 10px;">
+	
+	  <em>Category: </em>
+	  <em><a href="/categories/vuepress">VuePress</a></em>
+		
+	
+</div>
+					</header>
+					<div class="entry-content">
+						
+
+<hr>
+
+<p><strong>Example website:</strong> <a href="https://github.com/yonkov/Vuepress-project">https://github.com/yonkov/Vuepress-project</a></p>
+
+<p>VuePress is on of the most promising frameworks to create extremely fast and lightweight static websites that act as Single page applications. By the end of this tutorial, you will have set up VuePress and added a light-weight and easy to use content management system, called Netlify CMS, designed specially for static websites.</p>
+
+<p><img src="../../images/netlify-cms.JPG" alt="vuepress example website" /></p>
+
+<p>Let&rsquo;s get started!</p>
+
+<div>
+	<header>
+		<h5 style="margin: 0 0 10px 23px;">Table of Contents</h5>
+	</header>
+	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#the-rise-of-static-site-generators">The Rise of Static Site Generators</a></li>
+<li><a href="#why-vuepress">Why VuePress</a></li>
+<li><a href="#why-netlify-cms">Why Netlify CMS</a></li>
+<li><a href="#how-to-install-vuepress">How to Install VuePress</a></li>
+<li><a href="#add-vuepress-to-github">Add VuePress to Github</a></li>
+<li><a href="#deploy-to-netlify">Deploy to Netlify</a></li>
+<li><a href="#integrate-netlify-cms-to-vuepress">Integrate Netlify CMS to VuePress</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+
+<h3 id="the-rise-of-static-site-generators">The Rise of Static Site Generators</h3>
+
+<p>Static site generators are becoming more and more popular these days due to better performance, low cost, high security and a better developer experience. These websites use an architectural approach called <a href="https://jamstack.org/">JAMstack</a> to generate an entirely static website by using source files. It was not so long ago when the world wide web was dominated by static websites. All the content was delivered by editing static html files. Soon, content management systems like WordPress emerged. Wordpress allowed non technical users to take control over their website and manage its content using an intuitive, easy to use GUI interface.</p>
+
+<p>However, with the rise of tecnology and the front-end frameworks, the need for faster paced workflow emerged. The traditional CMS systems  gained notority for being slow and clunky to work with. Moreover, maintaining a database automatically makes the web application a subject to security vulnerabilities and also leads to performance bottlenecks. A traditional CMS framework requires setting up a virtual environment and managing a database, an unnecessary overhead for simple websites such as blogs, documentaton websites and portfolios that do not require any server-side logic. To address all these issues, the static site generators emerged.</p>
+
+<p>The first static website generator was Jekyll, written by  GitHub co-founder, Tom Preston-Werer in 2008. It is the most popular framework of its kind mainly because it was adopted by GitHub. However, Jekyll is NOT as straightforward as developers would like it to be. Another downside is Jekyll&rsquo;s build time. While this is not an issue for a two-page website, larger websites may suffer from really long build times. To address this, Hugo appeared in 2013. Hugo is a really fast website generator written in Go. I am a hugo fan of Hugo myself and in fact this website is built with Hugo. Soon, other generators also gained popularity, such as Gatsby or Hexo. <a href="https://www.staticgen.com/">StaticGen.com</a> provides a regularly updated list with all static generators based on their GitHub popularity.</p>
+
+<h3 id="why-vuepress">Why VuePress</h3>
+
+<p>So, with the market getting more and more sturated, how did VuePress even got our attention?</p>
+
+<p><em>Its main strength is the technology it incorporates and the community behind it</em>.</p>
+
+<p>VuePress is build on vue.js, an extremely adpotable and easy to use modern javascript architecture that allow for creating single page applications. Vue.js provides awesome developer experience and is much easier to pick compared to other javascript frameworks such as react.js or angular.js. Single page applications are a new revolutionary approach in web programming that works inside the user&rsquo;s browser and does not require page reloading during use. In this way, once loaded, SPA website are extremely fast and provide awesome user experience.</p>
+
+<p><a href="https://vuepress.vuejs.org/">VuePress</a> was developed in 2018 by Evan You, a Google employee that also came up with vue.js. With the implementation of vue.js Evan You has clearly shown to the dev community that he knows how to develop easy to use and reliable tools that provide awesome developer experience. VuePress was originally built as a software documentation website, however you can also use it to create blogs or portfolio websites. In my opinion, it is one of the easiest and fastest ways to build single page application websites.</p>
+
+<h3 id="why-netlify-cms">Why Netlify CMS</h3>
+
+<p><a href="https://www.netlifycms.org/docs/intro/">Netlify CMS</a> is an open source, fully-functional content management system that allows non-technical users to edit website content of static site genrators. Yes, you hear me right, this is really the best of the two worlds! I recently delivered a VuePress project for a client and it worked great for her but she wanted to have an easy way to edit its content and not having to use a Git system for that. The solution was Netlify.cms and the customer simply loved it! Netlify CMS is a light-weight CMS built on react that enables users to add and edit content without the overhead to maintain a database and without having to bother with performance and security issues! If this is still not enough, you can use Netlify CMS with <a href="https://www.netlify.com/">Netlify</a>, an outstanding free CDN host that is in my opinion far better and more performant that using a paid php-mysql host. Moreover, you are free to use Netlify CMS with different hosts.. i simply could not recommend it more! So, enough talking, let&rsquo;s get done with the actual set up!</p>
+
+<h3 id="how-to-install-vuepress">How to Install VuePress</h3>
+
+<p>To install VuePress on your machine, create a vuepress folder and open the terminal in that same folder (If you are on windows, you can click on the folder navbar and type &ldquo;cmd&rdquo;. This will automatically open the windows console in the specified location)</p>
+
+<p>First, you need to install yarn, if you do not have it. It is a package manager for javascript and according to VuePress documentation it is recommended over npm. Here is a nice <a href="https://yarnpkg.com/lang/en/docs/install/#windows-stable">guide</a> on how to install yarn.</p>
+
+<p>After that, use yarn to install VuePress:</p>
+
+<pre><code>yarn install
+yarn global add vuepress
+yarn add -D vuepress
+echo '# Hello VuePress' &gt; README.md
+mkdir docs
+</code></pre>
+
+<p>Now, move the readme.md file in the docs folder and add this configuration as a second property to the package.json file:</p>
+
+<p><strong>package.json</strong></p>
+
+<pre><code>&quot;scripts&quot;: {
+    &quot;docs:dev&quot;: &quot;vuepress dev docs&quot;,
+    &quot;docs:build&quot;: &quot;vuepress build docs&quot;
+    }
+</code></pre>
+
+<p>We need this scripts to tell Netlify how to serve our webste. Now run the project locally:
+    yarn docs:dev</p>
+
+<p>If all went well, you should see you project in the browser with the &ldquo;Hello VuePress&rdquo; message. Now that we have a very basic setup, let&rsquo;s put some configuration in it to make it look good!</p>
+
+<p>Create a config.js file at docs/.vuepress/ and add the following code:</p>
+
+<p><strong>docs/.vuepress/config.js</strong></p>
+
+<pre><code>module.exports = {
+    title: 'Teach Me VuePress',
+    description: 'Lessons in Vue.js and VuePress',
+}
+</code></pre>
+
+<p>Now add front matter in the Readme.md file:</p>
+
+<p><strong>docs/Readme.md</strong></p>
+
+<pre><code>---
+home: true
+heroText: Teach me Vuepress!
+heroImage: https://vuepress.vuejs.org/hero.png
+actionText: Read more →
+actionLink: /
+features:
+- title: Simplicity First
+details: Minimal setup with markdown-centered project structure helps you focus on writing.
+- title: Vue-Powered
+details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
+- title: Performant
+details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded
+footer: MIT Licensed | Copyright © 2018-present Evan You
+---
+
+## Hello VuePress!
+</code></pre>
+
+<p>Now, check again your localhost. You should be able to see this:</p>
+
+<p><img src="../../images/vuepress-example.jpg" alt="vuepress example website" /></p>
+
+<p>Not bad for a very basic setup, huh? You can go on to customize it even more and even develop your own custom theme. Use <a href="https://github.com/yonkov/Vuepress-project">my repo</a> for an example of a complete website built with VuePress. I have deployed an open-source VuePress project on GitHub using VuePress default documentation theme. Feel free to use it as a reference.</p>
+
+<p>Now you are safe to build the static version of the website (the one you are going to serve online) with the following command:</p>
+
+<pre><code>yarn docs:build
+</code></pre>
+
+<h3 id="add-vuepress-to-github">Add VuePress to Github</h3>
+
+<p>I am going to use my github repo to deploy the VuePress project to Netlify free hosting service and then use Netlify CMS for CMS. However, you can use other git clients, if you want.</p>
+
+<p>Setting up and upoading the repo to GitHub is a standard process. You first need to create a repo inside your GitHub account and then commit the changes. If you are using Windows, install GitBash. Then type the following commands in the console:</p>
+
+<pre><code>git init
+git add .
+git commit -m &quot;update vuepress content&quot;
+git remote add origin remote repository URL
+git remote -v
+git push origin master
+</code></pre>
+
+<p>If you need refreshment with this, check <a href="https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line">Github&rsquo;s documentation</a>. Basically, it is a fairly straightforward process, however, it can be a bit confusing if you are doing it for the first time. Make sure to upload the whole docs folder and the packaje.json, without the node modules.</p>
+
+<h3 id="deploy-to-netlify">Deploy to Netlify</h3>
+
+<p>We will host the static website using Netlify, in my opiinion, this is the best CDN for static websites. We first need to do some changes to our package.json file to allow Netlify to serve our content:</p>
+
+<p><strong>package.json</strong></p>
+
+<pre><code>{
+&quot;name&quot;: &quot;vuePress-project&quot;,
+&quot;version&quot;: &quot;1.0.0&quot;,
+&quot;description&quot;: &quot;Single Page Application website example. The website uses VuePress static site generator and the vue.js framework, developed by Evan You. VuePress is a brand new web development tool that singnificantly enhances and simplifies the SPA workflow. At the same time it provides a first-class user experience by developing an ultra-fast and extremely lightweight SPA website.&quot;,
+&quot;license&quot;: &quot;MIT&quot;,
+&quot;main&quot;: &quot;index.js&quot;,
+&quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;,
+    &quot;docs:dev&quot;: &quot;vuepress dev&quot;,
+    &quot;docs:build&quot;: &quot;vuepress build&quot;
+},
+&quot;repository&quot;: {
+    &quot;type&quot;: &quot;git&quot;,
+    &quot;url&quot;: &quot;git+https://github.com/your-username/Vuepress-project.git&quot;
+},
+&quot;keywords&quot;: [],
+&quot;author&quot;: &quot;&quot;,
+&quot;bugs&quot;: {
+    &quot;url&quot;: &quot;https://github.com/your-username/Vuepress-project/issues&quot;
+},
+&quot;homepage&quot;: &quot;https://github.com/your-username/Vuepress-project#readme&quot;,
+&quot;devDependencies&quot;: {
+    &quot;vuepress&quot;: &quot;^0.14.8&quot;
+}
+}
+</code></pre>
+
+<p>Change the data with your website&rsquo;s info and change GitHub&rsquo;s repo location. To upload your website, go to Netlify&rsquo;s website to create an <a href="https://app.netlify.com/signup?_ga=2.192767016.380810935.1550997457-416417896.1533213447">account</a></p>
+
+<p>Now you have set up an account, you need to link your Github repo to it.</p>
+
+<p>Use the following settings:</p>
+
+<pre><code>Build command: npm run docs:build
+Publish directory: .vuepress/dist
+</code></pre>
+
+<p>Hit the deploy button and your website should be live!</p>
+
+<h3 id="integrate-netlify-cms-to-vuepress">Integrate Netlify CMS to VuePress</h3>
+
+<p>To set up Netlify CMS, you need to create an &ldquo;admin&rdquo; folder inside \docs.vuepress\public directory. Inside the admin folder create two files: config.yml and index.html. In the config file are all configuration options to access the CMS UI. Some of the options are optional Here is an example of these two files</p>
+
+<p><strong>config yml</strong></p>
+
+<pre><code>backend:
+  name: github
+  repo: yonkov/Vuepress-project
+  branch: master
+media_folder: &quot;.vuepress/public/&quot;
+public_folder: &quot;../../&quot;
+display_url: https://teachenglish.netlify.com
+collections:
+  - name: &quot;doc&quot; # Used in routes, e.g., /admin/collections/blog
+    label: &quot;Doc&quot; # Used in the UI
+    folder: &quot;lessons&quot; # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: &quot;{{slug}}&quot; # Filename template, e.g., YYYY-MM-DD-title.md
+    show_preview_links: true
+    fields: # The fields for each document, usually in front matter
+      - {label: &quot;Title&quot;, name: &quot;title&quot;, widget: &quot;string&quot;}
+      - {label: &quot;Description&quot;, name: &quot;description&quot;, widget: &quot;string&quot;}
+      - {label: &quot;Body&quot;, name: &quot;body&quot;, widget: &quot;markdown&quot;}
+      - {label: &quot;Featured Image&quot;, name: &quot;image&quot;, widget: &quot;image&quot;}
+      - {label: &quot;Publish Date&quot;, name: &quot;date&quot;, widget: &quot;datetime&quot;}
+      - {label: &quot;Categories&quot;, name: &quot;categories&quot;, widget: &quot;list&quot;}
+</code></pre>
+
+<p><strong>index.html</strong></p>
+
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Content Manager&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/netlify-cms@1.8.2/dist/cms.css&quot; /&gt;
+    &lt;script src=&quot;https://identity.netlify.com/v1/netlify-identity-widget.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Include the script that builds the page and powers Netlify CMS --&gt;
+    &lt;script src=&quot;https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Replace the info with your own data and make sure you preserve the formatting as one or two more spaces can break the entire configuration. Again, feel free to use <a href="https://github.com/yonkov/Vuepress-project">my GitHub repo</a> as an example. You can also refer to <a href="https://www.netlifycms.org/docs/configuration-options/">Netlify CMS official documentation</a>. There you can find a detailed info with all the available configuration options.</p>
+
+<p>You can modify or add some other options to the config file. The backend option is required and it specifies how to access you website&rsquo;s content. The media_folder and public_folder option let&rsquo;s you upload your images to the correct location. The folder option specifies in which folder you can modify content. You can change the label properties the way you want them to appear in the UI, however the name properties should be the same as the ones you use in your VuePress front matter.</p>
+
+<p>Now, when you go to <a href="https://yourwebsite.netlify.com/admin">https://yourwebsite.netlify.com/admin</a>, you should be able to see a login page. We are going to enable GitHub login but you also have other options that are listed here.</p>
+
+<p>In your Netlify account, click on Identity tab and choose registration preferences to &ldquo;invite only&rdquo;. For external providers, choose GitHub. Now, scroll down to services and in Git Gateaway section, you need to specify your repository&rsquo;s url and Github API access token.</p>
+
+<p><img src="../../images/netlify-cms-vuepress.JPG" alt="set up netlify identity" /></p>
+
+<p>Click &ldquo;generate access token in Github&rdquo; and give permission to Netlify to have access to your git repository where the VuePress project resides. Finally, you need to set up OAuth App with Github. On Github, navigate to settings =&gt; developer settings and the then click on &ldquo;New Oauth App&rdquo;.</p>
+
+<p>For authorization callback URL specify:</p>
+
+<pre><code>https://api.netlify.com/auth/done
+</code></pre>
+
+<p>Use the generated token in your Netlify account. Now, when you navigate to <a href="https://yourwebsite.netlify.com/admin">https://yourwebsite.netlify.com/admin</a>, you should be able to login the CMS dashboard! The CMS so fast and easy to work with that you wil simply fall in love with it.</p>
+
+<p>So, it was quite a lot of work but it proved to be fruitful. Now it is easier that ever to edit content of Single Page App and your clients,  collaborators or friends will simply love that.</p>
+
+					</div>
+				</article>
+
+			</div>
+		</div> 
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+	</div>	
+
+</main>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><br>
+						<a href="mailto:yonkov.atanas@gmail.com">yonkov.atanas@gmail.com</a><br>
+						<br>
+						
+					</p>
+				</div>
+			</div>
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Follow me</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+                        
+                            
+                                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram fa-2"></i></a>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <a href="https://github.com/yonkov" target="_blank"><i class="fa fa-github fa-2"></i></a>
+                            
+                        
+                            
+                        
+					</p>
+				</div>
+			</div>
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Personal Info</h3>
+				<div class="widget-body">
+					<p>Welcome to my professional website! I work as a devoted web developer and a freelancer. My ultimate goal is customer satisfaction. I focus on quality and creating value for my clients. </p>
+					
+				</div>
+			</div>
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Form widget</h3>
+				<div class="widget-body">
+					<p><br>
+						<a href="mailto:yonkov.atanas@gmail.com">yonkov.atanas@gmail.com</a><br>
+						<br>
+                        
+					</p>
+				</div>
+			</div>
+		</div> 
+	</div>
+</footer>
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p></p>
+				</div>
+			</div>
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2017, Atanas Yonkov<br>
+						Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> - 
+                        Powered by: <a href="https://gohugo.io/" rel="poweredby">Hugo</a>
+                    </p>
+				</div>
+			</div>
+		</div> 
+	</div>
+</footer>
+
+
+    
+      
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://yonkov.github.io/js/template.js"></script>
+
+<script>!function(t,e,n,c,x,o,a){t.TyxoObject=x,t.tx=t.tx||function(){(t.tx.q=t.tx.q||[]).push(arguments)},t.tx.l=1*new Date,o=e.createElement(n),a=e.getElementsByTagName(n)[0],o.async=1,o.src="//s.tyxo.com/c.js",a.parentNode.insertBefore(o,a)}(window,document,"script",0,"tx"),tx("create","TX-927463385881"),tx("pageview");</script>
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+	<noscript><link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"></noscript>	
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#000"},button:{background:"#f1d600"}},content:{message:"This website uses cookies to analyze traffic and for advertisements. By continuing you agree to the use of these cookies.",dismiss:"Ok, I accept",href:"https://yonkov.github.io/privacy-policy"}})});</script>
+</body>
+</html>

@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/post/setting-up-vuepress-with-netlify-cms/</loc>
+    <lastmod>2019-02-24T10:05:06+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/post/display-cookie-notification-in-your-divi-theme/</loc>
     <lastmod>2018-11-18T14:04:20+02:00</lastmod>
   </url>
@@ -213,14 +218,8 @@
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/categories/</loc>
-    <lastmod>2017-11-16T15:24:01+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://yonkov.github.io/tags/</loc>
-    <lastmod>2017-11-21T21:02:46+02:00</lastmod>
+    <lastmod>2019-02-24T10:05:06+02:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -232,6 +231,12 @@
                 hreflang="en"
                 href="https://yonkov.github.io/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/categories/</loc>
+    <lastmod>2017-11-16T15:24:01+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -388,7 +393,7 @@
   
   <url>
     <loc>https://yonkov.github.io/tags/</loc>
-    <lastmod>2017-11-21T21:02:46+02:00</lastmod>
+    <lastmod>2019-02-24T10:05:06+02:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -428,6 +433,12 @@
                 hreflang="en"
                 href="https://yonkov.github.io/categories/vba/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/categories/vuepress/</loc>
+    <lastmod>2019-02-24T10:05:06+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>

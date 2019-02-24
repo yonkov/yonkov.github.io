@@ -32,6 +32,18 @@ Cookies and Web Beacons Yonkov.</description>
     </item>
     
     <item>
+      <title>Setting Up Vuepress With Netlify CMS</title>
+      <link>https://yonkov.github.io/post/setting-up-vuepress-with-netlify-cms/</link>
+      <pubDate>Sun, 24 Feb 2019 10:05:06 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/post/setting-up-vuepress-with-netlify-cms/</guid>
+      <description>Example website: https://github.com/yonkov/Vuepress-project
+VuePress is on of the most promising frameworks to create extremely fast and lightweight static websites that act as Single page applications. By the end of this tutorial, you will have set up VuePress and added a light-weight and easy to use content management system, called Netlify CMS, designed specially for static websites.
+Let&amp;rsquo;s get started!
+Table of Contents     The Rise of Static Site Generators Why VuePress Why Netlify CMS How to Install VuePress Add VuePress to Github Deploy to Netlify Integrate Netlify CMS to VuePress     The Rise of Static Site Generators Static site generators are becoming more and more popular these days due to better performance, low cost, high security and a better developer experience.</description>
+    </item>
+    
+    <item>
       <title>Display Cookie Notice in Your Divi Theme</title>
       <link>https://yonkov.github.io/post/display-cookie-notification-in-your-divi-theme/</link>
       <pubDate>Sun, 18 Nov 2018 14:04:20 +0200</pubDate>
