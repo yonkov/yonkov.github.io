@@ -18,7 +18,7 @@
 "headline":"Setting Up Vuepress With Netlify CMS",
 "description":"A detailed guide on how to install VuePress and add CMS to it",
 "datePublished":"2019-02-24 10:05:06 &#43;0200 EET",
-"wordCount": "2155",
+"wordCount": "2151",
 "publisher": {
 "@type": "Website",
 "name": "Yonkov.github.io"
@@ -134,7 +134,7 @@
 
 <p><strong>Example website:</strong> <a href="https://github.com/yonkov/Vuepress-project">https://github.com/yonkov/Vuepress-project</a></p>
 
-<p>VuePress is one of the most promising frameworks to create extremely fast and lightweight static websites that act as Single page applications. By the end of this tutorial, you will have set up VuePress and added a light-weight and easy to use content management system, called Netlify CMS, designed specifically for static websites.</p>
+<p>VuePress is one of the most promising frameworks to create extremely fast and lightweight static websites that act as single page applications. By the end of this tutorial, you will have set up VuePress and added a light-weight and easy to use content management system to it, called Netlify CMS.</p>
 
 <p><img src="../../images/netlify-cms.JPG" alt="vuepress example website" /></p>
 
@@ -165,11 +165,11 @@
 
 <h3 id="the-rise-of-static-site-generators">The Rise of Static Site Generators</h3>
 
-<p>Static site generators are becoming more and more popular these days due to better performance, low cost, high security and a better developer experience. These websites use an architectural approach called <a href="https://jamstack.org/">JAMstack</a> to generate an entirely static website by using source files. It was not so long ago when the world wide web was dominated by static websites. All the content was delivered by editing static html files. Soon, content management systems like WordPress emerged. WordPress allowed non technical users to take control over their website and manage its content using an intuitive, easy to use GUI interface.</p>
+<p>Static site generators are becoming more and more popular these days due to better performance, low cost, high security and better developer experience. These websites use an architectural approach called <a href="https://jamstack.org/">JAMstack</a> to generate an entirely static website by using source files. It was not so long ago when the world wide web was dominated by static websites. All the content was delivered by editing static html files. Soon, content management systems like WordPress emerged. WordPress allowed non technical users to take control over their website and manage its content using an intuitive, easy to use GUI interface.</p>
 
-<p>However, with the rise of technology and the front-end frameworks, the need for faster paced workflow emerged. The traditional CMS systems  gained notoriety for being slow and clunky to work with. Moreover, maintaining a database automatically makes the web application a subject to security vulnerabilities and also leads to performance bottlenecks. A traditional CMS framework requires setting up a virtual environment and managing a database, an unnecessary overhead for simple websites such as blogs, documentation websites and portfolios that do not require any server-side logic. To address all these issues, the static site generators emerged.</p>
+<p>However, with the rise of technology and the front-end frameworks, the need for faster paced workflow emerged. The traditional CMS systems  gained notoriety for being slow and clunky to work with. Moreover, maintaining a database automatically makes the web application a subject to security vulnerabilities and also leads to performance bottlenecks. A traditional CMS framework requires setting up a virtual environment and managing a database. This is an unnecessary overhead for simple websites such as blogs, documentation websites and portfolios, which do not really require any server-side logic. To address all these issues, the static site generators emerged.</p>
 
-<p>The first static website generator was Jekyll, written by  GitHub co-founder, Tom Preston-Werer in 2008. It is the most popular framework of its kind mainly because it was adopted by GitHub. However, Jekyll is NOT as straightforward as developers would like it to be. Another downside is Jekyll&rsquo;s build time. While this is not an issue for a two-page website, larger websites may suffer from really long build times. To address this, Hugo appeared in 2013. Hugo is a really fast website generator written in Go. I am a huge fan of Hugo myself and in fact this website is built with Hugo. Soon, other generators also gained popularity, such as Gatsby or Hexo. <a href="https://www.staticgen.com/">StaticGen.com</a> provides a regularly updated list with all static generators based on their GitHub popularity.</p>
+<p>The first static website generator was Jekyll, written by GitHub co-founder, Tom Preston-Werer in 2008. It is the most popular framework of its kind mainly because it was adopted by GitHub. However, Jekyll is NOT as straightforward as developers would like it to be. Another downside is Jekyll&rsquo;s build time. While this is not an issue for a two-page website, larger websites may suffer from really long build times. To address this, Hugo appeared in 2013. Hugo is a really fast static website generator written in Go. (By the way I am a huge fan of Hugo myself and this website is built with Hugo!) Soon, other generators also gained popularity, such as Gatsby or Hexo. <a href="https://www.staticgen.com/">StaticGen.com</a>provides a regularly updated list with all static generators, based on their GitHub popularity.</p>
 
 <h3 id="why-vuepress">Why VuePress</h3>
 
@@ -177,13 +177,13 @@
 
 <p><em>Its main strength is the technology it incorporates and the community behind it</em>.</p>
 
-<p>VuePress is built on vue.js, an extremely adoptable and easy to use modern javascript architecture that allow for creating single page applications. Vue.js provides awesome developer experience and is much easier to pick compared to other javascript frameworks such as react.js or angular.js. Single page applications are a new revolutionary approach in web programming that works inside the user&rsquo;s browser and does not require page reloading during use. In this way, once loaded, SPA website are extremely fast and provide awesome user experience.</p>
+<p>VuePress is built on vue.js, an extremely adoptable and easy to use modern javascript architecture that allows for creating single page applications. Vue.js provides awesome developer experience and is much easier to pick compared to other javascript frameworks such as react.js or angular.js. Single page applications are a new revolutionary approach in web programming that works inside the user&rsquo;s browser and does not require page reloading during use. In this way, once loaded, SPA website are extremely fast and provide awesome user experience.</p>
 
 <p><a href="https://vuepress.vuejs.org/">VuePress</a> was developed in 2018 by Evan You, a Google employee that also came up with vue.js. With the implementation of vue.js Evan You has clearly shown to the dev community that he knows how to develop easy to use and reliable tools that provide awesome developer experience. VuePress was originally built as a software documentation website, however you can also use it to create blogs or portfolio websites. In my opinion, it is one of the easiest and fastest ways to build single page application websites.</p>
 
 <h3 id="why-netlify-cms">Why Netlify CMS</h3>
 
-<p><a href="https://www.netlifycms.org/docs/intro/">Netlify CMS</a> is an open source, fully-functional content management system that allows non-technical users to edit website content of static site generators. Yes, you hear me right, this is really the best of the two worlds! I recently delivered a VuePress project for a client and it worked great for her but she wanted to have an easy way to edit its content and not having to use a Git system for that. The solution was Netlify.cms and the customer simply loved it! Netlify CMS is a light-weight CMS built on react that enables users to add and edit content without the overhead to maintain a database and without having to bother with performance and security issues! If this is still not enough, you can use Netlify CMS with <a href="https://www.netlify.com/">Netlify</a>, an outstanding free CDN host that is in my opinion far better and more performant that using a paid php-mysql host. Moreover, you are free to use Netlify CMS with different hosts.. i simply could not recommend it more! So, enough talking, let&rsquo;s get done with the actual set up!</p>
+<p><a href="https://www.netlifycms.org/docs/intro/">Netlify CMS</a> is an open source, fully-functional content management system that allows non-technical users to edit website content of static site generators. Yes, you hear me right, this is really the best of the two worlds! I recently delivered a VuePress project for a client and it worked great for her but she wanted to have an easy way to edit its content and not having to use a Git system for that. The solution was Netlify.cms and the customer simply loved it! Netlify CMS is a light-weight CMS built on react that enables users to add and edit content without the overhead to maintain a database and without having to bother with performance and security issues! If this is still not enough, you can use Netlify CMS with <a href="https://www.netlify.com/">Netlify</a>, an outstanding free CDN host that is in my opinion far better and more performant than using a paid php-mysql host. Moreover, you are free to use Netlify CMS with different hosts.. i simply could not recommend it more! So, enough talking, let&rsquo;s get done with the actual set up!</p>
 
 <h3 id="how-to-install-vuepress">How to Install VuePress</h3>
 
@@ -210,7 +210,7 @@ mkdir docs
     }
 </code></pre>
 
-<p>We need this scripts to tell Netlify how to serve our webste. Now run the project locally:
+<p>We need this scripts to tell Netlify how to serve our webste. Go on and run the project locally:
     yarn docs:dev</p>
 
 <p>If all went well, you should see you project in the browser with the &ldquo;Hello VuePress&rdquo; message. Now that we have a very basic setup, let&rsquo;s put some configuration in it to make it look good!</p>
@@ -248,7 +248,7 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
 ## Hello VuePress!
 </code></pre>
 
-<p>Now, check again your localhost. You should be able to see this:</p>
+<p>Check localhost again. You should be able to see this:</p>
 
 <p><img src="../../images/vuepress-example.jpg" alt="vuepress example website" /></p>
 
@@ -310,7 +310,7 @@ git push origin master
 
 <p>Change the data with your website&rsquo;s info and change GitHub&rsquo;s repo location. To upload your website, go to Netlify&rsquo;s website to create an <a href="https://app.netlify.com/signup?_ga=2.192767016.380810935.1550997457-416417896.1533213447">account</a></p>
 
-<p>Now you have set up an account, you need to link your GitHub repo to it.</p>
+<p>After you have set up an account, you need to link your GitHub repo to it.</p>
 
 <p>Use the following settings:</p>
 
@@ -322,7 +322,7 @@ Publish directory: .vuepress/dist
 
 <h3 id="integrate-netlify-cms-to-vuepress">Integrate Netlify CMS to VuePress</h3>
 
-<p>To set up Netlify CMS, you need to create an &ldquo;admin&rdquo; folder inside \docs.vuepress\public directory. Inside the admin folder create two files: config.yml and index.html. In the config file are all configuration options to access the CMS UI. Some of the options are optional. Here is an example of these two files</p>
+<p>To set up Netlify CMS, you need to create an &ldquo;admin&rdquo; folder inside \docs.vuepress\public directory. Inside the admin folder create two files: config.yml and index.html. In the config file are all configuration options to access the CMS UI.. Here is an example of these two files:</p>
 
 <p><strong>config yml</strong></p>
 
@@ -367,9 +367,9 @@ collections:
 &lt;/html&gt;
 </code></pre>
 
-<p>Replace the info with your own data and make sure you preserve the formatting as one or two more spaces can break the entire configuration. Again, feel free to use <a href="https://github.com/yonkov/Vuepress-project">my GitHub repo</a> as an example. You can also refer to <a href="https://www.netlifycms.org/docs/configuration-options/">Netlify CMS official documentation</a>. There you can find a detailed info with all the available configuration options.</p>
+<p>Replace the info with your own data and make sure you preserve the formatting, as one or two more spaces can break the entire configuration. Again, feel free to use <a href="https://github.com/yonkov/Vuepress-project">my GitHub repo</a> as an example. You can also refer to <a href="https://www.netlifycms.org/docs/configuration-options/">Netlify CMS official documentation</a>. There you can find a detailed guide with all the available configuration options.</p>
 
-<p>You can modify or add some other options to the config file. The backend option is required and it specifies how to access you website&rsquo;s content. The media_folder and public_folder option let&rsquo;s you upload your images to the correct location. The folder option specifies in which folder you can modify content. You can change the label properties the way you want them to appear in the UI, however the name properties should be the same as the ones you use in your VuePress front matter.</p>
+<p>You can modify or add some other options to the config file. The <em>backend</em> option is required and it specifies how to access the website&rsquo;s content. The <em>media_folder</em> and <em>public_folder</em> option let&rsquo;s you upload your images to the correct location. The <em>folder</em> option specifies in which folder you can modify content. You can change the label properties the way you want them to appear in the UI, however the name properties should be the same as the ones you use in VuePress front matter.</p>
 
 <p>Now, when you go to <a href="https://yourwebsite.netlify.com/admin">https://yourwebsite.netlify.com/admin</a>, you should be able to see a login page. We are going to enable GitHub login but you also have other options that are listed here.</p>
 
@@ -384,9 +384,9 @@ collections:
 <pre><code>https://api.netlify.com/auth/done
 </code></pre>
 
-<p>Use the generated token in your Netlify account. Now, when you navigate to <a href="https://yourwebsite.netlify.com/admin">https://yourwebsite.netlify.com/admin</a>, you should be able to login the CMS dashboard! The CMS so fast and easy to work with that you will simply fall in love with it.</p>
+<p>Use the generated token in your Netlify account. Now, when you navigate to <a href="https://yourwebsite.netlify.com/admin">https://yourwebsite.netlify.com/admin</a>, you should be able to log in the CMS dashboard! The CMS is so fast and easy to work with that you will simply fall in love with it.</p>
 
-<p>So, it was quite a lot of work but it proved to be fruitful. Now it is easier that ever to edit content of Single Page App and your clients,  collaborators or friends will simply love that.</p>
+<p>So, it was quite a lot of work but it proved to be fruitful. Now it is easier than ever to edit content of Single Page App and your clients,  collaborators and friends will simply love your app!</p>
 
 					</div>
 				</article>
