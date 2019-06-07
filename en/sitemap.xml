@@ -218,12 +218,6 @@
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/categories/</loc>
-    <lastmod>2017-11-16T15:24:01+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://yonkov.github.io/tags/</loc>
     <lastmod>2019-02-24T10:05:06+02:00</lastmod>
     <priority>0</priority>
@@ -237,6 +231,12 @@
                 hreflang="en"
                 href="https://yonkov.github.io/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/categories/</loc>
+    <lastmod>2017-11-16T15:24:01+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
