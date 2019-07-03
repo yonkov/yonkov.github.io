@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="In this tutorial I will show you the optimizations I did to improve the page load time of my Divi website. Warning: if you are looking for plugins, this article is not for you!">
+	<meta name="author"      content="Atanas Yonkov">
+	
+	
+
+<script type="application/ld+json">{
+"@context":"http://schema.org",
+"@type":"TechArticle",
+"url":"https://yonkov.github.io/post/optimize-divi-for-speed/",
+"author": "Atanas Yonkov",
+"creator" : "Atanas Yonkov",
+"copyrightHolder" : "Atanas Yonkov",
+"headline":"Optimize Divi for Speed",
+"description":"In this tutorial I will show you the optimizations I did to improve the page load time of my Divi website. Warning: if you are looking for plugins, this article is not for you!",
+"datePublished":"2019-07-03 17:01:16 &#43;0300 EEST",
+"wordCount": "1844",
+"publisher": {
+"@type": "Website",
+"name": "Yonkov.github.io"
+}
+}
+</script>
+
+
+	<title>Optimize Divi for Speed</title>
+	
+	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
+	
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	
+	<link rel="preload" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"></noscript>
+	
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700"></noscript>
+	
+	<link href="/css/styles.css" rel="stylesheet">
+	<link rel="preload" href="/css/custom.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="/css/custom.css"></noscript>		
+		<script>!function(e){"use strict";var t=function(t,n,r){var o,a=e.document,l=a.createElement("link");if(n)o=n;else{var i=(a.body||a.getElementsByTagName("head")[0]).childNodes;o=i[i.length-1]}var d=a.styleSheets;l.rel="stylesheet",l.href=t,l.media="only x",function e(t){if(a.body)return t();setTimeout(function(){e(t)})}(function(){o.parentNode.insertBefore(l,n?o:o.nextSibling)});var s=function(e){for(var t=l.href,n=d.length;n--;)if(d[n].href===t)return e();setTimeout(function(){s(e)})};function u(){l.addEventListener&&l.removeEventListener("load",u),l.media=r||"all"}return l.addEventListener&&l.addEventListener("load",u),l.onloadcssdefined=s,s(u),l};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r,r.getAttribute("media")),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){t.poly(),e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);</script>	
+</head>
+<body class="home">
+<header id="header">
+	<div id="head" class="parallax" parallax-speed="2">
+		<h1 id="logo" class="text-center">
+			<img class="img-circle" src="https://yonkov.github.io/images/guy.jpg" alt="me">
+			<span class="title">Atanas Yonkov</span>
+			<span class="tagline">Blogger, Web Developer<br>
+				<a href="">yonkov.atanas@gmail.com</a>
+            </span>
+		</h1>
+	</div>
+    <nav class="navbar navbar-default navbar-sticky">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/post">Blog</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+                
+                <li>
+                    <a href="/privacy-policy/">Privacy Policy</a>
+                </li>
+                
+				
+            </ul>
+        </div>
+    </div>
+</nav>	
+</header>
+<main id="main">
+
+	<div class="container">
+
+		<div class="row topspace">
+			<div class="col-sm-8 col-sm-offset-2">
+
+ 				<article class="post">
+					<header class="entry-header">
+ 						<div id="breadcrumbs" class="entry-meta" style="font-size:15px;">
+<a href="/">Home</a>
+    
+        
+    
+        
+            / <a href="/post">Blog</a>
+        
+    
+        
+            / <a href="/optimize-divi-for-speed">Optimize divi for speed</a>
+        
+    
+        
+    
+</div>
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/optimize-divi-for-speed/" rel="bookmark">Optimize Divi for Speed</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2019-07-03 17:01:16 &#43;0300 EEST">July 3, 2019</time></span>
+						</div>
+						<div id="blog-categories" style="font-style:italic;font-size:15px; text-align:center; padding: 0 0 10px;">
+	
+	  <em>Categories: </em>
+	  <em><a href="/categories/divi">Divi</a></em>, <em><a href="/categories/wordpress">WordPress</a></em>
+		
+	
+</div>
+					</header>
+					<div class="entry-content">
+						
+
+<p>Internet users these days do not have the patience to wait for a webpage to load. In fact, Google survey from 2016 figured out that 53% of mobile users abandon a webpage if it takes more than 3 seconds to load! It is obvious that faster websites improve customer satisfaction and provide better user experience. Then, why is Divi so slow? Don&rsquo;t get me wrong, I love Divi. It is one of the most versatile premium WordPress themes that comes with tons of functionalities. It comes with more than 100 free templates that can help deliver gorgeous designs in no time! Fast and easy- that is Divi&rsquo;s title. However, we pay a price for that.
+It is not a secret that Divi’s page load speed is far from fantastic. This is not a big problem if you can afford a premium hosting plan but it can be an issue you are on a low budget and you have limited server resources. Divi has some in-built performance optimizations, e.g. css and javascript minification, however, it still feels a bit bloated and there are just too many files that need to be loaded in order to do its magic. However, I have some good news for you! With a bit of effort we can actually make it better. There are some tricks that can help to reduce dramatically the loading time of your website and improve customer satisfaction and deliver more visitors.</p>
+
+<p>There are a lot of plugins that you can also use to do optimizations. However, I would suggest to get your hands dirty with it and use some custom code, especially when it comes to making optimizations. The problem with plugins is the same as the problem with versatile themes - they are bloated with unnecessary functionalities and we had enough of this already! In this article, I will share the code that I use when I build my freelance projects with the Divi theme. Feel free to use it as much as you like it.</p>
+
+<p>Enough talking, let’s do some work!
+I will be adding custom code in .htaccess file, located in the root folder of the server. I will be also adding some code snippets in functions.php, which is located in your theme’s main folder. However, you should not add the code directly to it and use a child theme instead. I will get to that in a little while. Now, log in via cpanel or via ftp to the server and go to the site&rsquo;s root folder (it is usually called public html). <em>(If you login via cpanel and cannot find .htaccess in your root folder, make sure that you clicked on show hidden files and folders in the settings tab from the top right corner)</em>
+<div>
+	<header>
+		<h5 style="margin: 0 0 10px 23px;">Table of Contents</h5>
+	</header>
+	<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#enable-gzip-compression">Enable Gzip Compression</a></li>
+<li><a href="#leverage-browser-caching">Leverage Browser Caching</a></li>
+<li><a href="#remove-rest-api-lines-from-the-html-header-in-wordpress">Remove REST API Lines from the HTML Header in WordPress</a></li>
+<li><a href="#disable-emojis-in-wordpress">Disable Emojis in WordPress</a></li>
+<li><a href="#remove-rss-rsd-and-other-unnecessary-head-tags">Remove RSS, RSD and Other Unnecessary Head Tags</a></li>
+<li><a href="#eliminate-render-blocking-css">Eliminate Render Blocking CSS</a></li>
+<li><a href="#properly-size-images">Properly Size Images</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</div></p>
+
+<h3 id="enable-gzip-compression">Enable Gzip Compression</h3>
+
+<p>If there was only one thing I had to recommend above all optimizations , this would definitely be to enable gzip compression. Gzip will reduce the size of your webpage by compressing it. In this way, you can reduce up to 80% of your website size! Not bad, huh?! First, check <a href="https://smallseotools.com/check-gzip-compression/">this online tool</a> to make sure gzip is not enabled by default by your host. Most probably it won’t be. Add the following code to htaccess:</p>
+
+<pre><code>&lt;IfModule mod_deflate.c&gt;
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+&lt;/IfModule&gt;
+</code></pre>
+
+<p>That&rsquo;s it! Now check the tool again to make sure you have successfully enabled gzip compression on your website.</p>
+
+<h3 id="leverage-browser-caching">Leverage Browser Caching</h3>
+
+<p>Leverage browser caching means how much time you want the client&rsquo;s browser to store images, css and javascript. This is deffinitely a good practice, because returning users will already have the data on their pc-s, so they do not have to wait for the browser to download the same static files over and over again. This is another card in our hands that can help improve the page load time. Paste the following code in .htaccess, just before the #End Wordpress text:</p>
+
+<pre><code>&lt;IfModule mod_expires.c&gt;
+ExpiresActive On
+ExpiresDefault &quot;access 14 days&quot;
+ExpiresByType text/css &quot;access 1 month&quot;
+ExpiresByType image/png &quot;access 1 month&quot;
+ExpiresByType image/gif &quot;access 1 month&quot;
+ExpiresByType image/jpg &quot;access 1 month&quot;
+ExpiresByType image/jpeg &quot;access 1 month&quot;
+ExpiresByType text/x-javascript &quot;access 1 year&quot;
+ExpiresByType application/pdf &quot;access 1 week&quot;
+ExpiresByType image/x-icon &quot;access 2 months&quot;
+ExpiresByType application/x-shockwave-flash &quot;access 7 months&quot;
+&lt;/IfModule&gt;
+</code></pre>
+
+<h3 id="remove-rest-api-lines-from-the-html-header-in-wordpress">Remove REST API Lines from the HTML Header in WordPress</h3>
+
+<p>Since WordPress 4.7, REST API endpoints were introduced, which made it possible for developers to use WordPress as a backend, while developing modern, cutting-edge frontend applications. In this way, you can use any innovative javascript framework to deliver single page applications that provide awesome user experience. I am personally a big fan of frameworks such as vue, react and angular. However, if you are using Divi, chances are you are never going to start writing your frontend from scratch. This code will remove the rest api links from the header and in this way will help to reduce the burden on the server. Add it to your child theme&rsquo;s functions.php. If you do not have a child theme, take a look at this tutorial how to set up a <a href="https://www.elegantthemes.com/blog/divi-resources/divi-child-theme">child theme</a>. If you are not in the mood of doing it, you can just install the plugin <a href="https://wordpress.org/plugins/code-snippets/">Code Snippets</a>. It is extremely light and easy to use. You just have to install it and it will let you modify functions.php, while you will still be able to update Divi without losing any changes. Copy the following code <em>(without the opening &lt;?php tag, it should be put only once in the whole file!)</em></p>
+
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">	<span style="color:#1e889b">&lt;?php</span>
+	<span style="color:#228b22">// Remove the REST API lines from the HTML Header since WP 4.7
+</span><span style="color:#228b22"></span>	<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">remove_json_api</span> () {
+		remove_action( <span style="color:#cd5555">&#39;wp_head&#39;</span>, <span style="color:#cd5555">&#39;rest_output_link_wp_head&#39;</span>, <span style="color:#b452cd">10</span> );
+		remove_action( <span style="color:#cd5555">&#39;wp_head&#39;</span>, <span style="color:#cd5555">&#39;wp_oembed_add_discovery_links&#39;</span>, <span style="color:#b452cd">10</span> );
+		<span style="color:#228b22">// Remove the REST API endpoint.
+</span><span style="color:#228b22"></span>		remove_action( <span style="color:#cd5555">&#39;rest_api_init&#39;</span>, <span style="color:#cd5555">&#39;wp_oembed_register_route&#39;</span> );
+		<span style="color:#228b22">// Turn off oEmbed auto discovery.
+</span><span style="color:#228b22"></span>		add_filter( <span style="color:#cd5555">&#39;embed_oembed_discover&#39;</span>, <span style="color:#cd5555">&#39;__return_false&#39;</span> );
+		<span style="color:#228b22">// Don&#39;t filter oEmbed results.
+</span><span style="color:#228b22"></span>		remove_filter( <span style="color:#cd5555">&#39;oembed_dataparse&#39;</span>, <span style="color:#cd5555">&#39;wp_filter_oembed_result&#39;</span>, <span style="color:#b452cd">10</span> );
+		<span style="color:#228b22">// Remove oEmbed discovery links.
+</span><span style="color:#228b22"></span>		remove_action( <span style="color:#cd5555">&#39;wp_head&#39;</span>, <span style="color:#cd5555">&#39;wp_oembed_add_discovery_links&#39;</span> );
+		<span style="color:#228b22">// Remove oEmbed-specific JavaScript from the front-end and back-end.
+</span><span style="color:#228b22"></span>		remove_action( <span style="color:#cd5555">&#39;wp_head&#39;</span>, <span style="color:#cd5555">&#39;wp_oembed_add_host_js&#39;</span> );
+		remove_action( <span style="color:#cd5555">&#39;template_redirect&#39;</span>, <span style="color:#cd5555">&#39;rest_output_link_header&#39;</span>, <span style="color:#b452cd">11</span> );
+	   <span style="color:#228b22">// Remove all embeds rewrite rules.
+</span><span style="color:#228b22"></span>	   add_filter( <span style="color:#cd5555">&#39;rewrite_rules_array&#39;</span>, <span style="color:#cd5555">&#39;disable_embeds_rewrites&#39;</span> );
+	}
+</code></pre></div>
+
+<h3 id="disable-emojis-in-wordpress">Disable Emojis in WordPress</h3>
+
+<p>WordPress 4.2 added support to emojis into its core. While they are fun, they also generate additional http request and have additional css that increases the file size of your webpage. Remove them, unless you are really into using them. Paste the following code in your child theme&rsquo;s functions.php or in Code Snippets plugin:</p>
+
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">	<span style="color:#1e889b">&lt;?php</span>
+	<span style="color:#cd5555">/**
+</span><span style="color:#cd5555">	 * Disable the emoji&#39;s since WP 4.2
+</span><span style="color:#cd5555">	 */</span>
+	<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">disable_emojis</span>() {
+	 remove_action( <span style="color:#cd5555">&#39;wp_head&#39;</span>, <span style="color:#cd5555">&#39;print_emoji_detection_script&#39;</span>, <span style="color:#b452cd">7</span> );
+	 remove_action( <span style="color:#cd5555">&#39;admin_print_scripts&#39;</span>, <span style="color:#cd5555">&#39;print_emoji_detection_script&#39;</span> );
+	 remove_action( <span style="color:#cd5555">&#39;wp_print_styles&#39;</span>, <span style="color:#cd5555">&#39;print_emoji_styles&#39;</span> );
+	 remove_action( <span style="color:#cd5555">&#39;admin_print_styles&#39;</span>, <span style="color:#cd5555">&#39;print_emoji_styles&#39;</span> ); 
+	 remove_filter( <span style="color:#cd5555">&#39;the_content_feed&#39;</span>, <span style="color:#cd5555">&#39;wp_staticize_emoji&#39;</span> );
+	 remove_filter( <span style="color:#cd5555">&#39;comment_text_rss&#39;</span>, <span style="color:#cd5555">&#39;wp_staticize_emoji&#39;</span> ); 
+	 remove_filter( <span style="color:#cd5555">&#39;wp_mail&#39;</span>, <span style="color:#cd5555">&#39;wp_staticize_emoji_for_email&#39;</span> );
+	 add_filter( <span style="color:#cd5555">&#39;tiny_mce_plugins&#39;</span>, <span style="color:#cd5555">&#39;disable_emojis_tinymce&#39;</span> );
+	 add_filter( <span style="color:#cd5555">&#39;wp_resource_hints&#39;</span>, <span style="color:#cd5555">&#39;disable_emojis_remove_dns_prefetch&#39;</span>, <span style="color:#b452cd">10</span>, <span style="color:#b452cd">2</span> );
+	}
+	add_action( <span style="color:#cd5555">&#39;init&#39;</span>, <span style="color:#cd5555">&#39;disable_emojis&#39;</span> );
+
+	<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">disable_emojis_tinymce</span>( <span style="color:#00688b">$plugins</span> ) {
+	 <span style="color:#8b008b;font-weight:bold">if</span> ( is_array( <span style="color:#00688b">$plugins</span> ) ) {
+	 <span style="color:#8b008b;font-weight:bold">return</span> array_diff( <span style="color:#00688b">$plugins</span>, <span style="color:#8b008b;font-weight:bold">array</span>( <span style="color:#cd5555">&#39;wpemoji&#39;</span> ) );
+	 } <span style="color:#8b008b;font-weight:bold">else</span> {
+	 <span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#8b008b;font-weight:bold">array</span>();
+	 }
+	}
+
+	<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">disable_emojis_remove_dns_prefetch</span>( <span style="color:#00688b">$urls</span>, <span style="color:#00688b">$relation_type</span> ) {
+	 <span style="color:#8b008b;font-weight:bold">if</span> ( <span style="color:#cd5555">&#39;dns-prefetch&#39;</span> == <span style="color:#00688b">$relation_type</span> ) {
+	 <span style="color:#cd5555">/** This filter is documented in wp-includes/formatting.php */</span>
+	 <span style="color:#00688b">$emoji_svg_url</span> = apply_filters( <span style="color:#cd5555">&#39;emoji_svg_url&#39;</span>, <span style="color:#cd5555">&#39;https://s.w.org/images/core/emoji/2/svg/&#39;</span> );
+
+	<span style="color:#00688b">$urls</span> = array_diff( <span style="color:#00688b">$urls</span>, <span style="color:#8b008b;font-weight:bold">array</span>( <span style="color:#00688b">$emoji_svg_url</span> ) );
+	 }
+	<span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#00688b">$urls</span>;
+	}
+</code></pre></div>
+
+<h3 id="remove-rss-rsd-and-other-unnecessary-head-tags">Remove RSS, RSD and Other Unnecessary Head Tags</h3>
+
+<p>Let&rsquo;s continue reducing the number of unnecessary http requests done in the header. These requests prevents your site from loading fast and dissatisfy your visitors. Let&rsquo;s fix this now! Remove rss feeds, rsd and the ping functionality, unless you cannot live without them. I mean, they are cool, but not many people use them these days:</p>
+
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">	<span style="color:#1e889b">&lt;?php</span>
+	<span style="color:#228b22">//Remove RSS, RSD and other unnecessary head tags
+</span><span style="color:#228b22"></span>	remove_action(<span style="color:#cd5555">&#39;wp_head&#39;</span>, <span style="color:#cd5555">&#39;wlwmanifest_link&#39;</span>); <span style="color:#228b22">//removes wlwmanifest (Windows Live Writer) link.
+</span><span style="color:#228b22"></span>	remove_action(<span style="color:#cd5555">&#39;wp_head&#39;</span>, <span style="color:#cd5555">&#39;wp_generator&#39;</span>); <span style="color:#228b22">//removes meta name generator.
+</span><span style="color:#228b22"></span>	remove_action( <span style="color:#cd5555">&#39;wp_head&#39;</span>, <span style="color:#cd5555">&#39;feed_links&#39;</span>, <span style="color:#b452cd">2</span> ); <span style="color:#228b22">//removes feed links.
+</span><span style="color:#228b22"></span>	remove_action(<span style="color:#cd5555">&#39;wp_head&#39;</span>, <span style="color:#cd5555">&#39;feed_links_extra&#39;</span>, <span style="color:#b452cd">3</span> );  <span style="color:#228b22">//removes comments feed.
+</span><span style="color:#228b22"></span>	remove_action (<span style="color:#cd5555">&#39;wp_head&#39;</span>, <span style="color:#cd5555">&#39;rsd_link&#39;</span>);
+	remove_action( <span style="color:#cd5555">&#39;wp_head&#39;</span>, <span style="color:#cd5555">&#39;wp_shortlink_wp_head&#39;</span>);
+
+	<span style="color:#228b22">// Remove trackback and ping functionality
+</span><span style="color:#228b22"></span>	<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">no_self_ping</span>( &amp;<span style="color:#00688b">$links</span> ) {
+		<span style="color:#00688b">$home</span> = get_option( <span style="color:#cd5555">&#39;home&#39;</span> );
+		<span style="color:#8b008b;font-weight:bold">foreach</span> ( <span style="color:#00688b">$links</span> <span style="color:#8b008b;font-weight:bold">as</span> <span style="color:#00688b">$l</span> =&gt; <span style="color:#00688b">$link</span> )
+			<span style="color:#8b008b;font-weight:bold">if</span> ( <span style="color:#b452cd">0</span> === strpos( <span style="color:#00688b">$link</span>, <span style="color:#00688b">$home</span> ) )
+				unset(<span style="color:#00688b">$links</span>[<span style="color:#00688b">$l</span>]);
+	}
+	add_action( <span style="color:#cd5555">&#39;pre_ping&#39;</span>, <span style="color:#cd5555">&#39;no_self_ping&#39;</span> );
+</code></pre></div>
+
+<h3 id="eliminate-render-blocking-css">Eliminate Render Blocking CSS</h3>
+
+<p>You do not want to defer all your site&rsquo;s css because it will just look ugly. However, you can defer some links that are not crucial for the initial site loading. For example, i would suggest to defer the fonts. Currently, all Divi&rsquo;s css is loded in the header, which makes your visitors wait before they are able to see the webpage. Deferring css can deffinitely help your page load faster. To do that, we first need to deregister the css files from the header and then assign them again in the footer:
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+<span style="color:#228b22">//Defer specific css files
+</span><span style="color:#228b22"></span> <span style="color:#228b22">//first dequeue the css styles
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">remove_css_styles</span>() {
+	wp_dequeue_style( <span style="color:#cd5555">&#39;divi-fonts&#39;</span> ); <span style="color:#228b22">// the only parameter - ID of the CSS stylesheet
+</span><span style="color:#228b22"></span>	wp_dequeue_style( <span style="color:#cd5555">&#39;et-builder-googlefonts-cached&#39;</span> );
+	wp_dequeue_style( <span style="color:#cd5555">&#39;wp-block-library&#39;</span> );
+	wp_dequeue_style( <span style="color:#cd5555">&#39;dashicons&#39;</span> );
+}
+add_action( <span style="color:#cd5555">&#39;wp_enqueue_scripts&#39;</span>, <span style="color:#cd5555">&#39;remove_css_styles&#39;</span>, <span style="color:#b452cd">999</span> );
+
+<span style="color:#228b22">//enque the css files manually in the footer
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">wpc_footer_css</span>() {
+    <span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#cd5555">&#34;
+</span><span style="color:#cd5555">	&lt;link rel=&#39;stylesheet&#39; id=&#39;divi-fonts-css&#39; href=&#39;&#34;</span> . site_url(<span style="color:#cd5555">&#39;//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;#038;subset=latin,latin-ext&#39;</span>) . <span style="color:#cd5555">&#34;&#39; type=&#39;text/css&#39; media=&#39;all&#39; /&gt;
+</span><span style="color:#cd5555">	&lt;link rel=&#39;stylesheet&#39; id=&#39;et-builder-googlefonts-cached&#39; href=&#39;&#34;</span> . site_url(<span style="color:#cd5555">&#39;//fonts.googleapis.com/css?family=Noto+Serif%3Aregular%2Citalic%2C700%2C700italic%7CNoto+Sans%3Aregular%2Citalic%2C700%2C700italic&amp;#038;ver=5.2.1#038;subset=latin,latin-ext&#39;</span>) . <span style="color:#cd5555">&#34;&#39; type=&#39;text/css&#39; media=&#39;all&#39; /&gt;
+</span><span style="color:#cd5555">	&lt;link rel=&#39;stylesheet&#39; id=&#39;wp-block-library-css&#39; href=&#39;&#34;</span> . site_url(<span style="color:#cd5555">&#39;/wp-includes/css/dist/block-library/style.min.css?ver=5.2.1&#39;</span>) . <span style="color:#cd5555">&#34;&#39; type=&#39;text/css&#39; media=&#39;all&#39; /&gt;&#34;</span>;
+
+}
+add_action(<span style="color:#cd5555">&#39;wp_footer&#39;</span>, <span style="color:#cd5555">&#39;wpc_footer_css&#39;</span>);
+</code></pre></div></p>
+
+<p>I know that printing the css is not the recommended way to do it in WordPress and you should actually enqueue them. So, if anyone finds a more neat solution, please feel free to <a href = "mailto: yonkov.atanas@gmail.com">send me an email</a>. Now, if you check the html of the page, you will see that the css files are no longer loaded in the header, so they are no longer stopping the page from showing up.</p>
+
+<h3 id="properly-size-images">Properly Size Images</h3>
+
+<p>Last but not least, you should compress all your images before uploading them. No, I am not joking, this is really, really important! As a rule of thumb, never upload images larger than 100KB, unless you really know what you are doing. Instead, compress or resize them. I am using <a href="https://smallseotools.com/image-compressor/">Small Seo Tools&rsquo; Image Compressor</a> but most programs for processing images will also do the job. Actually, it is crutial to avoid putting big images to your website because they can really slow down the webpage and frustrate your visiors to the point that they abandon the website without waiting for the page to load.</p>
+
+<p>Feel free to use these optimization hacks and <a href = "mailto: yonkov.atanas@gmail.com">send me an email</a> if you have found some other ways to make the Divi theme faster. Keep on rocking with Divi!</p>
+
+<p><strong>Disclaimer</strong>: Make a backup of your website before doing any changes!</p>
+
+					</div>
+				</article>
+
+			</div>
+		</div> 
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+	</div>	
+
+</main>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><br>
+						<a href="mailto:yonkov.atanas@gmail.com">yonkov.atanas@gmail.com</a><br>
+						<br>
+						
+					</p>
+				</div>
+			</div>
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Follow me</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+                        
+                            
+                                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram fa-2"></i></a>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <a href="https://github.com/yonkov" target="_blank"><i class="fa fa-github fa-2"></i></a>
+                            
+                        
+                            
+                        
+					</p>
+				</div>
+			</div>
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Personal Info</h3>
+				<div class="widget-body">
+					<p>Welcome to my professional website! I work as a devoted web developer and a freelancer. My ultimate goal is customer satisfaction. I focus on quality and creating value for my clients. </p>
+					
+				</div>
+			</div>
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Form widget</h3>
+				<div class="widget-body">
+					<p><br>
+						<a href="mailto:yonkov.atanas@gmail.com">yonkov.atanas@gmail.com</a><br>
+						<br>
+                        
+					</p>
+				</div>
+			</div>
+		</div> 
+	</div>
+</footer>
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p></p>
+				</div>
+			</div>
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2017, Atanas Yonkov<br>
+						Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> - 
+                        Powered by: <a href="https://gohugo.io/" rel="poweredby">Hugo</a>
+                    </p>
+				</div>
+			</div>
+		</div> 
+	</div>
+</footer>
+
+
+    
+      
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://yonkov.github.io/js/template.js"></script>
+
+<script>!function(t,e,n,c,x,o,a){t.TyxoObject=x,t.tx=t.tx||function(){(t.tx.q=t.tx.q||[]).push(arguments)},t.tx.l=1*new Date,o=e.createElement(n),a=e.getElementsByTagName(n)[0],o.async=1,o.src="//s.tyxo.com/c.js",a.parentNode.insertBefore(o,a)}(window,document,"script",0,"tx"),tx("create","TX-927463385881"),tx("pageview");</script>
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+	<noscript><link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"></noscript>	
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#000"},button:{background:"#f1d600"}},content:{message:"This website uses cookies to analyze traffic and for advertisements. By continuing you agree to the use of these cookies.",dismiss:"Ok, I accept",href:"https://yonkov.github.io/privacy-policy"}})});</script>
+</body>
+</html>

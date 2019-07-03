@@ -5,10 +5,19 @@
     <link>https://yonkov.github.io/categories/divi/</link>
     <description>Recent content in Divi on Atanas Yonkov</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 18 Nov 2018 14:04:20 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jul 2019 17:01:16 +0300</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/categories/divi/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Optimize Divi for Speed</title>
+      <link>https://yonkov.github.io/post/optimize-divi-for-speed/</link>
+      <pubDate>Wed, 03 Jul 2019 17:01:16 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/optimize-divi-for-speed/</guid>
+      <description>Internet users these days do not have the patience to wait for a webpage to load. In fact, Google survey from 2016 figured out that 53% of mobile users abandon a webpage if it takes more than 3 seconds to load! It is obvious that faster websites improve customer satisfaction and provide better user experience. Then, why is Divi so slow? Don&amp;rsquo;t get me wrong, I love Divi. It is one of the most versatile premium WordPress themes that comes with tons of functionalities.</description>
+    </item>
     
     <item>
       <title>Display Cookie Notice in Your Divi Theme</title>
