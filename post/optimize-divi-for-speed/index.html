@@ -18,7 +18,7 @@
 "headline":"Optimize Divi for Speed",
 "description":"In this tutorial I will show you the optimizations I did to make my Divi theme load faster. Without the use of any plugins.",
 "datePublished":"2019-07-03 17:01:16 &#43;0300 EEST",
-"wordCount": "1821",
+"wordCount": "1816",
 "publisher": {
 "@type": "Website",
 "name": "Yonkov.github.io"
@@ -131,9 +131,9 @@
 						
 
 <p>Internet users these days do not have the patience to wait for a webpage to load. In fact, Google survey from 2016 figured out that 53% of mobile users abandon a webpage if it takes more than 3 seconds to load! It is obvious that faster websites improve customer satisfaction and provide better user experience. Then, why is the Divi theme so slow? Don&rsquo;t get me wrong, I love Divi. It is one of the most versatile premium WordPress themes that comes with tons of functionalities. It has more than 100 free templates that can help deliver gorgeous designs in no time! Fast and easy- that is the title of Divi. However, we pay a price for that.
-It is not a secret that Divi’s page load speed is far from fantastic. This is not a big problem if you can afford a premium hosting plan but it can be an issue if you are on a low budget and you are limited on server resources. Divi has some in-built performance optimizations, e.g. css and javascript minification. However, it still feels a bit bloated. There are just too many files that need to be loaded in order to do its magic. I have some good news for you, though! With just a bit of effort we can actually make it better. There are some tricks that can help to reduce dramatically the loading time of Divi and improve your visitors&rsquo; user experience.</p>
+It is not a secret that Divi’s page load speed is far from fantastic. This is not a big problem if you can afford a premium hosting plan but it can be an issue if you are on a low budget and you are limited on server resources. Divi has some in-built performance optimizations, e.g. css and javascript minification. However, it still feels a bit bloated. There are just too many files that need to be loaded in order to do its magic. I have some good news for you, though! With just a bit of effort we can actually speed it up. There are some tricks that can help to optimize Divi and improve your visitors&rsquo; user experience.</p>
 
-<p>There are a lot of plugins that can help you do the below optimizations. However, I would advize against it! Let us get our hands dirty with it and use some custom code, especially when we are planning on making optimizations. The problem with plugins is the same as the problem with versatile themes - they are bloated with unnecessary functionalities and we have enough of them already! In this article, I will share the code that I am using when I build my freelance projects with Divi. Feel free to use the scripts as much as you like it.</p>
+<p>There are a lot of plugins that can help you do the below optimizations. However, I would advize against it! Let us get our hands dirty with it and use some custom code, especially when we are planning on making optimizations. The problem with plugins is the same as the problem with versatile themes - they are bloated with unnecessary functionalities and we have enough of them already! In this article, I will share the code that I am using when I build my freelance projects with Divi. Feel free to use the scripts and optimize your website as well.</p>
 
 <p>Enough talking, let’s do some work!
 I will be adding custom code in .htaccess file, located in the root folder of the server. I will be also adding some code snippets in functions.php, which is located in your theme’s main folder. However, you should not add the code directly to it and use a child theme instead. I will get to that in a little while. Now, log in via cpanel or via ftp to the server and go to the site&rsquo;s root folder (it is usually called public html). That is where .htaccess file should be located <em>(If you login via cpanel and cannot find .htaccess in your root folder, make sure that you clicked on show hidden files and folders in the settings tab from the top right corner!)</em>
