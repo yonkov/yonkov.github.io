@@ -35,7 +35,7 @@
       
       <guid>https://yonkov.github.io/post/setting-up-vuepress-with-netlify-cms/</guid>
       <description>Example repo: https://github.com/yonkov/Vuepress-project
-   (adsbygoogle = window.adsbygoogle || []).push({});  VuePress is one of the most promising frameworks to create extremely fast and lightweight static websites that act as single page applications. By the end of this tutorial, you will know how to set up VuePress and add a light-weight and easy to use content management system to it, called Netlify CMS.
+VuePress is one of the most promising frameworks to create extremely fast and lightweight static websites that act as single page applications. By the end of this tutorial, you will know how to set up VuePress and add a light-weight and easy to use content management system to it, called Netlify CMS.
 Let&amp;rsquo;s get started!
 Table of Contents     The Rise of Static Site Generators Why VuePress Why Netlify CMS How to Install VuePress Add VuePress to Github Deploy to Netlify Integrate Netlify CMS to VuePress     The Rise of Static Site Generators Static site generators are becoming more and more popular these days due to better performance, low cost, high security and better developer experience.</description>
     </item>
