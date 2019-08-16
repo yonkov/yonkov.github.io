@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="How to display and style related posts in wordpress just like Yuzo Related Posts without the use of any plugins">
+	<meta name="author"      content="Atanas Yonkov">
+	
+	
+
+<script type="application/ld+json">{
+"@context":"http://schema.org",
+"@type":"TechArticle",
+"url":"https://yonkov.github.io/post/display-related-posts-from-the-same-category-in-wordpress-without-a-pugin/",
+"author": "Atanas Yonkov",
+"creator" : "Atanas Yonkov",
+"copyrightHolder" : "Atanas Yonkov",
+"headline":"Display Related Posts from the Same Category in WordPress Without a Pugin",
+"description":"How to display and style related posts in wordpress just like Yuzo Related Posts without the use of any plugins",
+"datePublished":"2019-08-16 16:04:31 &#43;0300 EEST",
+"wordCount": "565",
+"publisher": {
+"@type": "Website",
+"name": "Yonkov.github.io"
+}
+}
+</script>
+
+
+	<title>Display Related Posts from the Same Category in WordPress Without a Pugin</title>
+	
+	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
+	
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	
+	<link rel="preload" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"></noscript>
+	
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700"></noscript>
+	
+	<link href="/css/styles.css" rel="stylesheet">
+	<link rel="preload" href="/css/custom.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="/css/custom.css"></noscript>		
+		<script>!function(e){"use strict";var t=function(t,n,r){var o,a=e.document,l=a.createElement("link");if(n)o=n;else{var i=(a.body||a.getElementsByTagName("head")[0]).childNodes;o=i[i.length-1]}var d=a.styleSheets;l.rel="stylesheet",l.href=t,l.media="only x",function e(t){if(a.body)return t();setTimeout(function(){e(t)})}(function(){o.parentNode.insertBefore(l,n?o:o.nextSibling)});var s=function(e){for(var t=l.href,n=d.length;n--;)if(d[n].href===t)return e();setTimeout(function(){s(e)})};function u(){l.addEventListener&&l.removeEventListener("load",u),l.media=r||"all"}return l.addEventListener&&l.addEventListener("load",u),l.onloadcssdefined=s,s(u),l};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r,r.getAttribute("media")),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){t.poly(),e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);</script>	
+</head>
+<body class="home">
+<header id="header">
+	<div id="head" class="parallax" parallax-speed="2">
+		<h1 id="logo" class="text-center">
+			<img class="img-circle" src="https://yonkov.github.io/images/guy.jpg" alt="me">
+			<span class="title">Atanas Yonkov</span>
+			<span class="tagline">Blogger, Web Developer<br>
+				<a href="">yonkov.atanas@gmail.com</a>
+            </span>
+		</h1>
+	</div>
+    <nav class="navbar navbar-default navbar-sticky">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/post">Blog</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+                
+                <li>
+                    <a href="/privacy-policy/">Privacy Policy</a>
+                </li>
+                
+				
+            </ul>
+        </div>
+    </div>
+</nav>	
+</header>
+<main id="main">
+
+	<div class="container">
+
+		<div class="row topspace">
+			<div class="col-sm-8 col-sm-offset-2">
+
+ 				<article class="post">
+					<header class="entry-header">
+ 						<div id="breadcrumbs" class="entry-meta" style="font-size:15px;">
+<a href="/">Home</a>
+    
+        
+    
+        
+            / <a href="/post">Blog</a>
+        
+    
+        
+            / <a href="/display-related-posts-from-the-same-category-in-wordpress-without-a-pugin">Display related blogs from the same category in wordpress without a pugin</a>
+        
+    
+        
+    
+</div>
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/display-related-posts-from-the-same-category-in-wordpress-without-a-pugin/" rel="bookmark">Display Related Posts from the Same Category in WordPress Without a Pugin</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2019-08-16 16:04:31 &#43;0300 EEST">August 16, 2019</time></span>
+						</div>
+						<div id="blog-categories" style="font-style:italic;font-size:15px; text-align:center; padding: 0 0 10px;">
+	
+	  <em>Category: </em>
+	  <em><a href="/categories/wordpress">WordPress</a></em>
+		
+	
+</div>
+					</header>
+					<div class="entry-content">
+						
+
+<p>In this tutorial I am going to show you how to display related posts from the same category as the single post page in WordPress. Without the use of any plugins. The related posts are a great way to improve your website conversions (the time that your visitors spend on the website) and improve Google&rsquo;s search rankings. In the past, I was using Yuzo Related Posts plugin. However, in the beginning of 2019, there was a <a href="https://www.wordfence.com/blog/2019/04/yuzo-related-posts-zero-day-vulnerability-exploited-in-the-wild/">vulnerability issue</a> and it is no longer supported by the WordPress community. So, more than 60 000 WordPress users, including myself, had to find another way to show related posts on our websites and in this way engage more our readers. Finally, I came up with a neat solution that actually does not require installation of extra plugins waiting to get hacked. By the end of this tutorial you should be able to display related posts section without a plugin:</p>
+
+<p><img src="../../images/related-posts-3-column-layout.jpg" alt="related-posts-3-column-layout" /></p>
+
+<p>Enough talking, let&rsquo;s write some code!</p>
+
+<h2 id="display-related-posts-section-with-posts-from-the-same-category">Display Related Posts section with posts from the same category</h2>
+
+<p>Open your child theme&rsquo;s functions.php and paste the following function:
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">	<span style="color:#1e889b">&lt;?php</span>
+    <span style="color:#228b22">/* Show related posts */</span>
+    <span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">show_related_posts_by_category</span> {
+        <span style="color:#00688b">$cats</span> = get_the_category();
+        <span style="color:#00688b">$args</span> = <span style="color:#8b008b;font-weight:bold">array</span>(
+            <span style="color:#cd5555">&#39;post_type&#39;</span> =&gt; <span style="color:#cd5555">&#39;post&#39;</span>,
+            <span style="color:#cd5555">&#39;post__not_in&#39;</span> =&gt; <span style="color:#8b008b;font-weight:bold">array</span>( get_the_ID() ),
+            <span style="color:#cd5555">&#39;posts_per_page&#39;</span> =&gt; <span style="color:#b452cd">3</span>,
+            <span style="color:#cd5555">&#39;cat&#39;</span>     =&gt; <span style="color:#00688b">$cats</span>[<span style="color:#b452cd">0</span>]-&gt;<span style="color:#658b00">term_id</span>,
+        );
+        <span style="color:#00688b">$query</span> = <span style="color:#8b008b;font-weight:bold">new</span> WP_Query( <span style="color:#00688b">$args</span> );
+    <span style="color:#1e889b">?&gt;</span> 
+    &lt;<span style="color:#8b008b;font-weight:bold">div</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;related-posts&#34;</span>&gt;
+        &lt;<span style="color:#8b008b;font-weight:bold">h1</span>&gt;Препоръчано за вас&lt;/<span style="color:#8b008b;font-weight:bold">h1</span>&gt;
+            &lt;<span style="color:#8b008b;font-weight:bold">ul</span>&gt;
+            <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">if</span>( <span style="color:#00688b">$query</span>-&gt;<span style="color:#658b00">have_posts</span>() ) : <span style="color:#8b008b;font-weight:bold">while</span>( <span style="color:#00688b">$query</span>-&gt;<span style="color:#658b00">have_posts</span>() ) : <span style="color:#00688b">$query</span>-&gt;<span style="color:#658b00">the_post</span>(); <span style="color:#1e889b">?&gt;</span>   
+                &lt;<span style="color:#8b008b;font-weight:bold">li</span>&gt;
+                    &lt;<span style="color:#8b008b;font-weight:bold">a</span> <span style="color:#658b00">href</span>=<span style="color:#cd5555">&#34;</span><span style="color:#1e889b">&lt;?php</span> the_permalink(); <span style="color:#1e889b">?&gt;</span><span style="color:#cd5555">&#34;</span>&gt;
+                        <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">if</span> ( has_post_thumbnail() ) { <span style="color:#228b22">/* Display the post&#39;s featured image */</span>
+                            the_post_thumbnail(<span style="color:#cd5555">&#39;thumbnail&#39;</span>);
+                            } <span style="color:#8b008b;font-weight:bold">else</span> { <span style="color:#228b22">/* Display default image if no featured image is included */</span> <span style="color:#1e889b">?&gt;</span>
+                            &lt;<span style="color:#8b008b;font-weight:bold">img</span> <span style="color:#658b00">src</span>=<span style="color:#cd5555">&#34;</span><span style="color:#1e889b">&lt;?php</span> bloginfo(<span style="color:#cd5555">&#39;template_directory&#39;</span>); <span style="color:#1e889b">?&gt;</span><span style="color:#cd5555">/../../../wp-content/uploads/2018/05/default-image&#34;</span> <span style="color:#658b00">alt</span>=<span style="color:#cd5555">&#34;</span><span style="color:#1e889b">&lt;?php</span> the_title(); <span style="color:#1e889b">?&gt;</span><span style="color:#cd5555">&#34;</span> /&gt;
+                            <span style="color:#1e889b">&lt;?php</span> } <span style="color:#1e889b">?&gt;</span>
+                        <span style="color:#1e889b">&lt;?php</span> the_title(); <span style="color:#228b22">/* Display the post&#39;s title */</span> <span style="color:#1e889b">?&gt;</span>
+                    &lt;/<span style="color:#8b008b;font-weight:bold">a</span>&gt;
+                &lt;/<span style="color:#8b008b;font-weight:bold">li</span>&gt;
+    <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">endwhile</span>; <span style="color:#8b008b;font-weight:bold">endif</span>; wp_reset_postdata(); <span style="color:#1e889b">?&gt;</span>
+            &lt;<span style="color:#8b008b;font-weight:bold">ul</span>&gt;
+    &lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt; <span style="color:#1e889b">&lt;?php</span>
+    }
+</code></pre></div>
+The code displays up to 3 posts from the same category as the post that is currently opened. If there is no post thumbnail, a default one is used. Do not forget to replace the default image url with the website&rsquo;s default image. Now, go to your single.php template (the template that displays the blog posts) and call the function just after the post content. Just like this:
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">    <span style="color:#1e889b">&lt;?php</span> show_related_posts_by_category() <span style="color:#1e889b">?&gt;</span>
+</code></pre></div></p>
+
+<h2 id="style-the-related-posts-in-one-column-layout">Style the Related Posts in One Column Layout</h2>
+
+<p>Now, when you refresh your blog post, you should be able to see a list of posts from the same category (maximum 3). Great job! Now, all you need to do is to put some css to style it in a beautiful 1 column layout:</p>
+
+<pre><code>.related-posts ul {
+    list-style: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0
+}
+
+.related-posts ul li {
+    overflow: hidden;
+    margin: 0 0 1.5em
+}
+
+.related-posts ul li:last-child {
+    margin: 0
+}
+
+.related-posts ul li img {
+    display: inline;
+    float: left;
+    margin: .3em .75em .75em 0;
+    width: 120px;
+    height: 120px;
+}
+</code></pre>
+
+<p>This is how your related posts section should look like at this point:</p>
+
+<p><img src="../../images/related-posts-1-column-layout.jpg" alt="related-posts-1-column-layout" /></p>
+
+<h2 id="style-the-related-posts-in-three-column-layout">Style the Related Posts in Three-Column Layout</h2>
+
+<p>If you want, you can turn this to a beautiful 3 column layout representation:</p>
+
+<pre><code>@media only screen and (min-width: 669px) {
+        .related-posts ul {
+            display: flex;
+            width: 100%;
+        }
+
+        .related-posts ul li {
+            padding: 20px;
+        }
+}
+</code></pre>
+
+<p>It&rsquo;s a kind of magic! You now finally have related posts that are likely to engage your visitors more and we even managed to do it without installing any additional plugins! Congratulations!</p>
+
+					</div>
+				</article>
+
+			</div>
+		</div> 
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+	</div>	
+
+</main>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><br>
+						<a href="mailto:yonkov.atanas@gmail.com">yonkov.atanas@gmail.com</a><br>
+						<br>
+						
+					</p>
+				</div>
+			</div>
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Follow me</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+                        
+                            
+                                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram fa-2"></i></a>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <a href="https://github.com/yonkov" target="_blank"><i class="fa fa-github fa-2"></i></a>
+                            
+                        
+                            
+                        
+					</p>
+				</div>
+			</div>
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Personal Info</h3>
+				<div class="widget-body">
+					<p>Welcome to my professional website! I work as a devoted web developer and a freelancer. My ultimate goal is customer satisfaction. I focus on quality and creating value for my clients. </p>
+					
+				</div>
+			</div>
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Form widget</h3>
+				<div class="widget-body">
+					<p><br>
+						<a href="mailto:yonkov.atanas@gmail.com">yonkov.atanas@gmail.com</a><br>
+						<br>
+                        
+					</p>
+				</div>
+			</div>
+		</div> 
+	</div>
+</footer>
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p></p>
+				</div>
+			</div>
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2017, Atanas Yonkov<br>
+						Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> - 
+                        Powered by: <a href="https://gohugo.io/" rel="poweredby">Hugo</a>
+                    </p>
+				</div>
+			</div>
+		</div> 
+	</div>
+</footer>
+
+
+    
+      
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://yonkov.github.io/js/template.js"></script>
+
+<script>!function(t,e,n,c,x,o,a){t.TyxoObject=x,t.tx=t.tx||function(){(t.tx.q=t.tx.q||[]).push(arguments)},t.tx.l=1*new Date,o=e.createElement(n),a=e.getElementsByTagName(n)[0],o.async=1,o.src="//s.tyxo.com/c.js",a.parentNode.insertBefore(o,a)}(window,document,"script",0,"tx"),tx("create","TX-927463385881"),tx("pageview");</script>
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+	<noscript><link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"></noscript>	
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#000"},button:{background:"#f1d600"}},content:{message:"This website uses cookies to analyze traffic and for advertisements. By continuing you agree to the use of these cookies.",dismiss:"Ok, I accept",href:"https://yonkov.github.io/privacy-policy"}})});</script>
+</body>
+</html>

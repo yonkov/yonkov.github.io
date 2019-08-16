@@ -32,6 +32,15 @@ Cookies and Web Beacons Yonkov.</description>
     </item>
     
     <item>
+      <title>Display Related Posts from the Same Category in WordPress Without a Pugin</title>
+      <link>https://yonkov.github.io/post/display-related-posts-from-the-same-category-in-wordpress-without-a-pugin/</link>
+      <pubDate>Fri, 16 Aug 2019 16:04:31 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/display-related-posts-from-the-same-category-in-wordpress-without-a-pugin/</guid>
+      <description>In this tutorial I am going to show you how to display related posts from the same category as the single post page in WordPress. Without the use of any plugins. The related posts are a great way to improve your website conversions (the time that your visitors spend on the website) and improve Google&amp;rsquo;s search rankings. In the past, I was using Yuzo Related Posts plugin. However, in the beginning of 2019, there was a vulnerability issue and it is no longer supported by the WordPress community.</description>
+    </item>
+    
+    <item>
       <title>Optimize Divi for Speed</title>
       <link>https://yonkov.github.io/post/optimize-divi-for-speed/</link>
       <pubDate>Wed, 03 Jul 2019 17:01:16 +0300</pubDate>
@@ -208,7 +217,7 @@ Speed Hugo is absurdly fast! The developers claim that one webpage can be built 
       <pubDate>Tue, 07 Nov 2017 21:23:59 +0200</pubDate>
       
       <guid>https://yonkov.github.io/service/service4/</guid>
-      <description>Web development with Wordpress. Experience with portfolio websites, ecommerce websites, forums and blogs. “Mobile first” responsive design approach.</description>
+      <description>Single page application development with React.js and Angular.js. Experience with portfolio websites, ecommerce websites, forums and blogs.</description>
     </item>
     
     <item>
@@ -235,16 +244,16 @@ Speed Hugo is absurdly fast! The developers claim that one webpage can be built 
       <pubDate>Tue, 07 Nov 2017 21:23:58 +0200</pubDate>
       
       <guid>https://yonkov.github.io/service/service3/</guid>
-      <description>Web development with Wordpress. Experience with portfolio websites, ecommerce websites, forums and blogs. “Mobile first” responsive design approach.</description>
+      <description>Professional web design with Wordpress. Experience with portfolio websites, ecommerce websites, forums and blogs. “Mobile first” responsive design approach.</description>
     </item>
     
     <item>
-      <title>Wordpress integration</title>
+      <title>Wordpress Theme Development</title>
       <link>https://yonkov.github.io/service/service2/</link>
       <pubDate>Tue, 07 Nov 2017 21:23:58 +0200</pubDate>
       
       <guid>https://yonkov.github.io/service/service2/</guid>
-      <description>Integration of existing websites to Wordpress. Experience with portfolio websites, ecommerce websites, forums and blogs. “Mobile first” responsive design approach.</description>
+      <description>Custom theme development with Wordpress. Demonstrated experience with portfolio websites, ecommerce websites, forums and blogs.</description>
     </item>
     
   </channel>

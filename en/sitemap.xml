@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/post/display-related-posts-from-the-same-category-in-wordpress-without-a-pugin/</loc>
+    <lastmod>2019-08-16T16:04:31+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/post/optimize-divi-for-speed/</loc>
     <lastmod>2019-07-03T17:01:16+03:00</lastmod>
   </url>
@@ -454,7 +459,7 @@
   
   <url>
     <loc>https://yonkov.github.io/categories/wordpress/</loc>
-    <lastmod>2019-07-03T17:01:16+03:00</lastmod>
+    <lastmod>2019-08-16T16:04:31+03:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
