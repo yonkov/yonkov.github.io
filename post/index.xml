@@ -11,7 +11,16 @@
     
     
     <item>
-      <title>Display Related Posts from the Same Category in WordPress Without a Pugin</title>
+      <title>Show Recent Posts with Thumbnails in WordPress Without a Plugin</title>
+      <link>https://yonkov.github.io/post/show-recent-posts-with-thumbnails-in-wordpress-without-a-plugin/</link>
+      <pubDate>Sat, 24 Aug 2019 15:12:16 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/show-recent-posts-with-thumbnails-in-wordpress-without-a-plugin/</guid>
+      <description>Sometimes, you may need to add a section in your page that displays your recent blog posts. This can be very useful for portfolio websites and it can be a nice addition to the home page. Normally, you can only add html inside your WordPress posts. However, with the help of shortcodes, you can add some programming logic and create custom content whereever you want. In this post, I will guide you through the process how to create a custom shortcode to display recent posts with thumbnails in WordPress.</description>
+    </item>
+    
+    <item>
+      <title>Display Related Posts With Thumbnails in WordPress Without a Pugin</title>
       <link>https://yonkov.github.io/post/display-related-posts-from-the-same-category-in-wordpress-without-a-pugin/</link>
       <pubDate>Fri, 16 Aug 2019 16:04:31 +0300</pubDate>
       

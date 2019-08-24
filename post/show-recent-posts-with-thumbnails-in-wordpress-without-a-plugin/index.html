@@ -3,14 +3,32 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
+	<meta name="description" content="In this tutorial, I will show you how to create a custom shortcode to display recent posts with thumbnails in WordPress without the use of any plugins">
 	<meta name="author"      content="Atanas Yonkov">
 	
 	
-	<title>Wordpress</title>
+
+<script type="application/ld+json">{
+"@context":"http://schema.org",
+"@type":"TechArticle",
+"url":"https://yonkov.github.io/post/show-recent-posts-with-thumbnails-in-wordpress-without-a-plugin/",
+"author": "Atanas Yonkov",
+"creator" : "Atanas Yonkov",
+"copyrightHolder" : "Atanas Yonkov",
+"headline":"Show Recent Posts with Thumbnails in WordPress Without a Plugin",
+"description":"In this tutorial, I will show you how to create a custom shortcode to display recent posts with thumbnails in WordPress without the use of any plugins",
+"datePublished":"2019-08-24 15:12:16 &#43;0300 EEST",
+"wordCount": "671",
+"publisher": {
+"@type": "Website",
+"name": "Yonkov.github.io"
+}
+}
+</script>
+
+
+	<title>Show Recent Posts with Thumbnails in WordPress Without a Plugin</title>
 	
-	<link rel="alternate" hreflang="ru" href="https://yonkov.github.io/ru/categories/wordpress/" />
-	<link rel="alternate" hreflang="x-default" href="https://yonkov.github.io/en" />
 	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
 	
 	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
@@ -67,115 +85,198 @@
                 </li>
                 
 				
-    
-    <li>
-		<span class="language-switcher" style=""> 
-		<i class="fa fa-globe"></i>
-		<a href ="https://yonkov.github.io/ru/categories/wordpress/" style="">ru:  </a>
-		</span>
-    </li>
-    
-
             </ul>
         </div>
     </div>
 </nav>	
 </header>
 <main id="main">
+
 	<div class="container">
+
 		<div class="row topspace">
 			<div class="col-sm-8 col-sm-offset-2">
 
-                
-				<article class="post">
+ 				<article class="post">
+					<header class="entry-header">
+ 						<div id="breadcrumbs" class="entry-meta" style="font-size:15px;">
+<a href="/">Home</a>
+    
+        
+    
+        
+            / <a href="/post">Blog</a>
+        
+    
+        
+            / <a href="/show-recent-posts-with-thumbnails-in-wordpress-without-a-plugin">Show recent blogs with thumbnails in wordpress without a plugin</a>
+        
+    
+        
+    
+</div>
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/show-recent-posts-with-thumbnails-in-wordpress-without-a-plugin/" rel="bookmark">Show Recent Posts with Thumbnails in WordPress Without a Plugin</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2019-08-24 15:12:16 &#43;0300 EEST">August 24, 2019</time></span>
+						</div>
+						<div id="blog-categories" style="font-style:italic;font-size:15px; text-align:center; padding: 0 0 10px;">
+	
+	  <em>Category: </em>
+	  <em><a href="/categories/wordpress">WordPress</a></em>
+		
+	
+</div>
+					</header>
 					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/how-to-style-a-very-long-drop-down-menu-in-divi/" rel="bookmark">How to Customize a Very Long Drop Down Menu in Divi</a></h2>
-							</header>
-								How to customize the drop down menu in your Divi theme? This is a common question when you have a menu item that is too long (has many submenu items). You usually come to a point when the content can go below the fold of the screen. In these cases, you will not be able to see the remaining submenu items. Luckily to all of us who are using the Divi theme, there is a nice hidden feature, called &ldquo;mega menu&rdquo;.
-								
-								
-								<a href="/post/how-to-style-a-very-long-drop-down-menu-in-divi/">Read More…</a>
-							</div>
-						  
-						</article>
+						
+
+<p>Sometimes, you may need to add a section in your page that displays your recent blog posts. This can be very useful for portfolio websites and it can be a nice addition to the home page. Normally, you can only add html inside your WordPress posts. However, with the help of <a href="https://codex.wordpress.org/Shortcode">shortcodes</a>, you can add some programming logic and create custom content whereever you want. In this post, I will guide you through the process how to create a custom shortcode to display recent posts with thumbnails in WordPress. By the end, you will be able to display recent posts as a seperate section on your homepage or whereever you want just like this:</p>
+
+<p><img src="../../images/recent-posts-cpr.png" alt="recent-posts-with-thumbnails-wordpress-without-plugin" /></p>
+
+<p>To take full advantage of this tutorial, you need to have some very basic knowledge of php and you need to have a child theme installed or a <a href="https://wordpress.org/plugins/code-snippets/">plugin</a> that lets you add php snippets.</p>
+
+<h2 id="create-a-custom-shortcode">Create a custom shortcode</h2>
+
+<p>The first need to do is to create a shortcode. It is actually easier than you might think. Just paste the following code in your child theme&rsquo;s functions.php:</p>
+
+<pre><code>add_shortcode( 'yonkov_recent_posts', 'yonkov_recent_posts' );
+</code></pre>
+
+<p>This peace of code will create a custom shortcode called yonkov_recent_posts. You can use this snippet to paste it inside any page in WordPress.</p>
+
+<h2 id="display-recent-posts-shortcode-with-thumbnails">Display Recent Posts Shortcode With thumbnails</h2>
+
+<p>Now, whe need to create a function that will do the magic for us:</p>
+
+<pre><code>function yonkov_recent_posts($atts) {
+ob_start();
+$atts = shortcode_atts(
+array( /* Display the 3 latest posts */
+        'showposts' =&gt; '3',
+), $atts, 'yonkov_recent_posts' );
+
+$recent = new WP_Query(); 
+$query = &quot;cat=&quot;.$atts['cat'].&quot;&amp;showposts=&quot;.$atts['showposts'];
+$recent-&gt;query( $query ); ?&gt;
+&lt;ul class=&quot;display-posts-listing grid&quot;&gt;
+
+&lt;?php while( $recent-&gt;have_posts() ) : $recent-&gt;the_post(); ?&gt;
+    &lt;li class=&quot;listing-item&quot;&gt;
+        &lt;a class=&quot;image&quot; href=&quot;&lt;?php the_permalink(); ?&gt;&quot;&gt;
+            &lt;?php /* If there is a featured image, display it */
+    if ( has_post_thumbnail() ) {
+        the_post_thumbnail('medium'); 
+} /* If there is no featured image, display default image */
+else{ ?&gt;
+            &lt;img src=&quot;/wp-content/uploads/2019/07/7804389671562754084-cpr.jpg&quot; &lt;?php } ?&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;title&quot; href=&quot;&lt;?php the_permalink(); ?&gt;&quot;&gt;
+            &lt;?php the_title(); ?&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+
+&lt;?php endwhile; ?&gt;
+&lt;/ul&gt;
+
+&lt;?php return ob_get_clean(); 
+}
+</code></pre>
+
+<p>Do not forget to replace the default image url with your own one or remove it, if you do not want to display default image.
+Now, all that is left to do is to copy the shortcode that we have just created [yonkov_recent_posts] and paste it inside your page content. Save the page and when you open it again, you should see the recent posts inside the page.</p>
+
+<h2 id="style-the-recent-posts-shortcode-with-css">Style the recent posts shortcode with css</h2>
+
+<p>We have managed to display the recent posts but it does not look pretty, right? Let&rsquo;s style it with some css! Add the following code to your main style.css file or open your theme&rsquo;s customizer and paste the code in the additional css tab:</p>
+
+<pre><code>.display-posts-listing.grid {
+    list-style: none;
+    display: flex;
+    max-width: 781px;
+    margin: 0 auto;
+}
+
+.listing-item {
+    width: 33%;
+    position: relative;
+    padding: 10px;
+    margin: 0 10px;
+    box-shadow: 0px 2px 30px 0px rgba(0,0,0,0.06) !important;
+    z-index: 0;
+}
+
+.listing-item .image img {
+    object-fit: cover;
+    max-height: 180px;
+}
+
+.listing-item .title {
+    display: block;
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+    padding: 15px 0px 10px 0;
+    box-shadow: none !important;
+    font-weight: 700;
+}
+.listing-item:hover .image{
+    opacity:0.2;
+    box-shadow: 0 3px 50px -2px rgba(0, 0, 0, 0.2) !important;
+}
+.listing-item:hover {
+    box-shadow: 0 3px 50px -2px rgba(0, 0, 0, 0.2) !important;
+}
+</code></pre>
+
+<p>Great! Now we have the recent posts and they finally look good on desktop! However, on mobile version, they are overlapping and still do not look pretty. Let&rsquo;s fix that as well! Add the following css:</p>
+
+<pre><code>@media only screen and (max-width: 543px){
+    .display-posts-listing.grid {
+        display: block;
+    }
+    .listing-item {
+        width: 100%;
+        padding: 30px;
+        margin: 30px auto;
+    }
+}
+</code></pre>
+
+<p>We have finally created a recent posts widget, that looks surprizingly good and it is fully responsive on mobile! Congratulate yourself for the good work and share this post in the social media, if you find it useful! Happy coding!</p>
+
+<p><strong>Read more: <div></strong><a href="/post/display-related-posts-from-the-same-category-in-wordpress-without-a-pugin/">1. Display Related Posts from the Same Category in WordPress Without a Pugin</a>
+<p><a href="/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/">2. Easy Way to Add a Cookie Popup in WordPress Without a Plugin</a></p></div></p>
+
 					</div>
 				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/how-to-change-the-color-of-woocommerce-add-to-cart-button-in-divi/" rel="bookmark">How to Change the Color of the “Add to Cart” button in Divi</a></h2>
-							</header>
-								In this tutorial, I am going to show you how to change the style of the “Add to Cart” button in your Divi theme. The Woocommerce &ldquo;Add to Cart&rdquo; button is the first thing that the customer sees on your product page, so it is really important to style it with a color that corresponds well with your theme. After all, you do not want to lose sales because your website design is not as good as your competitors’.
-								
-								
-								<a href="/post/how-to-change-the-color-of-woocommerce-add-to-cart-button-in-divi/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
+
 			</div>
-		</div>
-		<center class="">
-			<ul class="pagination">
-                
+		</div> 
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
 
-<ul class="pagination">
-    
-    <li class="page-item">
-        <a href="/categories/wordpress/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-    </li>
-    
-    <li class="page-item">
-    <a href="/categories/wordpress/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-    </li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="/categories/wordpress/">1</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item active"><a class="page-link" href="/categories/wordpress/page/2/">2</a></li>
-    
-    
-    <li class="page-item disabled">
-    <a href="" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-    </li>
-    
-    <li class="page-item">
-        <a href="/categories/wordpress/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-    </li>
-    
-</ul>
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
 
-			</ul>
-		</center>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
 	</div>	
+
 </main>
+
 <footer id="footer">
 	<div class="container">
 		<div class="row">
