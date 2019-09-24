@@ -5,10 +5,19 @@
     <link>https://yonkov.github.io/categories/wordpress/</link>
     <description>Recent content in Wordpress on Atanas Yonkov</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 24 Aug 2019 15:12:16 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 24 Sep 2019 23:25:55 +0300</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/categories/wordpress/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How To Easily Add Parent Category to the WordPress body class</title>
+      <link>https://yonkov.github.io/post/add-parent-category-to-the-body-class/</link>
+      <pubDate>Tue, 24 Sep 2019 23:25:55 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/add-parent-category-to-the-body-class/</guid>
+      <description>I had a client that wanted to customize category archives in such a way that they had different content and different layout for the child categories that belong to a specific parent category. For this, I needed a class name, so i can display it on the frontend and customize each child category&amp;rsquo;s archive page accordingly. A. In this tutorial, I will show you how to quickly assign the parent category id as a body class name to any WordPress child category archive.</description>
+    </item>
     
     <item>
       <title>Shortcode for Recent Posts with Thumbnails in WordPress Without a Plugin</title>
