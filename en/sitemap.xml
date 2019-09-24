@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/post/new-post/</loc>
+    <lastmod>2019-09-24T23:25:55+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/post/show-recent-posts-with-thumbnails-in-wordpress-without-a-plugin/</loc>
     <lastmod>2019-08-24T15:12:16+03:00</lastmod>
   </url>
@@ -233,14 +238,8 @@
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/categories/</loc>
-    <lastmod>2017-11-16T15:24:01+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://yonkov.github.io/tags/</loc>
-    <lastmod>2019-07-03T17:01:16+03:00</lastmod>
+    <lastmod>2019-09-24T23:25:55+03:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -252,6 +251,12 @@
                 hreflang="en"
                 href="https://yonkov.github.io/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/categories/</loc>
+    <lastmod>2019-09-24T23:25:55+03:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -272,7 +277,7 @@
   
   <url>
     <loc>https://yonkov.github.io/categories/</loc>
-    <lastmod>2017-11-16T15:24:01+02:00</lastmod>
+    <lastmod>2019-09-24T23:25:55+03:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -408,7 +413,7 @@
   
   <url>
     <loc>https://yonkov.github.io/tags/</loc>
-    <lastmod>2019-07-03T17:01:16+03:00</lastmod>
+    <lastmod>2019-09-24T23:25:55+03:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
