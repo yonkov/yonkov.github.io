@@ -1,16 +1,34 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
+	<meta name="description" content="See how to assign the parent category id as a body class to any child category.">
 	<meta name="author"      content="Atanas Yonkov">
 	
 	
-	<title></title>
+
+<script type="application/ld+json">{
+"@context":"http://schema.org",
+"@type":"TechArticle",
+"url":"https://yonkov.github.io/post/add-parent-category-to-the-body-class/",
+"author": "Atanas Yonkov",
+"creator" : "Atanas Yonkov",
+"copyrightHolder" : "Atanas Yonkov",
+"headline":"How To Easily Add Parent Category ID to the WordPress body class",
+"description":"See how to assign the parent category id as a body class to any child category.",
+"datePublished":"2019-09-24 23:25:55 &#43;0300 EEST",
+"wordCount": "237",
+"publisher": {
+"@type": "Website",
+"name": "Yonkov.github.io"
+}
+}
+</script>
+
+
+	<title>How To Easily Add Parent Category ID to the WordPress body class</title>
 	
-	<link rel="alternate" hreflang="en" href="https://yonkov.github.io/tags/" />
-	<link rel="alternate" hreflang="x-default" href="https://yonkov.github.io/en" />
 	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
 	
 	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
@@ -31,8 +49,8 @@
 	<div id="head" class="parallax" parallax-speed="2">
 		<h1 id="logo" class="text-center">
 			<img class="img-circle" src="https://yonkov.github.io/images/guy.jpg" alt="me">
-			<span class="title">Атанас Йонков</span>
-			<span class="tagline">Блоггер, Веб-разработчик<br>
+			<span class="title">Atanas Yonkov</span>
+			<span class="tagline">Blogger, Web Developer<br>
 				<a href="">yonkov.atanas@gmail.com</a>
             </span>
 		</h1>
@@ -51,82 +69,130 @@
             <ul class="nav navbar-nav">
                 
                 <li>
-                    <a href="/ru">Главная</a>
+                    <a href="/">Home</a>
                 </li>
                 
                 <li>
-                    <a href="/ru/post/">Блог</a>
+                    <a href="/post">Blog</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+                
+                <li>
+                    <a href="/privacy-policy/">Privacy Policy</a>
                 </li>
                 
 				
-    
-    <li>
-		<span class="language-switcher" style=""> 
-		<i class="fa fa-globe"></i>
-		<a href ="https://yonkov.github.io/tags/" style="">en:  </a>
-		</span>
-    </li>
-    
-
             </ul>
         </div>
     </div>
 </nav>	
 </header>
 <main id="main">
+
 	<div class="container">
+
 		<div class="row topspace">
 			<div class="col-sm-8 col-sm-offset-2">
 
-                
-				<article class="post">
+ 				<article class="post">
+					<header class="entry-header">
+ 						<div id="breadcrumbs" class="entry-meta" style="font-size:15px;">
+<a href="/">Home</a>
+    
+        
+    
+        
+            / <a href="/post">Blog</a>
+        
+    
+        
+            / <a href="/add-parent-category-to-the-body-class">Add parent category to the body class</a>
+        
+    
+        
+    
+</div>
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/add-parent-category-to-the-body-class/" rel="bookmark">How To Easily Add Parent Category ID to the WordPress body class</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2019-09-24 23:25:55 &#43;0300 EEST">September 24, 2019</time></span>
+						</div>
+						<div id="blog-categories" style="font-style:italic;font-size:15px; text-align:center; padding: 0 0 10px;">
+	
+	  <em>Category: </em>
+	  <em><a href="/categories/"></a></em>
+		
+	
+</div>
+					</header>
 					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/ru/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/" rel="bookmark">Как настроить уведомление о cookie в WordPress без плагина</a></h2>
-							</header>
-								В этом уроке я Вам покажу как легко и быстро добавить уведомление о cookie на веб-сайт WordPress без установки каких-либо дополнительных плагинов. После прочтения этой статьи Вы сможете отобразить сообщение cookie при загрузке страницы так, как я показываю его на этом веб-сайте.
-Не поймите меня неправильно - я люблю плагинов, и использую некоторые из них на своих сайтах. Это одна из главных причин, по которой WordPress стал таким популярным. Одним щелчком мыши Вы сможете значительно расширить функциональные возможности вашего сайта.
-								
-								
-								<a href="/ru/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/ru/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/" rel="bookmark">Как настроить уведомление о cookie в WordPress без плагина</a></h2>
-							</header>
-								В этом уроке я Вам покажу как легко и быстро добавить уведомление о cookie на веб-сайт WordPress без установки каких-либо дополнительных плагинов. После прочтения этой статьи Вы сможете отобразить сообщение cookie при загрузке страницы так, как я показываю его на этом веб-сайте.
-Не поймите меня неправильно - я люблю плагинов, и использую некоторые из них на своих сайтах. Это одна из главных причин, по которой WordPress стал таким популярным. Одним щелчком мыши Вы сможете значительно расширить функциональные возможности вашего сайта.
-								
-								
-								<a href="/ru/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-			</div>
-		</div>
-		<center class="">
-			<ul class="pagination">
-                
+						
 
-			</ul>
-		</center>
+<p>I had a client that wanted to customize category archives in such a way that they had different content and different layout for each child category. For this, I needed a class name, so i can display it on the frontend and customize each archive page accordingly.
+At the same time, I needed the same subcategory class for child categories from the same parent. In this tutorial, I will show you how to quickly assign the parent category id as a body class name to any WordPress child category archive.
+Tested and works on my website.</p>
+
+<h2 id="add-parent-category-to-body-class">Add Parent Category to Body Class</h2>
+
+<p>Here is the code that I used to display the parent category class name on the body tag of each child category. Add this on the top of header.php:</p>
+
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+    <span style="color:#00688b">$this_category</span> = get_category(<span style="color:#00688b">$cat</span>);
+    <span style="color:#8b008b;font-weight:bold">if</span> (<span style="color:#00688b">$this_category</span>-&gt;<span style="color:#658b00">category_parent</span> == <span style="color:#b452cd">0</span>) {
+    <span style="color:#00688b">$this_category</span>-&gt;<span style="color:#658b00">category_parent</span> = <span style="color:#00688b">$cat</span>;
+    } <span style="color:#8b008b;font-weight:bold">else</span> {
+    <span style="color:#00688b">$parent_category</span> = get_category(<span style="color:#00688b">$this_category</span>-&gt;<span style="color:#658b00">category_parent</span>);
+    <span style="color:#00688b">$ParentCatId</span> = <span style="color:#00688b">$parent_category</span>-&gt;<span style="color:#658b00">cat_ID</span>;
+    }
+    <span style="color:#00688b">$childcategories</span> = <span style="color:#8b008b;font-weight:bold">array</span>();
+    <span style="color:#00688b">$catx</span> = <span style="color:#00688b">$ParentCatId</span>;
+    <span style="color:#00688b">$cats</span> = get_categories(<span style="color:#cd5555">&#39;parent=&#39;</span>.<span style="color:#00688b">$catx</span>);
+    <span style="color:#8b008b;font-weight:bold">foreach</span>(<span style="color:#00688b">$cats</span> <span style="color:#8b008b;font-weight:bold">as</span> <span style="color:#00688b">$cat</span>) {
+    <span style="color:#00688b">$childcategories</span>[] = <span style="color:#00688b">$cat</span>-&gt;<span style="color:#658b00">term_id</span>; } ;
+    <span style="color:#8b008b;font-weight:bold">if</span>( is_category( <span style="color:#00688b">$childcategories</span> ) ) {
+    <span style="color:#00688b">$class</span> = <span style="color:#cd5555">&#39;parent-category-&#39;</span>.<span style="color:#00688b">$ParentCatId</span>;
+    }
+<span style="color:#1e889b">?&gt;</span> 
+</code></pre></div>
+
+<p>Now, pass the $class variable as argument to the body_class function in header.php. After the changes, the body tag should look like this</p>
+
+<pre><code>&lt;body &lt;?php body_class($class); ?&gt;&gt;
+</code></pre>
+
+<p>Now, when you open a child category archive, you should be able to see a different body classname for the child categories that come from different parent categories,</p>
+
+					</div>
+				</article>
+
+			</div>
+		</div> 
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
 	</div>	
+
 </main>
+
 <footer id="footer">
 	<div class="container">
 		<div class="row">
@@ -203,7 +269,7 @@
 			<div class="col-md-6 widget">
 				<div class="widget-body">
 					<p class="text-right">
-						Copyright &copy; 2017, Атанас Йонков<br>
+						Copyright &copy; 2017, Atanas Yonkov<br>
 						Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> - 
                         Powered by: <a href="https://gohugo.io/" rel="poweredby">Hugo</a>
                     </p>
