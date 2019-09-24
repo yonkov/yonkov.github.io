@@ -16,7 +16,7 @@
       <pubDate>Tue, 24 Sep 2019 23:25:55 +0300</pubDate>
       
       <guid>https://yonkov.github.io/post/add-parent-category-to-the-body-class/</guid>
-      <description>I had a client that wanted to customize category archives in such a way that they had different content and different layout for the child categories that belong to a specific parent category. For this, I needed a class name, so i can display it on the frontend and customize each child category&amp;rsquo;s archive page accordingly. A. In this tutorial, I will show you how to quickly assign the parent category id as a body class name to any WordPress child category archive.</description>
+      <description>I had a client that wanted to customize the category archives in such a way that they had different content and layout for all the child categories that belong to a certain parent category. For this, I needed a class name, so i can display it on the frontend and customize each child category&amp;rsquo;s archive page accordingly. In this tutorial, I will show you how to quickly assign the parent category id as a body class name to any WordPress child category&amp;rsquo;s archive page.</description>
     </item>
     
     <item>
