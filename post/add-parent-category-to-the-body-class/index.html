@@ -18,7 +18,7 @@
 "headline":"How To Easily Add Parent Category ID to the WordPress body class",
 "description":"See how to assign the parent category id as a body class to any child category.",
 "datePublished":"2019-09-24 23:25:55 &#43;0300 EEST",
-"wordCount": "244",
+"wordCount": "278",
 "publisher": {
 "@type": "Website",
 "name": "Yonkov.github.io"
@@ -130,13 +130,13 @@
 					<div class="entry-content">
 						
 
-<p>I had a client that wanted to customize category archives in such a way that they had different content and different layout for the child categories that belong to a specific parent category. For this, I needed a class name, so i can display it on the frontend and customize each archive page accordingly.
-At the same time, I needed the same subcategory class for child categories from the same parent. In this tutorial, I will show you how to quickly assign the parent category id as a body class name to any WordPress child category archive.
+<p>I had a client that wanted to customize category archives in such a way that they had different content and different layout for the child categories that belong to a specific parent category. For this, I needed a class name, so i can display it on the frontend and customize each child category&rsquo;s archive page accordingly.
+A. In this tutorial, I will show you how to quickly assign the parent category id as a body class name to any WordPress child category archive.
 Tested and works on my website.</p>
 
 <h2 id="add-parent-category-to-body-class">Add Parent Category to Body Class</h2>
 
-<p>Here is the code that I used to display the parent category class name on the body tag of each child category. Add this on the top of header.php:</p>
+<p>Here is the code that I used to display the parent category class name on the body tag of each child category. Add this on top of your child&rsquo;s theme header.php:</p>
 
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
     <span style="color:#00688b">$this_category</span> = get_category(<span style="color:#00688b">$cat</span>);
@@ -157,12 +157,16 @@ Tested and works on my website.</p>
 <span style="color:#1e889b">?&gt;</span> 
 </code></pre></div>
 
-<p>Now, pass the $class variable as argument to the body_class function in header.php. After the changes, the body tag should look like this</p>
+<p>Now, pass the $class variable as an argument to the body_class function in header.php. Locate the body tag and update it to look like this:</p>
 
 <pre><code>&lt;body &lt;?php body_class($class); ?&gt;&gt;
 </code></pre>
 
-<p>Now, when you open a child category archive, you should be able to see a different body classname for the child categories that come from different parent categories,</p>
+<p>Now, when you open a child category&rsquo;s archive page and inspect the page with the developer tools (F11), you should be able to see a body classname for the child categories that come from different parent categories.
+For example, if you want to add styles to the child category that has a parent category with id==2, you can use the following css code:
+    .parent-category-2{
+        /* Add your css code here */
+    }</p>
 
 					</div>
 				</article>
