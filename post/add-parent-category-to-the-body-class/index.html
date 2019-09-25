@@ -18,7 +18,7 @@
 "headline":"How To Easily Add Parent Category to the WordPress body class",
 "description":"See how to assign the parent category id as a body class to any child category.",
 "datePublished":"2019-09-24 23:25:55 &#43;0300 EEST",
-"wordCount": "280",
+"wordCount": "314",
 "publisher": {
 "@type": "Website",
 "name": "Yonkov.github.io"
@@ -136,24 +136,27 @@ Tested and works on my website.</p>
 
 <h2 id="add-parent-category-id-to-body-class">Add Parent Category Id to Body Class</h2>
 
-<p>Here is the code that I used to display the parent category class name on the body tag of each child category. Add this on top of your child&rsquo;s theme header.php:</p>
+<p>Here is the code that I used to display the parent category class name on the body tag of each child category. Add this on top of your child theme&rsquo;s header.php:</p>
 
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
     <span style="color:#00688b">$this_category</span> = get_category(<span style="color:#00688b">$cat</span>);
-    <span style="color:#8b008b;font-weight:bold">if</span> (<span style="color:#00688b">$this_category</span>-&gt;<span style="color:#658b00">category_parent</span> == <span style="color:#b452cd">0</span>) {
-    <span style="color:#00688b">$this_category</span>-&gt;<span style="color:#658b00">category_parent</span> = <span style="color:#00688b">$cat</span>;
-    } <span style="color:#8b008b;font-weight:bold">else</span> {
-    <span style="color:#00688b">$parent_category</span> = get_category(<span style="color:#00688b">$this_category</span>-&gt;<span style="color:#658b00">category_parent</span>);
-    <span style="color:#00688b">$ParentCatId</span> = <span style="color:#00688b">$parent_category</span>-&gt;<span style="color:#658b00">cat_ID</span>;
-    }
-    <span style="color:#00688b">$childcategories</span> = <span style="color:#8b008b;font-weight:bold">array</span>();
-    <span style="color:#00688b">$catx</span> = <span style="color:#00688b">$ParentCatId</span>;
-    <span style="color:#00688b">$cats</span> = get_categories(<span style="color:#cd5555">&#39;parent=&#39;</span>.<span style="color:#00688b">$catx</span>);
-    <span style="color:#8b008b;font-weight:bold">foreach</span>(<span style="color:#00688b">$cats</span> <span style="color:#8b008b;font-weight:bold">as</span> <span style="color:#00688b">$cat</span>) {
-    <span style="color:#00688b">$childcategories</span>[] = <span style="color:#00688b">$cat</span>-&gt;<span style="color:#658b00">term_id</span>; } ;
-    <span style="color:#8b008b;font-weight:bold">if</span>( is_category( <span style="color:#00688b">$childcategories</span> ) ) {
-    <span style="color:#00688b">$class</span> = <span style="color:#cd5555">&#39;parent-category-&#39;</span>.<span style="color:#00688b">$ParentCatId</span>;
-    }
+	<span style="color:#228b22">//If category is parent, list it
+</span><span style="color:#228b22"></span>    <span style="color:#8b008b;font-weight:bold">if</span> (<span style="color:#00688b">$this_category</span>-&gt;<span style="color:#658b00">category_parent</span> == <span style="color:#b452cd">0</span>) {
+		<span style="color:#00688b">$this_category</span>-&gt;<span style="color:#658b00">category_parent</span> = <span style="color:#00688b">$cat</span>;
+    } <span style="color:#8b008b;font-weight:bold">else</span> { <span style="color:#228b22">// If category is not parent, list parent category
+</span><span style="color:#228b22"></span>		<span style="color:#00688b">$parent_category</span> = get_category(<span style="color:#00688b">$this_category</span>-&gt;<span style="color:#658b00">category_parent</span>);
+		<span style="color:#228b22">//get the parent category id
+</span><span style="color:#228b22"></span>		<span style="color:#00688b">$ParentCatId</span> = <span style="color:#00688b">$parent_category</span>-&gt;<span style="color:#658b00">cat_ID</span>;
+		}
+		<span style="color:#00688b">$childcategories</span> = <span style="color:#8b008b;font-weight:bold">array</span>();
+		<span style="color:#00688b">$catx</span> = <span style="color:#00688b">$ParentCatId</span>;
+		<span style="color:#00688b">$cats</span> = get_categories(<span style="color:#cd5555">&#39;parent=&#39;</span>.<span style="color:#00688b">$catx</span>);
+		<span style="color:#8b008b;font-weight:bold">foreach</span>(<span style="color:#00688b">$cats</span> <span style="color:#8b008b;font-weight:bold">as</span> <span style="color:#00688b">$cat</span>) {
+			<span style="color:#00688b">$childcategories</span>[] = <span style="color:#00688b">$cat</span>-&gt;<span style="color:#658b00">term_id</span>; } ;
+		<span style="color:#228b22">//if it is a child category, add a class with the parent category id
+</span><span style="color:#228b22"></span>		<span style="color:#8b008b;font-weight:bold">if</span>( is_category( <span style="color:#00688b">$childcategories</span> ) ) {
+			<span style="color:#00688b">$class</span> = <span style="color:#cd5555">&#39;parent-category-&#39;</span>.<span style="color:#00688b">$ParentCatId</span>;
+		}
 <span style="color:#1e889b">?&gt;</span> 
 </code></pre></div>
 
@@ -162,11 +165,15 @@ Tested and works on my website.</p>
 <pre><code>&lt;body &lt;?php body_class($class); ?&gt;&gt;
 </code></pre>
 
-<p>Now, when you open a child category&rsquo;s archive page and inspect the page with the developer tools (F11), you should be able to see a body classname for the child categories that come from different parent categories.
-For example, if you want to add styles to the child category that has a parent category with id==2, you can use the following css code:
-    .parent-category-2{
-        /* Add your css code here */
-    }</p>
+<p>Now, when you open a child category&rsquo;s archive page and inspect the page with the developer tools (F11), you should be able to see a body classname that has the id of its parent category.
+For example, if you want to add styles to the child category that has a parent category with id=2, you can use the following css code:</p>
+
+<pre><code>.parent-category-2{
+    /* Add your css code here */
+}
+</code></pre>
+
+<p>Happy codng!</p>
 
 					</div>
 				</article>
