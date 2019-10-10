@@ -18,7 +18,7 @@
 "headline":"2 Ways to Reorder Posts from a Specific Category in WordPress (With and Without a Plugin)",
 "description":"A detailed guide on how to reorder posts from a certain category in WordPress",
 "datePublished":"2019-10-10 11:40:28 &#43;0300 EEST",
-"wordCount": "524",
+"wordCount": "532",
 "publisher": {
 "@type": "Website",
 "name": "Yonkov.github.io"
@@ -130,7 +130,7 @@
 					<div class="entry-content">
 						
 
-<p>I had a client that needed to build an archive website for a museum. Needless to say, the museum had thousands of materials, seperated into categories and subcategories. Some of the subcategories needed to have a custom post order on the category archive page (by title or by date), while others should have been ordered with the default post order (date descending). In this tutorial, I will show you two ways how to sort the posts from a certain category archive page like a pro!</p>
+<p>I had a client that needed to build an archive website for a museum. Needless to say, the museum had thousands of materials, seperated into categories and subcategories. Some of the subcategories needed to have a custom post order on the category archive page (by title or by published date), while others should have been ordered with the default post order (date descending). In this tutorial, I will show you two ways how to sort the posts from a certain category archive page like a pro!</p>
 
 <h2 id="change-post-order-for-a-certain-category-without-a-plugin">Change Post Order for a Certain Category Without a Plugin</h2>
 
@@ -153,7 +153,7 @@ add_action( 'pre_get_posts', 'change_category_order' );
 
 <p>The above code changes the post order for categories with id-s 15 and 19. All the interviews are sorted in a chronological order (from oldest to newest) and all the documents are sorted by title (from A to Z). Do not forget to change the category id-s with the ones you have. You can easily check which is the correct category id by going to the category archive page and hover the mouse on the edit category button in the WordPress admin black top bar (upper right corner).</p>
 
-<p>P.S. If you need a custom sort (for example by location) you can accomplish this by using WordPress custom fields. This is a very nice feature that lets you assign custom fields (known as metadata) to posts. They are out of the scope of this article, but you can read more about them <a href="https://wordpress.org/support/article/custom-fields/">here</a>.</p>
+<p>P.S. If you need a custom sort (for example by location or by date as a custom field) you can accomplish this by using WordPress custom fields. This is a very nice feature that lets you assign custom fields (known as metadata) to posts. They are out of the scope of this article, but you can read more about them <a href="https://wordpress.org/support/article/custom-fields/">here</a>.</p>
 
 <h2 id="change-post-order-for-a-certain-category-with-a-plugin">Change Post Order for a Certain Category With a Plugin</h2>
 
