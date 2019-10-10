@@ -3,14 +3,32 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
+	<meta name="description" content="A detailed guide on how to reorder posts from a certain category in WordPress">
 	<meta name="author"      content="Atanas Yonkov">
 	
 	
-	<title>Wordpress</title>
+
+<script type="application/ld+json">{
+"@context":"http://schema.org",
+"@type":"TechArticle",
+"url":"https://yonkov.github.io/post/change-post-order-for-a-specific-category-in-wordpress/",
+"author": "Atanas Yonkov",
+"creator" : "Atanas Yonkov",
+"copyrightHolder" : "Atanas Yonkov",
+"headline":"2 Ways to Reorder Posts from a Specific Category in WordPress (With and Without a Plugin)",
+"description":"A detailed guide on how to reorder posts from a certain category in WordPress",
+"datePublished":"2019-10-10 11:40:28 &#43;0300 EEST",
+"wordCount": "524",
+"publisher": {
+"@type": "Website",
+"name": "Yonkov.github.io"
+}
+}
+</script>
+
+
+	<title>2 Ways to Reorder Posts from a Specific Category in WordPress (With and Without a Plugin)</title>
 	
-	<link rel="alternate" hreflang="ru" href="https://yonkov.github.io/ru/categories/wordpress/" />
-	<link rel="alternate" hreflang="x-default" href="https://yonkov.github.io/en" />
 	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
 	
 	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
@@ -67,151 +85,115 @@
                 </li>
                 
 				
-    
-    <li>
-		<span class="language-switcher" style=""> 
-		<i class="fa fa-globe"></i>
-		<a href ="https://yonkov.github.io/ru/categories/wordpress/" style="">ru:  </a>
-		</span>
-    </li>
-    
-
             </ul>
         </div>
     </div>
 </nav>	
 </header>
 <main id="main">
+
 	<div class="container">
+
 		<div class="row topspace">
 			<div class="col-sm-8 col-sm-offset-2">
 
-                
-				<article class="post">
+ 				<article class="post">
+					<header class="entry-header">
+ 						<div id="breadcrumbs" class="entry-meta" style="font-size:15px;">
+<a href="/">Home</a>
+    
+        
+    
+        
+            / <a href="/post">Blog</a>
+        
+    
+        
+            / <a href="/change-post-order-for-a-specific-category-in-wordpress">Change blog order for a specific category in wordpress</a>
+        
+    
+        
+    
+</div>
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/change-post-order-for-a-specific-category-in-wordpress/" rel="bookmark">2 Ways to Reorder Posts from a Specific Category in WordPress (With and Without a Plugin)</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2019-10-10 11:40:28 &#43;0300 EEST">October 10, 2019</time></span>
+						</div>
+						<div id="blog-categories" style="font-style:italic;font-size:15px; text-align:center; padding: 0 0 10px;">
+	
+	  <em>Category: </em>
+	  <em><a href="/categories/wordpress">WordPress</a></em>
+		
+	
+</div>
+					</header>
 					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/12-custom-woocommerce-functions-that-will-make-you-stand-out/" rel="bookmark">12 Custom WooCommerce Functions That Will Make You Stand Out</a></h2>
-							</header>
-								WooCommerce is the most popular ecommerce platform in the world and there is a reason for this – it is highly customizable, easy to use and completely free. While it gives you an awesome standardized solution, which you may use to build a complete online store, sometimes you may want to expand your Wordpress website functionalities and further customize it according to your clients’ needs. In this way, you can make your website stand out from the rest.
-								
-								
-								<a href="/post/12-custom-woocommerce-functions-that-will-make-you-stand-out/">Read More…</a>
-							</div>
-						  
-						</article>
+						
+
+<p>I had a client that needed to build an archive website for a museum. Needless to say, the museum had thousands of materials, seperated into categories and subcategories. Some of the subcategories needed to have a custom post order on the category archive page (by title or by date), while others should have been ordered with the default post order (date descending). In this tutorial, I will show you two ways how to sort the posts from a certain category archive page like a pro!</p>
+
+<h2 id="change-post-order-for-a-certain-category-without-a-plugin">Change Post Order for a Certain Category Without a Plugin</h2>
+
+<p>If you want to achieve this with a plugin, skip the following paragraph. Now, for those of you, who are not afraid to touch php code, I will show you how you can do a custom post sort. Open your child theme&rsquo;s functions.php and paste the following snippet:</p>
+
+<pre><code>/* Reverse default date descending order for specific categories */
+function change_category_order( $query ) {
+    //Sort all interviews by date asc order
+    if($query-&gt;is_category('19') &amp;&amp; $query-&gt;is_main_query()){
+        $query-&gt;set( 'order', 'ASC' );
+    }
+    //Sort all documents by title and then by date asc order
+    elseif($query-&gt;is_category('15') &amp;&amp; $query-&gt;is_main_query()){
+        $query-&gt;query_vars['orderby'] = 'name';
+        $query-&gt;query_vars['order'] = 'ASC';
+    } 
+}
+add_action( 'pre_get_posts', 'change_category_order' );
+</code></pre>
+
+<p>The above code changes the post order for categories with id-s 15 and 19. All the interviews are sorted in a chronological order (from oldest to newest) and all the documents are sorted by title (from A to Z). Do not forget to change the category id-s with the ones you have. You can easily check which is the correct category id by going to the category archive page and hover the mouse on the edit category button in the WordPress admin black top bar (upper right corner).</p>
+
+<p>P.S. If you need a custom sort (for example by location) you can accomplish this by using WordPress custom fields. This is a very nice feature that lets you assign custom fields (known as metadata) to posts. They are out of the scope of this article, but you can read more about them <a href="https://wordpress.org/support/article/custom-fields/">here</a>.</p>
+
+<h2 id="change-post-order-for-a-certain-category-with-a-plugin">Change Post Order for a Certain Category With a Plugin</h2>
+
+<p>If you do not want to get your hands dirty with code, you can use a very lightweight plugin that I created, that lets you control the post order for each category you create or edit. This is done from the WordPress dashboard, so it is very user-friendly and convenient and can easily be done by less tech-savy users. In the WordPress dashboard, go to plugins -&gt; add new and install <a href="https://wordpress.org/plugins/post-order-by-category/">Post Order By Category</a> plugin.</p>
+
+<p>After you have installed the plugin, all you need to do is to edit the category you want to sort. Go to posts-&gt;categories and you will notice a new field just below the category description textarea called post order. The dropdown option list allows you to change the post order by date ascending or date descending. Currently, the plugin can reorder posts only by date but in future I might add additional options. For now, If you need more flexibility (sort the posts by title), I suggest you to read the above paragraph as well.</p>
+
+<p><img src="../../images/edit-category.png" alt="reorder-posts-from-wordpress-admin" /></p>
+
+<p>Happy blogging!</p>
+
 					</div>
 				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/change-product-title-based-on-product-variations-in-woocommerce/" rel="bookmark">Change Product Title Based on Variations WooCommerce</a></h2>
-							</header>
-								WooCommerce is an awesome e-commerce plugin that you can use to create beautiful ecommerce stores. However, sometimes you may also need to customise or change its functionalities, based on your customer’s specific requirements. Luckily, WooCommerce is a highly customizable Wordpress plugin. You can use the provided actions to give your clients the best user experience possible.    (adsbygoogle = window.adsbygoogle || []).push({});  The default WooCommerce behaviour does not allow you to change the page title on the single product page.
-								
-								
-								<a href="/post/change-product-title-based-on-product-variations-in-woocommerce/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/how-to-style-a-very-long-drop-down-menu-in-divi/" rel="bookmark">How to Customize a Very Long Drop Down Menu in Divi</a></h2>
-							</header>
-								How to customize the drop down menu in your Divi theme? This is a common question when you have a menu item that is too long (has many submenu items). You usually come to a point when the content can go below the fold of the screen. In these cases, you will not be able to see the remaining submenu items. Luckily to all of us who are using the Divi theme, there is a nice hidden feature, called &ldquo;mega menu&rdquo;.
-								
-								
-								<a href="/post/how-to-style-a-very-long-drop-down-menu-in-divi/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/how-to-change-the-color-of-woocommerce-add-to-cart-button-in-divi/" rel="bookmark">How to Change the Color of the “Add to Cart” button in Divi</a></h2>
-							</header>
-								In this tutorial, I am going to show you how to change the style of the “Add to Cart” button in your Divi theme. The Woocommerce &ldquo;Add to Cart&rdquo; button is the first thing that the customer sees on your product page, so it is really important to style it with a color that corresponds well with your theme. After all, you do not want to lose sales because your website design is not as good as your competitors’.
-								
-								
-								<a href="/post/how-to-change-the-color-of-woocommerce-add-to-cart-button-in-divi/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
+
 			</div>
-		</div>
-		<center class="">
-			<ul class="pagination">
-                
+		</div> 
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
 
-<ul class="pagination">
-    
-    <li class="page-item">
-        <a href="/categories/wordpress/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-    </li>
-    
-    <li class="page-item">
-    <a href="/categories/wordpress/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-    </li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="/categories/wordpress/">1</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item active"><a class="page-link" href="/categories/wordpress/page/2/">2</a></li>
-    
-    
-    <li class="page-item disabled">
-    <a href="" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-    </li>
-    
-    <li class="page-item">
-        <a href="/categories/wordpress/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-    </li>
-    
-</ul>
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
 
-			</ul>
-		</center>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
 	</div>	
+
 </main>
+
 <footer id="footer">
 	<div class="container">
 		<div class="row">

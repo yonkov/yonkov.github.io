@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/post/change-post-order-for-a-specific-category-in-wordpress/</loc>
+    <lastmod>2019-10-10T11:40:28+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/post/add-parent-category-to-the-body-class/</loc>
     <lastmod>2019-09-24T23:25:55+03:00</lastmod>
   </url>
@@ -239,7 +244,7 @@
   
   <url>
     <loc>https://yonkov.github.io/tags/</loc>
-    <lastmod>2019-09-24T23:25:55+03:00</lastmod>
+    <lastmod>2019-10-10T11:40:28+03:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -413,7 +418,7 @@
   
   <url>
     <loc>https://yonkov.github.io/tags/</loc>
-    <lastmod>2019-09-24T23:25:55+03:00</lastmod>
+    <lastmod>2019-10-10T11:40:28+03:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -469,7 +474,7 @@
   
   <url>
     <loc>https://yonkov.github.io/categories/wordpress/</loc>
-    <lastmod>2019-09-24T23:25:55+03:00</lastmod>
+    <lastmod>2019-10-10T11:40:28+03:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
