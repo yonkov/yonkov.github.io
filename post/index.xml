@@ -16,7 +16,7 @@
       <pubDate>Thu, 10 Oct 2019 11:40:28 +0300</pubDate>
       
       <guid>https://yonkov.github.io/post/change-post-order-for-a-specific-category-in-wordpress/</guid>
-      <description>I had a client that needed to build an archive website for a museum. Needless to say, the museum had thousands of materials, seperated into categories and subcategories. Some of the subcategories needed to have a custom post order on the category archive page (by title or by published date), while others should have been ordered with the default post order (date descending). In this tutorial, I will show you two ways how to sort the posts from a certain category archive page like a pro!</description>
+      <description>I had a client that needed to build an archive website for a museum. Needless to say, the museum had thousands of materials, seperated into categories and subcategories. Some of the subcategories needed to have a custom post order on the category archive page (by title or by published date in ascending order), while others should have been ordered with the default post order (date descending). In this tutorial, I will show you two ways how to sort the posts from a certain category archive page like a pro!</description>
     </item>
     
     <item>
