@@ -18,7 +18,7 @@
 "headline":"2 Ways to Reverse Post Order from a Specific Category in WordPress (With and Without a Plugin)",
 "description":"A detailed guide on how to reorder posts from a certain category in WordPress",
 "datePublished":"2019-10-10 11:40:28 &#43;0300 EEST",
-"wordCount": "539",
+"wordCount": "558",
 "publisher": {
 "@type": "Website",
 "name": "Yonkov.github.io"
@@ -134,15 +134,15 @@
 
 <h2 id="change-post-order-for-a-certain-category-without-a-plugin">Change Post Order for a Certain Category Without a Plugin</h2>
 
-<p>If you want to reverse the post order by category with a plugin, skip the following paragraph. Now, for those of you, who are not afraid to touch php code, I will show you how you can do a custom post sort. Open your child theme&rsquo;s functions.php and paste the following snippet:</p>
+<p>If you want to reverse the post order by category with a plugin, skip the following paragraph. Now, for those of you, who are not afraid to touch php code, I will show you how you can do a custom post sort. Let&rsquo;s say we have 2 categories: interviews and documents. Open your child theme&rsquo;s functions.php and paste the following snippet:</p>
 
 <pre><code>/* Reverse default date descending order for specific categories */
 function change_category_order( $query ) {
-    //Sort all interviews by date asc order
+    //Sort all posts from category with id=19 (interviews) by date asc order
     if($query-&gt;is_category('19') &amp;&amp; $query-&gt;is_main_query()){
         $query-&gt;set( 'order', 'ASC' );
     }
-    //Sort all documents by title and then by date asc order
+    //Sort all posts from category with id=15 (documents) by title and then by date asc order
     elseif($query-&gt;is_category('15') &amp;&amp; $query-&gt;is_main_query()){
         $query-&gt;query_vars['orderby'] = 'name';
         $query-&gt;query_vars['order'] = 'ASC';
