@@ -6,18 +6,18 @@
     <description>Recent content in Posts on Атанас Йонков</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-RU</language>
-    <lastBuildDate>Sun, 24 Feb 2019 10:05:06 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jan 2020 10:05:06 +0200</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/ru/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Setting Up Vuepress With Netlify CMS</title>
+      <title>Генератор статических сайтов Vuepress с Netlify CMS</title>
       <link>https://yonkov.github.io/ru/post/setting-up-vuepress-with-netlify-cms/</link>
-      <pubDate>Sun, 24 Feb 2019 10:05:06 +0200</pubDate>
+      <pubDate>Sun, 19 Jan 2020 10:05:06 +0200</pubDate>
       
       <guid>https://yonkov.github.io/ru/post/setting-up-vuepress-with-netlify-cms/</guid>
-      <description>Example repo: https://github.com/yonkov/Vuepress-project
+      <description>Пример: https://github.com/yonkov/Vuepress-project
 VuePress является одной из наиболее перспективных инструментов для создания быстрых и легких статических веб-сайтов, которые функционируют как одностраничные приложения (SPA). К концу этого урока вы узнаете, как настроить VuePress и добавить к нему легкую и простую в использовании систему управления контентом, которая называется Netlify CMS. Давайте начнем!
 Table of Contents     Зачем использовать статические генераторы сайтов Почему Vuepress Почему Netlify CMS Как установить VuePress Добавить VuePress в Github Развернуть в Netlify Интеграция Netlify CMS в VuePress     Зачем использовать статические генераторы сайтов Генераторы статических сайтов становятся все более популярными в наши дни благодаря лучшей производительности, низкой стоимости, высокой безопасности и простота использования для разработчиков.</description>
     </item>
