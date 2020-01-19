@@ -161,7 +161,9 @@ add_action( 'pre_get_posts', 'change_category_order' );
 
 <p>After you have installed the plugin, all you need to do is to edit the category you want to sort. Go to posts-&gt;categories and you will notice a new field just below the category description textarea called post order. The dropdown option list allows you to change the post order by date ascending or date descending.</p>
 
-<h3 id="support-for-custom-post-types">Support for Custom Post Types</h3>
+<p>Currently, the plugin can reverse the posts only by date but in future I might add additional options. For now, If you need more flexibility (sort the posts by title), I suggest you to read the above paragraph as well.</p>
+
+<h5 id="support-for-custom-post-types">Support for Custom Post Types</h5>
 
 <p>The plugin can also reverse post order within category for custom post types (not only for posts)! You can reverse the post order of category archives for any custom post types (projects, portfolio items, testimonials, etc.), as long as you use categories as a default taxonomy. However, to display a category archive for custom post types, you also need to extend your child theme&rsquo;s functions.php. Here is an example code that lets you do that:</p>
 
@@ -174,8 +176,6 @@ add_action( 'pre_get_posts', 'change_category_order' );
 }
 add_filter('pre_get_posts', 'my_query_post_type');
 </code></pre>
-
-<p>Currently, the plugin can reverse the posts only by date but in future I might add additional options. For now, If you need more flexibility (sort the posts by title), I suggest you to read the above paragraph as well.</p>
 
 <p><img src="../../images/edit-category.png" alt="reorder-posts-from-wordpress-admin" /></p>
 
