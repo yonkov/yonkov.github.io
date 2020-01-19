@@ -40,6 +40,16 @@
   <url>
     <loc>https://yonkov.github.io/post/setting-up-vuepress-with-netlify-cms/</loc>
     <lastmod>2019-02-24T10:05:06+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://yonkov.github.io/ru/post/setting-up-vuepress-with-netlify-cms/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yonkov.github.io/post/setting-up-vuepress-with-netlify-cms/"
+                />
   </url>
   
   <url>
@@ -464,6 +474,16 @@
     <loc>https://yonkov.github.io/categories/vuepress/</loc>
     <lastmod>2019-02-24T10:05:06+02:00</lastmod>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://yonkov.github.io/ru/categories/vuepress/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yonkov.github.io/categories/vuepress/"
+                />
   </url>
   
   <url>
