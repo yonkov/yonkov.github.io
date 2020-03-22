@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Shortcode to Display Recent Posts for Each Category in WordPress</title>
+      <link>https://yonkov.github.io/post/shortcode-for-recent-posts-for-each-category-in-wordpress/</link>
+      <pubDate>Sun, 22 Mar 2020 10:30:41 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/post/shortcode-for-recent-posts-for-each-category-in-wordpress/</guid>
+      <description>Sometimes, you may need to add a section in your page that displays recent blog posts. WordPress homepage by default shows recent blog posts and nothing else. However, in most of the cases, the user would like to customize the homepage content to display other sections as well. In such cases, you can use the Gutenberg editor, the new core WordPress editor, since it has a lot of code blocks that are very handy and easy to use.</description>
+    </item>
+    
+    <item>
       <title>2 Ways to Reverse Post Order from a Specific Category in WordPress (With and Without a Plugin)</title>
       <link>https://yonkov.github.io/post/change-post-order-for-a-specific-category-in-wordpress/</link>
       <pubDate>Thu, 10 Oct 2019 11:40:28 +0300</pubDate>

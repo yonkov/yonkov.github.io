@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="In this tutorial, I will show you how to create a custom shortcode to display the last 5 posts from each different post category in WordPress without the use of any plugins">
+	<meta name="author"      content="Atanas Yonkov">
+	
+	
+
+<script type="application/ld+json">{
+"@context":"http://schema.org",
+"@type":"TechArticle",
+"url":"https://yonkov.github.io/post/shortcode-for-recent-posts-for-each-category-in-wordpress/",
+"author": "Atanas Yonkov",
+"creator" : "Atanas Yonkov",
+"copyrightHolder" : "Atanas Yonkov",
+"headline":"Shortcode to Display Recent Posts for Each Category in WordPress",
+"description":"In this tutorial, I will show you how to create a custom shortcode to display the last 5 posts from each different post category in WordPress without the use of any plugins",
+"datePublished":"2020-03-22 10:30:41 &#43;0200 EET",
+"wordCount": "810",
+"publisher": {
+"@type": "Website",
+"name": "Yonkov.github.io"
+}
+}
+</script>
+
+
+	<title>Shortcode to Display Recent Posts for Each Category in WordPress</title>
+	
+	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
+	
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	
+	<link rel="preload" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"></noscript>
+	
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700"></noscript>
+	
+	<link href="/css/styles.css" rel="stylesheet">
+	<link rel="preload" href="/css/custom.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="/css/custom.css"></noscript>		
+		<script>!function(e){"use strict";var t=function(t,n,r){var o,a=e.document,l=a.createElement("link");if(n)o=n;else{var i=(a.body||a.getElementsByTagName("head")[0]).childNodes;o=i[i.length-1]}var d=a.styleSheets;l.rel="stylesheet",l.href=t,l.media="only x",function e(t){if(a.body)return t();setTimeout(function(){e(t)})}(function(){o.parentNode.insertBefore(l,n?o:o.nextSibling)});var s=function(e){for(var t=l.href,n=d.length;n--;)if(d[n].href===t)return e();setTimeout(function(){s(e)})};function u(){l.addEventListener&&l.removeEventListener("load",u),l.media=r||"all"}return l.addEventListener&&l.addEventListener("load",u),l.onloadcssdefined=s,s(u),l};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r,r.getAttribute("media")),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){t.poly(),e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);</script>	
+</head>
+<body class="home">
+<header id="header">
+	<div id="head" class="parallax" parallax-speed="2">
+		<h1 id="logo" class="text-center">
+			<img class="img-circle" src="https://yonkov.github.io/images/guy.jpg" alt="me">
+			<span class="title">Atanas Yonkov</span>
+			<span class="tagline">Blogger, Web Developer<br>
+				<a href="">yonkov.atanas@gmail.com</a>
+            </span>
+		</h1>
+	</div>
+    <nav class="navbar navbar-default navbar-sticky">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/post">Blog</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+                
+                <li>
+                    <a href="/privacy-policy/">Privacy Policy</a>
+                </li>
+                
+				
+            </ul>
+        </div>
+    </div>
+</nav>	
+</header>
+<main id="main">
+
+	<div class="container">
+
+		<div class="row topspace">
+			<div class="col-sm-8 col-sm-offset-2">
+
+ 				<article class="post">
+					<header class="entry-header">
+ 						<div id="breadcrumbs" class="entry-meta" style="font-size:15px;">
+<a href="/">Home</a>
+    
+        
+    
+        
+            / <a href="/post">Blog</a>
+        
+    
+        
+            / <a href="/shortcode-for-recent-posts-for-each-category-in-wordpress">Shortcode for recent blogs for each category in wordpress</a>
+        
+    
+        
+    
+</div>
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/shortcode-for-recent-posts-for-each-category-in-wordpress/" rel="bookmark">Shortcode to Display Recent Posts for Each Category in WordPress</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2020-03-22 10:30:41 &#43;0200 EET">March 22, 2020</time></span>
+						</div>
+						<div id="blog-categories" style="font-style:italic;font-size:15px; text-align:center; padding: 0 0 10px;">
+	
+	  <em>Category: </em>
+	  <em><a href="/categories/wordpress">WordPress</a></em>
+		
+	
+</div>
+					</header>
+					<div class="entry-content">
+						
+
+<p>Sometimes, you may need to add a section in your page that displays recent blog posts. WordPress homepage by default shows recent blog posts and nothing else. However, in most of the cases, the user would like to customize the homepage content to display other sections as well. In such cases, you can use the Gutenberg editor, the new core WordPress editor, since it has a lot of code blocks that are very handy and easy to use. There is also the <a href="https://gutenberghub.com/blocks/latest-posts-block/">recent posts block</a> that lets you display the most recent blog posts. However, in some cases, you might want to make some customizations. You might want to display a section on the homepage (or any other page) that displays the most recent blog posts from a specific category (or even display multiple sections of latest blog posts sorted by category). In this tutorial, I will share with you what I did - looping through all categories and displaying the 5 most recent blog posts for each different category:</p>
+
+<p><img src="../../images/recent-posts-for-each-category.jpg" alt="recent-posts-by-category" /></p>
+
+<p>This can be very useful for websites with lots of content that needs to be ordered by category and it can be a nice addition to the home page (or any other page you want). Normally, you can only add Gutenberg blocks or custom html inside your WordPress posts. However, with the help of <a href="https://codex.wordpress.org/Shortcode">shortcodes</a>, you can add some programming logic and create custom content whereever you want. In this post, I will guide you through the process how to create a custom shortcode to display recent posts for each different category in WordPress. By the end of this tutorial, you will be able to display the latest posts as a seperate section on your homepage or whereever you want, in a beautful, two column layout.</p>
+
+<p>To take full advantage of this tutorial, you need to have some very basic knowledge of php and you need to have a child theme installed or a <a href="https://wordpress.org/plugins/code-snippets/">plugin</a> that lets you add php snippets.</p>
+
+<h2 id="create-a-custom-shortcode">Create a Custom Shortcode</h2>
+
+<p>First, you need to create a shortcode. It is actually easier than you might think. Just paste the following code in your child theme&rsquo;s functions.php:</p>
+
+<pre><code>add_shortcode('yonkov_recent_posts_by_category', 'yonkov_recent_posts_by_category');
+</code></pre>
+
+<p>This piece of code will create a custom shortcode for you called yonkov_recent_posts_by_category.</p>
+
+<h2 id="display-recent-posts-with-thumbnails">Display Recent Posts With thumbnails</h2>
+
+<p>Now, we need to create a function that will do the magic for us:
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+<span style="color:#228b22">/* Recent posts by category shortcode */</span>
+
+<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">yonkov_recent_posts_by_category</span> () {
+    
+    <span style="color:#8b008b;font-weight:bold">global</span> <span style="color:#00688b">$post</span>;
+    
+    <span style="color:#228b22">// Instantate on object. We need this for the shortcode to work
+</span><span style="color:#228b22"></span>    ob_start();
+    
+    <span style="color:#00688b">$categories</span> = get_categories(); <span style="color:#1e889b">?&gt;</span>
+    
+    &lt;<span style="color:#8b008b;font-weight:bold">div</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;recent-posts-per-category&#34;</span>&gt; <span style="color:#1e889b">&lt;?php</span>
+    
+    <span style="color:#8b008b;font-weight:bold">foreach</span>(<span style="color:#00688b">$categories</span> <span style="color:#8b008b;font-weight:bold">as</span> <span style="color:#00688b">$category</span>){ <span style="color:#228b22">//loop through all categories
+</span><span style="color:#228b22"></span>    
+        <span style="color:#228b22">//initiate i counter
+</span><span style="color:#228b22"></span>        <span style="color:#00688b">$i</span>=<span style="color:#b452cd">1</span>;
+        
+        <span style="color:#228b22">// the query
+</span><span style="color:#228b22"></span>        <span style="color:#00688b">$the_query</span> = <span style="color:#8b008b;font-weight:bold">new</span> WP_Query( <span style="color:#8b008b;font-weight:bold">array</span>( <span style="color:#cd5555">&#39;category_name&#39;</span> =&gt; <span style="color:#00688b">$category</span>-&gt;<span style="color:#658b00">name</span>, <span style="color:#cd5555">&#39;posts_per_page&#39;</span> =&gt; <span style="color:#b452cd">6</span> ) ); 
+
+        <span style="color:#228b22">// The Loop
+</span><span style="color:#228b22"></span>        <span style="color:#8b008b;font-weight:bold">if</span> ( <span style="color:#00688b">$the_query</span>-&gt;<span style="color:#658b00">have_posts</span>() ) {
+        <span style="color:#228b22">// Get the ID of a given category
+</span><span style="color:#228b22"></span>        <span style="color:#00688b">$category_id</span> = get_cat_ID( <span style="color:#00688b">$category</span>-&gt;<span style="color:#658b00">name</span> );
+    
+        <span style="color:#228b22">// Get the URL of this category
+</span><span style="color:#228b22"></span>        <span style="color:#00688b">$category_link</span> = get_category_link( <span style="color:#00688b">$category_id</span> ); <span style="color:#1e889b">?&gt;</span>
+        
+        &lt;<span style="color:#8b008b;font-weight:bold">div</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;column&#34;</span>&gt;
+            
+            &lt;<span style="color:#8b008b;font-weight:bold">a</span> <span style="color:#658b00">href</span>=<span style="color:#cd5555">&#34;</span><span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">echo</span> esc_url( <span style="color:#00688b">$category_link</span> ); <span style="color:#1e889b">?&gt;</span><span style="color:#cd5555">&#34;</span>&gt;
+                &lt;<span style="color:#8b008b;font-weight:bold">h4</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;title&#34;</span>&gt;<span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">echo</span> esc_attr(<span style="color:#00688b">$category</span>-&gt;<span style="color:#658b00">name</span>);<span style="color:#1e889b">?&gt;</span> &lt;/<span style="color:#8b008b;font-weight:bold">h4</span>&gt; 
+            &lt;/<span style="color:#8b008b;font-weight:bold">a</span>&gt;
+            
+            &lt;<span style="color:#8b008b;font-weight:bold">ul</span> <span style="color:#658b00">class </span>=<span style="color:#cd5555">&#34;display-posts-listing grid&#34;</span>&gt;
+            
+            <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">while</span> ( <span style="color:#00688b">$the_query</span>-&gt;<span style="color:#658b00">have_posts</span>() ) :
+
+                <span style="color:#00688b">$the_query</span>-&gt;<span style="color:#658b00">the_post</span>();
+                <span style="color:#228b22">// Display the last 5 posts 
+</span><span style="color:#228b22"></span>                <span style="color:#8b008b;font-weight:bold">if</span>(<span style="color:#00688b">$i</span>&lt;<span style="color:#b452cd">6</span>) : <span style="color:#1e889b">?&gt;</span>
+                
+                &lt;<span style="color:#8b008b;font-weight:bold">li</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;listing-item&#34;</span>&gt;
+                    &lt;<span style="color:#8b008b;font-weight:bold">a</span> <span style="color:#658b00">class</span>=<span style="color:#cd5555">&#34;title&#34;</span> <span style="color:#658b00">href</span>=<span style="color:#cd5555">&#34;</span><span style="color:#1e889b">&lt;?php</span> the_permalink(); <span style="color:#1e889b">?&gt;</span><span style="color:#cd5555">&#34;</span>&gt; <span style="color:#1e889b">&lt;?php</span> the_title(); <span style="color:#1e889b">?&gt;</span> &lt;/<span style="color:#8b008b;font-weight:bold">a</span>&gt; 
+                &lt;/<span style="color:#8b008b;font-weight:bold">li</span>&gt;
+                
+                <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">else</span>: <span style="color:#228b22">// Display a read more button if there are more than 5 posts ?&gt;
+</span><span style="color:#228b22"></span>        
+                &lt;a class=<span style="color:#cd5555">&#34;view-more&#34;</span> href=<span style="color:#cd5555">&#34;&lt;?php echo esc_url( </span><span style="color:#cd5555">$category_link</span><span style="color:#cd5555"> ); ?&gt;&#34;</span>&gt;View more&lt;/a&gt;
+        
+                &lt;?php <span style="color:#8b008b;font-weight:bold">endif</span>;
+                
+                <span style="color:#00688b">$i</span>++; <span style="color:#1e889b">?&gt;</span>
+                
+            <span style="color:#1e889b">&lt;?php</span> <span style="color:#8b008b;font-weight:bold">endwhile</span>; <span style="color:#1e889b">?&gt;</span>
+
+            &lt;/<span style="color:#8b008b;font-weight:bold">ul</span>&gt;
+        
+        &lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt; <span style="color:#1e889b">&lt;?php</span>
+            
+        }
+
+        <span style="color:#228b22">/* Restore original Post Data */</span>
+        wp_reset_postdata();
+    } <span style="color:#1e889b">?&gt;</span>
+
+    &lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt; <span style="color:#1e889b">&lt;?php</span>
+    
+    <span style="color:#8b008b;font-weight:bold">return</span> ob_get_clean();
+
+}
+</code></pre></div>
+Now, all that is left to do is to copy the shortcode that we have just created:</p>
+
+<pre><code>[yonkov_recent_posts_by_category]
+</code></pre>
+
+<p>In your WordPress dashboard, go to pages and choose a page to edit. Paste the shortcode somewhere inside your page content. Save the page and when you visit it again, you should be able to display the recent posts for each different cateogory inside the page.</p>
+
+<h2 id="style-the-recent-posts-shortcode-with-css">Style the recent posts shortcode with css</h2>
+
+<p>We have managed to display the recent posts but it does not look pretty, right? Let&rsquo;s style it with some css! Add the following code to your main style.css file or open your theme&rsquo;s customizer and paste the code in the additional css tab:</p>
+
+<pre><code>/* Two column layout */
+@media (min-width: 40em){
+
+.recent-posts, .recent-posts-per-category {
+        display: table;
+        width: 100%;
+    }
+
+.column {
+        width: 50%;
+        float: left;
+    }
+
+.recent-posts-per-category:after {
+        content: '';
+        clear: both;
+    }
+
+}
+</code></pre>
+
+<p>Great! Now we have a seperate section for the latest posts from each different category in WordPress and they are displayed in a beautiful 2-column layout on desktop!</p>
+
+<p>We have finally created a section that displays recent posts for each category that looks surprizingly good and it is fully responsive on mobile!</p>
+
+<p><strong>Read more: <div></strong><a href="/post/display-related-posts-from-the-same-category-in-wordpress-without-a-pugin/">1. Display Related Posts from the Same Category in WordPress Without a Pugin</a>
+<p><a href="/post/show-recent-posts-with-thumbnails-in-wordpress-without-a-plugin">2. Shortcode for Recent Posts with Thumbnails in WordPress Without a Plugin</a></p></div></p>
+
+					</div>
+				</article>
+
+			</div>
+		</div> 
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+	</div>	
+
+</main>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><br>
+						<a href="mailto:yonkov.atanas@gmail.com">yonkov.atanas@gmail.com</a><br>
+						<br>
+						
+					</p>
+				</div>
+			</div>
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Follow me</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+                        
+                            
+                                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram fa-2"></i></a>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <a href="https://github.com/yonkov" target="_blank"><i class="fa fa-github fa-2"></i></a>
+                            
+                        
+                            
+                        
+					</p>
+				</div>
+			</div>
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Personal Info</h3>
+				<div class="widget-body">
+					<p>Welcome to my professional website! I work as a devoted web developer and a freelancer. My ultimate goal is customer satisfaction. I focus on quality and creating value for my clients. </p>
+					
+				</div>
+			</div>
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Email</h3>
+				<div class="widget-body">
+					<p><br>
+						<a href="mailto:yonkov.atanas@gmail.com">yonkov.atanas@gmail.com</a><br>
+						<br>
+                        
+					</p>
+				</div>
+			</div>
+		</div> 
+	</div>
+</footer>
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p></p>
+				</div>
+			</div>
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2017, Atanas Yonkov<br>
+						Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> - 
+                        Powered by: <a href="https://gohugo.io/" rel="poweredby">Hugo</a>
+                    </p>
+				</div>
+			</div>
+		</div> 
+	</div>
+</footer>
+
+
+    
+      
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://yonkov.github.io/js/template.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145838420-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-145838420-1');
+</script>
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+	<noscript><link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"></noscript>	
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#000"},button:{background:"#f1d600"}},content:{message:"This website uses cookies to analyze traffic and for advertisements. By continuing you agree to the use of these cookies.",dismiss:"Ok, I accept",href:"https://yonkov.github.io/privacy-policy"}})});</script>
+</body>
+</html>
