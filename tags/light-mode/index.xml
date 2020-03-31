@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Light Mode on Atanas Yonkov</title>
+    <link>https://yonkov.github.io/tags/light-mode/</link>
+    <description>Recent content in Light Mode on Atanas Yonkov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 31 Mar 2020 17:46:43 +0300</lastBuildDate>
+    
+	<atom:link href="https://yonkov.github.io/tags/light-mode/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Switching off the Lights - Add Dark Mode to WordPress</title>
+      <link>https://yonkov.github.io/post/add-dark-mode-toggle-button-to-wordpress/</link>
+      <pubDate>Tue, 31 Mar 2020 17:46:43 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/add-dark-mode-toggle-button-to-wordpress/</guid>
+      <description>Yesterday, 30 March, StackOverflow started to offer a dark theme version (still in beta) for their visitors! On their home page, you can read: &amp;ldquo;You’ve been asking for dark mode for years. The dark mode beta is finally here. Change your preferences any time.&amp;rdquo;
+More and More web apps are offering or considering to offer &amp;ldquo;dark mode&amp;rdquo; layout to their visitors that comes together with their normal, &amp;ldquo;light mode&amp;rdquo; layout.</description>
+    </item>
+    
+  </channel>
+</rss>

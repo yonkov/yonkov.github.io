@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="In this tutorial, I will show you how to add dark mode toggle button to allow users to switch between day and night mode.">
+	<meta name="author"      content="Atanas Yonkov">
+	
+	
+
+<script type="application/ld+json">{
+"@context":"http://schema.org",
+"@type":"TechArticle",
+"url":"https://yonkov.github.io/post/add-dark-mode-toggle-button-to-wordpress/",
+"author": "Atanas Yonkov",
+"creator" : "Atanas Yonkov",
+"copyrightHolder" : "Atanas Yonkov",
+"headline":"Switching off the Lights - Add Dark Mode to WordPress",
+"description":"In this tutorial, I will show you how to add dark mode toggle button to allow users to switch between day and night mode.",
+"datePublished":"2020-03-31 17:46:43 &#43;0300 EEST",
+"wordCount": "1774",
+"publisher": {
+"@type": "Website",
+"name": "Yonkov.github.io"
+}
+}
+</script>
+
+
+	<title>Switching off the Lights - Add Dark Mode to WordPress</title>
+	
+	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
+	
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	
+	<link rel="preload" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"></noscript>
+	
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700"></noscript>
+	
+	<link href="/css/styles.css" rel="stylesheet">
+	<link rel="preload" href="/css/custom.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="/css/custom.css"></noscript>		
+		<script>!function(e){"use strict";var t=function(t,n,r){var o,a=e.document,l=a.createElement("link");if(n)o=n;else{var i=(a.body||a.getElementsByTagName("head")[0]).childNodes;o=i[i.length-1]}var d=a.styleSheets;l.rel="stylesheet",l.href=t,l.media="only x",function e(t){if(a.body)return t();setTimeout(function(){e(t)})}(function(){o.parentNode.insertBefore(l,n?o:o.nextSibling)});var s=function(e){for(var t=l.href,n=d.length;n--;)if(d[n].href===t)return e();setTimeout(function(){s(e)})};function u(){l.addEventListener&&l.removeEventListener("load",u),l.media=r||"all"}return l.addEventListener&&l.addEventListener("load",u),l.onloadcssdefined=s,s(u),l};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r,r.getAttribute("media")),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){t.poly(),e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);</script>	
+</head>
+<body class="home">
+<header id="header">
+	<div id="head" class="parallax" parallax-speed="2">
+		<h1 id="logo" class="text-center">
+			<img class="img-circle" src="https://yonkov.github.io/images/guy.jpg" alt="me">
+			<span class="title">Atanas Yonkov</span>
+			<span class="tagline">Blogger, Web Developer<br>
+				<a href="">yonkov.atanas@gmail.com</a>
+            </span>
+		</h1>
+	</div>
+    <nav class="navbar navbar-default navbar-sticky">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/post">Blog</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+                
+                <li>
+                    <a href="/privacy-policy/">Privacy Policy</a>
+                </li>
+                
+				
+            </ul>
+        </div>
+    </div>
+</nav>	
+</header>
+<main id="main">
+
+	<div class="container">
+
+		<div class="row topspace">
+			<div class="col-sm-8 col-sm-offset-2">
+
+ 				<article class="post">
+					<header class="entry-header">
+ 						<div id="breadcrumbs" class="entry-meta" style="font-size:15px;">
+<a href="/">Home</a>
+    
+        
+    
+        
+            / <a href="/post">Blog</a>
+        
+    
+        
+            / <a href="/add-dark-mode-toggle-button-to-wordpress">Add dark mode toggle button to wordpress</a>
+        
+    
+        
+    
+</div>
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/add-dark-mode-toggle-button-to-wordpress/" rel="bookmark">Switching off the Lights - Add Dark Mode to WordPress</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2020-03-31 17:46:43 &#43;0300 EEST">March 31, 2020</time></span>
+						</div>
+						<div id="blog-categories" style="font-style:italic;font-size:15px; text-align:center; padding: 0 0 10px;">
+	
+	  <em>Category: </em>
+	  <em><a href="/categories/wordpress">WordPress</a></em>
+		
+	
+</div>
+					</header>
+					<div class="entry-content">
+						
+
+<p>Yesterday, 30 March, <a href="https://stackoverflow.com/">StackOverflow</a> started to offer a dark theme version (still in beta) for their visitors! On their home page, you can read: <em>&ldquo;You’ve been asking for dark mode for years. The dark mode beta is finally here. Change your preferences any time.&rdquo;</em></p>
+
+<p>More and More web apps are offering or considering to offer &ldquo;dark mode&rdquo; layout to their visitors that comes together with their normal, &ldquo;light mode&rdquo; layout. To name a few, YouTube and Twitter have already implemented dark mode. Recently, Facebook Messenger and some other mobile apps including <a href="https://nighteye.app/wikipedia-night-mode/">Wikipedia</a> have also implemented this feature.</p>
+
+<p>The dark mode has been around since the first days of computers. Historically, phosphorescent screens were used for computer user interfaces.  The screen usually consisted of a very dark color background, while the text appeared to be green or amber, depending on the type of phosphorus applied on the monochrome screen.</p>
+
+<p><img src="../../images/ibm-phosphorus.jpg" alt="phosphorescent screens" /></p>
+
+<p>With the advent of teletext in the early 70s, different text color schemes were implemented, however, soon dark-on-light background color schemes became the de facto norm, leaving the dark mode to scholars and crazy hackers. However, recent trends shows that more and more websites and businesses are looking back to it.</p>
+
+<p>Some argue that a color scheme with light text on a dark background is easier to read on the screen, because the lower brightness causes less eyestrain. A 2018 article by <a href="https://db0nus869y26v.cloudfront.net/en/Popular_Science">Popular Science</a> suggests that dark mode is easier on the eyes and consumes up to six times less battery. The black design is considered to be sophisticated, energetic, mysterious, elegant. According to an <a href="https://philpresents.wordpress.com/2012/03/23/5-reasons-why-black-is-the-new-white/">article by Phil Waknell</a>, the dark mode makes visitors keep coming back to your website and can make your publishing platform or online business stand out from the crowd.</p>
+
+<p>Personally, I like it when websites have a dark theme mode, especially at night, when my eyes are tired from working on the PC the whole day. So, as a theme developer, I realised that it will be nice to add this option to my themes in WordPress. WordPress is my favourite CMS, however, they are not that quick in adopting new trends. I found that there are a lot of tutorials about how to implement dark theme mode in <a href="https://css-tricks.com/a-dark-mode-toggle-with-react-and-themeprovider/">react</a>, however, I could not find any info on how to do it in WordPress. There is a <a href="https://wordpress.org/plugins/dark-mode/">Dark Mode</a> plugin, however, it only adds dark mode to the WordPress admin dashboard. I think it will be even more benefitial, if the websites can actually offer this feature to their visitors. In this way,  you can attract more visitors to your website, make them stay more time on the page, read more articles and last but not least protect their eyes from being hurt.</p>
+
+<h2 id="add-dark-mode-switcher-using-a-plugin">Add Dark Mode Switcher Using a Plugin</h2>
+
+<p>Luckily, I recently found <a href="https://wordpress.org/plugins/wp-night-mode/">WP Night Mode</a>, an awesome plugin that you can use to quickly add dark mode toggle to your WordPress website. Install the plugin and call the dark mode toggler by adding a &ldquo;Night Mode&rdquo; menu item with a css class &ldquo;wp-night-mode&rdquo;. To do this, go to appearance =&gt; menus and click on the options tab (top right corner) and put a tick on css classes. This will allow you to add the &ldquo;wp-night-mode&rdquo; class on the menu item. Now, add menu item called &ldquo;Night Mode&rdquo; and assign the css class to it.</p>
+
+<p><img src="../../images/wp-night-mode.png" alt="wp night mode" /></p>
+
+<p>When you refresh the home page, you should see the dark mode switcher in your website menu. You can also add the dark mode toggler as a shortcode. For more information, refer to the plugin <a href="https://wordpress.org/plugins/wp-night-mode/">documentation</a>.</p>
+
+<p>You can now customize the layout of the dark mode by going to the theme customizer =&gt; Night Mode. You can change colors of links, text and background. However, in some cases you may want to have more flexibility. For further customization, you can use the &ldquo;wp-night-mode-on&rdquo; css class that is appended to the body tag on each page, when the dark mode is selected. For example, if you want to change the background color of specific element with id &ldquo;div-1&rdquo;, you can use the following code:</p>
+
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#8b008b;font-weight:bold">body</span>.<span style="color:#008b45;font-weight:bold">wp-night-mode-on</span> #<span style="color:#008b45">div-1</span> {
+    <span style="color:#8b008b;font-weight:bold">background-color</span>: <span style="color:#8b008b;font-weight:bold">red</span>;
+}</code></pre></div>
+
+<h2 id="add-dark-mode-switcher-without-a-plugin">Add Dark Mode Switcher Without a Plugin</h2>
+
+<p>If you are a theme developer like me or for some reason you are looking more flexibility, I will also provide a custom solution on how to add a dark mode toggle on your website. You can see a live implementaton of this in my free WordPress theme <a href="https://wordpress.org/themes/nasio/">Nasio</a>:</p>
+
+<p><strong>Add the html and css</strong></p>
+
+<p>First, we need to add the html for our night mode toggle button. To do that, we will use a small part of the code from the <a href="https://wordpress.org/plugins/wp-night-mode/">WP Night Mode</a> plugin, since it is open-source and free to use. Put this code in your theme&rsquo;s header or footer. In my case, I decided to add it in the theme footer:</p>
+
+<pre><code>&lt;div class=&quot;wpnm-button&quot;&gt;
+    &lt;div class=&quot;wpnm-button-inner-left&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;wpnm-button-inner&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Now, lets make it pretty! Add the following css to it:</p>
+
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#228b22">/* Dark mode switcher */</span>
+ .<span style="color:#008b45;font-weight:bold">wpnm-button</span> {
+     <span style="color:#8b008b;font-weight:bold">font-size</span>: <span style="color:#b452cd">16</span><span style="color:#00688b;font-weight:bold">px</span> 
+}
+ .<span style="color:#008b45;font-weight:bold">wpnm-button-inner-left</span>:<span style="color:#707a7c">empty</span> {
+     <span style="color:#8b008b;font-weight:bold">margin-left</span>: <span style="color:#b452cd">-0.625</span><span style="color:#00688b;font-weight:bold">em</span> 
+}
+ .<span style="color:#008b45;font-weight:bold">wpnm-button-inner-left</span>:<span style="color:#707a7c">before</span>, .<span style="color:#008b45;font-weight:bold">wpnm-button-inner-left</span>:<span style="color:#707a7c">after</span> {
+     <span style="color:#8b008b;font-weight:bold">box-sizing</span>: <span style="color:#8b008b;font-weight:bold">border-box</span>;
+     <span style="color:#8b008b;font-weight:bold">margin</span>: <span style="color:#b452cd">0</span>;
+     <span style="color:#8b008b;font-weight:bold">padding</span>: <span style="color:#b452cd">0</span>;
+    <span style="color:#228b22">/*transition*/</span>
+     <span style="color:#8b008b;font-weight:bold">-webkit-</span><span style="color:#8b008b;font-weight:bold">transition</span>: <span style="color:#b452cd">0.4</span><span style="color:#00688b;font-weight:bold">s</span> <span style="color:#8b008b;font-weight:bold">ease</span>-in-out;
+     <span style="color:#8b008b;font-weight:bold">-moz-</span><span style="color:#8b008b;font-weight:bold">transition</span>: <span style="color:#b452cd">0.4</span><span style="color:#00688b;font-weight:bold">s</span> <span style="color:#8b008b;font-weight:bold">ease</span>-in-out;
+     <span style="color:#8b008b;font-weight:bold">-o-</span><span style="color:#8b008b;font-weight:bold">transition</span>: <span style="color:#b452cd">0.4</span><span style="color:#00688b;font-weight:bold">s</span> <span style="color:#8b008b;font-weight:bold">ease</span>-in-out;
+     <span style="color:#8b008b;font-weight:bold">transition</span>: <span style="color:#b452cd">0.4</span><span style="color:#00688b;font-weight:bold">s</span> <span style="color:#8b008b;font-weight:bold">ease</span>-in-out;
+     <span style="color:#8b008b;font-weight:bold">outline</span>: <span style="color:#8b008b;font-weight:bold">none</span> 
+}
+ .<span style="color:#008b45;font-weight:bold">wpnm-button</span> .<span style="color:#008b45;font-weight:bold">wpnm-button-inner</span>, .<span style="color:#008b45;font-weight:bold">wpnm-button</span> .<span style="color:#008b45;font-weight:bold">wpnm-button-inner-left</span> {
+     <span style="color:#8b008b;font-weight:bold">display</span>: <span style="color:#8b008b;font-weight:bold">inline</span>-<span style="color:#8b008b;font-weight:bold">block</span>;
+     <span style="color:#8b008b;font-weight:bold">font-size</span>: <span style="color:#b452cd">0.875</span><span style="color:#00688b;font-weight:bold">em</span>;
+     <span style="color:#8b008b;font-weight:bold">position</span>: <span style="color:#8b008b;font-weight:bold">relative</span>;
+     <span style="color:#8b008b;font-weight:bold">padding</span>: <span style="color:#b452cd">0</span><span style="color:#00688b;font-weight:bold">em</span>;
+     <span style="color:#8b008b;font-weight:bold">line-height</span>: <span style="color:#b452cd">1</span><span style="color:#00688b;font-weight:bold">em</span>;
+     <span style="color:#8b008b;font-weight:bold">cursor</span>: <span style="color:#8b008b;font-weight:bold">pointer</span>;
+     <span style="color:#8b008b;font-weight:bold">color</span>: <span style="color:#658b00">rgba</span>(<span style="color:#b452cd">149</span>, <span style="color:#b452cd">149</span>, <span style="color:#b452cd">149</span>, <span style="color:#b452cd">0.51</span>);
+     <span style="color:#8b008b;font-weight:bold">font-weight</span>: <span style="color:#8b008b;font-weight:bold">normal</span> 
+}
+ .<span style="color:#008b45;font-weight:bold">wpnm-button</span> .<span style="color:#008b45;font-weight:bold">wpnm-button-inner-left</span>:<span style="color:#707a7c">before</span> {
+     <span style="color:#8b008b;font-weight:bold">content</span>: <span style="color:#cd5555">&#39;&#39;</span>;
+     <span style="color:#8b008b;font-weight:bold">display</span>: <span style="color:#8b008b;font-weight:bold">block</span>;
+     <span style="color:#8b008b;font-weight:bold">position</span>: <span style="color:#8b008b;font-weight:bold">absolute</span>;
+     <span style="color:#8b008b;font-weight:bold">z-index</span>: <span style="color:#b452cd">1</span>;
+     <span style="color:#8b008b;font-weight:bold">line-height</span>: <span style="color:#b452cd">2.125</span><span style="color:#00688b;font-weight:bold">em</span>;
+     <span style="color:#8b008b;font-weight:bold">text-indent</span>: <span style="color:#b452cd">2.5</span><span style="color:#00688b;font-weight:bold">em</span>;
+     <span style="color:#8b008b;font-weight:bold">height</span>: <span style="color:#b452cd">1</span><span style="color:#00688b;font-weight:bold">em</span>;
+     <span style="color:#8b008b;font-weight:bold">width</span>: <span style="color:#b452cd">1</span><span style="color:#00688b;font-weight:bold">em</span>;
+     <span style="color:#8b008b;font-weight:bold">margin</span>: <span style="color:#b452cd">0.25</span><span style="color:#00688b;font-weight:bold">em</span>;
+    <span style="color:#228b22">/*border-radius*/</span>
+     <span style="color:#8b008b;font-weight:bold">-webkit-</span><span style="color:#8b008b;font-weight:bold">border-radius</span>: <span style="color:#b452cd">100</span><span style="color:#00688b;font-weight:bold">%</span>;
+     <span style="color:#8b008b;font-weight:bold">-moz-</span><span style="color:#8b008b;font-weight:bold">border-radius</span>: <span style="color:#b452cd">100</span><span style="color:#00688b;font-weight:bold">%</span>;
+     <span style="color:#8b008b;font-weight:bold">border-radius</span>: <span style="color:#b452cd">100</span><span style="color:#00688b;font-weight:bold">%</span>;
+     <span style="color:#8b008b;font-weight:bold">right</span>: <span style="color:#b452cd">1.625</span><span style="color:#00688b;font-weight:bold">em</span>;
+     <span style="color:#8b008b;font-weight:bold">bottom</span>: <span style="color:#b452cd">0</span><span style="color:#00688b;font-weight:bold">em</span>;
+     <span style="color:#8b008b;font-weight:bold">background</span>: <span style="color:#b452cd">#FFB200</span>;
+     <span style="color:#8b008b;font-weight:bold">transform</span>: <span style="color:#658b00">rotate</span>(<span style="color:#b452cd">-45</span><span style="color:#00688b;font-weight:bold">deg</span>);
+     <span style="color:#8b008b;font-weight:bold">box-shadow</span>: <span style="color:#b452cd">0</span> <span style="color:#b452cd">0</span> <span style="color:#b452cd">0.625</span><span style="color:#00688b;font-weight:bold">em</span> <span style="color:#8b008b;font-weight:bold">white</span> 
+}
+ .<span style="color:#008b45;font-weight:bold">wpnm-button</span> .<span style="color:#008b45;font-weight:bold">wpnm-button-inner-left</span>:<span style="color:#707a7c">after</span> {
+     <span style="color:#8b008b;font-weight:bold">content</span>: <span style="color:#cd5555">&#34;&#34;</span>;
+     <span style="color:#8b008b;font-weight:bold">display</span>: <span style="color:#8b008b;font-weight:bold">inline</span>-<span style="color:#8b008b;font-weight:bold">block</span>;
+     <span style="color:#8b008b;font-weight:bold">width</span>: <span style="color:#b452cd">2.5</span><span style="color:#00688b;font-weight:bold">em</span>;
+     <span style="color:#8b008b;font-weight:bold">height</span>: <span style="color:#b452cd">1.5</span><span style="color:#00688b;font-weight:bold">em</span>;
+     <span style="color:#8b008b;font-weight:bold">-webkit-</span><span style="color:#8b008b;font-weight:bold">border-radius</span>: <span style="color:#b452cd">1</span><span style="color:#00688b;font-weight:bold">em</span>;
+     <span style="color:#8b008b;font-weight:bold">-moz-</span><span style="color:#8b008b;font-weight:bold">border-radius</span>: <span style="color:#b452cd">1</span><span style="color:#00688b;font-weight:bold">em</span>;
+     <span style="color:#8b008b;font-weight:bold">border-radius</span>: <span style="color:#b452cd">1</span><span style="color:#00688b;font-weight:bold">em</span>;
+     <span style="color:#8b008b;font-weight:bold">background</span>: <span style="color:#658b00">rgba</span>(<span style="color:#b452cd">255</span>, <span style="color:#b452cd">255</span>, <span style="color:#b452cd">255</span>, <span style="color:#b452cd">0.15</span>);
+     <span style="color:#8b008b;font-weight:bold">vertical-align</span>: <span style="color:#8b008b;font-weight:bold">middle</span>;
+     <span style="color:#8b008b;font-weight:bold">margin</span>: <span style="color:#b452cd">0</span> <span style="color:#b452cd">0.625</span><span style="color:#00688b;font-weight:bold">em</span>;
+     <span style="color:#8b008b;font-weight:bold">border</span>: <span style="color:#b452cd">0.125</span><span style="color:#00688b;font-weight:bold">em</span> <span style="color:#8b008b;font-weight:bold">solid</span> <span style="color:#b452cd">#FFB200</span> 
+}
+ .<span style="color:#008b45;font-weight:bold">wpnm-button</span>.<span style="color:#008b45;font-weight:bold">active</span> .<span style="color:#008b45;font-weight:bold">wpnm-button-inner-left</span>:<span style="color:#707a7c">before</span> {
+     <span style="color:#8b008b;font-weight:bold">right</span>: <span style="color:#b452cd">1.0625</span><span style="color:#00688b;font-weight:bold">em</span>;
+     <span style="color:#8b008b;font-weight:bold">box-shadow</span>: <span style="color:#b452cd">0.3125</span><span style="color:#00688b;font-weight:bold">em</span> <span style="color:#b452cd">0.3125</span><span style="color:#00688b;font-weight:bold">em</span> <span style="color:#b452cd">0</span> <span style="color:#b452cd">0</span> <span style="color:#b452cd">#eee</span>;
+     <span style="color:#8b008b;font-weight:bold">background</span>: <span style="color:#8b008b;font-weight:bold">transparent</span> 
+}
+ .<span style="color:#008b45;font-weight:bold">wpnm-button</span>.<span style="color:#008b45;font-weight:bold">active</span> .<span style="color:#008b45;font-weight:bold">wpnm-button-inner-left</span>:<span style="color:#707a7c">after</span> {
+     <span style="color:#8b008b;font-weight:bold">background</span>: <span style="color:#658b00">rgba</span>(<span style="color:#b452cd">0</span>, <span style="color:#b452cd">0</span>, <span style="color:#b452cd">0</span>, <span style="color:#b452cd">0.15</span>);
+     <span style="color:#8b008b;font-weight:bold">border</span>: <span style="color:#b452cd">0.125</span><span style="color:#00688b;font-weight:bold">em</span> <span style="color:#8b008b;font-weight:bold">solid</span> <span style="color:#8b008b;font-weight:bold">white</span> 
+}
+ .<span style="color:#008b45;font-weight:bold">wpnm-button</span> .<span style="color:#008b45;font-weight:bold">wpnm-button-inner-left</span> {
+     <span style="color:#8b008b;font-weight:bold">color</span>: <span style="color:#658b00">rgba</span>(<span style="color:#b452cd">250</span>, <span style="color:#b452cd">250</span>, <span style="color:#b452cd">250</span>, <span style="color:#b452cd">0.51</span>);
+     <span style="color:#8b008b;font-weight:bold">font-weight</span>: <span style="color:#8b008b;font-weight:bold">bold</span> 
+}
+ .<span style="color:#008b45;font-weight:bold">wpnm-button</span>.<span style="color:#008b45;font-weight:bold">active</span> .<span style="color:#008b45;font-weight:bold">wpnm-button-inner-left</span> {
+     <span style="color:#8b008b;font-weight:bold">color</span>: <span style="color:#658b00">rgba</span>(<span style="color:#b452cd">149</span>, <span style="color:#b452cd">149</span>, <span style="color:#b452cd">149</span>, <span style="color:#b452cd">0.51</span>);
+     <span style="color:#8b008b;font-weight:bold">font-weight</span>: <span style="color:#8b008b;font-weight:bold">normal</span> 
+}
+ .<span style="color:#008b45;font-weight:bold">wpnm-button</span>.<span style="color:#008b45;font-weight:bold">active</span> .<span style="color:#008b45;font-weight:bold">wpnm-button-inner-left</span> + .<span style="color:#008b45;font-weight:bold">wpnm-button-inner</span> {
+     <span style="color:#8b008b;font-weight:bold">color</span>: <span style="color:#658b00">rgba</span>(<span style="color:#b452cd">250</span>, <span style="color:#b452cd">250</span>, <span style="color:#b452cd">250</span>, <span style="color:#b452cd">0.51</span>);
+     <span style="color:#8b008b;font-weight:bold">font-weight</span>: <span style="color:#8b008b;font-weight:bold">bold</span> 
+}</code></pre></div>
+
+<p>I am really fascinated by this code snippet, since it draws a beautiful sun and moon with just custom css! All the credit for this code should go for the plugin author Marko Arula.</p>
+
+<p><strong>Add dark mode class to the body tag</strong></p>
+
+<p>Next, we need to add a &ldquo;dark-mode&rdquo; class to the body tag. We will use this class later, to customize the dark mode layout.</p>
+
+<p>To do that, we also need to find a way to store the user preference on page reload. We can use localStorage to store the user preferences. Use the following code:
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">jQuery(<span style="color:#8b008b;font-weight:bold">function</span>($) {
+    <span style="color:#228b22">/*Click on dark mode icon. Add dark mode classes and wrappers. 
+</span><span style="color:#228b22">    Store user preference through sessions*/</span>
+    $(<span style="color:#cd5555">&#39;.wpnm-button&#39;</span>).click(<span style="color:#8b008b;font-weight:bold">function</span>() {
+        <span style="color:#228b22">//Show either moon or sun
+</span><span style="color:#228b22"></span>        $(<span style="color:#cd5555">&#39;.wpnm-button&#39;</span>).toggleClass(<span style="color:#cd5555">&#39;active&#39;</span>);
+        <span style="color:#228b22">//If dark mode is selected
+</span><span style="color:#228b22"></span>        <span style="color:#8b008b;font-weight:bold">if</span> ($(<span style="color:#cd5555">&#39;.wpnm-button&#39;</span>).hasClass(<span style="color:#cd5555">&#39;active&#39;</span>)) {
+            <span style="color:#228b22">//Add dark mode class to the body
+</span><span style="color:#228b22"></span>            $(<span style="color:#cd5555">&#39;body&#39;</span>).addClass(<span style="color:#cd5555">&#39;dark-mode&#39;</span>);
+            <span style="color:#228b22">//Save user preference to Storage
+</span><span style="color:#228b22"></span>            localStorage.setItem(<span style="color:#cd5555">&#39;darkMode&#39;</span>, <span style="color:#8b008b;font-weight:bold">true</span>);
+        } <span style="color:#8b008b;font-weight:bold">else</span> {
+            $(<span style="color:#cd5555">&#39;body&#39;</span>).removeClass(<span style="color:#cd5555">&#39;dark-mode&#39;</span>);
+            localStorage.removeItem(<span style="color:#cd5555">&#39;darkMode&#39;</span>);
+        }
+    })
+    <span style="color:#228b22">//Check Storage. Display user preference 
+</span><span style="color:#228b22"></span>    <span style="color:#8b008b;font-weight:bold">if</span> (localStorage.getItem(<span style="color:#cd5555">&#34;darkMode&#34;</span>)) {
+        $(<span style="color:#cd5555">&#39;body&#39;</span>).addClass(<span style="color:#cd5555">&#39;dark-mode&#39;</span>);
+        $(<span style="color:#cd5555">&#39;.wpnm-button&#39;</span>).addClass(<span style="color:#cd5555">&#39;active&#39;</span>);
+    }
+})
+</code></pre></div></p>
+
+<p>Now, select the dark mode layout (click on the toggle button) and inspect the body tag. The &ldquo;dark-mode&rdquo; css class should be added as a body class! Add some dark background to test if it is working as expected:</p>
+
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#8b008b;font-weight:bold">body</span>.<span style="color:#008b45;font-weight:bold">dark-mode</span> * {
+    <span style="color:#8b008b;font-weight:bold">background</span>: <span style="color:#b452cd">#333</span>;
+}</code></pre></div>
+
+<p>This code should already be working fine, however, do you notice that after page refresh, the light mode is first loaded and only after some time the dark mode is finally applied? While this may be a working solution, it is still not perfect from user experience point of view. There must be a way to make it better!</p>
+
+<p>The problem with the above approach is that we are using code only on the client (the browser) and our server does not know anything about what we are doing. So, it first renders the body without the &ldquo;dark mode&rdquo; class and the js adds the class only after the DOM has been fully loaded!</p>
+
+<p><strong>Store User Preference Through Sessions Via Cookie</strong></p>
+
+<p>We need to find a way to send this body class to the server, so it loads before serving the page. There are multiple ways to do this. However, the problem that I faced is that <a href="https://stackoverflow.com/questions/3855337/php-localstorage">the server does not have access to localStorage</a>. So, I decided to store the user preference via a cookie. This means we need to create a cookie if the user chooses dark mode, get it with php and add a &ldquo;dark-mode &ldquo;body class if the cookie has been created. In this way, we will have body class &ldquo;dark mode&rdquo; as soon as the html is rendered and we will improve our user experience! Lets rewrite the above js code, this time storing data via a cookie:</p>
+
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">jQuery(<span style="color:#8b008b;font-weight:bold">function</span>($) {
+    <span style="color:#228b22">//Create the cookie object
+</span><span style="color:#228b22"></span>    <span style="color:#8b008b;font-weight:bold">var</span> cookieStorage = {
+        setCookie: <span style="color:#8b008b;font-weight:bold">function</span> setCookie(key, value, time, path) {
+            <span style="color:#8b008b;font-weight:bold">var</span> expires = <span style="color:#8b008b;font-weight:bold">new</span> <span style="color:#658b00">Date</span>();
+            expires.setTime(expires.getTime() + time);
+            <span style="color:#8b008b;font-weight:bold">var</span> pathValue = <span style="color:#cd5555">&#39;&#39;</span>;
+            <span style="color:#8b008b;font-weight:bold">if</span> (<span style="color:#8b008b;font-weight:bold">typeof</span> path !== <span style="color:#cd5555">&#39;undefined&#39;</span>) {
+                pathValue = <span style="color:#cd5555">&#39;path=&#39;</span> + path + <span style="color:#cd5555">&#39;;&#39;</span>;
+            }
+            <span style="color:#658b00">document</span>.cookie = key + <span style="color:#cd5555">&#39;=&#39;</span> + value + <span style="color:#cd5555">&#39;;&#39;</span> + pathValue + <span style="color:#cd5555">&#39;expires=&#39;</span> + expires.toUTCString();
+        },
+        getCookie: <span style="color:#8b008b;font-weight:bold">function</span> getCookie(key) {
+            <span style="color:#8b008b;font-weight:bold">var</span> keyValue = <span style="color:#658b00">document</span>.cookie.match(<span style="color:#cd5555">&#39;(^|;) ?&#39;</span> + key + <span style="color:#cd5555">&#39;=([^;]*)(;|$)&#39;</span>);
+            <span style="color:#8b008b;font-weight:bold">return</span> keyValue ? keyValue[<span style="color:#b452cd">2</span>] : <span style="color:#8b008b;font-weight:bold">null</span>;
+        },
+        removeCookie: <span style="color:#8b008b;font-weight:bold">function</span> removeCookie(key) {
+            <span style="color:#658b00">document</span>.cookie = key + <span style="color:#cd5555">&#39;=; Max-Age=0; path=/&#39;</span>;
+        }
+    };
+
+    <span style="color:#228b22">//Click on dark mode icon. Add dark mode classes and wrappers. Store user preference through sessions
+</span><span style="color:#228b22"></span>    $(<span style="color:#cd5555">&#39;.wpnm-button&#39;</span>).click(<span style="color:#8b008b;font-weight:bold">function</span>() {
+        <span style="color:#228b22">//Show either moon or sun
+</span><span style="color:#228b22"></span>        $(<span style="color:#cd5555">&#39;.wpnm-button&#39;</span>).toggleClass(<span style="color:#cd5555">&#39;active&#39;</span>);
+        <span style="color:#228b22">//If dark mode is selected
+</span><span style="color:#228b22"></span>        <span style="color:#8b008b;font-weight:bold">if</span> ($(<span style="color:#cd5555">&#39;.wpnm-button&#39;</span>).hasClass(<span style="color:#cd5555">&#39;active&#39;</span>)) {
+            <span style="color:#228b22">//Add dark mode class to the body
+</span><span style="color:#228b22"></span>            $(<span style="color:#cd5555">&#39;body&#39;</span>).addClass(<span style="color:#cd5555">&#39;dark-mode&#39;</span>);
+            cookieStorage.setCookie(<span style="color:#cd5555">&#39;nasioNightMode&#39;</span>, <span style="color:#cd5555">&#39;true&#39;</span>, <span style="color:#b452cd">2628000000</span>, <span style="color:#cd5555">&#39;/&#39;</span>);
+        } <span style="color:#8b008b;font-weight:bold">else</span> {
+            $(<span style="color:#cd5555">&#39;body&#39;</span>).removeClass(<span style="color:#cd5555">&#39;dark-mode&#39;</span>);
+            setTimeout(<span style="color:#8b008b;font-weight:bold">function</span>() {
+                cookieStorage.removeCookie(<span style="color:#cd5555">&#39;nasioNightMode&#39;</span>);
+            }, <span style="color:#b452cd">100</span>);
+        }
+    })
+
+    <span style="color:#228b22">//Check Storage. Display user preference 
+</span><span style="color:#228b22"></span>    <span style="color:#8b008b;font-weight:bold">if</span> (cookieStorage.getCookie(<span style="color:#cd5555">&#39;nasioNightMode&#39;</span>)) {
+        $(<span style="color:#cd5555">&#39;body&#39;</span>).addClass(<span style="color:#cd5555">&#39;dark-mode&#39;</span>);
+        $(<span style="color:#cd5555">&#39;.wpnm-button&#39;</span>).addClass(<span style="color:#cd5555">&#39;active&#39;</span>);
+    }
+})
+</code></pre></div>
+
+<p><strong>Add dark mode class via the body class filter</strong></p>
+
+<p>Now we have a cookie &ldquo;nasioNightMode&rdquo; that is created when the user selects dark mode layout. The only thing that is left is to get this cookie with php and add it to the body class. Add this code to your child theme&rsquo;s functions.php:</p>
+
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+<span style="color:#cd5555">/**
+</span><span style="color:#cd5555"> * Enable dark theme mode
+</span><span style="color:#cd5555"> *
+</span><span style="color:#cd5555"> * Inspired by https://wordpress.org/plugins/wp-night-mode/
+</span><span style="color:#cd5555"> *
+</span><span style="color:#cd5555"> */</span>
+<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">nasio_dark_mode</span>(<span style="color:#00688b">$classes</span>) {
+    <span style="color:#00688b">$nasio_night_mode</span> = isset(<span style="color:#00688b">$_COOKIE</span>[<span style="color:#cd5555">&#39;nasioNightMode&#39;</span>]) ? <span style="color:#00688b">$_COOKIE</span>[<span style="color:#cd5555">&#39;nasioNightMode&#39;</span>] : <span style="color:#cd5555">&#39;&#39;</span>;
+    <span style="color:#228b22">//if the cookie is stored..
+</span><span style="color:#228b22"></span>    <span style="color:#8b008b;font-weight:bold">if</span> (<span style="color:#00688b">$nasio_night_mode</span> !== <span style="color:#cd5555">&#39;&#39;</span>) {
+        <span style="color:#228b22">// Add &#39;dark-mode&#39; body class
+</span><span style="color:#228b22"></span>        <span style="color:#8b008b;font-weight:bold">return</span> array_merge(<span style="color:#00688b">$classes</span>, <span style="color:#8b008b;font-weight:bold">array</span>(<span style="color:#cd5555">&#39;dark-mode&#39;</span>));
+    }
+    <span style="color:#8b008b;font-weight:bold">return</span> <span style="color:#00688b">$classes</span>;
+}
+add_filter(<span style="color:#cd5555">&#39;body_class&#39;</span>, <span style="color:#cd5555">&#39;nasio_dark_mode&#39;</span>);
+</code></pre></div>
+
+<p>Voila! You now have a fully-working prototype of the dark mode layout. Feel free to use it on your website to improve the user experience and protect your visitors&rsquo; eyes durning night time!</p>
+
+					</div>
+				</article>
+
+			</div>
+		</div> 
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+	</div>	
+
+</main>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><br>
+						<a href="mailto:yonkov.atanas@gmail.com">yonkov.atanas@gmail.com</a><br>
+						<br>
+						
+					</p>
+				</div>
+			</div>
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Follow me</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+                        
+                            
+                                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram fa-2"></i></a>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <a href="https://github.com/yonkov" target="_blank"><i class="fa fa-github fa-2"></i></a>
+                            
+                        
+                            
+                        
+					</p>
+				</div>
+			</div>
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Personal Info</h3>
+				<div class="widget-body">
+					<p>Welcome to my professional website! I work as a devoted web developer and a freelancer. My ultimate goal is customer satisfaction. I focus on quality and creating value for my clients. </p>
+					
+				</div>
+			</div>
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Email</h3>
+				<div class="widget-body">
+					<p><br>
+						<a href="mailto:yonkov.atanas@gmail.com">yonkov.atanas@gmail.com</a><br>
+						<br>
+                        
+					</p>
+				</div>
+			</div>
+		</div> 
+	</div>
+</footer>
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p></p>
+				</div>
+			</div>
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2017, Atanas Yonkov<br>
+						Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> - 
+                        Powered by: <a href="https://gohugo.io/" rel="poweredby">Hugo</a>
+                    </p>
+				</div>
+			</div>
+		</div> 
+	</div>
+</footer>
+
+
+    
+      
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://yonkov.github.io/js/template.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145838420-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-145838420-1');
+</script>
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+	<noscript><link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"></noscript>	
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#000"},button:{background:"#f1d600"}},content:{message:"This website uses cookies to analyze traffic and for advertisements. By continuing you agree to the use of these cookies.",dismiss:"Ok, I accept",href:"https://yonkov.github.io/privacy-policy"}})});</script>
+</body>
+</html>
