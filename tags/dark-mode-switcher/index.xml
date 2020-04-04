@@ -5,10 +5,19 @@
     <link>https://yonkov.github.io/tags/dark-mode-switcher/</link>
     <description>Recent content in Dark Mode Switcher on Atanas Yonkov</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 31 Mar 2020 17:46:43 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2020 11:49:32 +0300</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/tags/dark-mode-switcher/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Switching off the Lights Part Two: Add Dark Mode to Hugo</title>
+      <link>https://yonkov.github.io/post/add-dark-mode-toggle-to-hugo/</link>
+      <pubDate>Sat, 04 Apr 2020 11:49:32 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/add-dark-mode-toggle-to-hugo/</guid>
+      <description>In my last blog post, I wrote about how to Add Dark Mode Toggle to WordPress. Today I will go a step further, by showing you how to switch between light and dark (day and night) theme mode in Hugo - the fastest framework for creating static web sites. This time, we will make a dark theme toggle button similar to what Redux author and React pioneer Dan Abramov did in his open-source blog Overreacted.</description>
+    </item>
     
     <item>
       <title>Switching off the Lights - Add Dark Mode to WordPress</title>
@@ -16,8 +25,9 @@
       <pubDate>Tue, 31 Mar 2020 17:46:43 +0300</pubDate>
       
       <guid>https://yonkov.github.io/post/add-dark-mode-toggle-button-to-wordpress/</guid>
-      <description>Yesterday, 30 March, StackOverflow started to offer a dark theme version (still in beta) for their visitors. On their home page, you can read: &amp;ldquo;You’ve been asking for dark mode for years. The dark mode beta is finally here. Change your preferences any time.&amp;rdquo;
-More and More web apps are offering or considering to offer &amp;ldquo;dark mode&amp;rdquo; layout to their visitors that comes together with their normal, &amp;ldquo;light mode&amp;rdquo; layout.</description>
+      <description>Yesterday, 30 March, StackOverflow started to offer a dark theme version (still in beta) for their visitors. On their home page, you can read:
+ &amp;ldquo;You’ve been asking for dark mode for years. The dark mode beta is finally here. Change your preferences any time.&amp;rdquo;
+ More and More web apps are offering or considering to offer a &amp;ldquo;dark mode&amp;rdquo; layout to their visitors that comes together with their normal, &amp;ldquo;light mode&amp;rdquo; layout.</description>
     </item>
     
   </channel>
