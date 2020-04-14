@@ -19,7 +19,7 @@
 "headline":"Switching off the Lights - Add Dark Mode to WordPress",
 "description":"Protect your visitors&#39; eyes and help them stay more time at your website by adding a dark mode toggle button in WordPress",
 "datePublished":"2020-03-31 17:46:43 &#43;0300 EEST",
-"wordCount": "2209",
+"wordCount": "2201",
 "publisher": {
 "@type": "Website",
 "name": "Yonkov.github.io"
@@ -179,7 +179,7 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
 
 <p>Personally, I like it when websites have a dark theme mode, especially at night, when my eyes are tired from working on the PC the whole day. So, as a theme developer, I realised that it will be nice to add this option to my WordPress themes. WordPress is my favourite CMS, however, they are not that quick in adopting new trends. I found that there are a lot of tutorials about how to implement dark theme mode in <a href="https://css-tricks.com/a-dark-mode-toggle-with-react-and-themeprovider/">react.js</a>, however, I could not find any info on how to do it in WordPress. There is the <a href="https://wordpress.org/plugins/dark-mode/">Dark Mode</a> plugin, but it only adds dark mode to the WordPress admin dashboard. While this is nice, I think it will be even more benefitial, if the websites can actually offer this feature to their visitors. Similarly to how YouTube and Facebook are doing it. The user sets a dark mode preference and can revert to light mode at any time by changing his preference. By empowering your website&rsquo;s visitors with this option, you can attract more readers to your website, make them spend more time on the page, read more articles and last but not least protect their eyes from being hurt.</p>
 
-<h2 id="add-dark-mode-switcher-using-a-plugin">Add Dark Mode Switcher Using a Plugin</h2>
+<h2 id="add-dark-mode-switch-using-a-plugin">Add Dark Mode Switch Using a Plugin</h2>
 
 <p>I wanted to implement this feature for my websites, but I did not know where to start. Luckily, I recently found <a href="https://wordpress.org/plugins/wp-night-mode/">WP Night Mode</a>, an awesome plugin that you can use to quickly add dark mode toggle to your WordPress website. Install the plugin and call the dark mode toggler by adding a &ldquo;Night Mode&rdquo; menu item with a css class &ldquo;wp-night-mode&rdquo;. To do this, go to appearance =&gt; menus and click on the options tab (top right corner), then put a tick on css classes. This will allow you to add the &ldquo;wp-night-mode&rdquo; class on the menu item. Now, add a menu item called &ldquo;Night Mode&rdquo; and assign the css class to it.</p>
 
@@ -195,7 +195,7 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
     <span style="color:#8b008b;font-weight:bold">background-color</span>: <span style="color:#8b008b;font-weight:bold">red</span>;
 }</code></pre></div>
 
-<h2 id="add-dark-mode-switcher-without-a-plugin">Add Dark Mode Switcher Without a Plugin</h2>
+<h2 id="add-dark-mode-switch-without-a-plugin">Add Dark Mode Switch Without a Plugin</h2>
 
 <p>If you are a theme developer like me or for some reason you are looking more flexibility, I will also provide a custom solution on how to add a dark mode toggle on your website. You can see a live implementaton of this in my free WordPress theme <a href="https://wordpress.org/themes/nasio/">Nasio</a>:</p>
 
@@ -419,7 +419,7 @@ add_filter(<span style="color:#cd5555">&#39;body_class&#39;</span>, <span style=
 
 <h2 id="themes-that-support-dark-mode-toggle">Themes that Support Dark Mode Toggle</h2>
 
-<p>Most WordPress themes can be customized to support both light and dark modes, either by using the Night Mode plugin or with the above custom solution. In any case, you will have to write a lot of custom css on top of it to set up the design of the dark theme. Wouldn&rsquo;t it be awesome if there was a WordPress theme that had a premade dark layout, so we do not have to do all the customizations ourselves? Well, here are some good news for those of you who are looking for the full package. There are two free WordPress themes I am aware of, which have both light and dark skins and have also implemented dark mode switcher out of the box. This means that website visitors can toggle between light and dark theme mode with a single click without you having to write a single line of css!</p>
+<p>Most WordPress themes can be customized to support dark mode, either by using the Night Mode plugin or with the above custom solution. In any case, you will have to write a lot of custom css on top of it to set up the design of the dark theme. Wouldn&rsquo;t it be awesome if there was a WordPress theme that had a premade dark mode toggle button, so we do not have to do all the customizations ourselves? Well, here are some good news for those of you who are looking for the full package. There are three free WordPress themes I am aware of, which have already implemented night mode switch out of the box. This means that website visitors can toggle between light and dark theme mode with a single click without you having to write a single line of code!</p>
 
 <h3 id="nasio">Nasio</h3>
 
