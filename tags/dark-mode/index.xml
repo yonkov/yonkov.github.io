@@ -5,7 +5,7 @@
     <link>https://yonkov.github.io/tags/dark-mode/</link>
     <description>Recent content in Dark Mode on Atanas Yonkov</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 04 Apr 2020 11:49:32 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2020 11:49:32 +0300</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/tags/dark-mode/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +13,7 @@
     <item>
       <title>Switching off the Lights Part Three - Adding Dark Mode to VuePress</title>
       <link>https://yonkov.github.io/post/add-dark-mode-to-vuepress/</link>
-      <pubDate>Sat, 04 Apr 2020 11:49:32 +0300</pubDate>
+      <pubDate>Wed, 15 Apr 2020 11:49:32 +0300</pubDate>
       
       <guid>https://yonkov.github.io/post/add-dark-mode-to-vuepress/</guid>
       <description>Dark mode is one of the newest and hottest trends in web development. Since release of macOS 10.14 in September 2018, more and more apps are starting to offer the option for users to choose a dark system-wide interface over the standard light color scheme. Recent versions of Windows 10 and Android also started to offer dark mode layout. It is perceived that a dark background is much more easier on the eyes and attracts more readers, especially during night time.</description>
