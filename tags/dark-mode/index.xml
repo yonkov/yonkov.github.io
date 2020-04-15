@@ -11,7 +11,16 @@
     
     
     <item>
-      <title>Switching off the Lights Part Two: Add Dark Mode to Hugo</title>
+      <title>Switching off the Lights Part Three - Adding Dark Mode to VuePress</title>
+      <link>https://yonkov.github.io/post/add-dark-mode-to-vuepress/</link>
+      <pubDate>Sat, 04 Apr 2020 11:49:32 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/add-dark-mode-to-vuepress/</guid>
+      <description>Dark mode is one of the newest and hottest trends in web development. Since release of macOS 10.14 in September 2018, more and more apps are starting to offer the option for users to choose a dark system-wide interface over the standard light color scheme. Recent versions of Windows 10 and Android also started to offer dark mode layout. It is perceived that a dark background is much more easier on the eyes and attracts more readers, especially during night time.</description>
+    </item>
+    
+    <item>
+      <title>Switching off the Lights Part Two - Adding Dark Mode to Hugo</title>
       <link>https://yonkov.github.io/post/add-dark-mode-toggle-to-hugo/</link>
       <pubDate>Sat, 04 Apr 2020 11:49:32 +0300</pubDate>
       
@@ -20,7 +29,7 @@
     </item>
     
     <item>
-      <title>Switching off the Lights - Add Dark Mode to WordPress</title>
+      <title>Switching off the Lights - Adding Dark Mode to WordPress</title>
       <link>https://yonkov.github.io/post/add-dark-mode-toggle-button-to-wordpress/</link>
       <pubDate>Tue, 31 Mar 2020 17:46:43 +0300</pubDate>
       

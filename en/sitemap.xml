@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/post/add-dark-mode-to-vuepress/</loc>
+    <lastmod>2020-04-04T11:49:32+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/post/add-dark-mode-toggle-to-hugo/</loc>
     <lastmod>2020-04-04T11:49:32+03:00</lastmod>
   </url>
@@ -268,6 +273,12 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/categories/</loc>
+    <lastmod>2017-11-16T15:24:01+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/tags/</loc>
     <lastmod>2019-10-10T11:40:28+03:00</lastmod>
     <priority>0</priority>
@@ -281,12 +292,6 @@
                 hreflang="en"
                 href="https://yonkov.github.io/tags/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://yonkov.github.io/categories/</loc>
-    <lastmod>2017-11-16T15:24:01+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -329,12 +334,6 @@
   
   <url>
     <loc>https://yonkov.github.io/tags/dark-mode-switch/</loc>
-    <lastmod>2020-03-31T17:46:43+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://yonkov.github.io/tags/dark-mode-switcher/</loc>
     <lastmod>2020-04-04T11:49:32+03:00</lastmod>
     <priority>0</priority>
   </url>
@@ -386,8 +385,14 @@
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/tags/light-mode/</loc>
+    <loc>https://yonkov.github.io/tags/hugo/</loc>
     <lastmod>2020-04-04T11:49:32+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/tags/light-mode/</loc>
+    <lastmod>2020-03-31T17:46:43+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -399,7 +404,7 @@
   
   <url>
     <loc>https://yonkov.github.io/tags/night-mode/</loc>
-    <lastmod>2020-03-31T17:46:43+03:00</lastmod>
+    <lastmod>2020-04-04T11:49:32+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -523,7 +528,7 @@
   
   <url>
     <loc>https://yonkov.github.io/categories/vuepress/</loc>
-    <lastmod>2019-02-24T10:05:06+02:00</lastmod>
+    <lastmod>2020-04-04T11:49:32+03:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -534,6 +539,22 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://yonkov.github.io/categories/vuepress/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/tags/vuepress/</loc>
+    <lastmod>2020-04-04T11:49:32+03:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://yonkov.github.io/ru/tags/vuepress/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yonkov.github.io/tags/vuepress/"
                 />
   </url>
   

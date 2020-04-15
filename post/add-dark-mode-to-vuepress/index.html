@@ -4,11 +4,31 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
+	<meta name="description" content="Allow site visitors to toggle between day and night mode (light and dark mode) in VuePress">
 	<meta name="author"      content="Atanas Yonkov">
 	
 	
-	<title>Hugo</title>
+
+<script type="application/ld+json">{
+"@context":"http://schema.org",
+"@type":"TechArticle",
+"url":"https://yonkov.github.io/post/add-dark-mode-to-vuepress/",
+"author": "Atanas Yonkov",
+"creator" : "Atanas Yonkov",
+"copyrightHolder" : "Atanas Yonkov",
+"headline":"Switching off the Lights Part Three - Adding Dark Mode to VuePress",
+"description":"Allow site visitors to toggle between day and night mode (light and dark mode) in VuePress",
+"datePublished":"2020-04-04 11:49:32 &#43;0300 EEST",
+"wordCount": "1056",
+"publisher": {
+"@type": "Website",
+"name": "Yonkov.github.io"
+}
+}
+</script>
+
+
+	<title>Switching off the Lights Part Three - Adding Dark Mode to VuePress</title>
 	
 	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
 	
@@ -102,95 +122,219 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
 	
 </header>
 <main id="main">
+
 	<div class="container">
+
 		<div class="row topspace">
 			<div class="col-sm-8 col-sm-offset-2">
 
-                
-				<article class="post">
+ 				<article class="post">
+					<header class="entry-header">
+ 						<div id="breadcrumbs" class="entry-meta" style="font-size:15px;">
+<a href="/">Home</a>
+    
+        
+    
+        
+            / <a href="/post">Blog</a>
+        
+    
+        
+            / <a href="/add-dark-mode-to-vuepress">Add dark mode to vuepress</a>
+        
+    
+        
+    
+</div>
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/add-dark-mode-to-vuepress/" rel="bookmark">Switching off the Lights Part Three - Adding Dark Mode to VuePress</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2020-04-04 11:49:32 &#43;0300 EEST">April 4, 2020</time></span>
+						</div>
+						<div id="blog-categories" style="font-style:italic;font-size:15px; text-align:center; padding: 0 0 10px;">
+	
+	  <em>Category: </em>
+	  <em><a href="/categories/vuepress">VuePress</a></em>
+		
+	
+</div>
+					</header>
 					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/add-dark-mode-toggle-to-hugo/" rel="bookmark">Switching off the Lights Part Two - Adding Dark Mode to Hugo</a></h2>
-							</header>
-								In my last blog post, I wrote about how to Add Dark Mode Toggle to WordPress. Today I will go a step further, by showing you how to switch between light and dark (day and night) theme mode in Hugo - the fastest framework for creating static web sites. This time, we will make a dark theme toggle button similar to what Redux author and React pioneer Dan Abramov did in his open-source blog Overreacted.
-								
-								
-								<a href="/post/add-dark-mode-toggle-to-hugo/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/how-to-convert-your-wordpress-site-to-hugo/" rel="bookmark">How to Convert Your Wordpress Site to Hugo</a></h2>
-							</header>
-								In this tutorial, I am going to show you the things that I did to successfully migrate my WordPress website to Hugo static site generator.
-Why would like to convert your WordPress website to Hugo?
-WordPress is the most popular framework fo building websites. This is because it is open-source, it has user-friendly CMS, allows for customization and has tons of documentation online. However, sometimes you do not need a dynamic website with a database.
-								
-								
-								<a href="/post/how-to-convert-your-wordpress-site-to-hugo/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/how-to-make-a-mulilingual-website-with-hugo/" rel="bookmark">How to Make a Mulilingual Website with Hugo</a></h2>
-							</header>
-								In this tutorial, I am going to show you how to create a multilingual website using Hugo. I am a big fan of Hugo, an awesome open-source static site generator with tons of cool features. It makes building websites fun again and it also supports multilingual mode. This means you can easily translate your Hugo website in any language you want! Follow me and I will teach you how to do it.
-								
-								
-								<a href="/post/how-to-make-a-mulilingual-website-with-hugo/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/4-awesome-things-you-can-do-with-hugo/" rel="bookmark">7 Reasons Why Hugo is Awesome</a></h2>
-							</header>
-								Hugo is an awesome open-source static site generator, which you can use to create beautiful portfolio websites and blogs. Hugo started as a side project in 2013 and quickly became one of the most popular frameworks for building static websites. In fact, this website is also built with Hugo! So, what are the ingredients that make Hugo so great? Here are the most important reasons why you should power your website with Hugo.
-								
-								
-								<a href="/post/4-awesome-things-you-can-do-with-hugo/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-			</div>
-		</div>
-		<center class="">
-			<ul class="pagination">
-                
+						
 
-			</ul>
-		</center>
+<p>Dark mode is one of the newest and hottest trends in web development. Since release of macOS 10.14 in September 2018, more and more apps are starting to offer the option for users to choose a dark system-wide interface over the standard light color scheme. Recent versions of Windows 10 and Android also started to offer dark mode layout. It is perceived that a dark background is much more easier on the eyes and attracts more readers, especially during night time. Recent <a href="https://db0nus869y26v.cloudfront.net/en/Popular_Science">study</a> also showed that a dark background color scheme uses 6 times less battery power on smartphones. While more and more applications are adopting this feature, users also started to like it, especially at night time, when there is less light and the eyes may be exhausted by staring at the pc&rsquo;s screen the whole day. I personally love it when websites have a dark mode option (also refered to as night mode) and i would like to see more and more websites implementing this feature. That is why, I have written two articles on that topic: <a href="/post/add-dark-mode-toggle-button-to-wordpress/">Switching off the Lights - Adding Dark Mode to WordPress</a> and <a href="/post/add-dark-mode-toggle-to-hugo/">Switching off the Lights Part Two - Adding Dark Mode to Hugo</a>. This time, I will be swimming even deeper, by showing you how to empower visitors to switch between day and night mode in VuePress. By the end of this tutorial, you will be able to dispay a beautiful dark mode toggle with sun and moon icons like in this short video:</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/UxcGT3hJRuI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<h2 id="wait-a-minute-vuepress">Wait a minute.. VuePress?!</h2>
+
+<p>Yes, you read it right, I am refering to VuePress, not WordPress. VuePress is a static site generator developed by vue.js author Evan You in 2018. VuePress quickly raised in popularity as one of the most promising static site generators out there. As the term suggests, static generators let you create a static site. Unlike classic CMS systems like WordPress, the pages are created at build time, using templates and markdown syntax. This makes static site generators stable, fast, cheap to maintain and secure. And there is more. As it is stated in the official documentation:</p>
+
+<blockquote>
+<p>&ldquo;VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.&rdquo;</p>
+</blockquote>
+
+<p>This means VuePress is not just offering the stability and security that most static site generators have but also leverages a first-class user experience by acting as a SEO-optimized single page application. Last but not least, it is written in Vue.js, one of the hottest js frameworks out there. Now, enough talking, let&rsquo;s get back to work!</p>
+
+<h2 id="toggle-dark-mode-in-vuepress">Toggle Dark Mode in VuePress</h2>
+
+<p>In case you need a refreshment how to set up VuePress, you can check the following tutorial: <a href="https://yonkov.github.io/post/setting-up-vuepress-with-netlify-cms/">Setting Up VuePress With Netlify Cms</a>. We are going to make a vue.js single component called ToggleDarkMode.vue. To make it beautiful, we will take inspiration and use part of the code that is generously provided in this <a href="https://codepen.io/nathangath/pen/qYeOJJ">Codepen</a> by Nathan Gath. We will also be using the default VuePress <a href="https://v1.vuepress.vuejs.org/theme/default-theme-config.html">theme</a>. Create &ldquo;components&rdquo; folder inside docs/.vuepress folder and save the new component file there. Now, go to the Readme.md file in the docs folder (our root folder) and call the component there. Your Readme.md file should look something like this:</p>
+
+<p><strong>docs/Readme.md</strong></p>
+
+<pre><code>---
+home: true
+heroText: Teach me Vuepress!
+heroImage: https://vuepress.vuejs.org/hero.png
+actionText: Read more →
+sidebar: auto
+actionLink: /
+features:
+- title: Simplicity First
+details: Minimal setup with markdown-centered project structure helps you focus on writing.
+- title: Vue-Powered
+details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
+- title: Performant
+details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded
+footer: MIT Licensed | Copyright © 2018-present Evan You
+---
+
+&lt;ToggleDarkMode/&gt;
+</code></pre>
+
+<p>Great, we have added the component, but it is empty, that is why we still do not see anything. Now, go back to the empty component we have just created and paste the following code:</p>
+
+<p><strong>docs/.vuepress/components/ToggleDarkMode.vue</strong></p>
+
+<pre><code>&lt;template&gt;
+&lt;div class=&quot;dark-mode-widget&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;theme-toggle&quot; @click=&quot;toggleDarkTheme&quot;&gt;&lt;/input&gt;
+    &lt;label for=&quot;theme-toggle&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/label&gt;
+&lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+mounted() {
+    this.checkUserPreference();
+},
+methods: {
+    toggleDarkTheme() {
+    const body = document.body;
+    body.classList.toggle(&quot;dark-mode&quot;);
+    //If dark mode is selected
+    if (body.classList.contains(&quot;dark-mode&quot;)) {
+        //Save user preference in storage
+        localStorage.setItem(&quot;dark-theme&quot;, &quot;true&quot;);
+    //If light mode is selected
+    } else {
+        body.classList.remove(&quot;dark-mode&quot;);
+        setTimeout(function() {
+        localStorage.removeItem(&quot;dark-theme&quot;);
+        }, 100);
+    }
+    },
+    checkUserPreference(){
+        //Check Storage on Page load. Keep user preference through sessions
+        if (localStorage.getItem(&quot;dark-theme&quot;)) {
+            document.body.classList.add(&quot;dark-mode&quot;);
+            document.getElementById('theme-toggle').checked = true;
+        }
+    }
+}
+};
+&lt;/script&gt;
+
+&lt;style&gt;
+.dark-mode-widget {
+    display: table;
+    margin: 1em auto;
+}
+body.dark-mode {
+    background: #333;
+}
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode p {
+    color: #f1f1f1
+}
+#theme-toggle {
+    display: none;
+}
+#theme-toggle + label {
+    font-size: 2rem;
+    display: flex;
+    width: 4em;
+    border-radius: 2em;
+    background-size: auto 8em;
+    background-position: bottom;
+    background-image: linear-gradient(180deg, #021037 0%, #20206A 19%, #4184B1 66%, #62E7F7 100%);
+    transition: .2s;
+    border: 0.125em solid #eef3f6;
+    overflow: hidden;
+}
+#theme-toggle + label span {
+    background: #fffad8;
+    border-radius: 50%;
+    height: 2em;
+    width: 2em;
+    transform: translateX(-.125em) scale(.65);
+    transition: .2s;
+    cursor: pointer;
+    box-shadow: 0 0 .25em .0625em #fbee8d, 0 0 2em 0 #FFEB3B, inset -.25em -.25em 0 0 #fbee8e, inset -.3125em -.3125em 0 .625em #fff5b2;
+    margin-top: -.125em;
+}
+#theme-toggle:checked {
+    font-size: 10rem;
+}
+#theme-toggle:checked + label {
+    background-position: top;
+    border-color: #5983a6;
+}
+#theme-toggle:checked + label span {
+    background: transparent;
+    transform: translateX(calc(100%)) scale(.65);
+    box-shadow: inset -.1875em -.1875em 0 0 #fbe7ef, inset -.5625em -.5625em 0 0 #fffff7;
+}
+&lt;/style&gt;
+</code></pre>
+
+<p>In the template tags, we are creating a simple html checkbox and assigning a click event to it. Inside the script tags, we are toggling &ldquo;dark-mode&rdquo; class to the body tag. We are also &ldquo;saving&rdquo; the user preference inside localstorage, so we can see the same theme mode even after page reload. The most interesting part for me is the css code, because we are actually creating the sun and the moon icons by using only custom css (no icons or images)!</p>
+
+<p>Now, when you check again the home page, you should see a beautiful sun icon just after the call to action button. Try to toggle it to make sure it is working. The last thing that you need to do is to add some custom css to customize your dark layout. You can easily add more styles by using the &ldquo;.dark-mode&rdquo; css class. Happy blogging!</p>
+
+<p><strong>Read more: <div></strong><a href="/post/setting-up-vuepress-with-netlify-cms/">1. Setting Up Vuepress With Netlify CMS</a></p>
+
+					</div>
+				</article>
+
+			</div>
+		</div> 
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
 	</div>	
+
 </main>
+
 <footer id="footer">
 	<div class="container">
 		<div class="row">
