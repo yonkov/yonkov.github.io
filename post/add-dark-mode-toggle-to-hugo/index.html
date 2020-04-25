@@ -19,7 +19,7 @@
 "headline":"Switching off the Lights Part Two - Adding Dark Mode to Hugo",
 "description":"Allow users to toggle between day and night mode (light and dark mode) in Hugo",
 "datePublished":"2020-04-04 11:49:32 &#43;0300 EEST",
-"wordCount": "1176",
+"wordCount": "1201",
 "publisher": {
 "@type": "Website",
 "name": "Yonkov.github.io"
@@ -175,11 +175,21 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
 <p><em>Night is dark. Screen is dark. Eyes not hurt.&rdquo;</em></p>
 </blockquote>
 
-<p>It is official, dark modes are the new mania. Dark backgrounds in computer technology is actualy something pretty ancient, however, recently more and more apps, including YouTube, Twitter, Facebook, started to offer dark mode backgrounds that come together with their default light layouts. One of the main reasons for this is that it is perceived that dark backgrounds put far less strain on the eye, making it the definite option, especially during night time. A recent <a href="https://db0nus869y26v.cloudfront.net/en/Popular_Science">study</a> also found that dark mode (also refered to as night mode) consummates up to six times less battery, making it more appealing to both business and eco-activists (isn&rsquo;t this lovely?!).</p>
+<p>It is official, dark modes are the new mania. Dark backgrounds in computer technology is actualy something pretty ancient, however, recently more and more apps, including YouTube, Twitter, Facebook, started to offer dark mode backgrounds that come together with their default light layouts. One of the main reasons for this is that it is perceived that dark backgrounds put far less strain on the eye, making it the definite option, especially during night time. A recent <a href="https://db0nus869y26v.cloudfront.net/en/Popular_Science">study</a> also found that dark mode (also refered to as night mode) consummates up to six times less battery, making it more appealing to both business and eco-activists (isn&rsquo;t this lovely?!).
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8282934831170709"
+     data-ad-slot="4478912043"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
 
 <h4 id="what-is-hugo">What is Hugo?</h4>
 
-<p>Hugo is an awesome open-source static site generator, which you can use to create beautiful portfolio websites and blogs. Hugo started as a side project in 2013 and quickly raised in popularity to become one of the most popular frameworks for building static websites. It is optimized for speed, easy use and configurability. It takes a directory with content and templates and renders them into a full html website, while using markdown files to generate posts and pages. Simply put, Hugo is my favourite static site generator. Now, enough talking, lets write some code!</p>
+<p>Hugo is an <a href="http://localhost:1313/post/4-awesome-things-you-can-do-with-hugo/">awesome</a> open-source static site generator, which you can use to create beautiful portfolio websites and blogs. Hugo started as a side project in 2013 and quickly raised in popularity to become one of the most popular frameworks for building static websites. It is optimized for speed, easy use and configurability. It takes a directory with content and templates and renders them into a full html website, while using markdown files to generate posts and pages. Simply put, Hugo is my favourite static site generator. Now, enough talking, lets write some code!</p>
 
 <h4 id="toggle-dark-mode-the-html">Toggle Dark Mode - the HTML</h4>
 
@@ -200,7 +210,17 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
 &lt;/<span style="color:#8b008b;font-weight:bold">div</span>&gt;
     </code></pre></div></p>
 
-<p>Just some html code, nothing to worry about here. The intersting part for me were the Base 64 images inlined in the html. How convenient actually! Now, go to hugo&rsquo;s root folder, navigate to layouts &gt; partials and add a partial &ldquo;toggle.html&rdquo; inside the &ldquo;partials&rdquo; folder. Add the partial at the end of the header.html partial and when you refresh the browser, you should be able to see the sun and the moon. If you need a refreshment on how to set up partials, check <a href="https://gohugo.io/templates/partials/">Hugo&rsquo;s documentation</a>.</p>
+<p>Just some html code, nothing to worry about here. The intersting part for me were the Base 64 images inlined in the html. How convenient actually! Now, go to hugo&rsquo;s root folder, navigate to layouts &gt; partials and add a partial &ldquo;toggle.html&rdquo; inside the &ldquo;partials&rdquo; folder. Add the partial at the end of the header.html partial and when you refresh the browser, you should be able to see the sun and the moon. If you need a refreshment on how to set up partials, check <a href="https://gohugo.io/templates/partials/">Hugo&rsquo;s documentation</a>.
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8282934831170709"
+     data-ad-slot="4478912043"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
 
 <h4 id="toggle-dark-mode-the-css">Toggle Dark Mode - the CSS</h4>
 
@@ -364,7 +384,17 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
 
 &lt;/<span style="color:#8b008b;font-weight:bold">script</span>&gt;</code></pre></div></p>
 
-<p>Make sure to inline all the code (html, css and js) in the toggle.js partial, otherwise, when the dark theme mode is selected, you will experience white flash on page reload. Now, refresh the page and test the code, it should be already working (clicking on the sun icon should toggle the &ldquo;dark-mode&rdquo; body class and replace the sun icon with a moon icon).</p>
+<p>Make sure to inline all the code (html, css and js) in the toggle.js partial, otherwise, when the dark theme mode is selected, you will experience white flash on page reload. Now, refresh the page and test the code, it should be already working (clicking on the sun icon should toggle the &ldquo;dark-mode&rdquo; body class and replace the sun icon with a moon icon).
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8282934831170709"
+     data-ad-slot="4478912043"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
 
 <h4 id="style-the-dark-mode-layout">Style the Dark Mode Layout</h4>
 
@@ -377,6 +407,10 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
 }</code></pre></div>
 
 <p>You will probably need to add more css but this is a good starting point. Happy coding!</p>
+
+<p><strong>Read more: </strong><div>
+<a href="/post/how-to-make-a-mulilingual-website-with-hugo/">How to Make a Multilanguage Website with Hugo</a>
+</div></p>
 
 					</div>
 				</article>

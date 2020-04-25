@@ -19,7 +19,7 @@
 "headline":"Optimize Divi for Speed",
 "description":"In this tutorial I will show you the optimizations I did to make my Divi theme load faster. Without the use of any plugins.",
 "datePublished":"2019-07-03 17:01:16 &#43;0300 EEST",
-"wordCount": "1806",
+"wordCount": "1768",
 "publisher": {
 "@type": "Website",
 "name": "Yonkov.github.io"
@@ -164,9 +164,18 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
 <p>Internet users these days do not have the patience to wait for a webpage to load. In fact, Google survey from 2016 figured out that 53% of mobile users abandon a webpage if it takes more than 3 seconds to load! It is obvious that faster websites improve customer satisfaction and provide better user experience. Then, why is the Divi theme so slow? Don&rsquo;t get me wrong, I love Divi. It is one of the most versatile premium WordPress themes that comes with tons of functionalities. It has more than 100 free templates that can help deliver gorgeous designs in no time! Fast and easy- that is the title of Divi. However, we pay a price for that.
 It is not a secret that Divi’s page load speed is far from fantastic. This is not a big problem if you can afford a premium hosting plan but it can be an issue if you are on a low budget and you are limited on server resources. Divi has some in-built performance optimizations, e.g. css and javascript minification. However, it still feels a bit bloated. There are just too many files that need to be loaded in order to do its magic. I have some good news for you, though! With just a bit of effort we can actually speed it up. There are some tricks that can help to optimize Divi and improve your visitors&rsquo; user experience.</p>
 
-<p>There are a lot of plugins that can help you do the below optimizations. However, I would advize against it! Let us get our hands dirty and optimize Divi without plugins! The problem with plugins is the same as the problem with versatile themes - they are bloated with unnecessary functionalities and we have enough of them already! In this article, I will share the code that I am using when I build my freelance projects with Divi. Feel free to use the scripts and optimize your website as well.</p>
-
-<p>Enough talking, let’s do some work!
+<p>There are a lot of plugins that can help you do the below optimizations. However, I would advize against it! Let us get our hands dirty and optimize Divi without plugins! The problem with plugins is the same as the problem with versatile themes - they are bloated with unnecessary functionalities and we have enough of them already! In this article, I will share the code that I am using when I build my freelance projects with Divi. Feel free to use the scripts and optimize your website as well.
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8282934831170709"
+     data-ad-slot="4478912043"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+Enough talking, let’s do some work!
 I will be adding custom code in .htaccess file, located in the root folder of the server. I will be also adding some code snippets in functions.php, which is located in your theme’s main folder. However, you should not add the code directly to it and use a child theme instead. I will get to that in a little while. Now, log in via cpanel or via ftp to the server and go to the site&rsquo;s root folder (it is usually called public html). That is where .htaccess file should be located <em>(If you login via cpanel and cannot find .htaccess in your root folder, make sure that you clicked on show hidden files and folders in the settings tab from the top right corner!)</em>
 <div>
 	<header>
@@ -243,27 +252,25 @@ ExpiresByType application/x-shockwave-flash &quot;access 7 months&quot;
 
 <h3 id="remove-rest-api-lines-from-the-html-header-in-wordpress">Remove REST API Lines from the HTML Header in WordPress</h3>
 
-<p>Since WordPress 4.7, REST API endpoints were introduced, which made it possible for developers to use WordPress as a backend, while developing modern, cutting-edge frontend applications. In this way, you can use any innovative javascript framework to deliver single page applications that provide awesome user experience. I am personally a big fan of frameworks such as vue, react and angular. However, if you are using Divi, chances are you are never going to start writing your frontend from scratch. This code will remove the rest api links from the header and in this way will help to reduce the burden on the server. Add it to your child theme&rsquo;s functions.php. If you do not have a child theme, take a look at this tutorial how to set up a <a href="https://www.elegantthemes.com/blog/divi-resources/divi-child-theme">child theme</a>. If you are not in the mood of doing it, you can just install the plugin <a href="https://wordpress.org/plugins/code-snippets/">Code Snippets</a>. It is extremely lightweight and easy to use. You just have to install it and it will let you modify functions.php, while you will still be able to update Divi without losing any changes. Copy the following code <em>(without the opening &lt;?php tag, it should be put only once, on first row in functions.php!)</em></p>
+<p><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8282934831170709"
+     data-ad-slot="4478912043"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+Since WordPress 4.4, REST API endpoints were introduced, which made it possible for developers to use WordPress as a backend, while developing modern, cutting-edge frontend applications. In this way, you can use any innovative javascript framework to deliver single page applications that provide awesome user experience. I am personally a big fan of frameworks such as vue, react and angular. However, if you are using Divi, chances are you are never going to start writing your frontend from scratch. This code will remove the rest api links from the header and in this way will help to reduce the burden on the server. Add it to your child theme&rsquo;s functions.php. If you do not have a child theme, take a look at this tutorial how to set up a <a href="https://www.elegantthemes.com/blog/divi-resources/divi-child-theme">child theme</a>. If you are not in the mood of doing it, you can just install the plugin <a href="https://wordpress.org/plugins/code-snippets/">Code Snippets</a>. It is extremely lightweight and easy to use. You just have to install it and it will let you modify functions.php, while you will still be able to update Divi without losing any changes. Copy the following code <em>(without the opening &lt;?php tag, it should be put only once, on first row in functions.php!)</em></p>
 
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">	<span style="color:#1e889b">&lt;?php</span>
-	<span style="color:#228b22">// Remove the REST API lines from the HTML Header since WP 4.7
-</span><span style="color:#228b22"></span>	<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">remove_json_api</span> () {
-		remove_action( <span style="color:#cd5555">&#39;wp_head&#39;</span>, <span style="color:#cd5555">&#39;rest_output_link_wp_head&#39;</span>, <span style="color:#b452cd">10</span> );
-		remove_action( <span style="color:#cd5555">&#39;wp_head&#39;</span>, <span style="color:#cd5555">&#39;wp_oembed_add_discovery_links&#39;</span>, <span style="color:#b452cd">10</span> );
-		<span style="color:#228b22">// Remove the REST API endpoint.
-</span><span style="color:#228b22"></span>		remove_action( <span style="color:#cd5555">&#39;rest_api_init&#39;</span>, <span style="color:#cd5555">&#39;wp_oembed_register_route&#39;</span> );
-		<span style="color:#228b22">// Turn off oEmbed auto discovery.
-</span><span style="color:#228b22"></span>		add_filter( <span style="color:#cd5555">&#39;embed_oembed_discover&#39;</span>, <span style="color:#cd5555">&#39;__return_false&#39;</span> );
-		<span style="color:#228b22">// Don&#39;t filter oEmbed results.
-</span><span style="color:#228b22"></span>		remove_filter( <span style="color:#cd5555">&#39;oembed_dataparse&#39;</span>, <span style="color:#cd5555">&#39;wp_filter_oembed_result&#39;</span>, <span style="color:#b452cd">10</span> );
-		<span style="color:#228b22">// Remove oEmbed discovery links.
-</span><span style="color:#228b22"></span>		remove_action( <span style="color:#cd5555">&#39;wp_head&#39;</span>, <span style="color:#cd5555">&#39;wp_oembed_add_discovery_links&#39;</span> );
-		<span style="color:#228b22">// Remove oEmbed-specific JavaScript from the front-end and back-end.
-</span><span style="color:#228b22"></span>		remove_action( <span style="color:#cd5555">&#39;wp_head&#39;</span>, <span style="color:#cd5555">&#39;wp_oembed_add_host_js&#39;</span> );
-		remove_action( <span style="color:#cd5555">&#39;template_redirect&#39;</span>, <span style="color:#cd5555">&#39;rest_output_link_header&#39;</span>, <span style="color:#b452cd">11</span> );
-	   <span style="color:#228b22">// Remove all embeds rewrite rules.
-</span><span style="color:#228b22"></span>	   add_filter( <span style="color:#cd5555">&#39;rewrite_rules_array&#39;</span>, <span style="color:#cd5555">&#39;disable_embeds_rewrites&#39;</span> );
+	<span style="color:#228b22">// Remove the REST API lines from the HTML Header Since WP 4.4
+</span><span style="color:#228b22"></span>	<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">yonkov_remove_api</span>(){
+		remove_action(<span style="color:#cd5555">&#39;wp_head&#39;</span>, <span style="color:#cd5555">&#39;rest_output_link_wp_head&#39;</span>, <span style="color:#b452cd">10</span>);
+		remove_action(<span style="color:#cd5555">&#39;wp_head&#39;</span>, <span style="color:#cd5555">&#39;wp_oembed_add_discovery_links&#39;</span>, <span style="color:#b452cd">10</span>);
 	}
+	add_action(<span style="color:#cd5555">&#39;after_setup_theme&#39;</span>, <span style="color:#cd5555">&#39;yonkov_remove_api&#39;</span>);
 </code></pre></div>
 
 <h3 id="disable-emojis-in-wordpress">Disable Emojis in WordPress</h3>
@@ -356,11 +363,24 @@ add_action(<span style="color:#cd5555">&#39;wp_footer&#39;</span>, <span style="
 
 <h3 id="properly-size-images">Properly Size Images</h3>
 
-<p>Last but not least, you should compress all your images before uploading them. No, I am not joking, this is really, really important! As a rule of thumb, never upload images larger than 100KB, unless you really know what you are doing. Instead, compress or resize them. I am using <a href="https://smallseotools.com/image-compressor/">Small Seo Tools&rsquo; Image Compressor</a> but most programs for processing images will also do the job. Actually, it is crutial to avoid putting big images to your website, because they can really slow down the webpage and frustrate your visiors to the point that they abandon the website without waiting for the page to load.</p>
+<p><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8282934831170709"
+     data-ad-slot="4478912043"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+Last but not least, you should compress all your images before uploading them. No, I am not joking, this is really, really important! As a rule of thumb, never upload images larger than 100KB, unless you really know what you are doing. Instead, compress or resize them. I am using <a href="https://smallseotools.com/image-compressor/">Small Seo Tools&rsquo; Image Compressor</a> but most programs for processing images will also do the job. Actually, it is crutial to avoid putting big images to your website, because they can really slow down the webpage and frustrate your visiors to the point that they abandon the website without waiting for the page to load.</p>
 
 <p>Feel free to use these optimization hacks and <a href = "mailto: yonkov.atanas@gmail.com">send me an email</a> if you have found some other ways to make the Divi theme faster. Keep on rocking with Divi!</p>
 
 <p><strong>Disclaimer</strong>: Make a backup of your website before doing any changes!</p>
+
+<p><strong>Read more:</strong><div><a href="/post/how-to-remove-top-menu-transition-effect-in-divi/">1. Remove Menu Animation on Page Scroll in Divi</a>
+<p><a href="https://yonkov.github.io/post/display-cookie-notification-in-your-divi-theme/">2. Display Cookie Notice in Your Divi Theme</a></p></div></p>
 
 					</div>
 				</article>
