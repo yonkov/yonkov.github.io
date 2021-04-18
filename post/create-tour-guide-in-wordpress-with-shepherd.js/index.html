@@ -4,14 +4,32 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
+	<meta name="description" content="In this tutorial I will show you how to integrate Shepherd.js in WordPress to create an interactive intro tour.">
 	<meta name="author"      content="Atanas Yonkov">
 	
 	
-	<title>Wordpress</title>
+
+<script type="application/ld+json">{
+"@context":"http://schema.org",
+"@type":"TechArticle",
+"url":"https://yonkov.github.io/post/create-tour-guide-in-wordpress-with-shepherd.js/",
+"author": "Atanas Yonkov",
+"creator" : "Atanas Yonkov",
+"copyrightHolder" : "Atanas Yonkov",
+"headline":"Two Ways to Add a Tour Guide in WordPress (With and Without a Plugin)",
+"description":"In this tutorial I will show you how to integrate Shepherd.js in WordPress to create an interactive intro tour.",
+"datePublished":"2021-04-18 19:17:04 &#43;0300 EEST",
+"wordCount": "1162",
+"publisher": {
+"@type": "Website",
+"name": "Yonkov.github.io"
+}
+}
+</script>
+
+
+	<title>Two Ways to Add a Tour Guide in WordPress (With and Without a Plugin)</title>
 	
-	<link rel="alternate" hreflang="ru" href="https://yonkov.github.io/ru/categories/wordpress/" />
-	<link rel="alternate" hreflang="x-default" href="https://yonkov.github.io/en" />
 	<link rel="shortcut icon" href="https://yonkov.github.io/images/gt_favicon.png">
 	
 	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
@@ -72,15 +90,6 @@
                 </li>
                 
 				
-    
-    <li>
-		<span class="language-switcher" style=""> 
-		<i class="fa fa-globe"></i>
-		<a href ="https://yonkov.github.io/ru/categories/wordpress/" style="">ru:  </a>
-		</span>
-    </li>
-    
-
             </ul>
         </div>
     </div>
@@ -113,248 +122,187 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
 	
 </header>
 <main id="main">
+
 	<div class="container">
+
 		<div class="row topspace">
 			<div class="col-sm-8 col-sm-offset-2">
 
-                
-				<article class="post">
+ 				<article class="post">
+					<header class="entry-header">
+ 						<div id="breadcrumbs" class="entry-meta" style="font-size:15px;">
+<a href="/">Home</a>
+    
+        
+    
+        
+            / <a href="/post">Blog</a>
+        
+    
+        
+            / <a href="/create-tour-guide-in-wordpress-with-shepherd.js">Create tour guide in wordpress with shepherd.js</a>
+        
+    
+        
+    
+</div>
+ 						<h1 class="entry-title"><a href="https://yonkov.github.io/post/create-tour-guide-in-wordpress-with-shepherd.js/" rel="bookmark">Two Ways to Add a Tour Guide in WordPress (With and Without a Plugin)</a></h1>
+						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2021-04-18 19:17:04 &#43;0300 EEST">April 18, 2021</time></span>
+						</div>
+						<div id="blog-categories" style="font-style:italic;font-size:15px; text-align:center; padding: 0 0 10px;">
+	
+	  <em>Categories: </em>
+	  <em><a href="/categories/shepherd">Shepherd</a></em>, <em><a href="/categories/wordpress">WordPress</a></em>
+		
+	
+</div>
+					</header>
 					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/create-tour-guide-in-wordpress-with-shepherd.js/" rel="bookmark">Two Ways to Add a Tour Guide in WordPress (With and Without a Plugin)</a></h2>
-							</header>
-								Why is User Onboarding Important? Guided tours matter. In fact, if you are still not using interactive user walkthroughs to guide your users thorughout your app&rsquo;s content, you should start as soon as possible! Let me tell you why. When the user visits a web page for a first time, he probably arrived there because he was searching for something in the first place and he might or might not figure out where to look for it.
-								
-								
-								<a href="/post/create-tour-guide-in-wordpress-with-shepherd.js/">Read More…</a>
-							</div>
-						  
-						</article>
+						
+
+<h3 id="why-is-user-onboarding-important">Why is User Onboarding Important?</h3>
+
+<p>Guided tours matter. In fact, if you are still not using interactive user walkthroughs to guide your users thorughout your app&rsquo;s content, you should start as soon as possible! Let me tell you why. When the user visits a web page for a first time, he probably arrived there because he was searching for something in the first place and he might or might not figure out where to look for it. If the user cannot find this information quick enough, he is highly likely to close your webpage and search somewhere else. This is the sad truth. And I am not going to blame the user. In today&rsquo;s high tech world, we are overwhelmed with information. As the information on the internet is constantly growing, so are the internet users getting more and more impatient to look for it. In fact, a <a href="https://www.marketingdive.com/news/google-53-of-mobile-users-abandon-sites-that-take-over-3-seconds-to-load/426070/">study by Google</a> claimed that 53% of mobile users will leave a website if it does not load for 3 seconds. And this study was done more than 5 years ago, in 2016.
+A step-by-step intro guide is a great way to enhance your app&rsquo;s user experience. It is an awesome tool, because it literally &ldquo;takes the users by the hand&rdquo;, guiding them through your content, so they can easily find what they were searching for and stay longer on your page. If you are guiding the user through a product or service, he might decide to make a purchase or simply drive more traffic by recommending your business.</p>
+
+<h3 id="shepherd-js">Shepherd.js</h3>
+
+<p><a href="https://shepherdjs.dev/">Shepherd.js</a> is an awesome open source js library for a step-by-step user onboarding. It uses Popper.js, another open source library, to create a tour with steps that guide users through your application. It includes minimal css which makes it easy to customize to any design. It also has great documentation and awesome user support. Another cool feature of Shepherd.js is that it is WCAG compliant (includes keyboard navigation and focus trapping) to help make you web site more accessible, user friendly and unique. In this tutorial, I am going to provide you with two possible ways to integrate Shepherd.js in WordPress (with and without a plugin), so you can show an interactive guided tour to your visitors.</p>
+
+<h3 id="how-to-add-a-guided-tour-to-wordpress-with-a-plugin">How to add a Guided Tour to WordPress with a Plugin</h3>
+
+<p>To make our lives easier, I created <a href="https://wordpress.org/plugins/simple-tour-guide/">Simple Tour Guide</a> - a lightweight and easy to use plugin that integrates Shepherd.js to WordPress with a single click. With Simple tour guide, creating an interactive user guide feels like a breeze. You can add as many steps as you want, choose on which pages to display the tour and even add a progress bar to display tour progress. You also have the setting to display the tour only once, instead of displaying the tour on every page reload. There are also options to change the default styles of the steps. All of this is done from a friendly admin interface, so you do not have to write a single line of code. However, if you wish, you can also customize the steps even beyond the included options, by assigning additional css classes to the steps - by writing custom css in Appearance =&gt; Customize =&gt; Additional css tab. There are no restrictions or any hidden costs - this plugin is 100% free and open source.</p>
+
+<p><img src="../../images/stg-1.jpg" alt="add steps in the WordPress admin" /></p>
+
+<p><strong>Image One: Add tour steps</strong>.</p>
+
+<p>You can add as many steps as you want directly from the WordPress admin. Link the step to any page element and assign custom css class to it for additional customization.</p>
+
+<p><img src="../../images/stg-2.jpg" alt="show tour on the site frontend" /></p>
+
+<p><strong>Image Two: Show the Tour on the Site Frontend</strong>.</p>
+
+<p>This is how the step will appear on the site frontend. Use the &ldquo;Style&rdquo; tab from the plugin settings to customize the progress bar and change the color of the buttons. For more customization options, assign additonal classnames via the &ldquo;Create a Tour&rdquo; tab and add your css in the theme customizer (Appearance =&gt; Customize =&gt; Additional css tab)</p>
+
+<h3 id="how-to-add-a-guided-tour-to-wordpress-without-a-plugin">How to add a Guided Tour to WordPress without a Plugin</h3>
+
+<p>For the more tech-savvy readers, who want to dive into coding, I will also show you how to integrate Shepherd.js without a plugin. Please note you will still need to add your own logic to hide the tour after the user dismisses it, as Shepherd.js does not handle this for us. First, you need to add Shepherd.js scripts and styles. First, you need access to your server via ftp or C-panel to manage your files. Add the following snippet to your child theme&rsquo;s functions.php file:</p>
+
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
+<span style="color:#cd5555">/**
+</span><span style="color:#cd5555"> * Load Guided App Tour with Shepperd.js
+</span><span style="color:#cd5555"> * Small Library to create interactive feature tour to guide site visitors
+</span><span style="color:#cd5555"> * @link https://shepherdjs.dev/
+</span><span style="color:#cd5555"> **/</span> 
+<span style="color:#8b008b;font-weight:bold">function</span> <span style="color:#008b45">my_theme_load_shepperd_js</span>() {
+    wp_enqueue_style( <span style="color:#cd5555">&#39;shepherd-style&#39;</span>, <span style="color:#cd5555">&#39;https://cdnjs.cloudflare.com/ajax/libs/shepherd.js/8.1.0/css/shepherd.min.css&#39;</span>, <span style="color:#8b008b;font-weight:bold">array</span>(), <span style="color:#cd5555">&#39;8.1&#39;</span> );
+	wp_enqueue_script( <span style="color:#cd5555">&#39;shepherd-script&#39;</span>, <span style="color:#cd5555">&#39;https://cdnjs.cloudflare.com/ajax/libs/shepherd.js/8.1.0/js/shepherd.min.js&#39;</span>, <span style="color:#8b008b;font-weight:bold">array</span>(), <span style="color:#cd5555">&#39;8.1&#39;</span>, <span style="color:#8b008b;font-weight:bold">true</span> );
+	wp_enqueue_script( <span style="color:#cd5555">&#39;shepherd-config&#39;</span>, get_template_directory_uri() . <span style="color:#cd5555">&#39;/assets/js/shepherd.js&#39;</span>, <span style="color:#8b008b;font-weight:bold">array</span>(), <span style="color:#cd5555">&#39;&#39;</span>, <span style="color:#8b008b;font-weight:bold">true</span> );
+}
+
+add_action(<span style="color:#cd5555">&#39;wp_enqueue_scripts&#39;</span>, <span style="color:#cd5555">&#39;my_theme_load_shepperd_js&#39;</span>, <span style="color:#b452cd">9</span>);
+</code></pre></div>
+
+<p>This code is doing the following:
+- it is loading Shepherd css and js through a cdn
+- it is including our own custom script, called &ldquo;shepherd.js&rdquo;. We will need to create and modify this file to make things work.</p>
+
+<p>Now, create <code>assets</code> folder (in your child theme&rsquo;s root folder) and inside it create another folder called <code>js</code>. Inside the <code>js</code> folder, add a js file called <code>shepherd.js</code>. Finally, add the following js code inside that file:</p>
+
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#8b008b;font-weight:bold">const</span> tour = <span style="color:#8b008b;font-weight:bold">new</span> Shepherd.Tour({
+  defaultStepOptions: {
+    classes: <span style="color:#cd5555">&#39;simple-tour-guide&#39;</span>,
+    scrollTo: <span style="color:#8b008b;font-weight:bold">true</span>,
+    cancelIcon: {
+      enabled: <span style="color:#8b008b;font-weight:bold">true</span>,
+    },
+    useModalOverlay: <span style="color:#8b008b;font-weight:bold">true</span>
+  },
+  confirmCancel: <span style="color:#8b008b;font-weight:bold">true</span>,
+});
+
+<span style="color:#228b22">//Construct the steps
+</span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">const</span> steps = [{
+        title: <span style="color:#cd5555">&#39;My Awesome Tour Guide : Step One&#39;</span>,
+        text: <span style="color:#cd5555">&#39;This step is attached to the bottom of the &lt;code&gt;header&lt;/code&gt; element.&#39;</span>,
+        attachTo: {
+            element: <span style="color:#cd5555">&#39;header&#39;</span>,
+            on: <span style="color:#cd5555">&#39;bottom&#39;</span>
+        },
+        classes: <span style="color:#cd5555">&#39;my-awesome-additional-class&#39;</span>,
+        buttons: [{
+            text: <span style="color:#cd5555">&#39;Next&#39;</span>,
+            action: tour.next
+        }, ],
+        showCancelLink: <span style="color:#8b008b;font-weight:bold">true</span>,
+        confirmCancel: <span style="color:#8b008b;font-weight:bold">true</span>,
+    },
+
+    {
+        title: <span style="color:#cd5555">&#39;My Awesome Tour Guide : Step Two&#39;</span>,
+        text: <span style="color:#cd5555">&#39;This step is attached to the bottom of the &lt;code&gt;.entry-content&lt;/code&gt; element. If no such element is found, the step appears in the center of the screen.&#39;</span>,
+        attachTo: {
+            element: <span style="color:#cd5555">&#39;.entry-cotent&#39;</span>,
+            on: <span style="color:#cd5555">&#39;bottom&#39;</span>
+        },
+        classes: <span style="color:#cd5555">&#39;my-awesome-additional-class&#39;</span>,
+        buttons: [{
+                text: <span style="color:#cd5555">&#39;Back&#39;</span>,
+                action: tour.back
+            },
+            {
+                text: <span style="color:#cd5555">&#39;Finish&#39;</span>,
+                classes: <span style="color:#cd5555">&#39;shepherd-button-close&#39;</span>,
+                action: tour.hide
+            }
+        ],
+        showCancelLink: <span style="color:#8b008b;font-weight:bold">true</span>,
+        confirmCancel: <span style="color:#8b008b;font-weight:bold">true</span>,
+    },
+
+]
+
+tour.addSteps(steps);
+
+<span style="color:#228b22">// Initiate the tour
+</span><span style="color:#228b22"></span>tour.start();
+</code></pre></div>
+
+<p>With this code, we are creating two steps and we are adding the steps to a tour. Now, when you go to your site&rsquo;s homepage, you should be able to see the tour guide! To add more steps, just add more objects inside the steps array. For a full list of the available options, check <a href="https://shepherdjs.dev/docs/tutorial-02-usage.html">Shepherd.js documentation</a>.</p>
+
+<p>Creating interactive user walktroughs does not have to be difficult anymore. In fact, there should be an easy and efficient way for any webmaster to to guide his visitors throughout the site content. With Shepherd.js, you can do exactly that. I hope this tutorial will be useful. Feel free to contact me by <a href="mailto:yonkov.atanas@gmail.com">email</a> if you need any additional help with Shepherd.js integration to WordPress. Good luck and happy blogging.</p>
+
 					</div>
 				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/add-dark-mode-toggle-button-to-wordpress/" rel="bookmark">Switching off the Lights - Adding Dark Mode to WordPress</a></h2>
-							</header>
-								Yesterday, 30 March, StackOverflow started to offer a dark theme version (still in beta) for their visitors. On their home page, you can read:
- &ldquo;You’ve been asking for dark mode for years. The dark mode beta is finally here. Change your preferences any time.&rdquo;
- More and More web apps are offering or considering to offer a &ldquo;dark mode&rdquo; layout to their visitors that comes together with their normal, &ldquo;light mode&rdquo; layout.
-								
-								
-								<a href="/post/add-dark-mode-toggle-button-to-wordpress/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/shortcode-for-recent-posts-for-each-category-in-wordpress/" rel="bookmark">Shortcode to Display Recent Posts for Each Category in WordPress</a></h2>
-							</header>
-								Sometimes, you may need to add a section in your page that displays recent blog posts. WordPress homepage by default shows recent blog posts and nothing else. However, in most of the cases, the user would like to customize the homepage content to display other sections as well. In such cases, you can use the Gutenberg editor, the new core WordPress editor, since it has a lot of code blocks that are very handy and easy to use.
-								
-								
-								<a href="/post/shortcode-for-recent-posts-for-each-category-in-wordpress/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/change-post-order-for-a-specific-category-in-wordpress/" rel="bookmark">2 Ways to Reverse Post Order from a Specific Category in WordPress (With and Without a Plugin)</a></h2>
-							</header>
-								I had a client that needed to build an archive website for a museum. Needless to say, the museum had thousands of materials, seperated into categories and subcategories. Some of the subcategories needed to have a custom post order on the category archive page (by title or by published date in ascending order), while others should have been ordered with the default post order (date descending). In this tutorial, I will show you two ways how to sort the posts from a certain category archive page like a pro!
-								
-								
-								<a href="/post/change-post-order-for-a-specific-category-in-wordpress/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/add-parent-category-to-the-body-class/" rel="bookmark">How To Easily Add Parent Category to the WordPress body class</a></h2>
-							</header>
-								I had a client that wanted to customize the category archives in such a way that they had different content and layout for all the child categories that belong to a certain parent category. For this, I needed a class name, so i can display it on the frontend and customize each child category&rsquo;s archive page accordingly. In this tutorial, I will show you how to quickly assign the parent category id as a body class name to any WordPress child category&rsquo;s archive page.
-								
-								
-								<a href="/post/add-parent-category-to-the-body-class/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/show-recent-posts-with-thumbnails-in-wordpress-without-a-plugin/" rel="bookmark">Shortcode for Recent Posts with Thumbnails in WordPress Without a Plugin</a></h2>
-							</header>
-								Sometimes, you may need to add a section in your page that displays your recent blog posts. This can be very useful for portfolio websites and it can be a nice addition to the home page. Normally, you can only add html inside your WordPress posts. However, with the help of shortcodes, you can add some programming logic and create custom content whereever you want. In this post, I will guide you through the process how to create a custom shortcode to display recent posts with thumbnails in WordPress.
-								
-								
-								<a href="/post/show-recent-posts-with-thumbnails-in-wordpress-without-a-plugin/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/display-related-posts-from-the-same-category-in-wordpress-without-a-pugin/" rel="bookmark">Display Related Posts With Thumbnails in WordPress Without a Pugin</a></h2>
-							</header>
-								In this tutorial I am going to show you how to display related posts from the same category as the single post page in WordPress. Without the use of any plugins. The related posts are a great way to improve your website conversions (the time that your visitors spend on the website) and improve Google&rsquo;s search rankings. In the past, I was using Yuzo Related Posts plugin. However, in the beginning of 2019, there was a vulnerability issue and it is no longer supported by the WordPress community.
-								
-								
-								<a href="/post/display-related-posts-from-the-same-category-in-wordpress-without-a-pugin/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/optimize-divi-for-speed/" rel="bookmark">Optimize Divi for Speed</a></h2>
-							</header>
-								Internet users these days do not have the patience to wait for a webpage to load. In fact, Google survey from 2016 figured out that 53% of mobile users abandon a webpage if it takes more than 3 seconds to load! It is obvious that faster websites improve customer satisfaction and provide better user experience. Then, why is the Divi theme so slow? Don&rsquo;t get me wrong, I love Divi.
-								
-								
-								<a href="/post/optimize-divi-for-speed/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/display-cookie-notification-in-your-divi-theme/" rel="bookmark">Display Cookie Notice in Your Divi Theme</a></h2>
-							</header>
-								In this tutorial, I will show you how to easily add a cookie notification popup to your Divi website. By the end of it, you will be able to display a cookie message on page load just the way I show it on my website. Now, let&rsquo;s get on with it.    (adsbygoogle = window.adsbygoogle || []).push({});  Why do you need cookie consent?
-Cookie consent is required by European Union&rsquo;s General Data Protection Regulation (GDPR) and ePrivacy Directive (ePR).
-								
-								
-								<a href="/post/display-cookie-notification-in-your-divi-theme/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
-				<article class="post">
-					<div class="entry-content">
-						<article>
-						  
-						  <div>
-							<header class="entry-header">
-								<h2 class="entry-title"><a href="https://yonkov.github.io/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/" rel="bookmark">Easy Way to Add a Cookie Popup in WordPress Without a Plugin</a></h2>
-							</header>
-								In this tutorial I am going to show you how to easily add a cookie notification popup to a WordPress website without installing any additional plugins.
-Don&rsquo;t get me wrong – I like plugins and I use a few of them on my websites. They are one of the main reasons that made WordPress so popular in the first place. With a simple click you can extend your website&rsquo;s functionalities and give an easy answer to a complex technical problem.
-								
-								
-								<a href="/post/easy-way-to-add-a-cookie-popup-in-wordpress-without-a-plugin/">Read More…</a>
-							</div>
-						  
-						</article>
-					</div>
-				</article>
-                
+
 			</div>
-		</div>
-		<center class="">
-			<ul class="pagination">
-                
+		</div> 
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
 
-<ul class="pagination">
-    
-    <li class="page-item">
-        <a href="/categories/wordpress/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-    </li>
-    
-    <li class="page-item disabled">
-    <a href="" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-    </li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item active"><a class="page-link" href="/categories/wordpress/">1</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="/categories/wordpress/page/2/">2</a></li>
-    
-    
-    <li class="page-item">
-    <a href="/categories/wordpress/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-    </li>
-    
-    <li class="page-item">
-        <a href="/categories/wordpress/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-    </li>
-    
-</ul>
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
 
-			</ul>
-		</center>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
 	</div>	
+
 </main>
+
 <footer id="footer">
 	<div class="container">
 		<div class="row">

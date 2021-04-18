@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>User Onboarding on Atanas Yonkov</title>
+    <link>https://yonkov.github.io/tags/user-onboarding/</link>
+    <description>Recent content in User Onboarding on Atanas Yonkov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 18 Apr 2021 19:17:04 +0300</lastBuildDate>
+    
+	<atom:link href="https://yonkov.github.io/tags/user-onboarding/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Two Ways to Add a Tour Guide in WordPress (With and Without a Plugin)</title>
+      <link>https://yonkov.github.io/post/create-tour-guide-in-wordpress-with-shepherd.js/</link>
+      <pubDate>Sun, 18 Apr 2021 19:17:04 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/create-tour-guide-in-wordpress-with-shepherd.js/</guid>
+      <description>Why is User Onboarding Important? Guided tours matter. In fact, if you are still not using interactive user walkthroughs to guide your users thorughout your app&amp;rsquo;s content, you should start as soon as possible! Let me tell you why. When the user visits a web page for a first time, he probably arrived there because he was searching for something in the first place and he might or might not figure out where to look for it.</description>
+    </item>
+    
+  </channel>
+</rss>

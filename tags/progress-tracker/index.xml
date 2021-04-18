@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Progress Tracker on Atanas Yonkov</title>
+    <link>https://yonkov.github.io/tags/progress-tracker/</link>
+    <description>Recent content in Progress Tracker on Atanas Yonkov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 18 Apr 2021 20:57:49 +0300</lastBuildDate>
+    
+	<atom:link href="https://yonkov.github.io/tags/progress-tracker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Add a Progress Bar in Shepherd.js</title>
+      <link>https://yonkov.github.io/post/progress-bar-in-shepherd/</link>
+      <pubDate>Sun, 18 Apr 2021 20:57:49 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/progress-bar-in-shepherd/</guid>
+      <description>Shepherd.js is an easy to use interactive onboarding user guide that can help visitors throughout the content of the app. It is very useful if you want to show your users around, emphasize on your product&amp;rsquo;s features and strengths or just help them get to know you more. It is an open source software that I highly recommend, because it is easy to use, has great documentation, friendly support team and most importantly - it can improve user experience and help your site convert more!</description>
+    </item>
+    
+  </channel>
+</rss>

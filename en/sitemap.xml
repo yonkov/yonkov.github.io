@@ -13,6 +13,16 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/post/progress-bar-in-shepherd/</loc>
+    <lastmod>2021-04-18T20:57:49+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/post/create-tour-guide-in-wordpress-with-shepherd.js/</loc>
+    <lastmod>2021-04-18T19:17:04+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/post/add-dark-mode-to-vuepress/</loc>
     <lastmod>2020-04-15T11:49:32+03:00</lastmod>
   </url>
@@ -391,6 +401,12 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/tags/intro-tour/</loc>
+    <lastmod>2021-04-18T19:17:04+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/tags/light-mode/</loc>
     <lastmod>2020-03-31T17:46:43+03:00</lastmod>
     <priority>0</priority>
@@ -411,6 +427,24 @@
   <url>
     <loc>https://yonkov.github.io/tags/php-mysql-website-from-scratch/</loc>
     <lastmod>2017-11-10T19:48:56+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/tags/progress-bar/</loc>
+    <lastmod>2021-04-18T20:57:49+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/tags/progress-indicator/</loc>
+    <lastmod>2021-04-18T20:57:49+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/tags/progress-tracker/</loc>
+    <lastmod>2021-04-18T20:57:49+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -440,6 +474,18 @@
                 hreflang="en"
                 href="https://yonkov.github.io/service/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/categories/shepherd/</loc>
+    <lastmod>2021-04-18T20:57:49+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/tags/shepherd.js/</loc>
+    <lastmod>2021-04-18T19:17:04+03:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -505,8 +551,20 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/tags/tour-guide/</loc>
+    <lastmod>2021-04-18T19:17:04+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/tags/useful-excel-functions/</loc>
     <lastmod>2017-11-12T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/tags/user-onboarding/</loc>
+    <lastmod>2021-04-18T19:17:04+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -566,7 +624,7 @@
   
   <url>
     <loc>https://yonkov.github.io/categories/wordpress/</loc>
-    <lastmod>2020-03-31T17:46:43+03:00</lastmod>
+    <lastmod>2021-04-18T19:17:04+03:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
