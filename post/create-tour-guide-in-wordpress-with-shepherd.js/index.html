@@ -19,7 +19,7 @@
 "headline":"Two Ways to Add a Tour Guide in WordPress (With and Without a Plugin)",
 "description":"In this tutorial I will show you how to integrate Shepherd.js in WordPress to create an interactive intro tour.",
 "datePublished":"2021-04-18 19:17:04 &#43;0300 EEST",
-"wordCount": "1162",
+"wordCount": "1170",
 "publisher": {
 "@type": "Website",
 "name": "Yonkov.github.io"
@@ -168,7 +168,7 @@ A step-by-step user walktrough is a great way to enhance your app&rsquo;s user e
 
 <h3 id="shepherd-js">Shepherd.js</h3>
 
-<p><a href="https://shepherdjs.dev/">Shepherd.js</a> is an awesome open source js library for a step-by-step user onboarding. It uses Popper.js, another open source library, to create a tour with steps that guide users through your application. It includes minimal css which makes it easy to customize to any design. It is easy to use, has great documentation and awesome user support. Another cool feature of Shepherd.js is that it is WCAG compliant (includes keyboard navigation and focus trapping) to help make you application more accessible, user friendly and unique. In this tutorial, I am going to show you two ways to integrate Shepherd.js in WordPress (with and without a plugin), so you can show an interactive guided tour to your visitors.</p>
+<p><a href="https://shepherdjs.dev/">Shepherd.js</a> is an awesome open source js library for a step-by-step user onboarding. It uses Popper.js, another open source library, to create a tour with steps that guide users through your application. It includes minimal css which makes it easy to customize to any design. It is easy to use, has great documentation and awesome user support. Another cool feature of Shepherd.js is that it is WCAG compliant (includes keyboard navigation and focus trapping) to help make youр application more accessible, user friendly and unique. In this tutorial, I am going to show you two ways to integrate Shepherd.js in WordPress (with and without a plugin), so you can show an interactive guided tour to your visitors.</p>
 
 <h3 id="how-to-add-a-guided-tour-to-wordpress-with-a-plugin">How to add a Guided Tour to WordPress with a Plugin</h3>
 
@@ -188,7 +188,7 @@ A step-by-step user walktrough is a great way to enhance your app&rsquo;s user e
 
 <h3 id="how-to-add-a-guided-tour-to-wordpress-without-a-plugin">How to add a Guided Tour to WordPress without a Plugin</h3>
 
-<p>For the more tech-savvy readers, who want to dive into coding, I will also show you how to integrate Shepherd.js without a plugin. Please note you will still need to add your own logic to hide the tour after the user dismisses it, as Shepherd.js does not handle this for us. First, you need to add Shepherd.js scripts and styles. First, you need access to your server via ftp or C-panel to manage your files. Add the following snippet to your child theme&rsquo;s functions.php file:</p>
+<p>For the more tech-savvy readers, who want to dive deeper into coding, I will also show you how to integrate Shepherd.js to WordPress without a plugin. Please note that you will still need to add your own logic to hide the tour after the user dismisses it, as Shepherd.js does not handle this for us. First, you need to add Shepherd.js scripts and styles. To do that, you would need access to your server via ftp or C-panel to manage your files. Add the following snippet to your child theme&rsquo;s functions.php file:</p>
 
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#1e889b">&lt;?php</span>
 <span style="color:#cd5555">/**
@@ -206,10 +206,10 @@ add_action(<span style="color:#cd5555">&#39;wp_enqueue_scripts&#39;</span>, <spa
 </code></pre></div>
 
 <p>This code is doing the following:
-- it is loading Shepherd css and js through a cdn
-- it is including our own custom script, called &ldquo;shepherd.js&rdquo;. We will need to create and modify this file to make things work.</p>
+* it is loading Shepherd css and js through a cdn
+* it is including our own custom script, called &ldquo;shepherd.js&rdquo;. You would need to create and modify this file to make things work.</p>
 
-<p>Now, create <code>assets</code> folder (in your child theme&rsquo;s root folder) and inside it create another folder called <code>js</code>. Inside the <code>js</code> folder, add a js file called <code>shepherd.js</code>. Finally, add the following js code inside that file:</p>
+<p>Now, create <code>assets</code> folder (in your child theme&rsquo;s root folder) and inside it create another folder called <code>js</code>. Inside the <code>js</code> folder, add a js file called <code>shepherd.js</code>. Finally, add the following js code in that file:</p>
 
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#8b008b;font-weight:bold">const</span> tour = <span style="color:#8b008b;font-weight:bold">new</span> Shepherd.Tour({
   defaultStepOptions: {
@@ -272,7 +272,7 @@ tour.addSteps(steps);
 
 <p>With this code, we are creating two steps and we are adding the steps to a tour. Now, when you go to your site&rsquo;s homepage, you should be able to see the tour guide! To add more steps, just add more objects inside the steps array. For a full list of the available options, check <a href="https://shepherdjs.dev/docs/tutorial-02-usage.html">Shepherd.js documentation</a>.</p>
 
-<p>Creating interactive user walktroughs does not have to be difficult anymore. In fact, there should be an easy and efficient way for any webmaster to to guide his visitors throughout the site content. With Shepherd.js, you can do exactly that. I hope this tutorial will be useful. Feel free to contact me by <a href="mailto:yonkov.atanas@gmail.com">email</a> if you need any additional help with Shepherd.js integration to WordPress. Good luck and happy blogging.</p>
+<p>Creating interactive user walktroughs does not have to be difficult anymore. In fact, there should be an easy and efficient way for any webmaster to to guide his visitors throughout the site content. With Shepherd.js, you can do exactly that. I hope that you found this tutorial useful. Feel free to contact me by <a href="mailto:yonkov.atanas@gmail.com">email</a> if you need any additional help with Shepherd.js integration to WordPress. Good luck and happy blogging!</p>
 
 					</div>
 				</article>
