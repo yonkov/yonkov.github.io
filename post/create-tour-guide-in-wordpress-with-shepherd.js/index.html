@@ -19,7 +19,7 @@
 "headline":"Two Ways to Add a Tour Guide in WordPress (With and Without a Plugin)",
 "description":"In this tutorial I will show you how to integrate Shepherd.js in WordPress to create an interactive intro tour.",
 "datePublished":"2021-04-18 19:17:04 &#43;0300 EEST",
-"wordCount": "1166",
+"wordCount": "1161",
 "publisher": {
 "@type": "Website",
 "name": "Yonkov.github.io"
@@ -235,7 +235,7 @@ add_action(<span style="color:#cd5555">&#39;wp_enqueue_scripts&#39;</span>, <spa
         buttons: [{
             text: <span style="color:#cd5555">&#39;Next&#39;</span>,
             action: tour.next
-        }, ]
+        }]
     },
 
     {
@@ -255,9 +255,7 @@ add_action(<span style="color:#cd5555">&#39;wp_enqueue_scripts&#39;</span>, <spa
                 classes: <span style="color:#cd5555">&#39;shepherd-button-close&#39;</span>,
                 action: tour.hide
             }
-        ],
-        showCancelLink: <span style="color:#8b008b;font-weight:bold">true</span>,
-        confirmCancel: <span style="color:#8b008b;font-weight:bold">true</span>,
+        ]
     },
 
 ]
