@@ -5,10 +5,19 @@
     <link>https://yonkov.github.io/tags/shepherd.js/</link>
     <description>Recent content in Shepherd.js on Atanas Yonkov</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 18 Apr 2021 19:17:04 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 21 Apr 2021 09:05:44 +0300</lastBuildDate>
     
 	<atom:link href="https://yonkov.github.io/tags/shepherd.js/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Display Shepherd.js Only Once</title>
+      <link>https://yonkov.github.io/post/display-shepherd-only-once/</link>
+      <pubDate>Wed, 21 Apr 2021 09:05:44 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/display-shepherd-only-once/</guid>
+      <description>Shepherd.js is an awesome library for creating interactive user walktroughs / client onboarding. With Shepherd, you can create an intro tour to guide the visitor through a list of steps. Each step can trigger different optional actions. For example, the user can go back a step or go to the next step, dismiss the tour without reaching the end of it or close the tour after completion. All the hard work is done for us, and we only need to write a few lines of javaScript to set it up.</description>
+    </item>
     
     <item>
       <title>Two Ways to Add a Tour Guide in WordPress (With and Without a Plugin)</title>

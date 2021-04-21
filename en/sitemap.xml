@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/post/display-shepherd-only-once/</loc>
+    <lastmod>2021-04-21T09:05:44+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/post/progress-bar-in-shepherd/</loc>
     <lastmod>2021-04-18T20:57:49+03:00</lastmod>
   </url>
@@ -349,6 +354,12 @@
   </url>
   
   <url>
+    <loc>https://yonkov.github.io/tags/display-tour-one-time-only/</loc>
+    <lastmod>2021-04-21T09:05:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://yonkov.github.io/categories/divi/</loc>
     <lastmod>2019-07-03T17:01:16+03:00</lastmod>
     <priority>0</priority>
@@ -402,7 +413,7 @@
   
   <url>
     <loc>https://yonkov.github.io/tags/intro-tour/</loc>
-    <lastmod>2021-04-18T19:17:04+03:00</lastmod>
+    <lastmod>2021-04-21T09:05:44+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -478,13 +489,13 @@
   
   <url>
     <loc>https://yonkov.github.io/categories/shepherd/</loc>
-    <lastmod>2021-04-18T20:57:49+03:00</lastmod>
+    <lastmod>2021-04-21T09:05:44+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://yonkov.github.io/tags/shepherd.js/</loc>
-    <lastmod>2021-04-18T19:17:04+03:00</lastmod>
+    <lastmod>2021-04-21T09:05:44+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -564,7 +575,7 @@
   
   <url>
     <loc>https://yonkov.github.io/tags/user-onboarding/</loc>
-    <lastmod>2021-04-18T19:17:04+03:00</lastmod>
+    <lastmod>2021-04-21T09:05:44+03:00</lastmod>
     <priority>0</priority>
   </url>
   

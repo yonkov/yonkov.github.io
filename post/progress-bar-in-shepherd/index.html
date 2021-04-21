@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Shepherd.js is an easy to use interactive onboarding user guide that can help visitors throughout the content of the app. This is very useful if you want to show your users around, focus on your product&rsquo;s strengths or just help the others find their way around your app more easily. Shepherd.js is an open source software that I highly recommend, because it is easy to use, has great documentation, friendly support team and most importantly - it can improve user experience and help your site convert more!">
+	<meta name="description" content="Shepherd.js is an easy to use interactive onboarding user guide that can help visitors throughout the content of the app. This is very useful if you want to show your users around, focus on your product&rsquo;s strengths or just help the others find their way around your project more easily. Shepherd.js is an open source software that I highly recommend, because it is easy to use, has great documentation, friendly support team and most importantly - it can improve user experience and help your content convert more!">
 	<meta name="author"      content="Atanas Yonkov">
 	
 	
@@ -19,7 +19,7 @@
 "headline":"How to Add a Progress Bar in Shepherd",
 "description":"",
 "datePublished":"2021-04-18 20:57:49 &#43;0300 EEST",
-"wordCount": "957",
+"wordCount": "971",
 "publisher": {
 "@type": "Website",
 "name": "Yonkov.github.io"
@@ -161,7 +161,7 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
 					<div class="entry-content">
 						
 
-<p><a href="https://shepherdjs.dev/">Shepherd.js</a> is an easy to use interactive onboarding user guide that can help visitors throughout the content of the app. This is very useful if you want to show your users around, focus on your product&rsquo;s strengths or just help the others find their way around your app more easily. Shepherd.js is an open source software that I highly recommend, because it is easy to use, has great documentation, friendly support team and most importantly - it can improve user experience and help your site convert more!</p>
+<p><a href="https://shepherdjs.dev/">Shepherd.js</a> is an easy to use interactive onboarding user guide that can help visitors throughout the content of the app. This is very useful if you want to show your users around, focus on your product&rsquo;s strengths or just help the others find their way around your project more easily. Shepherd.js is an open source software that I highly recommend, because it is easy to use, has great documentation, friendly support team and most importantly - it can improve user experience and help your content convert more!</p>
 
 <p>One of the things I found missing from the default options was a progress bar (progress indicatior) to show users where they are in their tour guide. In my opinion, a progress bar to indicate the progress of the intro tour is something that can increase overall user experience and is a must-have for your interactive guided tour. After some digging around, I figured out that this feature can be ironed out with just a few lines of js. In fact, there is already information about how to add a progress indicator in the official <a href="https://shepherdjs.dev/docs/tutorial-04-cookbook.html">Shepperd documentation</a>. Although it is a great starting point, it feels very basic and I was looking for something way more visual. I modified the progress tracker a bit to suit my needs and decided to share the end result with you in this blog post. In the end of this tutorial, you will be able to add a progress bar to your Shepherd tour that looks exaclty like this:</p>
 
@@ -289,9 +289,7 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
         buttons: [{
             text: <span style="color:#cd5555">&#39;Next&#39;</span>,
             action: tour.next
-        }, ],
-        showCancelLink: <span style="color:#8b008b;font-weight:bold">true</span>,
-        confirmCancel: <span style="color:#8b008b;font-weight:bold">true</span>,
+        }]
     },
 
     {
@@ -311,9 +309,7 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
                 classes: <span style="color:#cd5555">&#39;shepherd-button-close&#39;</span>,
                 action: tour.hide
             }
-        ],
-        showCancelLink: <span style="color:#8b008b;font-weight:bold">true</span>,
-        confirmCancel: <span style="color:#8b008b;font-weight:bold">true</span>,
+        ]
     },
 
 ]
@@ -325,6 +321,9 @@ tour.addSteps(steps);
 </code></pre></div>
 
 <p>Good luck and happy coding!</p>
+
+<p><strong>Read more:</strong><div><a href="/post/display-shepherd-only-once/">1. How to Display Shepherd.js Only Once</a>
+<p><a href="/post/create-tour-guide-in-wordpress-with-shepherd.js/">2. Two Ways to Add a Tour Guide in WordPress (With and Without a Plugin)</a></p></div></p>
 
 					</div>
 				</article>

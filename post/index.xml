@@ -11,12 +11,21 @@
     
     
     <item>
+      <title>How to Display Shepherd.js Only Once</title>
+      <link>https://yonkov.github.io/post/display-shepherd-only-once/</link>
+      <pubDate>Wed, 21 Apr 2021 09:05:44 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/display-shepherd-only-once/</guid>
+      <description>Shepherd.js is an awesome library for creating interactive user walktroughs / client onboarding. With Shepherd, you can create an intro tour to guide the visitor through a list of steps. Each step can trigger different optional actions. For example, the user can go back a step or go to the next step, dismiss the tour without reaching the end of it or close the tour after completion. All the hard work is done for us, and we only need to write a few lines of javaScript to set it up.</description>
+    </item>
+    
+    <item>
       <title>How to Add a Progress Bar in Shepherd</title>
       <link>https://yonkov.github.io/post/progress-bar-in-shepherd/</link>
       <pubDate>Sun, 18 Apr 2021 20:57:49 +0300</pubDate>
       
       <guid>https://yonkov.github.io/post/progress-bar-in-shepherd/</guid>
-      <description>Shepherd.js is an easy to use interactive onboarding user guide that can help visitors throughout the content of the app. This is very useful if you want to show your users around, focus on your product&amp;rsquo;s strengths or just help the others find their way around your app more easily. Shepherd.js is an open source software that I highly recommend, because it is easy to use, has great documentation, friendly support team and most importantly - it can improve user experience and help your site convert more!</description>
+      <description>Shepherd.js is an easy to use interactive onboarding user guide that can help visitors throughout the content of the app. This is very useful if you want to show your users around, focus on your product&amp;rsquo;s strengths or just help the others find their way around your project more easily. Shepherd.js is an open source software that I highly recommend, because it is easy to use, has great documentation, friendly support team and most importantly - it can improve user experience and help your content convert more!</description>
     </item>
     
     <item>
