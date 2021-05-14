@@ -19,7 +19,7 @@
 "headline":"How to Display Shepherd.js Only Once",
 "description":"How to display Shepherd.js tour only on first user visit",
 "datePublished":"2021-04-21 09:05:44 &#43;0300 EEST",
-"wordCount": "835",
+"wordCount": "850",
 "publisher": {
 "@type": "Website",
 "name": "Yonkov.github.io"
@@ -208,6 +208,17 @@ tour.addSteps(steps);
 
 <p>This code will create a tour with two steps that will show on each page reload. In some cases this is fine, however, in most scenarios you would prefer to display the tour only during first user visit. Even better, it might make more sense to hide the tour only after the user dismisses the tour or finishes it. In this tutorial, I will show you how to do both.</p>
 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8282934831170709"
+     data-ad-slot="4478912043"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 <h3 id="show-shepherd-js-on-first-visit-only">Show Shepherd.js On First Visit Only</h3>
 
 <p>If you are using plain javaScript, you can achieve the required effect with localstorage. You can create a key called &ldquo;shepherd-tour&rdquo;, store it there, then do a check if the key exists. If it does not exist, do not initiate the tour. Here is a working example:</p>
@@ -220,6 +231,17 @@ tour.addSteps(steps);
 </code></pre></div>
 
 <p>Simple and tidy solution. You just need to wrap the tour initiation in an if condition that checks the user browser&rsquo;s localstorage. This code will only display the tour once. The next time the user loads the page, he will not see the tour, even if he never interacted with the tour.</p>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8282934831170709"
+     data-ad-slot="4478912043"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 <h3 id="show-shepherd-js-until-the-user-dismisses-or-finishes-the-tour">Show Shepherd.js Until the User Dismisses or Finishes the Tour</h3>
 
@@ -262,6 +284,17 @@ tour.addSteps(steps);
     ]
 },
 </code></pre></div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-8282934831170709"
+     data-ad-slot="4478912043"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 <p>Our final code:</p>
 
