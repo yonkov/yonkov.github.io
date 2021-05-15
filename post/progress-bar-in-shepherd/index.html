@@ -180,10 +180,7 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
 
 <p>I hope that you will find this tutorial useful. If you wish, feel free to modify the progress bar even more and share the end result. Now, back to work!</p>
 
-<h3 id="add-a-basic-progress-bar-to-shepherd">Add a Basic Progress Bar to Shepherd</h3>
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
+<p><ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
@@ -191,7 +188,9 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
      data-ad-slot="4478912043"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script></p>
+
+<h3 id="add-a-basic-progress-bar-to-shepherd">Add a Basic Progress Bar to Shepherd</h3>
 
 <p>To add a progress bar, following <a href="https://shepherdjs.dev/docs/tutorial-04-cookbook.html">Shepherd.js documentation</a>, add the following js to the tour options:</p>
 
@@ -220,8 +219,6 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
 
 <p>Great, we already got it to work. This &ldquo;<sup>1</sup>&frasl;<sub>2</sub>&rdquo; stats on the top right corner means that we are on the first step and there are two steps in total until the end of the tour. Cool, but how to turn this info into a beautiful progress bar? Keep reading to find out!</p>
 
-<h3 id="customize-the-progress-bar">Customize the Progress bar</h3>
-
 <p><ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
@@ -231,6 +228,8 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script></p>
+
+<h3 id="customize-the-progress-bar">Customize the Progress bar</h3>
 
 <p>To be able to customize the progress bar, we will need to add some more html and add dynamically the progress width for each step. For example, if we have 2 steps in total (as in the above example), the width of the progress bar on the first step needs to be 50% and the width of the progress bar on the second step needs to be 100%. If we have more steps, the percentages will need to adjust accordingly. This may sound a bit overwhelming at the beginning, but it is not. All we need to do is to calculate the correct percentage with js and append a single line of css to include the width of the progress bar. Modify the show function to include the following:</p>
 
