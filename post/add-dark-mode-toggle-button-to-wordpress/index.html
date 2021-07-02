@@ -19,7 +19,7 @@
 "headline":"Switching off the Lights - Adding Dark Mode to WordPress",
 "description":"Protect your visitors&#39; eyes and help them stay more time at your website by adding a dark mode toggle button in WordPress",
 "datePublished":"2020-03-31 17:46:43 &#43;0300 EEST",
-"wordCount": "2525",
+"wordCount": "2531",
 "publisher": {
 "@type": "Website",
 "name": "Yonkov.github.io"
@@ -161,7 +161,7 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
 					<div class="entry-content">
 						
 
-<p>Yesterday, 30 March, <a href="https://stackoverflow.com/">StackOverflow</a> started to offer a dark theme version (still in beta) for their visitors. On their home page, you can read:</p>
+<p>Since 30 March 2020 <a href="https://stackoverflow.com/">StackOverflow</a> started to offer a dark theme version (still in beta) for their logged-in users. They came up with an official announcement on their home page:</p>
 
 <blockquote>
 <p><em>&ldquo;You’ve been asking for dark mode for years. The dark mode beta is finally here. Change your preferences any time.&rdquo;</em></p>
@@ -252,8 +252,9 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
      data-ad-slot="4478912043"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<strong>Add the html and css</strong></p>
+</script></p>
+
+<p><strong>Add the html and css</strong></p>
 
 <p>First, we need to add the html for our night mode toggle button. To do that, we will use a small part of the code from the <a href="https://wordpress.org/plugins/wp-night-mode/">WP Night Mode</a> plugin, since it is open-source and free to use. Put this code in your theme&rsquo;s header or footer. In my case, I decided to add it in the theme footer:</p>
 
@@ -406,8 +407,9 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
      data-ad-slot="4478912043"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<strong>Store User Preference Through Sessions Via Cookie</strong></p>
+</script></p>
+
+<p><strong>Store User Preference Through Sessions Via Cookie</strong></p>
 
 <p>We need to find a way to send this body class to the server, so it loads before serving the page. There are a few ways to fix this. However, the problem that I faced was that <a href="https://stackoverflow.com/questions/3855337/php-localstorage">the server does not have access to localStorage</a>. So, I decided to store the user preference via a cookie. This means we need to create a cookie if the user chooses dark mode, get it with php and add a &ldquo;dark-mode &ldquo;body class if the cookie has been created. In this way, we will have body class &ldquo;dark mode&rdquo; as soon as the html is rendered and we will improve our user experience! Lets rewrite the above js code, this time storing the dark mode user preference via a cookie:</p>
 
@@ -482,7 +484,8 @@ add_filter(<span style="color:#cd5555">&#39;body_class&#39;</span>, <span style=
 
 <h2 id="ready-made-solution-list-of-wordpress-themes-with-both-light-and-dark-mode">Ready-made Solution: List of WordPress Themes with Both Light and Dark Mode</h2>
 
-<p>Most WordPress themes can be customized to support dark mode, either by using the Night Mode plugin or with the above custom solution. In any case, you will have to write a lot of custom css on top of it to set up the design of the dark theme. Wouldn&rsquo;t it be awesome if there was a theme that had a dark mode toggle button out of the box, so we do not have to do all the customizations ourselves? Well, here are some good news for those of you who are looking for the full package. I have prepared a list of WordPress themes that support both light and dark mode and let site visitors set their preference with a single click.
+<p>Most WordPress themes can be customized to support dark mode, either by using the Night Mode plugin or with the above custom solution. In any case, you will have to write a lot of custom css on top of it to set up the design of the dark theme. Wouldn&rsquo;t it be awesome if there was a theme that had a dark mode toggle button out of the box, so we do not have to do all the customizations ourselves? Well, here are some good news for those of you who are looking for the full package. I have prepared a list of WordPress themes that support both light and dark mode and let site visitors set their preference with a single click.</p>
+
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -492,7 +495,7 @@ add_filter(<span style="color:#cd5555">&#39;body_class&#39;</span>, <span style=
      data-ad-slot="4478912043"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script></p>
+</script>
 
 <h3 id="pliska">Pliska</h3>
 
