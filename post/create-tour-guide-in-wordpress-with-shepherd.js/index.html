@@ -19,7 +19,7 @@
 "headline":"Two Ways to Add a Tour Guide in WordPress (With and Without a Plugin)",
 "description":"In this tutorial I will show you how to integrate Shepherd.js in WordPress to create an interactive user intro tour.",
 "datePublished":"2021-04-18 19:17:04 &#43;0300 EEST",
-"wordCount": "1182",
+"wordCount": "1347",
 "publisher": {
 "@type": "Website",
 "name": "Yonkov.github.io"
@@ -183,19 +183,23 @@ A step-by-step user intro tour is a great way to enhance your app&rsquo;s user e
 
 <h3 id="how-to-add-a-guided-tour-to-wordpress-with-a-plugin">How to add a Guided Tour to WordPress with a Plugin</h3>
 
-<p>To make our lives easier, I created <a href="https://wordpress.org/plugins/simple-tour-guide/">Simple Tour Guide</a> - a lightweight and easy to use plugin that integrates Shepherd.js to WordPress with a single click. With Simple tour guide, creating an interactive user guide feels like a breeze. You can add as many steps as you want, choose on which pages to display the tour and even add a progress bar to display tour progress. You also have the setting to display the tour only once, instead of displaying the tour on every page reload. There are also options to change the default styles of the steps. All of this is done from a friendly admin interface, so you do not have to write a single line of code. However, if you wish, you can also customize the steps even beyond the included options, by assigning additional css classes to the steps - by writing custom css in Appearance =&gt; Customize =&gt; Additional css tab. There are no restrictions or any hidden costs - this plugin is 100% free and open source.</p>
+<p>The most convenient way to create an intro tour is by using <a href="https://wordpress.org/plugins/simple-tour-guide/">Simple Tour Guide</a> - a lightweight and easy-to-use plugin that integrates Shepherd.js to WordPress with a single click. With Simple Tour Guide, creating an interactive user guide feels like a breeze. You can add as many steps as you want, choose on which pages to display the tour and even add a progress bar to display tour progress. You also have the setting to display the tour only once, instead of displaying the tour on every page reload. There are also options to change the default styles of the steps, as well as additional customization options. All of this is done from a friendly admin interface, so you do not have to write a single line of code. There are no restrictions or any hidden costs - this plugin is 100% free and open source.</p>
 
 <p><img src="../../images/stg-1.jpg" alt="add steps in the WordPress admin" /></p>
 
 <p><strong>Image One: Add tour steps</strong>.</p>
 
-<p>You can add as many steps as you want directly from the WordPress admin. Link the step to any page element and assign custom css class to it for additional customization.</p>
+<p>Install the plugin from the admin dashboard =&gt; plugins =&gt; add new, then go to the Settings =&gt; Simple Tour Guide and customize accordingly. You can add as many steps as you want directly from the WordPress admin. Link the step to any page element and assign custom css class to it for additional customization (optional).</p>
 
 <p><img src="../../images/stg-2.jpg" alt="show tour on the site frontend" /></p>
 
 <p><strong>Image Two: Show the Tour on the Site Frontend</strong>.</p>
 
-<p>This is how the step will appear on the site frontend. Use the &ldquo;Style&rdquo; tab from the plugin settings to customize the progress bar and change the color of the buttons. For more customization options, assign additonal classnames via the &ldquo;Create a Tour&rdquo; tab and add your css in the theme customizer (Appearance =&gt; Customize =&gt; Additional css tab)</p>
+<p>This is how the step will appear on the site frontend. To link a step to a paticular page element, you need to <a href="https://youtu.be/db83PCnPiNM">find out the element&rsquo;s selector</a>. Visit the webpage you want to add the tour, right click on the element you want to target, then click &ldquo;inspect&rdquo;. This will open the browser&rsquo;s dev tools.  Write down the element selector. Id, classname and tagname will all work, as long as you paste them in the plugin&rsquo;s settings page in the following format: #id, .classname, tagname. If you do not assign an element to a particular step, this is also fine, the step will appear in the middle of the screen.</p>
+
+<p>Use the &ldquo;Style&rdquo; tab from the plugin settings to customize the progress bar and change the color of the buttons. For more customization options, assign an additonal classname to a specific step via the &ldquo;Create a Tour&rdquo; tab (or use the <code>.stg</code> classname to target all the steps) and add your css in the theme customizer (Appearance =&gt; Customize =&gt; Additional css tab).</p>
+
+<p>To show te tour on a particular page only, e.g. &ldquo;Our Services&rdquo;, go the page editor screen, add a shortcode block and paste the <code>[stg_kef]</code> shortcode. You also need to go to plugin&rsquo;s settings page =&gt; tour options tab and remove the tick from the &ldquo;Show the tour on all pages&rdquo; field.</p>
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
