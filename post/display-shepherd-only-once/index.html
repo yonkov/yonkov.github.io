@@ -19,7 +19,7 @@
 "headline":"How to Display Shepherd.js Only Once",
 "description":"How to display Shepherd.js tour only on first user visit",
 "datePublished":"2021-04-21 09:05:44 &#43;0300 EEST",
-"wordCount": "850",
+"wordCount": "864",
 "publisher": {
 "@type": "Website",
 "name": "Yonkov.github.io"
@@ -177,15 +177,23 @@ var body=document.body;var switcher=document.getElementsByClassName('js-toggle')
 </span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">const</span> steps = [{
         title: <span style="color:#cd5555">&#39;My Awesome Tour Guide : Step One&#39;</span>,
         text: <span style="color:#cd5555">&#39;This step is attached to the bottom of the &lt;code&gt;header&lt;/code&gt; element.&#39;</span>,
+        attachTo: {
+            element: <span style="color:#cd5555">&#39;header&#39;</span>,
+            on: <span style="color:#cd5555">&#39;bottom&#39;</span>
+        },
         buttons: [{
             text: <span style="color:#cd5555">&#39;Next&#39;</span>,
             action: tour.next
-        }]
+        }],
     },
 
     {
         title: <span style="color:#cd5555">&#39;My Awesome Tour Guide : Step Two&#39;</span>,
         text: <span style="color:#cd5555">&#39;This step is attached to the bottom of the &lt;code&gt;.entry-content&lt;/code&gt; element. If no such element is found, the step appears in the center of the screen.&#39;</span>,
+        attachTo: {
+            element: <span style="color:#cd5555">&#39;.entry-content&#39;</span>,
+            on: <span style="color:#cd5555">&#39;bottom&#39;</span>
+        },
         buttons: [{
                 text: <span style="color:#cd5555">&#39;Back&#39;</span>,
                 action: tour.back
