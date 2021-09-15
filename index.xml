@@ -32,6 +32,15 @@ Cookies and Web Beacons Yonkov.</description>
     </item>
     
     <item>
+      <title>Add a Custom Welcome Guide in the WordPress Admin (With and Without a Plugin)</title>
+      <link>https://yonkov.github.io/post/adding-a-custom-welcome-guide-in-the-wordpress-admin/</link>
+      <pubDate>Wed, 15 Sep 2021 10:06:13 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/post/adding-a-custom-welcome-guide-in-the-wordpress-admin/</guid>
+      <description>In the WordPress admin, when you edit a post or page for the first time, a guided tour pops up and introduces the user to the Gutenberg editor. Traditionally, WordPress was using a visual editor (also known as the Classic Editor) to create posts and pages without the need to write custom html. Since version 5.0, the Gutenberg plugin has been integrated into the WordPress core, replacing the old editor.</description>
+    </item>
+    
+    <item>
       <title>How to Display Shepherd.js Only Once</title>
       <link>https://yonkov.github.io/post/display-shepherd-only-once/</link>
       <pubDate>Wed, 21 Apr 2021 09:05:44 +0300</pubDate>
