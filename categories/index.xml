@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Atanas Yonkov</title>
+    <title>Categories on Atanas Yonkov</title>
     <link>https://yonkov.github.io/categories/</link>
-    <description>Recent content on Atanas Yonkov</description>
+    <description>Recent content in Categories on Atanas Yonkov</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 16 Nov 2017 15:24:01 +0200</lastBuildDate>
     
@@ -11,12 +11,93 @@
     
     
     <item>
-      <title>How to Set up Static IP in Windows XP and Windows 7</title>
-      <link>https://yonkov.github.io/post/how-to-set-up-static-ip-in-windows-xp-and-windows-7/</link>
+      <title></title>
+      <link>https://yonkov.github.io/categories/</link>
       <pubDate>Thu, 16 Nov 2017 15:24:01 +0200</pubDate>
       
-      <guid>https://yonkov.github.io/post/how-to-set-up-static-ip-in-windows-xp-and-windows-7/</guid>
-      <description>Static IP means that your computer is assigned an IP address that does not change each time the PC is restarted. It is required in some situations, for example, to access an ftp server or a web server from another computer inside the network. To do this, you need to change the IP version 4 (TCP / IP) properties. First, go to the start menu and type cmd in the search bar.</description>
+      <guid>https://yonkov.github.io/categories/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Divi</title>
+      <link>https://yonkov.github.io/categories/divi/</link>
+      <pubDate>Wed, 03 Jul 2019 17:01:16 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/categories/divi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Excel</title>
+      <link>https://yonkov.github.io/categories/excel/</link>
+      <pubDate>Tue, 21 Nov 2017 21:02:46 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/categories/excel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://yonkov.github.io/categories/hugo/</link>
+      <pubDate>Sat, 04 Apr 2020 11:49:32 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/categories/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seo</title>
+      <link>https://yonkov.github.io/categories/seo/</link>
+      <pubDate>Mon, 10 Sep 2018 17:08:06 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/categories/seo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shepherd</title>
+      <link>https://yonkov.github.io/categories/shepherd/</link>
+      <pubDate>Wed, 21 Apr 2021 09:05:44 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/categories/shepherd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vba</title>
+      <link>https://yonkov.github.io/categories/vba/</link>
+      <pubDate>Tue, 21 Nov 2017 21:02:46 +0200</pubDate>
+      
+      <guid>https://yonkov.github.io/categories/vba/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vuepress</title>
+      <link>https://yonkov.github.io/categories/vuepress/</link>
+      <pubDate>Wed, 15 Apr 2020 11:49:32 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/categories/vuepress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Woocommerce</title>
+      <link>https://yonkov.github.io/categories/woocommerce/</link>
+      <pubDate>Wed, 08 Aug 2018 17:08:06 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/categories/woocommerce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wordpress</title>
+      <link>https://yonkov.github.io/categories/wordpress/</link>
+      <pubDate>Wed, 15 Sep 2021 10:06:13 +0300</pubDate>
+      
+      <guid>https://yonkov.github.io/categories/wordpress/</guid>
+      <description></description>
     </item>
     
   </channel>

@@ -271,22 +271,6 @@
   </url>
   
   <url>
-    <loc>https://yonkov.github.io/ru/tags/vuepress/</loc>
-    <lastmod>2020-01-19T10:05:06+02:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yonkov.github.io/tags/vuepress/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="https://yonkov.github.io/ru/tags/vuepress/"
-                />
-  </url>
-  
-  <url>
     <loc>https://yonkov.github.io/ru/categories/vuepress/</loc>
     <lastmod>2020-01-19T10:05:06+02:00</lastmod>
     <priority>0</priority>
@@ -299,6 +283,22 @@
                 rel="alternate"
                 hreflang="ru"
                 href="https://yonkov.github.io/ru/categories/vuepress/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://yonkov.github.io/ru/tags/vuepress/</loc>
+    <lastmod>2020-01-19T10:05:06+02:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yonkov.github.io/tags/vuepress/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://yonkov.github.io/ru/tags/vuepress/"
                 />
   </url>
   
